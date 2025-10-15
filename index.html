@@ -183,17 +183,30 @@
     </div>
   </footer>
 
-  <!-- 🔝 Scroll to top knapp -->
-<button onclick="window.scrollTo({top:0, behavior:'smooth'})"
-  class="fixed bottom-5 right-5 bg-accent text-white p-3 rounded-full shadow-lg hover:bg-red-700 transition z-50"
-  aria-label="Til toppen">
-  <i data-feather="arrow-up" class="w-5 h-5"></i>
+            <!-- 🔝 Scroll to top knapp -->
+            <button id="scrollTopBtn"
+              onclick="window.scrollTo({top:0, behavior:'smooth'})"
+                class="hidden fixed bottom-5 right-5 bg-accent text-white p-3 rounded-full shadow-lg hover:bg-red-700 transition z-50"
+                    aria-label="Til toppen">
+                      <i data-feather="arrow-up" class="w-5 h-5"></i>
 </button>
 
-<script>
-  // Sørg for at ikonene faktisk tegnes
+  <script>
+  // Aktiver Feather-ikoner
   feather.replace();
+
+  // Vise / skjule knapp avhengig av scroll
+  const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 200) {
+      scrollTopBtn.classList.remove('hidden');
+    } else {
+      scrollTopBtn.classList.add('hidden');
+    }
+  });
 </script>
+
 
   <script>feather.replace();</script>
   
