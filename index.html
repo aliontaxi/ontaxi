@@ -30,6 +30,27 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
   }
 </style>
+
+	<style>
+  /* 📱 Fikser bakgrunnsbilde på mobil – viser bilen */
+  @media (max-width: 768px) {
+    section[style*="Bilioslo.jpg"] {
+      background-attachment: scroll !important;  /* iOS bug fix */
+      background-position: 65% center !important; /* flytter fokus mot bilen */
+      background-size: cover !important;         /* sørger for riktig dekning */
+      min-height: 520px !important;              /* gir plass til hele bilen */
+    }
+  }
+
+  @media (max-width: 480px) {
+    section[style*="Bilioslo.jpg"] {
+      background-position: 70% center !important; /* mer fokus på bilen på små skjermer */
+      min-height: 500px !important;
+    }
+  }
+</style>
+
+	
 </head>
 
 <body class="bg-gray-50 font-sans">
