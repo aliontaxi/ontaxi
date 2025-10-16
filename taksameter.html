@@ -24,28 +24,61 @@
 
 <body class="bg-gray-50 font-sans">
   <!-- 🔹 Navigasjon -->
-  <nav class="bg-white shadow-sm fixed w-full z-10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between h-16">
-        <div class="flex items-center">
-          <a href="/" class="flex items-center">
-            <img src="OnTaxi-signatur-GIF.gif" alt="OnTaxi logo" class="h-10 mr-3">
-          </a>
-        </div>
-        <div class="hidden md:flex items-center space-x-8">
-          <a href="/" class="text-gray-900 hover:text-primary transition">Hjem</a>
-          <a href="taksameter.html" class="text-primary font-semibold">Taksameter</a>
-          <a href="bli-løyvehaver.html" class="text-gray-900 hover:text-primary transition">Bli løyvehaver</a>
-          <a href="kontakt.html" class="text-gray-900 hover:text-primary transition">Kontakt</a>
-        </div>
-        <div class="flex items-center">
-          <a href="kontakt.html" class="bg-accent text-white px-6 py-2 rounded-full hover:bg-red-700 transition">
-            Kontakt oss
-          </a>
-        </div>
+<nav class="bg-white shadow-sm fixed w-full z-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16">
+      
+      <!-- Logo -->
+      <div class="flex items-center">
+        <a href="/" class="flex items-center">
+          <img src="OnTaxi-signatur-GIF.gif" alt="OnTaxi logo" class="h-10 mr-3">
+        </a>
+      </div>
+
+      <!-- Desktop meny -->
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="/" class="text-gray-900 hover:text-primary transition">Hjem</a>
+        <a href="taksameter.html" class="text-primary font-semibold">Taksameter</a>
+        <a href="bli-løyvehaver.html" class="text-gray-900 hover:text-primary transition">Bli løyvehaver</a>
+        <a href="kontakt.html" class="text-gray-900 hover:text-primary transition">Kontakt</a>
+      </div>
+
+      <!-- Kontakt knapp (PC) -->
+      <div class="hidden md:flex items-center">
+        <a href="kontakt.html" class="bg-accent text-white px-6 py-2 rounded-full hover:bg-red-700 transition">
+          Kontakt oss
+        </a>
+      </div>
+
+      <!-- Mobilmeny knapp -->
+      <div class="md:hidden flex items-center">
+        <button id="menu-btn" class="text-gray-900 focus:outline-none">
+          <i data-feather="menu"></i>
+        </button>
       </div>
     </div>
-  </nav>
+  </div>
+
+  <!-- Mobilmeny -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+    <a href="/" class="block px-4 py-2 text-gray-900 hover:bg-gray-100">Hjem</a>
+    <a href="taksameter.html" class="block px-4 py-2 text-primary font-semibold bg-gray-50">Taksameter</a>
+    <a href="bli-løyvehaver.html" class="block px-4 py-2 text-gray-900 hover:bg-gray-100">Bli løyvehaver</a>
+    <a href="kontakt.html" class="block px-4 py-2 text-gray-900 hover:bg-gray-100">Kontakt</a>
+    <a href="kontakt.html" class="block px-4 py-2 mt-2 bg-accent text-white text-center rounded hover:bg-red-700 transition">
+      Kontakt oss
+    </a>
+  </div>
+</nav>
+
+<!-- Script for mobilmeny -->
+<script>
+  document.getElementById("menu-btn").addEventListener("click", function () {
+    const menu = document.getElementById("mobile-menu");
+    menu.classList.toggle("hidden");
+  });
+</script>
+
 
   <!-- 🔹 Hero -->
   <section class="pt-24 pb-20 md:pt-32 md:pb-28 bg-gradient-to-r from-[#1a3b67] via-[#2b4d83] to-[#b33e3e] text-white">
