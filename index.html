@@ -108,6 +108,17 @@
 </h1>
 
 <style>
+	<style>
+/* 📱 Fikser hero-bilde på mobil */
+@media (max-width: 768px) {
+  .hero-bg {
+    background-position: 60% center !important; /* flytter fokus mot bilen */
+    background-attachment: scroll !important;   /* unngår at Safari klipper bildet */
+    min-height: 520px;                          /* sørger for nok høyde */
+  }
+}
+</style>
+
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
