@@ -153,7 +153,83 @@
     </div>
   </section>
 
+    <!-- 🔹 Footer -->
+  <footer class="bg-gray-900 text-white pt-12 pb-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-8 mb-10">
+        <div>
+          <h3 class="text-xl font-bold mb-4">OnTaxi AS</h3>
+          <p class="text-gray-400">
+            Enklere drift, lavere kostnader og ukentlig utbetaling – OnTaxi gjør hverdagen bedre for deg som sjåfør.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Snarveier</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="taksameter.html" class="hover:text-white transition">Taksameter</a></li>
+            <li><a href="bli-løyvehaver.html" class="hover:text-white transition">Bli løyvehaver</a></li>
+            <li><a href="kontakt.html" class="hover:text-white transition">Kontakt</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Kontakt oss</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li class="flex items-center"><i data-feather="mail" class="w-5 h-5 mr-2"></i> post@ontaxi.no</li>
+            <li class="flex items-center"><i data-feather="phone" class="w-5 h-5 mr-2"></i> +47 400 24 400</li>
+            <li class="flex items-center"><i data-feather="map-pin" class="w-5 h-5 mr-2"></i> Holmenveien 5C - 0374 Oslo, Norge</li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 pt-6 text-center text-gray-400 text-sm">
+        © 2025 OnTaxi AS – Alle rettigheter forbeholdt.
+      </div>
+    </div>
+  </footer>
+
+	            <!-- 🔝 Scroll to top knapp -->
+			<style>
+  			.fade-in {
+  			  opacity: 1;
+   			 transition: opacity 0.4s ease-in-out;
+  								}
+  			.fade-out {
+   			 opacity: 0;
+    			transition: opacity 0.4s ease-in-out;
+  			}
+		</style>
+
+		<button id="scrollTopBtn"
+  	onclick="window.scrollTo({top:0, behavior:'smooth'})"
+  	class="opacity-0 pointer-events-none fixed bottom-5 right-5 bg-accent text-white p-3 rounded-full shadow-lg hover:bg-red-700 transition z-50"
+  	aria-label="Til toppen">
+  	<i data-feather="arrow-up" class="w-5 h-5"></i>
+		</button>
+
+<script>
+  feather.replace();
+
+  const scrollTopBtn = document.getElementById('scrollTopBtn');
+  let isVisible = false;
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 200 && !isVisible) {
+      scrollTopBtn.classList.remove('fade-out');
+      scrollTopBtn.classList.add('fade-in');
+      scrollTopBtn.classList.remove('pointer-events-none');
+      isVisible = true;
+    } else if (window.scrollY <= 200 && isVisible) {
+      scrollTopBtn.classList.remove('fade-in');
+      scrollTopBtn.classList.add('fade-out');
+      scrollTopBtn.classList.add('pointer-events-none');
+      isVisible = false;
+    }
+  });
+</script>
+
+
+
   <script>feather.replace();</script>
+  
 </body>
 </html>
 
