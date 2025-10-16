@@ -1,1 +1,123 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taksameter | OnTaxi</title>
+  <link rel="icon" type="image/png" href="favicon-96x96.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1a3b67',
+            accent: '#b33e3e',
+            dark: '#1F2937'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-gray-50 font-sans">
+  <!-- 🔹 Navigasjon -->
+  <nav class="bg-white shadow-sm fixed w-full z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex items-center">
+          <a href="/" class="flex items-center">
+            <img src="OnTaxi-signatur-GIF.gif" alt="OnTaxi logo" class="h-10 mr-3">
+          </a>
+        </div>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="/" class="text-gray-900 hover:text-primary transition">Hjem</a>
+          <a href="taksameter.html" class="text-primary font-semibold">Taksameter</a>
+          <a href="bli-løyvehaver.html" class="text-gray-900 hover:text-primary transition">Bli løyvehaver</a>
+          <a href="kontakt.html" class="text-gray-900 hover:text-primary transition">Kontakt</a>
+        </div>
+        <div class="flex items-center">
+          <a href="kontakt.html" class="bg-accent text-white px-6 py-2 rounded-full hover:bg-red-700 transition">
+            Kontakt oss
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 🔹 Hero -->
+  <section class="pt-24 pb-20 md:pt-32 md:pb-28 bg-gradient-to-r from-[#1a3b67] via-[#2b4d83] to-[#b33e3e] text-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">OnTaxi Taksameter</h1>
+      <p class="text-lg max-w-2xl mx-auto">
+        Vårt taksameter-system er utviklet for løyvehavere som vil ha den beste teknologien – uten å betale for mye. 
+        Rask installasjon, pålitelig drift og lavest pris i Norge.
+      </p>
+    </div>
+  </section>
+
+  <!-- 🔹 Innhold -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Billig. Stabilt. Godkjent.</h2>
+          <p class="text-gray-600 mb-6">
+            OnTaxi tilbyr Norges rimeligste løsning for taksameter – med gratis montering og full support. 
+            Vi samarbeider med godkjente leverandører og sørger for at du får systemet montert og klart til bruk uten ekstra kostnader.
+          </p>
+          <ul class="space-y-3 text-gray-700">
+            <li class="flex items-start"><i data-feather="check-circle" class="text-accent w-5 h-5 mr-3"></i> Gratis montering og oppsett</li>
+            <li class="flex items-start"><i data-feather="check-circle" class="text-accent w-5 h-5 mr-3"></i> Fullt godkjent av myndighetene</li>
+            <li class="flex items-start"><i data-feather="check-circle" class="text-accent w-5 h-5 mr-3"></i> Lav månedskostnad uten skjulte gebyrer</li>
+            <li class="flex items-start"><i data-feather="check-circle" class="text-accent w-5 h-5 mr-3"></i> Support og service inkludert</li>
+          </ul>
+        </div>
+        <div class="text-center">
+          <img src="hero-bil.png" alt="OnTaxi taksameter bil" class="mx-auto rounded-lg shadow-md" style="filter: drop-shadow(0px 8px 12px rgba(0,0,0,0.4));">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🔹 Ekstra seksjon: Fordeler -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold text-gray-900 mb-8">Fordeler med OnTaxi-taksameter</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition">
+          <i data-feather="cpu" class="text-primary w-10 h-10 mb-4 mx-auto"></i>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Moderne teknologi</h3>
+          <p class="text-gray-600">Digitalt taksameter med integrert rapportering og kompatibilitet med UBER og Bolt.</p>
+        </div>
+        <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition">
+          <i data-feather="credit-card" class="text-accent w-10 h-10 mb-4 mx-auto"></i>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Rimelig drift</h3>
+          <p class="text-gray-600">Markedets laveste månedskostnad – uten bindinger eller skjulte gebyrer.</p>
+        </div>
+        <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition">
+          <i data-feather="tool" class="text-primary w-10 h-10 mb-4 mx-auto"></i>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Support og service</h3>
+          <p class="text-gray-600">Gratis support og rask hjelp ved behov. Vi sørger for at alt fungerer som det skal – alltid.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🔹 CTA (samme som forsiden) -->
+  <section class="py-16 bg-primary text-center text-white">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-4">Klar for neste tur?</h2>
+      <p class="text-lg mb-8">Registrer deg som løyvehaver eller ta kontakt for å bli en del av OnTaxi-nettverket.</p>
+      <a href="kontakt.html" class="bg-accent text-white px-8 py-3 rounded-full font-semibold hover:bg-red-700 transition">
+        Kom i kontakt
+      </a>
+    </div>
+  </section>
+
+  <script>feather.replace();</script>
+</body>
+</html>
 
