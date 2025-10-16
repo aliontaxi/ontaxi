@@ -59,9 +59,10 @@
   </nav>
 
   <!-- 🔹 Hero -->
-<section class="pt-24 pb-16 md:pt-32 md:pb-24 bg-cover bg-center relative"
-         style="background-image: url('Bilioslo.jpg');">
-  
+<section
+  class="pt-24 pb-16 md:pt-32 md:pb-24 bg-center bg-cover relative hero-bg"
+  style="background-image: url('Bilioslo.jpg');"
+>
   <!-- Mørkt filter -->
   <div class="absolute inset-0 bg-black/40"></div>
 
@@ -70,42 +71,66 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="md:flex items-center justify-between">
         <div class="md:w-1/2 mb-10 md:mb-0">
-          
-          <h1 class="text-5xl font-bold text-white mb-6 opacity-0 translate-y-8 animate-fadeInUp">
-  Tjen mer. Betal mindre. <br> Kjør <span class="text-primary">On</span><span class="text-accent">Taxi</span>
-</h1>
-
-<style>
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-.animate-fadeInUp {
-  animation: fadeInUp 1s ease-out forwards;
-}
-</style>
-
-
-            </span>
+          <h1
+            class="text-5xl font-bold text-white mb-6 opacity-0 translate-y-8 animate-fadeInUp"
+          >
+            Tjen mer. Betal mindre. <br />
+            Kjør <span class="text-primary">On</span
+            ><span class="text-accent">Taxi</span>
           </h1>
 
           <p class="text-lg text-gray-200 mb-8">
-            Norges rimeligste taksameter – med ukentlig utbetaling og full støtte for løyvehavere.
+            Norges rimeligste taksameter – med ukentlig utbetaling og full støtte
+            for løyvehavere.
           </p>
 
           <div class="flex flex-col sm:flex-row gap-4">
-            <a href="bli-løyvehaver.html" class="bg-white text-primary px-6 py-3 rounded-full font-medium hover:bg-gray-100 transition">
-              Bli løyvehaver
-            </a>
-            <a href="kontakt.html" class="bg-transparent border-2 border-white text-white px-6 py-3 rounded-full font-medium hover:bg-white hover:text-primary transition">
-              Kontakt oss
-            </a>
+            <a
+              href="bli-løyvehaver.html"
+              class="bg-white text-primary px-6 py-3 rounded-full font-medium hover:bg-gray-100 transition"
+              >Bli løyvehaver</a
+            >
+            <a
+              href="kontakt.html"
+              class="bg-transparent border-2 border-white text-white px-6 py-3 rounded-full font-medium hover:bg-white hover:text-primary transition"
+              >Kontakt oss</a
+            >
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<style>
+  /* Parallax på desktop, men scroll på mobil */
+  .hero-bg {
+    background-attachment: fixed;
+  }
+
+  @media (max-width: 768px) {
+    .hero-bg {
+      background-attachment: scroll;
+      background-position: center top;
+    }
+  }
+
+  /* Fade-in animasjon */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .animate-fadeInUp {
+    animation: fadeInUp 1s ease-out forwards;
+  }
+</style>
+
 
 
   <!-- 🔹 Hvorfor OnTaxi -->
