@@ -1,1 +1,227 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt oss | OnTaxi</title>
+  <link rel="icon" type="image/png" href="favicon-96x96.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1a3b67',
+            accent: '#b33e3e',
+            dark: '#1F2937'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-gray-50 font-sans">
+
+  <!-- 🔹 Navigasjon -->
+  <nav class="bg-white shadow-sm fixed w-full z-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+
+        <!-- Logo -->
+        <div class="flex items-center">
+          <a href="/" class="flex items-center">
+            <img src="OnTaxi-signatur-GIF.gif" alt="OnTaxi logo" class="h-10 mr-3">
+          </a>
+        </div>
+
+        <!-- Desktop meny -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="/" class="text-gray-900 hover:text-primary transition">Hjem</a>
+          <a href="taksameter.html" class="text-gray-900 hover:text-primary transition">Taksameter</a>
+          <a href="bli-løyvehaver.html" class="text-gray-900 hover:text-primary transition">Bli løyvehaver</a>
+          <a href="kontakt.html" class="text-primary font-semibold">Kontakt</a>
+        </div>
+
+        <!-- Kontakt knapp (PC) -->
+        <div class="hidden md:flex items-center">
+          <a href="kontakt.html" class="bg-accent text-white px-6 py-2 rounded-full hover:bg-red-700 transition">
+            Kontakt oss
+          </a>
+        </div>
+
+        <!-- Mobilmeny knapp -->
+        <div class="md:hidden flex items-center">
+          <button id="menu-btn" class="text-gray-900 focus:outline-none">
+            <i data-feather="menu"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobilmeny -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+      <a href="/" class="block px-4 py-2 text-gray-900 hover:bg-gray-100">Hjem</a>
+      <a href="taksameter.html" class="block px-4 py-2 text-gray-900 hover:bg-gray-100">Taksameter</a>
+      <a href="bli-løyvehaver.html" class="block px-4 py-2 text-gray-900 hover:bg-gray-100">Bli løyvehaver</a>
+      <a href="kontakt.html" class="block px-4 py-2 text-primary font-semibold bg-gray-50">Kontakt</a>
+      <a href="kontakt.html" class="block px-4 py-2 mt-2 bg-accent text-white text-center rounded hover:bg-red-700 transition">
+        Kontakt oss
+      </a>
+    </div>
+  </nav>
+
+  <!-- Script for mobilmeny -->
+  <script>
+    document.getElementById("menu-btn").addEventListener("click", function () {
+      const menu = document.getElementById("mobile-menu");
+      menu.classList.toggle("hidden");
+    });
+  </script>
+
+  <!-- 🔹 Hero -->
+  <section class="pt-24 pb-20 md:pt-32 md:pb-28 bg-gradient-to-r from-[#1a3b67] via-[#2b4d83] to-[#b33e3e] text-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Kontakt oss</h1>
+      <p class="text-lg max-w-2xl mx-auto">
+        Vi hjelper deg gjerne! Kontakt oss for spørsmål om samarbeid, løyver eller teknisk støtte.
+      </p>
+    </div>
+  </section>
+
+  <!-- 🔹 Kontaktseksjon -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+
+        <!-- 📩 Skjema -->
+        <div>
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">Send oss en melding</h2>
+          <form class="space-y-5">
+            <div>
+              <label class="block text-gray-700 mb-2">Navn</label>
+              <input type="text" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary outline-none" placeholder="Ditt navn">
+            </div>
+            <div>
+              <label class="block text-gray-700 mb-2">E-post</label>
+              <input type="email" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary outline-none" placeholder="din@epost.no">
+            </div>
+            <div>
+              <label class="block text-gray-700 mb-2">Melding</label>
+              <textarea rows="5" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary outline-none" placeholder="Skriv din melding her..."></textarea>
+            </div>
+            <button type="submit" class="bg-accent text-white px-8 py-3 rounded-full font-semibold hover:bg-red-700 transition">
+              Send melding
+            </button>
+          </form>
+        </div>
+
+        <!-- 📍 Kontaktinfo -->
+        <div class="bg-gray-50 p-8 rounded-xl shadow-sm">
+          <h3 class="text-2xl font-semibold text-gray-900 mb-4">Kontaktinformasjon</h3>
+          <ul class="space-y-3 text-gray-700">
+            <li class="flex items-center"><i data-feather="mail" class="text-accent w-5 h-5 mr-3"></i>
+              <a href="mailto:post@ontaxi.no" class="hover:text-accent transition">post@ontaxi.no</a>
+            </li>
+            <li class="flex items-center"><i data-feather="phone" class="text-accent w-5 h-5 mr-3"></i>
+              <a href="tel:+4740024400" class="hover:text-accent transition">+47 400 24 400</a>
+            </li>
+            <li class="flex items-center"><i data-feather="map-pin" class="text-accent w-5 h-5 mr-3"></i>
+              <a href="https://www.google.com/maps?q=Holmenveien+5C,+0374+Oslo,+Norge" target="_blank" class="hover:text-accent transition">
+                Holmenveien 5C – 0374 Oslo
+              </a>
+            </li>
+          </ul>
+
+          <div class="mt-8">
+            <iframe class="w-full h-64 rounded-lg shadow-sm"
+              src="https://www.google.com/maps?q=Holmenveien+5C,+0374+Oslo,+Norge&output=embed"
+              allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 🔹 CTA -->
+  <section class="py-16 bg-primary text-center text-white">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-4">Klar for neste tur?</h2>
+      <p class="text-lg mb-8">Registrer deg som løyvehaver eller ta kontakt for å bli en del av OnTaxi-nettverket.</p>
+      <a href="kontakt.html" class="bg-accent text-white px-8 py-3 rounded-full font-semibold hover:bg-red-700 transition">
+        Kom i kontakt
+      </a>
+    </div>
+  </section>
+
+  <!-- 🔹 Footer -->
+  <footer class="bg-gray-900 text-white pt-12 pb-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Kolonner -->
+      <div class="grid md:grid-cols-3 gap-8 mb-10">
+        <div>
+          <h3 class="text-xl font-bold mb-4">OnTaxi AS</h3>
+          <p class="text-gray-400">Enklere drift, lavere kostnader og ukentlig utbetaling – OnTaxi gjør hverdagen bedre for deg som sjåfør.</p>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Snarveier</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="taksameter.html" class="hover:text-white transition">Taksameter</a></li>
+            <li><a href="bli-løyvehaver.html" class="hover:text-white transition">Bli løyvehaver</a></li>
+            <li><a href="kontakt.html" class="hover:text-white transition">Kontakt</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Kontakt oss</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li class="flex items-center"><i data-feather="mail" class="w-5 h-5 mr-2"></i>post@ontaxi.no</li>
+            <li class="flex items-center"><i data-feather="phone" class="w-5 h-5 mr-2"></i>+47 400 24 400</li>
+            <li class="flex items-center"><i data-feather="map-pin" class="w-5 h-5 mr-2"></i>Holmenveien 5C – 0374 Oslo</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Nederste linje -->
+      <div class="border-t border-gray-800 pt-6 text-center text-gray-400 text-sm">
+        © 2025 OnTaxi AS – Alle rettigheter forbeholdt.
+      </div>
+    </div>
+  </footer>
+
+  <!-- 🔝 Scroll-to-top -->
+  <style>
+    .fade-in { opacity: 1; transition: opacity 0.4s ease-in-out; }
+    .fade-out { opacity: 0; transition: opacity 0.4s ease-in-out; }
+  </style>
+
+  <button id="scrollTopBtn"
+    onclick="window.scrollTo({top:0, behavior:'smooth'})"
+    class="opacity-0 pointer-events-none fixed bottom-5 right-5 bg-accent text-white p-3 rounded-full shadow-lg hover:bg-red-700 transition z-50"
+    aria-label="Til toppen">
+    <i data-feather="arrow-up" class="w-5 h-5"></i>
+  </button>
+
+  <script>
+    feather.replace();
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    let isVisible = false;
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 200 && !isVisible) {
+        scrollTopBtn.classList.remove('fade-out');
+        scrollTopBtn.classList.add('fade-in');
+        scrollTopBtn.classList.remove('pointer-events-none');
+        isVisible = true;
+      } else if (window.scrollY <= 200 && isVisible) {
+        scrollTopBtn.classList.remove('fade-in');
+        scrollTopBtn.classList.add('fade-out');
+        scrollTopBtn.classList.add('pointer-events-none');
+        isVisible = false;
+      }
+    });
+  </script>
+
+</body>
+</html>
 
