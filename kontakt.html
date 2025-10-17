@@ -98,7 +98,7 @@
         <!-- 📩 Skjema -->
         <div>
           <h2 class="text-3xl font-bold text-gray-900 mb-6">Send oss en melding</h2>
-          <form class="space-y-5">
+          <form action="https://formspree.io/f/xeornkeo" method="POST" class="space-y-5">
             <div>
               <label class="block text-gray-700 mb-2">Navn</label>
               <input type="text" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary outline-none" placeholder="Ditt navn">
@@ -219,5 +219,26 @@
   </script>
 
 </body>
+
+    <!-- 🔹 Takkemelding etter skjema -->
+<script>
+  const form = document.querySelector("form");
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const formData = new FormData(form);
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    });
+    if (response.ok) {
+      alert("✅ Takk! Meldingen din er sendt. Vi svarer så snart vi kan.");
+      form.reset();
+    } else {
+      alert("❌ Oi, noe gikk galt. Prøv igjen senere.");
+    }
+  });
+</script>
+
 </html>
 
