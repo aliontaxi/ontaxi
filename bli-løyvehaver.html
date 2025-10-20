@@ -106,30 +106,52 @@
   <!-- 🔹 Hero -->
 <section class="relative pt-24 md:pt-32 pb-20 overflow-hidden">
 
-  <!-- Grid med bilder -->
-  <section class="relative w-full h-[80vh] overflow-hidden">
-  <div class="absolute inset-0 animate-fade-slide">
-    <img src="sjafor1.png" class="w-full h-full object-cover" alt="OnTaxi sjåfør">
-  </div>
-  <div class="absolute inset-0 opacity-0 animate-fade-slide delay-5000">
-    <img src="kunde1.jpg" class="w-full h-full object-cover" alt="OnTaxi kunde">
-  </div>
-  <div class="absolute inset-0 opacity-0 animate-fade-slide delay-10000">
-    <img src="sjafor2.png" class="w-full h-full object-cover" alt="OnTaxi sjåfører">
-  </div>
+  <!-- 🔹 Bli løyvehaver – bilde-slider -->
+<section class="relative bg-gray-50 py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-8">
+    
+    <!-- Tekst -->
+    <div class="md:w-1/2 text-center md:text-left">
+      <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        Bli en del av <span class="text-primary">On</span><span class="text-accent">Taxi</span>
+      </h1>
+      <p class="text-gray-600 mb-6">
+        Vi tilbyr Norges mest rettferdige vilkår for løyvehavere – ukentlig utbetaling,
+        lav sentralavgift og gratis taksametermontering.
+      </p>
+      <a href="kontakt.html"
+         class="inline-block bg-accent text-white px-6 py-3 rounded-full font-medium hover:bg-red-700 transition">
+        Ta kontakt
+      </a>
+    </div>
 
-  <!-- Tekst over -->
-  <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
-    <h1 class="text-white text-4xl md:text-6xl font-bold">Bli en del av OnTaxi</h1>
+    <!-- Bilde-slider -->
+    <div class="md:w-1/2 relative overflow-hidden rounded-2xl shadow-lg h-[400px]">
+      <div class="absolute inset-0 animate-fadeSlide">
+        <img src="sjafor.jpg" alt="OnTaxi sjåfør"
+             class="w-full h-full object-cover" />
+      </div>
+      <div class="absolute inset-0 opacity-0 animate-fadeSlide delay-[5s]">
+        <img src="kunde.jpg" alt="Fornøyd kunde i taxi"
+             class="w-full h-full object-cover" />
+      </div>
+      <div class="absolute inset-0 opacity-0 animate-fadeSlide delay-[10s]">
+        <img src="samtale.jpg" alt="Sjåfører prater"
+             class="w-full h-full object-cover" />
+      </div>
+    </div>
   </div>
 </section>
 
+<!-- 🔹 Animasjon -->
 <style>
 @keyframes fadeSlide {
-  0%, 33% {opacity: 1;}
-  40%, 100% {opacity: 0;}
+  0%, 30% {opacity: 1;}
+  35%, 100% {opacity: 0;}
 }
-.animate-fade-slide {animation: fadeSlide 15s infinite;}
+.animate-fadeSlide {
+  animation: fadeSlide 15s infinite;
+}
 </style>
 
 
