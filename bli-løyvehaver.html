@@ -126,19 +126,15 @@
     </div>
 
     <!-- Bilde-slider -->
-    <div class="md:w-1/2 relative overflow-hidden rounded-2xl shadow-lg h-[400px]">
-      <div class="absolute inset-0 animate-fadeSlide">
-        <img src="sjafor1.png" alt="OnTaxi sjåfør"
-             class="w-full h-full object-cover" />
-      </div>
-      <div class="absolute inset-0 opacity-0 animate-fadeSlide delay-[5s]">
-        <img src="kunde1.jpg" alt="Fornøyd kunde i taxi"
-             class="w-full h-full object-cover" />
-      </div>
-      <div class="absolute inset-0 opacity-0 animate-fadeSlide delay-[10s]">
-        <img src="sjafor2.png" alt="Sjåfører prater"
-             class="w-full h-full object-cover" />
-      </div>
+    <div class="absolute inset-0 animate-fadeSlide delay-0">
+  <img src="sjafor1.png" alt="OnTaxi sjåfør" class="w-full h-full object-cover" />
+</div>
+<div class="absolute inset-0 animate-fadeSlide delay-1">
+  <img src="kunde1.jpg" alt="Fornøyd kunde i taxi" class="w-full h-full object-cover" />
+</div>
+<div class="absolute inset-0 animate-fadeSlide delay-2">
+  <img src="sjafor2.png" alt="Sjåfører prater" class="w-full h-full object-cover" />
+</div>
     </div>
   </div>
 </section>
@@ -146,25 +142,19 @@
 <!-- 🔹 Animasjon -->
 <style>
 @keyframes fadeSlide {
-  0%, 30% {opacity: 1;}
-  35%, 100% {opacity: 0;}
+  0%, 33% {opacity: 1;}
+  40%, 100% {opacity: 0;}
 }
 .animate-fadeSlide {
   animation: fadeSlide 15s infinite;
 }
+
+/* Forskyv starttid for hvert bilde */
+.delay-0 { animation-delay: 0s; }
+.delay-1 { animation-delay: 5s; }
+.delay-2 { animation-delay: 10s; }
 </style>
 
-  <style>
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .animate-fadeInUp {
-      animation: fadeInUp 1s ease-out forwards;
-    }
-    .delay-200 { animation-delay: 0.2s; }
-    .delay-300 { animation-delay: 0.3s; }
-  </style>
 </section>
 
 
