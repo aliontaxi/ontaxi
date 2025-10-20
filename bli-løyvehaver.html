@@ -107,14 +107,31 @@
 <section class="relative pt-24 md:pt-32 pb-20 overflow-hidden">
 
   <!-- Grid med bilder -->
-  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1">
-    <img src="sjafor1.png" alt="OnTaxi sjåfør" class="w-full h-48 md:h-64 object-cover hover:scale-105 transition-transform duration-500">
-    <img src="kunde1.jpg" alt="Fornøyd kunde" class="w-full h-48 md:h-64 object-cover hover:scale-105 transition-transform duration-500">
-    <img src="bil1.jpg" alt="OnTaxi bil" class="w-full h-48 md:h-64 object-cover hover:scale-105 transition-transform duration-500">
-    <img src="haldataksameter.jpg" alt="Taksameter" class="hidden md:block w-full h-48 md:h-64 object-cover hover:scale-105 transition-transform duration-500">
-    <img src="by1.jpg" alt="Oslo by" class="hidden lg:block w-full h-48 md:h-64 object-cover hover:scale-105 transition-transform duration-500">
-    <img src="sjafor2.png" alt="Sjåfør med bil" class="hidden lg:block w-full h-48 md:h-64 object-cover hover:scale-105 transition-transform duration-500">
+  <section class="relative w-full h-[80vh] overflow-hidden">
+  <div class="absolute inset-0 animate-fade-slide">
+    <img src="sjafor1.jpg" class="w-full h-full object-cover" alt="OnTaxi sjåfør">
   </div>
+  <div class="absolute inset-0 opacity-0 animate-fade-slide delay-5000">
+    <img src="kunde1.jpg" class="w-full h-full object-cover" alt="OnTaxi kunde">
+  </div>
+  <div class="absolute inset-0 opacity-0 animate-fade-slide delay-10000">
+    <img src="sjafor2.jpg" class="w-full h-full object-cover" alt="OnTaxi sjåfører">
+  </div>
+
+  <!-- Tekst over -->
+  <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+    <h1 class="text-white text-4xl md:text-6xl font-bold">Bli en del av OnTaxi</h1>
+  </div>
+</section>
+
+<style>
+@keyframes fadeSlide {
+  0%, 33% {opacity: 1;}
+  40%, 100% {opacity: 0;}
+}
+.animate-fade-slide {animation: fadeSlide 15s infinite;}
+</style>
+
 
   <!-- Mørkt filter -->
   <div class="absolute inset-0 bg-black/50"></div>
