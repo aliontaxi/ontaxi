@@ -285,6 +285,38 @@
     });
   </script>
 
+   <!-- 🔝 Scroll-to-top -->
+  <style>
+    .fade-in { opacity: 1; transition: opacity 0.4s ease-in-out; }
+    .fade-out { opacity: 0; transition: opacity 0.4s ease-in-out; }
+  </style>
+
+  <button id="scrollTopBtn"
+    onclick="window.scrollTo({top:0, behavior:'smooth'})"
+    class="opacity-0 pointer-events-none fixed bottom-5 right-5 bg-accent text-white p-3 rounded-full shadow-lg hover:bg-red-700 transition z-50"
+    aria-label="Til toppen">
+    <i data-feather="arrow-up" class="w-5 h-5"></i>
+  </button>
+
+  <script>
+    feather.replace();
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    let isVisible = false;
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 200 && !isVisible) {
+        scrollTopBtn.classList.remove('fade-out');
+        scrollTopBtn.classList.add('fade-in');
+        scrollTopBtn.classList.remove('pointer-events-none');
+        isVisible = true;
+      } else if (window.scrollY <= 200 && isVisible) {
+        scrollTopBtn.classList.remove('fade-in');
+        scrollTopBtn.classList.add('fade-out');
+        scrollTopBtn.classList.add('pointer-events-none');
+        isVisible = false;
+      }
+    });
+  </script>
+
 </body>
 </html>
 
