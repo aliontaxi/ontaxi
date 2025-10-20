@@ -1,1 +1,244 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WVLGSVQD9N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WVLGSVQD9N');
+  </script>
+
+  <!-- 🔹 SEO metadata -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bli løyvehaver | OnTaxi</title>
+  <meta name="description" content="Bli en del av OnTaxi – Norges mest fleksible taxisentral. Tjen mer, betal mindre og få ukentlig utbetaling.">
+  <meta name="keywords" content="ontaxi, bli løyvehaver, taxi oslo, drosje, taksameter, taxisentral, uber bolt samarbeid, ukentlig utbetaling">
+  <meta name="author" content="OnTaxi AS">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Bli løyvehaver hos OnTaxi – Tjen mer, betal mindre">
+  <meta property="og:description" content="Bli en del av OnTaxi og få lavere kostnader, fri montering og ukentlig utbetaling.">
+  <meta property="og:image" content="https://ontaxi.no/hero-bil.png">
+  <meta property="og:url" content="https://ontaxi.no/bli-løyvehaver">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <!-- Tailwind & Feather -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1a3b67',
+            accent: '#b33e3e',
+            dark: '#1f2937'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* 📱 Mobiljusteringer for hero-bilde */
+    @media (max-width: 768px) {
+      .hero-bg {
+        background-position: center;
+        background-size: cover;
+        background-attachment: scroll;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 font-sans">
+
+  <!-- 🔹 Navigasjon med hamburgermeny -->
+  <nav class="bg-white shadow-sm fixed w-full z-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+        <!-- Logo -->
+        <a href="/" class="flex items-center">
+          <img src="OnTaxi-signatur-GIF.gif" alt="OnTaxi logo" class="h-10 mr-3">
+        </a>
+
+        <!-- Desktop-meny -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="/" class="text-gray-900 hover:text-primary">Hjem</a>
+          <a href="taksameter.html" class="text-gray-900 hover:text-primary">Taksameter</a>
+          <a href="bli-løyvehaver.html" class="text-primary font-semibold">Bli løyvehaver</a>
+          <a href="kontakt.html" class="text-gray-900 hover:text-primary">Kontakt</a>
+        </div>
+
+        <!-- Kontakt-knapp -->
+        <div class="hidden md:block">
+          <a href="kontakt.html" class="bg-accent text-white px-6 py-2 rounded-full hover:bg-red-700 transition">
+            Kontakt oss
+          </a>
+        </div>
+
+        <!-- Hamburgermeny-ikon -->
+        <button id="menu-btn" class="md:hidden text-gray-900 focus:outline-none">
+          <i data-feather="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobilmeny -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+      <a href="/" class="block px-4 py-2 text-gray-900 hover:bg-gray-100">Hjem</a>
+      <a href="taksameter.html" class="block px-4 py-2 text-gray-900 hover:bg-gray-100">Taksameter</a>
+      <a href="bli-løyvehaver.html" class="block px-4 py-2 text-primary font-semibold bg-gray-50">Bli løyvehaver</a>
+      <a href="kontakt.html" class="block px-4 py-2 text-gray-900 hover:bg-gray-100">Kontakt</a>
+      <a href="kontakt.html" class="block px-4 py-2 text-accent font-semibold">Kontakt oss</a>
+    </div>
+  </nav>
+
+  <!-- 🔹 Hero -->
+  <section class="hero-bg pt-24 md:pt-32 pb-20 bg-cover bg-center relative" style="background-image: url('Bilioslo.jpg');">
+    <div class="absolute inset-0 bg-black/50"></div>
+    <div class="relative z-10 text-center text-white max-w-3xl mx-auto px-4">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6">Kjør smart. Kjør med OnTaxi.</h1>
+      <p class="text-lg md:text-xl mb-8">Bli en del av Norges mest fleksible taxisentral – uten skjulte kostnader, med ukentlig utbetaling.</p>
+      <a href="#skjema" class="bg-accent text-white px-8 py-3 rounded-full font-semibold hover:bg-red-700 transition">Registrer interesse</a>
+    </div>
+  </section>
+
+  <!-- 🔹 Fordeler -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10">Fordeler som løyvehaver hos OnTaxi</h2>
+      <div class="grid md:grid-cols-2 gap-10 text-left">
+        <div class="flex items-start space-x-4">
+          <i data-feather="dollar-sign" class="w-8 h-8 text-accent"></i>
+          <div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Lav sentralavgift</h3>
+            <p class="text-gray-600">Markedets laveste avgifter og gratis taksametermontering.</p>
+          </div>
+        </div>
+        <div class="flex items-start space-x-4">
+          <i data-feather="cpu" class="w-8 h-8 text-accent"></i>
+          <div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Full støtte for Uber/Bolt</h3>
+            <p class="text-gray-600">Lavere provisjon, integrert system og ukentlig oppgjør.</p>
+          </div>
+        </div>
+        <div class="flex items-start space-x-4">
+          <i data-feather="calendar" class="w-8 h-8 text-accent"></i>
+          <div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Ukentlig utbetaling</h3>
+            <p class="text-gray-600">Få pengene dine rett på konto hver uke, uten forsinkelser.</p>
+          </div>
+        </div>
+        <div class="flex items-start space-x-4">
+          <i data-feather="settings" class="w-8 h-8 text-accent"></i>
+          <div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Ingen bindingstid</h3>
+            <p class="text-gray-600">Fleksible avtaler – du bestemmer hvordan du vil kjøre.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🔹 Hvordan fungerer det -->
+  <section class="py-20 bg-primary text-white text-center">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-12">Hvordan fungerer det?</h2>
+      <div class="grid md:grid-cols-3 gap-10">
+        <div>
+          <div class="text-5xl font-bold text-accent mb-4">1</div>
+          <h3 class="text-xl font-semibold mb-2">Registrer deg</h3>
+          <p>Fyll ut skjemaet under – det tar under 2 minutter.</p>
+        </div>
+        <div>
+          <div class="text-5xl font-bold text-accent mb-4">2</div>
+          <h3 class="text-xl font-semibold mb-2">Få oppsett</h3>
+          <p>Vi monterer taksameter og kobler deg til systemet vårt.</p>
+        </div>
+        <div>
+          <div class="text-5xl font-bold text-accent mb-4">3</div>
+          <h3 class="text-xl font-semibold mb-2">Kjør og tjen penger</h3>
+          <p>Du er klar! Kjør med OnTaxi og få ukentlig utbetaling.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🔹 Skjema -->
+  <section id="skjema" class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center text-gray-900 mb-8">Registrer interesse</h2>
+      <form action="https://formspree.io/f/xeornkeo" method="POST" class="space-y-5">
+        <input type="text" name="navn" placeholder="Navn" required class="w-full border border-gray-300 rounded-lg px-4 py-3">
+        <input type="email" name="epost" placeholder="E-post" required class="w-full border border-gray-300 rounded-lg px-4 py-3">
+        <input type="tel" name="mobil" placeholder="Mobilnummer" required class="w-full border border-gray-300 rounded-lg px-4 py-3">
+        <input type="text" name="løyvenummer" placeholder="Løyvenummer (valgfritt)" class="w-full border border-gray-300 rounded-lg px-4 py-3">
+        <textarea name="melding" rows="5" placeholder="Melding / spørsmål" class="w-full border border-gray-300 rounded-lg px-4 py-3"></textarea>
+        <button type="submit" class="w-full bg-accent text-white py-3 rounded-full font-semibold hover:bg-red-700 transition">Send forespørsel</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- 🔹 Avslutning -->
+  <section class="py-16 bg-primary text-center text-white">
+    <h2 class="text-3xl font-bold mb-4">Klar for å tjene mer?</h2>
+    <p class="text-lg mb-6">Bli en del av fremtidens taxisentral i dag – OnTaxi gjør det enklere å drive.</p>
+    <a href="#skjema" class="bg-accent text-white px-8 py-3 rounded-full font-semibold hover:bg-red-700 transition">Registrer nå</a>
+  </section>
+
+  <!-- 🔹 Footer -->
+  <footer class="bg-gray-900 text-white pt-12 pb-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-8 mb-10">
+        <div>
+          <h3 class="text-xl font-bold mb-4">OnTaxi Norge</h3>
+          <p class="text-gray-400">Enklere drift, lavere kostnader og ukentlig utbetaling – OnTaxi gjør hverdagen bedre for norske sjåfører.</p>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Snarveier</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="taksameter.html" class="hover:text-white">Taksameter</a></li>
+            <li><a href="bli-løyvehaver.html" class="hover:text-white">Bli løyvehaver</a></li>
+            <li><a href="kontakt.html" class="hover:text-white">Kontakt</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Kontakt oss</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li><i data-feather="mail" class="inline w-5 h-5 mr-2"></i> post@ontaxi.no</li>
+            <li><i data-feather="phone" class="inline w-5 h-5 mr-2"></i> +47 400 24 400</li>
+            <li><i data-feather="map-pin" class="inline w-5 h-5 mr-2"></i> Holmenveien 5C, 0374 Oslo</li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 pt-6 text-center text-gray-400 text-sm">
+        © 2025 OnTaxi AS – Alle rettigheter forbeholdt.
+      </div>
+    </div>
+  </footer>
+
+  <!-- 🔹 Scripts -->
+  <script>
+    feather.replace();
+
+    // Hamburgermeny
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>
 
