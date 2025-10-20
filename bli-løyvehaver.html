@@ -104,14 +104,48 @@
   </nav>
 
   <!-- 🔹 Hero -->
-  <section class="hero-bg pt-24 md:pt-32 pb-20 bg-cover bg-center relative" style="background-image: url('Bilioslo.jpg');">
-    <div class="absolute inset-0 bg-black/50"></div>
-    <div class="relative z-10 text-center text-white max-w-3xl mx-auto px-4">
-      <h1 class="text-4xl md:text-5xl font-bold mb-6">Kjør smart. Kjør med OnTaxi.</h1>
-      <p class="text-lg md:text-xl mb-8">Bli en del av Norges mest fleksible taxisentral – uten skjulte kostnader, med ukentlig utbetaling.</p>
-      <a href="#skjema" class="bg-accent text-white px-8 py-3 rounded-full font-semibold hover:bg-red-700 transition">Registrer interesse</a>
-    </div>
-  </section>
+  <!-- 🔹 Hero – Bildekollasj -->
+<section class="relative pt-24 md:pt-32 pb-20 overflow-hidden">
+
+  <!-- Grid med bilder -->
+  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1">
+    <img src="bilder/sjafor1.jpg" alt="OnTaxi sjåfør" class="w-full h-48 md:h-64 object-cover hover:scale-105 transition-transform duration-500">
+    <img src="bilder/kunde1.jpg" alt="Fornøyd kunde" class="w-full h-48 md:h-64 object-cover hover:scale-105 transition-transform duration-500">
+    <img src="bilder/bil1.jpg" alt="OnTaxi bil" class="w-full h-48 md:h-64 object-cover hover:scale-105 transition-transform duration-500">
+    <img src="bilder/taksameter.jpg" alt="Taksameter" class="hidden md:block w-full h-48 md:h-64 object-cover hover:scale-105 transition-transform duration-500">
+    <img src="bilder/by1.jpg" alt="Oslo by" class="hidden lg:block w-full h-48 md:h-64 object-cover hover:scale-105 transition-transform duration-500">
+    <img src="bilder/sjafor2.jpg" alt="Sjåfør med bil" class="hidden lg:block w-full h-48 md:h-64 object-cover hover:scale-105 transition-transform duration-500">
+  </div>
+
+  <!-- Mørkt filter -->
+  <div class="absolute inset-0 bg-black/50"></div>
+
+  <!-- Tekst over collage -->
+  <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
+    <h1 class="text-4xl md:text-5xl font-bold text-white mb-6 animate-fadeInUp">
+      Kjør smart. Kjør med <span class="text-primary">On</span><span class="text-accent">Taxi</span>
+    </h1>
+    <p class="text-lg md:text-xl text-gray-200 max-w-2xl mb-8 animate-fadeInUp delay-200">
+      Bli en del av Norges mest fleksible taxisentral – uten skjulte kostnader, med ukentlig utbetaling.
+    </p>
+    <a href="#skjema" class="bg-accent text-white px-8 py-3 rounded-full font-semibold hover:bg-red-700 transition animate-fadeInUp delay-300">
+      Registrer interesse
+    </a>
+  </div>
+
+  <style>
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fadeInUp {
+      animation: fadeInUp 1s ease-out forwards;
+    }
+    .delay-200 { animation-delay: 0.2s; }
+    .delay-300 { animation-delay: 0.3s; }
+  </style>
+</section>
+
 
   <!-- 🔹 Fordeler -->
   <section class="py-16 bg-white">
