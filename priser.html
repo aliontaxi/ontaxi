@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
-  <!-- Google tag (gtag.js) - bytt ID hvis du bruker annen -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Priser | OnTaxi</title>
+
+  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WVLGSVQD9N"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -10,36 +14,30 @@
     gtag('config', 'G-WVLGSVQD9N');
   </script>
 
-  <!-- 🔹 SEO -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Priser | OnTaxi</title>
-  <meta name="description" content="Se våre taksameterpriser for 1–4 og 5–8 passasjerer. OnTaxi tilbyr konkurransedyktige priser og enkle vilkår.">
-  <meta name="keywords" content="ontaxi, priser, taxi priser, taksameter, drosje oslo, 1-4, 5-8, løyvehaver, taxisentral">
-  <meta name="author" content="OnTaxi AS">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://ontaxi.no/priser">
+  <!-- 🔹 SEO metadata -->
+  <meta name="description" content="Se OnTaxi sine priser. Velg antall passasjerer og få oversikt over takster for dag, kveld/natt, helg og høytid." />
+  <meta name="keywords" content="ontaxi priser, taxi priser oslo, taxitakster, drosje pris, taxi norge, on taxi priser" />
+  <meta name="author" content="OnTaxi AS" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://ontaxi.no/priser" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Priser | OnTaxi">
-  <meta property="og:description" content="Se våre priser for 1–4 og 5–8 passasjerer.">
-  <meta property="og:image" content="https://ontaxi.no/bilioslo.jpg">
-  <meta property="og:url" content="https://ontaxi.no/priser">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:title" content="Priser | OnTaxi" />
+  <meta property="og:description" content="Velg antall passasjerer og se takster for dag, kveld/natt, helg og høytid." />
+  <meta property="og:image" content="https://ontaxi.no/bilioslo.jpg" />
+  <meta property="og:url" content="https://ontaxi.no/priser" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Favicons (rot-relative) -->
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/web-app-manifest-192x192.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <meta name="theme-color" content="#ffffff">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="web-app-manifest-192x192.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="web-app-manifest-512x512.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="shortcut icon" href="favicon.ico" />
 
-  <!-- Tailwind + Feather -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/feather-icons"></script>
+
   <script>
     tailwind.config = {
       theme: {
@@ -47,7 +45,7 @@
           colors: {
             primary: '#1a3b67',
             accent: '#b33e3e',
-            dark: '#1f2937'
+            dark: '#1F2937'
           }
         }
       }
@@ -55,39 +53,10 @@
   </script>
 
   <style>
-    .text-shadow { text-shadow: 2px 2px 4px rgba(0,0,0,0.35); }
-
-    /* Scroll-to-top fade */
-    .fade-in { opacity: 1; transition: opacity 0.35s ease-in-out; }
-    .fade-out { opacity: 0; transition: opacity 0.35s ease-in-out; }
+    /* Smooth show/hide */
+    .fade-in { opacity: 1; transform: translateY(0); transition: all .25s ease; }
+    .fade-out { opacity: 0; transform: translateY(6px); transition: all .25s ease; }
   </style>
-
-  <!-- Structured data (for tydelig “OnTaxi Norge”) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "OnTaxi AS",
-    "alternateName": "OnTaxi",
-    "url": "https://ontaxi.no/",
-    "logo": "https://ontaxi.no/favicon-96x96.png",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Holmenveien 5C",
-      "addressLocality": "Oslo",
-      "postalCode": "0374",
-      "addressCountry": "NO"
-    },
-    "contactPoint": [{
-      "@type": "ContactPoint",
-      "contactType": "customer support",
-      "email": "post@ontaxi.no",
-      "telephone": "+47 400 24 400",
-      "areaServed": "NO",
-      "availableLanguage": ["no", "en"]
-    }]
-  }
-  </script>
 </head>
 
 <body class="bg-gray-50 font-sans">
@@ -96,11 +65,9 @@
   <nav class="bg-white shadow-sm fixed w-full z-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between h-16">
-
-        <!-- Logo -->
         <div class="flex items-center">
           <a href="/" class="flex items-center">
-            <img src="OnTaxi-signatur-GIF.gif" alt="OnTaxi logo" class="h-10 mr-3">
+            <img src="OnTaxi-signatur-GIF.gif" alt="OnTaxi logo" class="h-10 mr-3" />
           </a>
         </div>
 
@@ -108,21 +75,18 @@
         <div class="hidden md:flex items-center space-x-8">
           <a href="/" class="text-gray-900 hover:text-primary transition">Hjem</a>
           <a href="taksameter.html" class="text-gray-900 hover:text-primary transition">Taksameter</a>
-          <a href="priser.html" class="text-primary font-semibold">Priser</a>
+          <a href="priser.html" class="text-gray-900 hover:text-primary transition font-semibold">Priser</a>
           <a href="bli-partner.html" class="text-gray-900 hover:text-primary transition">Bli partner</a>
           <a href="kontakt.html" class="text-gray-900 hover:text-primary transition">Kontakt</a>
         </div>
 
-        <!-- Kontakt knapp (PC) -->
-        <div class="hidden md:flex items-center">
+        <div class="flex items-center gap-3">
           <a href="kontakt.html" class="bg-accent text-white px-6 py-2 rounded-full hover:bg-red-700 transition">
             Kontakt oss
           </a>
-        </div>
 
-        <!-- Mobilmeny knapp -->
-        <div class="md:hidden flex items-center">
-          <button id="menu-btn" class="text-gray-900 focus:outline-none">
+          <!-- Hamburger (mobile) -->
+          <button id="menuBtn" class="md:hidden p-2 rounded-lg hover:bg-gray-100" aria-label="Meny">
             <i data-feather="menu"></i>
           </button>
         </div>
@@ -130,143 +94,163 @@
     </div>
 
     <!-- Mobilmeny -->
-    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
-      <a href="/" class="block px-4 py-2 text-gray-900 hover:bg-gray-100">Hjem</a>
-      <a href="taksameter.html" class="block px-4 py-2 text-gray-900 hover:bg-gray-100">Taksameter</a>
-      <a href="priser.html" class="block px-4 py-2 text-primary font-semibold bg-gray-50">Priser</a>
-      <a href="bli-partner.html" class="block px-4 py-2 text-gray-900 hover:bg-gray-100">Bli partner</a>
-      <a href="kontakt.html" class="block px-4 py-2 text-gray-900 hover:bg-gray-100">Kontakt</a>
-      <a href="kontakt.html" class="block px-4 py-2 mt-2 bg-accent text-white text-center rounded hover:bg-red-700 transition">
-        Kontakt oss
-      </a>
+    <div id="mobileMenu" class="md:hidden hidden border-t bg-white">
+      <div class="max-w-7xl mx-auto px-4 py-4 space-y-3">
+        <a href="/" class="block text-gray-900 hover:text-primary transition">Hjem</a>
+        <a href="taksameter.html" class="block text-gray-900 hover:text-primary transition">Taksameter</a>
+        <a href="priser.html" class="block text-gray-900 hover:text-primary transition font-semibold">Priser</a>
+        <a href="bli-partner.html" class="block text-gray-900 hover:text-primary transition">Bli partner</a>
+        <a href="kontakt.html" class="block text-gray-900 hover:text-primary transition">Kontakt</a>
+      </div>
     </div>
   </nav>
 
-  <!-- 🔹 Hero -->
-  <section class="pt-24 pb-16 md:pt-28 md:pb-20 bg-gradient-to-r from-[#1a3b67] via-[#2b4d83] to-[#b33e3e] text-white">
+  <!-- 🔹 Header / intro -->
+  <header class="pt-28 pb-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 tracking-tight">
+        Priser hos <span class="text-primary">On</span><span class="text-accent">Taxi</span>
+      </h1>
+      <p class="mt-4 text-gray-600 max-w-3xl mx-auto">
+        Velg antall passasjerer og få en ryddig oversikt over takster.
+      </p>
+
+      <!-- Passasjer-velger -->
+      <div class="mt-8 inline-flex flex-wrap justify-center gap-2 bg-white p-2 rounded-2xl shadow-sm border">
+        <button class="px-4 py-2 rounded-xl text-sm font-medium bg-primary text-white" data-pax="1-4">1–4</button>
+        <button class="px-4 py-2 rounded-xl text-sm font-medium text-gray-700 hover:bg-gray-100" data-pax="5-8">5–8</button>
+        <button class="px-4 py-2 rounded-xl text-sm font-medium text-gray-700 hover:bg-gray-100" data-pax="9-12">9–12</button>
+        <button class="px-4 py-2 rounded-xl text-sm font-medium text-gray-700 hover:bg-gray-100" data-pax="13-16">13–16</button>
+      </div>
+
+      <p class="mt-3 text-xs text-gray-500">
+        * Eksempelvisning. Endelige priser kan variere ved spesialturer/avtaler.
+      </p>
+    </div>
+  </header>
+
+  <!-- 🔹 Pris-kort -->
+  <main class="pb-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row gap-10 items-center">
-        <div class="md:w-1/2 text-center md:text-left">
-          <h1 class="text-4xl md:text-5xl font-bold mb-4 text-shadow">
-            Våre priser
-          </h1>
-          <p class="text-lg text-gray-100 max-w-xl">
-            Her ser du prisene våre per passasjergruppe. Velg 1–4 eller 5–8 og sammenlign enkelt.
-          </p>
+      <div id="cardsWrap" class="grid lg:grid-cols-4 gap-6 fade-in">
 
-          <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
-            <a href="kontakt.html" class="bg-white text-primary px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition">
-              Spør oss om priser
-            </a>
-            <a href="#priser" class="bg-transparent border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-primary transition">
-              Se prisene
-            </a>
-          </div>
-        </div>
-
-        <div class="md:w-1/2 w-full">
-          <div class="bg-white/10 border border-white/20 rounded-2xl p-5 backdrop-blur">
-            <div class="flex items-center gap-3 mb-3">
-              <i data-feather="info" class="w-5 h-5"></i>
-              <p class="text-sm text-gray-100">
-                Prisene under er oppgitt som satser (start / km / time / minstepris).
-              </p>
-            </div>
-            <div class="flex items-center gap-3">
-              <i data-feather="shield" class="w-5 h-5"></i>
-              <p class="text-sm text-gray-100">
-                Ingen skjulte kostnader – tydelig og enkelt.
-              </p>
+        <!-- Dag -->
+        <section class="bg-white rounded-2xl border shadow-sm overflow-hidden">
+          <div class="px-6 py-4 bg-primary text-white">
+            <div class="flex items-center justify-between">
+              <div>
+                <h2 class="text-lg font-bold">Dag</h2>
+                <p class="text-xs opacity-90">Man–Fre 06:00–17:00</p>
+              </div>
+              <i data-feather="sun" class="w-6 h-6"></i>
             </div>
           </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- 🔹 Priser -->
-  <section id="priser" class="py-16 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-      <!-- Header -->
-      <div class="text-center mb-10">
-        <h2 class="text-3xl font-bold text-gray-900 mb-3">Velg passasjergruppe</h2>
-        <p class="text-gray-600 max-w-2xl mx-auto">
-          Vi har kun to grupper på denne siden: <strong>1–4</strong> og <strong>5–8</strong>.
-          (9–12 og 13–16 er fjernet.)
-        </p>
-      </div>
-
-      <!-- Selector -->
-      <div class="flex justify-center mb-10">
-        <div class="inline-flex bg-gray-100 rounded-full p-1">
-          <button class="px-5 py-2 rounded-full font-semibold transition"
-                  id="btn-1-4" data-pax="1-4">
-            1–4
-          </button>
-          <button class="px-5 py-2 rounded-full font-semibold transition"
-                  id="btn-5-8" data-pax="5-8">
-            5–8
-          </button>
-        </div>
-      </div>
-
-      <!-- Cards grid -->
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6" id="priceGrid">
-        <!-- JS renders cards here -->
-      </div>
-
-      <!-- Note -->
-      <div class="mt-10 bg-gray-50 border border-gray-200 rounded-2xl p-6">
-        <div class="flex items-start gap-3">
-          <i data-feather="alert-circle" class="w-6 h-6 text-accent mt-0.5"></i>
-          <div>
-            <h3 class="font-semibold text-gray-900 mb-1">Merk</h3>
-            <p class="text-gray-700">
-              Prisene kan variere ved høytider eller spesielle avtaler. Ta kontakt hvis du ønsker fastpris eller bedriftsavtale.
-            </p>
+          <div class="p-6 space-y-3 text-sm">
+            <div class="flex justify-between"><span class="text-gray-600">Startpris</span><span class="font-semibold" data-field="day_start">—</span></div>
+            <div class="flex justify-between"><span class="text-gray-600">Pris per km</span><span class="font-semibold" data-field="day_km">—</span></div>
+            <div class="flex justify-between"><span class="text-gray-600">Pris per minutt</span><span class="font-semibold" data-field="day_min">—</span></div>
+            <div class="flex justify-between"><span class="text-gray-600">Minstepris</span><span class="font-semibold" data-field="day_minprice">—</span></div>
+            <div class="pt-4 text-xs text-gray-500 border-t">
+              Transparent prising – ingen skjulte gebyrer.
+            </div>
           </div>
-        </div>
+        </section>
+
+        <!-- Kveld/Natt -->
+        <section class="bg-white rounded-2xl border shadow-sm overflow-hidden">
+          <div class="px-6 py-4 bg-accent text-white">
+            <div class="flex items-center justify-between">
+              <div>
+                <h2 class="text-lg font-bold">Kveld / Natt</h2>
+                <p class="text-xs opacity-90">Man–Fre 17:00–06:00</p>
+              </div>
+              <i data-feather="moon" class="w-6 h-6"></i>
+            </div>
+          </div>
+          <div class="p-6 space-y-3 text-sm">
+            <div class="flex justify-between"><span class="text-gray-600">Startpris</span><span class="font-semibold" data-field="night_start">—</span></div>
+            <div class="flex justify-between"><span class="text-gray-600">Pris per km</span><span class="font-semibold" data-field="night_km">—</span></div>
+            <div class="flex justify-between"><span class="text-gray-600">Pris per minutt</span><span class="font-semibold" data-field="night_min">—</span></div>
+            <div class="flex justify-between"><span class="text-gray-600">Minstepris</span><span class="font-semibold" data-field="night_minprice">—</span></div>
+            <div class="pt-4 text-xs text-gray-500 border-t">
+              Perfekt for flytog/ut på byen.
+            </div>
+          </div>
+        </section>
+
+        <!-- Helg -->
+        <section class="bg-white rounded-2xl border shadow-sm overflow-hidden">
+          <div class="px-6 py-4 bg-gray-900 text-white">
+            <div class="flex items-center justify-between">
+              <div>
+                <h2 class="text-lg font-bold">Helg</h2>
+                <p class="text-xs opacity-90">Fre 17:00 – Man 06:00</p>
+              </div>
+              <i data-feather="clock" class="w-6 h-6"></i>
+            </div>
+          </div>
+          <div class="p-6 space-y-3 text-sm">
+            <div class="flex justify-between"><span class="text-gray-600">Startpris</span><span class="font-semibold" data-field="weekend_start">—</span></div>
+            <div class="flex justify-between"><span class="text-gray-600">Pris per km</span><span class="font-semibold" data-field="weekend_km">—</span></div>
+            <div class="flex justify-between"><span class="text-gray-600">Pris per minutt</span><span class="font-semibold" data-field="weekend_min">—</span></div>
+            <div class="flex justify-between"><span class="text-gray-600">Minstepris</span><span class="font-semibold" data-field="weekend_minprice">—</span></div>
+            <div class="pt-4 text-xs text-gray-500 border-t">
+              Gjelder helgetid iht. lokal takst.
+            </div>
+          </div>
+        </section>
+
+        <!-- Høytid -->
+        <section class="bg-white rounded-2xl border shadow-sm overflow-hidden">
+          <div class="px-6 py-4 bg-gradient-to-r from-primary to-accent text-white">
+            <div class="flex items-center justify-between">
+              <div>
+                <h2 class="text-lg font-bold">Høytid</h2>
+                <p class="text-xs opacity-90">00–24 (utvalgte perioder)</p>
+              </div>
+              <i data-feather="star" class="w-6 h-6"></i>
+            </div>
+          </div>
+          <div class="p-6 space-y-3 text-sm">
+            <div class="flex justify-between"><span class="text-gray-600">Startpris</span><span class="font-semibold" data-field="holiday_start">—</span></div>
+            <div class="flex justify-between"><span class="text-gray-600">Pris per km</span><span class="font-semibold" data-field="holiday_km">—</span></div>
+            <div class="flex justify-between"><span class="text-gray-600">Pris per minutt</span><span class="font-semibold" data-field="holiday_min">—</span></div>
+            <div class="flex justify-between"><span class="text-gray-600">Minstepris</span><span class="font-semibold" data-field="holiday_minprice">—</span></div>
+            <div class="pt-4 text-xs text-gray-500 border-t">
+              Gjelder høytidsperioder og enkelte helligdager.
+            </div>
+          </div>
+        </section>
+
       </div>
 
+      <!-- Nederste linje -->
+      <div class="mt-8 text-center text-xs text-gray-500">
+        Har du spørsmål om priser for bedriftsavtaler eller faste ruter? <a href="kontakt.html" class="text-primary underline">Kontakt oss</a>.
+      </div>
     </div>
-  </section>
-
-  <!-- 🔹 CTA -->
-  <section class="py-14 bg-primary text-center text-white">
-    <div class="max-w-3xl mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-3">Vil du sammenligne eller sette opp avtale?</h2>
-      <p class="text-gray-100 mb-7">Kontakt oss – vi svarer raskt og hjelper deg med riktig løsning.</p>
-      <a href="kontakt.html" class="bg-accent text-white px-8 py-3 rounded-full font-semibold hover:bg-red-700 transition">
-        Kontakt OnTaxi
-      </a>
-    </div>
-  </section>
+  </main>
 
   <!-- 🔹 Footer -->
   <footer class="bg-gray-900 text-white pt-12 pb-6">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
       <div class="grid md:grid-cols-3 gap-8 mb-10">
         <div>
           <h3 class="text-xl font-bold mb-4">OnTaxi AS</h3>
           <p class="text-gray-400">
-            Enklere drift, lavere kostnader og ukentlig utbetaling –
-            OnTaxi gjør hverdagen bedre for deg som sjåfør.
+            Enklere drift, lavere kostnader og ukentlig utbetaling – OnTaxi gjør hverdagen bedre for norske sjåfører.
           </p>
         </div>
-
         <div>
           <h4 class="text-lg font-semibold mb-4">Snarveier</h4>
           <ul class="space-y-2 text-gray-400">
+            <li><a href="/" class="hover:text-white transition">Hjem</a></li>
             <li><a href="taksameter.html" class="hover:text-white transition">Taksameter</a></li>
             <li><a href="priser.html" class="hover:text-white transition">Priser</a></li>
             <li><a href="bli-partner.html" class="hover:text-white transition">Bli partner</a></li>
             <li><a href="kontakt.html" class="hover:text-white transition">Kontakt</a></li>
           </ul>
         </div>
-
         <div>
           <h4 class="text-lg font-semibold mb-4">Kontakt oss</h4>
           <ul class="space-y-2 text-gray-400">
@@ -280,9 +264,7 @@
             </li>
             <li class="flex items-center">
               <i data-feather="map-pin" class="w-5 h-5 mr-2"></i>
-              <a href="https://www.google.com/maps?q=Holmenveien+5C,+0374+Oslo,+Norge"
-                 target="_blank" rel="noopener noreferrer"
-                 class="hover:text-white transition">
+              <a href="https://www.google.com/maps?q=Holmenveien+5C,+0374+Oslo,+Norway" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">
                 Holmenveien 5C – 0374 Oslo, Norge
               </a>
             </li>
@@ -291,133 +273,107 @@
       </div>
 
       <div class="border-t border-gray-800 pt-6 text-center text-gray-400 text-sm">
-        © 2026 OnTaxi AS – Alle rettigheter forbeholdt.
+        © 2025 OnTaxi AS – Alle rettigheter forbeholdt.
       </div>
     </div>
   </footer>
 
-  <!-- 🔝 Scroll-to-top -->
+  <!-- 🔹 Scroll-to-top knapp -->
   <button id="scrollTopBtn"
-    onclick="window.scrollTo({top:0, behavior:'smooth'})"
-    class="opacity-0 pointer-events-none fixed bottom-5 right-5 bg-accent text-white p-3 rounded-full shadow-lg hover:bg-red-700 transition z-50"
-    aria-label="Til toppen">
-    <i data-feather="arrow-up" class="w-5 h-5"></i>
+          class="fixed bottom-6 right-6 bg-accent text-white p-3 rounded-full shadow-lg opacity-0 pointer-events-none transition duration-300"
+          aria-label="Scroll til toppen">
+    <i data-feather="arrow-up"></i>
   </button>
 
   <script>
-    // Feather
     feather.replace();
 
     // Mobilmeny
-    document.getElementById("menu-btn").addEventListener("click", function () {
-      const menu = document.getElementById("mobile-menu");
-      menu.classList.toggle("hidden");
-    });
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn?.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
 
-    // Scroll-to-top (vises etter 200px)
-    const scrollTopBtn = document.getElementById('scrollTopBtn');
-    let isVisible = false;
+    // Scroll-to-top (fade)
+    const btn = document.getElementById('scrollTopBtn');
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 200 && !isVisible) {
-        scrollTopBtn.classList.remove('fade-out');
-        scrollTopBtn.classList.add('fade-in');
-        scrollTopBtn.classList.remove('pointer-events-none');
-        isVisible = true;
-      } else if (window.scrollY <= 200 && isVisible) {
-        scrollTopBtn.classList.remove('fade-in');
-        scrollTopBtn.classList.add('fade-out');
-        scrollTopBtn.classList.add('pointer-events-none');
-        isVisible = false;
+      if (window.scrollY > 250) {
+        btn.classList.remove('opacity-0','pointer-events-none');
+        btn.classList.add('opacity-100');
+      } else {
+        btn.classList.add('opacity-0','pointer-events-none');
+        btn.classList.remove('opacity-100');
       }
     });
+    btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-    // ✅ Prisdata (kun 1–4 og 5–8)
-    // Du kan endre tallene her – resten oppdateres automatisk
+    // Pris-data (EKSEMPEL) – bytt til dine ekte priser
     const PRICE_DATA = {
       "1-4": {
-        day:     { title: "Dag",        subtitle: "Man–Fre 06:00–17:00", start: 79,  perKm: 20, perHour: 780,  min: 169 },
-        evening: { title: "Kveld/Natt", subtitle: "Man–Fre 17:00–06:00", start: 88,  perKm: 22, perHour: 840,  min: 203 },
-        weekend: { title: "Helg",       subtitle: "Fre–Man 17:00–06:00", start: 115, perKm: 24, perHour: 936,  min: 220 },
-        holiday: { title: "Høytider",   subtitle: "00–24",               start: 120, perKm: 29, perHour: 1131, min: 245 }
+        day_start: "79 kr", day_km: "20 kr", day_min: "13 kr", day_minprice: "169 kr",
+        night_start: "88 kr", night_km: "22 kr", night_min: "14 kr", night_minprice: "203 kr",
+        weekend_start: "115 kr", weekend_km: "24 kr", weekend_min: "16 kr", weekend_minprice: "220 kr",
+        holiday_start: "120 kr", holiday_km: "29 kr", holiday_min: "19 kr", holiday_minprice: "245 kr"
       },
       "5-8": {
-        day:     { title: "Dag",        subtitle: "Man–Fre 06:00–17:00", start: 0,  perKm: 0,  perHour: 0,   min: 0 },
-        evening: { title: "Kveld/Natt", subtitle: "Man–Fre 17:00–06:00", start: 0,  perKm: 0,  perHour: 0,   min: 0 },
-        weekend: { title: "Helg",       subtitle: "Fre–Man 17:00–06:00", start: 0,  perKm: 0,  perHour: 0,   min: 0 },
-        holiday: { title: "Høytider",   subtitle: "00–24",               start: 0,  perKm: 0,  perHour: 0,   min: 0 }
+        day_start: "99 kr", day_km: "24 kr", day_min: "15 kr", day_minprice: "199 kr",
+        night_start: "109 kr", night_km: "26 kr", night_min: "16 kr", night_minprice: "229 kr",
+        weekend_start: "129 kr", weekend_km: "28 kr", weekend_min: "18 kr", weekend_minprice: "249 kr",
+        holiday_start: "139 kr", holiday_km: "32 kr", holiday_min: "21 kr", holiday_minprice: "269 kr"
+      },
+      "9-12": {
+        day_start: "119 kr", day_km: "28 kr", day_min: "17 kr", day_minprice: "229 kr",
+        night_start: "129 kr", night_km: "30 kr", night_min: "18 kr", night_minprice: "259 kr",
+        weekend_start: "149 kr", weekend_km: "32 kr", weekend_min: "20 kr", weekend_minprice: "279 kr",
+        holiday_start: "159 kr", holiday_km: "36 kr", holiday_min: "23 kr", holiday_minprice: "299 kr"
+      },
+      "13-16": {
+        day_start: "139 kr", day_km: "32 kr", day_min: "19 kr", day_minprice: "259 kr",
+        night_start: "149 kr", night_km: "34 kr", night_min: "20 kr", night_minprice: "289 kr",
+        weekend_start: "169 kr", weekend_km: "36 kr", weekend_min: "22 kr", weekend_minprice: "309 kr",
+        holiday_start: "179 kr", holiday_km: "40 kr", holiday_min: "25 kr", holiday_minprice: "329 kr"
       }
     };
 
-    function formatNok(n) {
-      return (Number(n) || 0).toLocaleString('no-NO') + ",-";
-    }
+    const wrap = document.getElementById('cardsWrap');
+    const paxButtons = document.querySelectorAll('button[data-pax]');
 
-    function cardHtml(item) {
-      return `
-        <div class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition">
-          <div class="flex items-start justify-between gap-3 mb-4">
-            <div>
-              <h3 class="text-xl font-bold text-gray-900">${item.title}</h3>
-              <p class="text-gray-500 text-sm">${item.subtitle}</p>
-            </div>
-            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary">
-              Satser
-            </span>
-          </div>
-
-          <div class="space-y-2 text-gray-800">
-            <div class="flex justify-between"><span>Startpris</span><span class="font-semibold">${formatNok(item.start)}</span></div>
-            <div class="flex justify-between"><span>Pris per km</span><span class="font-semibold">${formatNok(item.perKm)}</span></div>
-            <div class="flex justify-between"><span>Pris per time</span><span class="font-semibold">${formatNok(item.perHour)}</span></div>
-            <div class="flex justify-between border-t pt-2"><span>Minstepris</span><span class="font-semibold text-accent">${formatNok(item.min)}</span></div>
-          </div>
-
-          ${Number(item.start) === 0 && Number(item.perKm) === 0 && Number(item.perHour) === 0 && Number(item.min) === 0
-            ? `<p class="mt-4 text-sm text-gray-500">Legg inn dine satser for 5–8 her (foreløpig 0).</p>`
-            : ``
-          }
-        </div>
-      `;
-    }
-
-    function setActiveButton(pax) {
-      const btn14 = document.getElementById('btn-1-4');
-      const btn58 = document.getElementById('btn-5-8');
-
-      const activeClasses = ['bg-white', 'shadow', 'text-primary'];
-      const inactiveClasses = ['text-gray-700', 'hover:text-primary'];
-
-      // Reset
-      [btn14, btn58].forEach(btn => {
-        btn.classList.remove(...activeClasses);
-        btn.classList.add(...inactiveClasses);
+    function setActive(btn){
+      paxButtons.forEach(b => {
+        b.classList.remove('bg-primary','text-white');
+        b.classList.add('text-gray-700');
+        b.classList.add('hover:bg-gray-100');
       });
-
-      // Active
-      const activeBtn = pax === '1-4' ? btn14 : btn58;
-      activeBtn.classList.add(...activeClasses);
-      activeBtn.classList.remove(...inactiveClasses);
+      btn.classList.add('bg-primary','text-white');
+      btn.classList.remove('text-gray-700');
+      btn.classList.remove('hover:bg-gray-100');
     }
 
-    function renderPrices(pax) {
-      const data = PRICE_DATA[pax];
-      const grid = document.getElementById('priceGrid');
+    function renderPrices(paxKey){
+      // liten overgang
+      wrap.classList.remove('fade-in');
+      wrap.classList.add('fade-out');
 
-      const cards = [
-        data.day, data.evening, data.weekend, data.holiday
-      ].map(cardHtml).join('');
+      setTimeout(() => {
+        const data = PRICE_DATA[paxKey];
+        document.querySelectorAll('[data-field]').forEach(el => {
+          const key = el.getAttribute('data-field');
+          el.textContent = data?.[key] ?? "—";
+        });
 
-      grid.innerHTML = cards;
-      setActiveButton(pax);
-      feather.replace();
+        wrap.classList.remove('fade-out');
+        wrap.classList.add('fade-in');
+      }, 180);
     }
 
-    // Click handlers
-    document.getElementById('btn-1-4').addEventListener('click', () => renderPrices('1-4'));
-    document.getElementById('btn-5-8').addEventListener('click', () => renderPrices('5-8'));
+    paxButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        setActive(btn);
+        renderPrices(btn.dataset.pax);
+      });
+    });
 
-    // Default
-    renderPrices('1-4');
+    // default
+    renderPrices("1-4");
   </script>
 </body>
 </html>
