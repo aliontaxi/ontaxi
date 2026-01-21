@@ -141,21 +141,53 @@
     </div>
 
     <!-- Mobilmeny -->
-    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
-      <a href="/" class="block px-4 py-2 text-gray-900 hover:bg-gray-100">Hjem</a>
-      <a href="taksameter.html" class="block px-4 py-2 text-gray-900 hover:bg-gray-100">Taksameter</a>
-	  <a href="priser.html" class="text-gray-900 hover:text-primary transition">Priser</a>
-      <a href="bli-partner.html" class="block px-4 py-2 text-gray-900 hover:bg-gray-100">Bli partner</a>
-      <a href="kontakt.html" class="block px-4 py-2 mt-2 bg-accent text-white text-center rounded hover:bg-red-700 transition">
+    <!-- Mobilmeny -->
+<div id="mobileMenu" class="md:hidden hidden border-t bg-white">
+  <div class="max-w-7xl mx-auto py-4">
+
+    <a href="/"
+       class="block px-4 py-3 text-gray-900 hover:text-primary transition">
+      Hjem
+    </a>
+
+    <a href="taksameter.html"
+       class="block px-4 py-3 text-gray-900 hover:text-primary transition">
+      Taksameter
+    </a>
+
+    <a href="priser.html"
+       class="block px-4 py-3 text-gray-900 hover:text-primary transition">
+      Priser
+    </a>
+
+    <a href="bli-partner.html"
+       class="block px-4 py-3 text-gray-900 hover:text-primary transition">
+      Bli partner
+    </a>
+
+    <!-- Aktiv side -->
+    <a href="kontakt.html"
+       class="block px-4 py-3 text-primary font-semibold bg-gray-50">
+      Kontakt
+    </a>
+
+    <!-- Rød CTA nederst (kun én) -->
+    <div class="px-4 pt-4">
+      <a href="kontakt.html"
+         class="block w-full text-center bg-accent text-white py-3 rounded-xl font-semibold shadow-md hover:bg-red-700 transition">
         Kontakt oss
       </a>
     </div>
+
+  </div>
+</div>
+
   </nav>
 
   <!-- Script for mobilmeny -->
   <script>
     document.getElementById("menu-btn").addEventListener("click", function () {
-      const menu = document.getElementById("mobile-menu");
+      const menu = document.getElementById("mobileMenu");
       menu.classList.toggle("hidden");
     });
   </script>
