@@ -75,10 +75,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>OnTaxi Taxisentral</title>
  <!-- Favicon ikoner -->
-<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
 <link rel="icon" type="image/png" sizes="192x192" href="web-app-manifest-192x192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="web-app-manifest-512x512.png">
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="shortcut icon" href="favicon.ico">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/feather-icons"></script>
@@ -104,7 +104,7 @@
 	<style>
   /* 📱 Fikser bakgrunnsbilde på mobil – viser bilen */
   @media (max-width: 768px) {
-    section[style*="Bilioslo.jpg"] {
+    section[style*="/Bilioslo.jpg"] {
       background-attachment: scroll !important;  /* iOS bug fix */
       background-position: 85% center !important; /* flytter fokus mot bilen */
       background-size: cover !important;         /* sørger for riktig dekning */
@@ -113,7 +113,7 @@
   }
 
   @media (max-width: 480px) {
-    section[style*="Bilioslo.jpg"] {
+    section[style*="/Bilioslo.jpg"] {
       background-position: 85% center !important; /* mer fokus på bilen på små skjermer */
       min-height: 700px !important;
     }
@@ -181,7 +181,7 @@
 
   <!-- 🔹 Hero -->
 <section class="pt-24 pb-16 md:pt-32 md:pb-24 bg-cover bg-center relative"
-         style="background-image: url('Bilioslo.jpg');">
+         style="background-image: url('/Bilioslo.jpg');">
   
   <!-- Mørkt filter -->
   <div class="absolute inset-0 bg-black/40"></div>
