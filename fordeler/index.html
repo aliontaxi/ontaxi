@@ -3,154 +3,366 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Fordeler | OnTaxi</title>
-  <meta name="description" content="Se fordelene med OnTaxi. Vi tilbyr gunstige avtaler og samarbeid som reduserer kostnadene for løyvehavere." />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WVLGSVQD9N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WVLGSVQD9N');
+  </script>
+
+  <!-- SEO -->
+  <meta name="description" content="Se fordelene med OnTaxi. Vi tilbyr gunstige avtaler og samarbeid som gjør hverdagen enklere og mer lønnsom for løyvehavere." />
+  <meta name="keywords" content="ontaxi fordeler, ontaxi avtaler, drosjesentral fordeler, løyvehaver avtaler, dekkverksted taxi, ladestasjoner taxi" />
+  <meta name="author" content="OnTaxi AS" />
+  <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://ontaxi.no/fordeler/" />
 
-  <!-- Tailwind -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta property="og:title" content="Fordeler | OnTaxi" />
+  <meta property="og:description" content="Gunstige avtaler og fordeler for løyvehavere hos OnTaxi." />
+  <meta property="og:image" content="https://ontaxi.no/Bilioslo.jpg" />
+  <meta property="og:url" content="https://ontaxi.no/fordeler/" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Farger -->
+  <!-- Favicons -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/web-app-manifest-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#ffffff">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            primary: "#1a3b67",
-            accent: "#b33e3e"
+            primary: '#1a3b67',
+            accent: '#b33e3e',
+            dark: '#1F2937'
           }
         }
       }
     }
   </script>
 
-  <!-- Icons -->
-  <script src="https://unpkg.com/feather-icons"></script>
+  <style>
+    .fade-in {
+      opacity: 1;
+      transform: translateY(0);
+      transition: all .25s ease;
+    }
+    .fade-out {
+      opacity: 0;
+      transform: translateY(6px);
+      transition: all .25s ease;
+    }
+  </style>
 </head>
 
-<body class="bg-white text-gray-900">
+<body class="bg-gray-50 font-sans flex flex-col min-h-screen">
 
-<!-- 🔹 NAVBAR -->
-<header class="bg-white shadow-sm fixed w-full z-50">
-  <div class="max-w-7xl mx-auto px-4 flex justify-between items-center h-16">
-    
-    <a href="/" class="text-2xl font-bold text-primary">OnTaxi</a>
+  <!-- 🔹 Navigasjon -->
+  <nav class="bg-white shadow-sm fixed w-full z-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
 
-    <nav class="hidden md:flex items-center gap-6">
-      <a href="/" class="hover:text-primary">Hjem</a>
-      <a href="/taksameter/" class="hover:text-primary">Taksameter</a>
-      <a href="/priser/" class="hover:text-primary">Priser</a>
-      <a href="/fordeler/" class="text-primary font-semibold">Fordeler</a>
-      <a href="/bli-partner/" class="hover:text-primary">Bli partner</a>
-    </nav>
+        <!-- Logo -->
+        <a href="/" class="flex items-center">
+          <img src="/OnTaxi-signatur-GIF.gif" alt="OnTaxi logo" class="h-10 mr-3">
+        </a>
 
-    <a href="/kontakt/" class="hidden md:inline-block bg-accent text-white px-5 py-2 rounded-full font-semibold hover:bg-red-700 transition">
-      Kontakt oss
-    </a>
-  </div>
-</header>
+        <!-- Desktop meny -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="/" class="text-gray-900 hover:text-primary transition">Hjem</a>
+          <a href="/taksameter" class="text-gray-900 hover:text-primary transition">Taksameter</a>
+          <a href="/priser" class="text-gray-900 hover:text-primary transition">Priser</a>
+          <a href="/fordeler/" class="text-primary font-semibold">Fordeler</a>
+          <a href="/bli-partner" class="text-gray-900 hover:text-primary transition">Bli partner</a>
+        </div>
 
-<!-- 🔹 HERO -->
-<section class="pt-24 pb-16 md:pt-32 md:pb-20 bg-gradient-to-r from-primary via-[#2b4d83] to-accent text-white">
-  <div class="max-w-6xl mx-auto px-4 text-center">
-    <h1 class="text-4xl md:text-5xl font-bold mb-4">Fordeler med OnTaxi</h1>
-    <p class="text-lg max-w-3xl mx-auto text-white/90">
-      Som løyvehaver hos OnTaxi får du tilgang til avtaler og fordeler som reduserer kostnader og gjør driften enklere.
-    </p>
-  </div>
-</section>
+        <!-- Kontakt knapp -->
+        <div class="hidden md:flex items-center">
+          <a href="/kontakt" class="bg-accent text-white px-6 py-2 rounded-full hover:bg-red-700 transition">
+            Kontakt oss
+          </a>
+        </div>
 
-<!-- 🔹 INTRO -->
-<section class="py-14 bg-white">
-  <div class="max-w-4xl mx-auto px-4 text-center">
-    <h2 class="text-3xl font-bold text-gray-900 mb-4">Gunstige avtaler for løyvehavere</h2>
-    <p class="text-lg text-gray-600 leading-relaxed">
-      Vi jobber kontinuerlig med å forhandle frem avtaler som gir mer verdi for våre løyvehavere. 
-      Her finner du fordeler innen blant annet dekk, lading, service og drift.
-    </p>
-  </div>
-</section>
+        <!-- Mobilmeny knapp -->
+        <div class="md:hidden flex items-center">
+          <button id="menu-btn" class="text-gray-900 focus:outline-none" aria-label="Åpne meny">
+            <i data-feather="menu"></i>
+          </button>
+        </div>
+      </div>
+    </div>
 
-<!-- 🔹 KORT -->
-<section class="pb-16 bg-gray-50">
-  <div class="max-w-7xl mx-auto px-4">
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <!-- Mobilmeny -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white shadow-md border-t">
+      <div class="max-w-7xl mx-auto py-2">
+        <a href="/" class="block px-4 py-3 text-gray-900 hover:text-primary transition">Hjem</a>
+        <a href="/taksameter" class="block px-4 py-3 text-gray-900 hover:text-primary transition">Taksameter</a>
+        <a href="/priser" class="block px-4 py-3 text-gray-900 hover:text-primary transition">Priser</a>
+        <a href="/fordeler/" class="block px-4 py-3 text-primary font-semibold bg-gray-50">Fordeler</a>
+        <a href="/bli-partner" class="block px-4 py-3 text-gray-900 hover:text-primary transition">Bli partner</a>
 
-      <!-- Dekk -->
-      <a href="/dekkverksted/" class="block bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition group">
-        <i data-feather="tool" class="mb-6 text-primary"></i>
-        <h3 class="text-xl font-semibold mb-3 group-hover:text-primary">Dekkverksted</h3>
-        <p class="text-gray-600 mb-4">
-          Gunstige avtaler på dekk, omlegging og verkstedtjenester.
-        </p>
-        <span class="text-accent font-medium">Les mer →</span>
-      </a>
+        <div class="px-4 pt-3 pb-2">
+          <a href="/kontakt"
+             class="block w-full text-center bg-accent text-white py-3 rounded-xl font-semibold shadow-md hover:bg-red-700 transition">
+            Kontakt oss
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
 
-      <!-- Lading -->
-      <a href="/ladestasjoner/" class="block bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition group">
-        <i data-feather="zap" class="mb-6 text-accent"></i>
-        <h3 class="text-xl font-semibold mb-3 group-hover:text-primary">Ladestasjoner</h3>
-        <p class="text-gray-600 mb-4">
-          Fordeler knyttet til lading og praktiske løsninger for elbil.
-        </p>
-        <span class="text-accent font-medium">Les mer →</span>
-      </a>
+  <!-- 🔹 Header / intro -->
+  <header class="pt-28 pb-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 tracking-tight">
+        Fordeler hos <span class="text-primary">On</span><span class="text-accent">Taxi</span>
+      </h1>
+      <p class="mt-4 text-gray-600 max-w-3xl mx-auto">
+        Som løyvehaver hos OnTaxi får du tilgang til gunstige avtaler og samarbeid som kan redusere kostnader og gjøre hverdagen enklere.
+      </p>
+    </div>
+  </header>
 
-      <!-- Verksted -->
-      <a href="/verksted/" class="block bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition group">
-        <i data-feather="settings" class="mb-6 text-primary"></i>
-        <h3 class="text-xl font-semibold mb-3 group-hover:text-primary">Verksted og service</h3>
-        <p class="text-gray-600 mb-4">
-          Samarbeid som gjør service og vedlikehold enklere.
-        </p>
-        <span class="text-accent font-medium">Les mer →</span>
-      </a>
+  <!-- 🔹 Fordeler-kort -->
+  <main class="pb-16 flex-grow">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-      <!-- Drift -->
-      <a href="/utstyr/" class="block bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition group">
-        <i data-feather="credit-card" class="mb-6 text-accent"></i>
-        <h3 class="text-xl font-semibold mb-3 group-hover:text-primary">Utstyr og drift</h3>
-        <p class="text-gray-600 mb-4">
-          Fordeler knyttet til utstyr og daglig drift.
-        </p>
-        <span class="text-accent font-medium">Les mer →</span>
-      </a>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 fade-in">
 
-      <!-- Flere -->
-      <div class="bg-white p-8 rounded-2xl shadow-sm">
-        <i data-feather="plus-circle" class="mb-6 text-primary"></i>
-        <h3 class="text-xl font-semibold mb-3">Flere fordeler på vei</h3>
-        <p class="text-gray-600">
-          Vi jobber kontinuerlig med nye samarbeid og avtaler.
-        </p>
+        <!-- Dekkverksted -->
+        <a href="/dekkverksted/" class="bg-white rounded-2xl border shadow-sm overflow-hidden hover:shadow-md transition group">
+          <div class="px-6 py-5 bg-primary text-white">
+            <div class="flex items-center justify-between">
+              <div>
+                <h2 class="text-lg font-bold">Dekkverksted</h2>
+                <p class="text-xs opacity-90">Dekk, omlegging og sesongtjenester</p>
+              </div>
+              <i data-feather="tool" class="w-6 h-6"></i>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Gunstige avtaler på dekk, omlegging og andre tjenester som er viktige i den daglige driften.
+            </p>
+            <div class="mt-5 text-primary font-semibold group-hover:underline">Les mer</div>
+          </div>
+        </a>
+
+        <!-- Ladestasjoner -->
+        <a href="/ladestasjoner/" class="bg-white rounded-2xl border shadow-sm overflow-hidden hover:shadow-md transition group">
+          <div class="px-6 py-5 bg-accent text-white">
+            <div class="flex items-center justify-between">
+              <div>
+                <h2 class="text-lg font-bold">Ladestasjoner</h2>
+                <p class="text-xs opacity-90">Lading og praktiske løsninger</p>
+              </div>
+              <i data-feather="zap" class="w-6 h-6"></i>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Fordeler knyttet til lading og løsninger for løyvehavere som kjører elbil.
+            </p>
+            <div class="mt-5 text-primary font-semibold group-hover:underline">Les mer</div>
+          </div>
+        </a>
+
+        <!-- Verksted og service -->
+        <a href="/verksted-og-service/" class="bg-white rounded-2xl border shadow-sm overflow-hidden hover:shadow-md transition group">
+          <div class="px-6 py-5 bg-primary text-white">
+            <div class="flex items-center justify-between">
+              <div>
+                <h2 class="text-lg font-bold">Verksted og service</h2>
+                <p class="text-xs opacity-90">Vedlikehold og praktisk hjelp</p>
+              </div>
+              <i data-feather="settings" class="w-6 h-6"></i>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Samarbeid som kan gjøre service, vedlikehold og praktiske behov enklere å håndtere.
+            </p>
+            <div class="mt-5 text-primary font-semibold group-hover:underline">Les mer</div>
+          </div>
+        </a>
+
+        <!-- Utstyr og drift -->
+        <a href="/utstyr-og-drift/" class="bg-white rounded-2xl border shadow-sm overflow-hidden hover:shadow-md transition group">
+          <div class="px-6 py-5 bg-accent text-white">
+            <div class="flex items-center justify-between">
+              <div>
+                <h2 class="text-lg font-bold">Utstyr og drift</h2>
+                <p class="text-xs opacity-90">Løsninger for hverdagen</p>
+              </div>
+              <i data-feather="credit-card" class="w-6 h-6"></i>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Praktiske fordeler knyttet til utstyr, drift og løsninger som brukes i hverdagen som løyvehaver.
+            </p>
+            <div class="mt-5 text-primary font-semibold group-hover:underline">Les mer</div>
+          </div>
+        </a>
+
+        <!-- Flere fordeler -->
+        <a href="/flere-fordeler/" class="bg-white rounded-2xl border shadow-sm overflow-hidden hover:shadow-md transition group">
+          <div class="px-6 py-5 bg-primary text-white">
+            <div class="flex items-center justify-between">
+              <div>
+                <h2 class="text-lg font-bold">Flere fordeler på vei</h2>
+                <p class="text-xs opacity-90">Nye avtaler og samarbeid</p>
+              </div>
+              <i data-feather="plus-circle" class="w-6 h-6"></i>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Vi jobber kontinuerlig med å forhandle frem nye fordeler som kan komme løyvehaverne våre til gode.
+            </p>
+            <div class="mt-5 text-primary font-semibold group-hover:underline">Les mer</div>
+          </div>
+        </a>
+
       </div>
 
+      <!-- Nederste tekst -->
+      <div class="mt-10 text-center text-xs text-gray-500 px-4">
+        Avtalene og fordelene kan variere over tid. Ta kontakt med oss for oppdatert informasjon.
+      </div>
+
+      <div class="mt-8 text-center text-xs text-gray-500">
+        Har du spørsmål om fordelene eller ønsker mer informasjon? 
+        <a href="/kontakt" class="text-primary underline">Kontakt oss</a>.
+      </div>
     </div>
-  </div>
-</section>
+  </main>
 
-<!-- 🔹 CTA -->
-<section class="py-16 bg-primary text-center text-white">
-  <div class="max-w-3xl mx-auto px-4">
-    <h2 class="text-3xl font-bold mb-4">Vil du vite mer?</h2>
-    <p class="text-lg mb-8">
-      Ta kontakt med oss for mer informasjon om fordelene hos OnTaxi.
-    </p>
-    <a href="/kontakt/" class="bg-accent px-8 py-3 rounded-full font-semibold hover:bg-red-700 transition">
-      Kontakt oss
-    </a>
-  </div>
-</section>
+  <!-- 🔹 CTA -->
+  <section class="py-16 bg-primary text-center text-white">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-4">Vil du vite mer om fordelene hos OnTaxi?</h2>
+      <p class="text-lg mb-8">
+        Ta kontakt med oss for mer informasjon om avtaler, samarbeid og hvordan du kan bli en del av OnTaxi.
+      </p>
+      <a href="/kontakt" class="bg-accent text-white px-8 py-3 rounded-full font-semibold hover:bg-red-700 transition">
+        Kontakt oss
+      </a>
+    </div>
+  </section>
 
-<!-- 🔹 FOOTER -->
-<footer class="bg-gray-100 py-8 text-center text-sm text-gray-500">
-  © 2026 OnTaxi. Alle rettigheter reservert.
-</footer>
+  <!-- 🔹 Footer -->
+  <footer class="bg-gray-900 text-white pt-12 pb-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-8 mb-10">
 
-<script>
-  feather.replace()
-</script>
+        <div>
+          <h3 class="text-xl font-bold mb-4">OnTaxi AS</h3>
+          <p class="text-gray-400">
+            Tydelige vilkår og gode løsninger som gjør hverdagen enklere for løyvehavere og sjåfører.
+          </p>
+        </div>
 
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Snarveier</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="/" class="hover:text-white transition">Startsiden</a></li>
+            <li><a href="/taksameter" class="hover:text-white transition">Taksameter</a></li>
+            <li><a href="/priser" class="hover:text-white transition">Priser</a></li>
+            <li><a href="/fordeler/" class="hover:text-white transition">Fordeler</a></li>
+            <li><a href="/bli-partner" class="hover:text-white transition">Bli partner</a></li>
+            <li><a href="/kontakt" class="hover:text-white transition">Kontakt</a></li>
+            <li>
+              <a href="https://akarnet.no" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">
+                Taksameter rapporter
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Kontakt oss</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li class="flex items-center">
+              <i data-feather="mail" class="w-5 h-5 mr-2"></i>
+              <a href="mailto:post@ontaxi.no" class="hover:text-white transition">post@ontaxi.no</a>
+            </li>
+            <li class="flex items-center">
+              <i data-feather="phone" class="w-5 h-5 mr-2"></i>
+              <a href="tel:+4740024400" class="hover:text-white transition">+47 400 24 400</a>
+            </li>
+            <li class="flex items-center">
+              <i data-feather="map-pin" class="w-5 h-5 mr-2"></i>
+              <a href="https://www.google.com/maps?q=Holmenveien+5C,+0374+Oslo,+Norge"
+                 target="_blank" rel="noopener noreferrer"
+                 class="hover:text-white transition">
+                Holmenveien 5C – 0374 Oslo, Norge
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="border-t border-gray-800 pt-6 text-center text-gray-400 text-sm">
+        © 2026 OnTaxi AS – Alle rettigheter forbeholdt.
+      </div>
+    </div>
+  </footer>
+
+  <!-- 🔝 Scroll to top knapp -->
+  <button id="scrollTopBtn"
+    onclick="window.scrollTo({top:0, behavior:'smooth'})"
+    class="opacity-0 pointer-events-none fixed bottom-5 right-5 bg-accent text-white p-3 rounded-full shadow-lg hover:bg-red-700 transition z-50"
+    aria-label="Til toppen">
+    <i data-feather="arrow-up" class="w-5 h-5"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script>
+    feather.replace();
+
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    let isVisible = false;
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 200 && !isVisible) {
+        scrollTopBtn.classList.remove('fade-out');
+        scrollTopBtn.classList.add('fade-in');
+        scrollTopBtn.classList.remove('pointer-events-none');
+        isVisible = true;
+      } else if (window.scrollY <= 200 && isVisible) {
+        scrollTopBtn.classList.remove('fade-in');
+        scrollTopBtn.classList.add('fade-out');
+        scrollTopBtn.classList.add('pointer-events-none');
+        isVisible = false;
+      }
+    });
+  </script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2609991072523085"
+     crossorigin="anonymous"></script>
 </body>
 </html>
