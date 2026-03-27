@@ -76,16 +76,21 @@
           <a href="/" class="text-gray-900 hover:text-primary transition">Hjem</a>
           <a href="/taksameter" class="text-gray-900 hover:text-primary transition">Taksameter</a>
           <a href="/priser" class="text-gray-900 hover:text-primary transition font-semibold">Priser</a>
+          <a href="/fordeler" class="text-gray-900 hover:text-primary transition font-semibold">Fordeler</a>
           <a href="/bli-partner" class="text-gray-900 hover:text-primary transition">Bli partner</a>
-          <a href="https://akarnet.no" target="_blank" class="text-gray-900 hover:text-primary transition">Taksameter rapporter</a>
           
         </div>
 
-        <div class="flex items-center gap-3">
-        <a href="/kontakt"
-   class="hidden md:inline-flex bg-accent text-white px-6 py-2 rounded-full hover:bg-red-700 transition">
-  Kontakt oss
+        <!-- Kontakt knapp -->
+        <div class="hidden md:flex items-center">
+          <a href="/kontakt" class="bg-accent text-white px-6 py-2 rounded-full hover:bg-red-700 transition">
+            Kontakt oss
           </a>
+        <!-- Taksameter rapporter knapp -->
+          <a href="https://akarnet.no" target="_blank"
+   class="hidden md:inline-block border px-4 py-2 rounded-full text-sm hover:bg-gray-100 transition">
+  Taksameter rapporter
+</a>
 
           <!-- Hamburger (mobile) -->
           <button id="menuBtn" class="md:hidden p-2 rounded-lg hover:bg-gray-100" aria-label="Meny">
