@@ -15,15 +15,15 @@
   </script>
 
   <!-- SEO -->
-  <meta name="description" content="Se fordelene med OnTaxi. Vi tilbyr gunstige avtaler og samarbeid som gjør hverdagen enklere og mer lønnsom for løyvehavere." />
-  <meta name="keywords" content="ontaxi fordeler, ontaxi avtaler, drosjesentral fordeler, løyvehaver avtaler, dekkverksted taxi, ladestasjoner taxi" />
+  <meta name="description" content="Se fordeler og avtaler for OnTaxi-løyvehavere. Gunstige avtaler på lading, verksted, bilvask, bilpleie og flere tjenester." />
+  <meta name="keywords" content="ontaxi fordeler, løyvehaver fordeler, taxi avtaler, drosje avtaler, ragde charge, mekonomen avtale, bilvask taxi" />
   <meta name="author" content="OnTaxi AS" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://ontaxi.no/fordeler/" />
 
   <meta property="og:title" content="Fordeler | OnTaxi" />
-  <meta property="og:description" content="Gunstige avtaler og fordeler for løyvehavere hos OnTaxi." />
-  <meta property="og:image" content="https://ontaxi.no/Bilioslo.jpg" />
+  <meta property="og:description" content="Fordeler og avtaler for OnTaxi-løyvehavere samlet på ett sted." />
+  <meta property="og:image" content="https://ontaxi.no/OnTaxi-signatur-GIF.gif" />
   <meta property="og:url" content="https://ontaxi.no/fordeler/" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -55,16 +55,8 @@
   </script>
 
   <style>
-    .fade-in {
-      opacity: 1;
-      transform: translateY(0);
-      transition: all .25s ease;
-    }
-    .fade-out {
-      opacity: 0;
-      transform: translateY(6px);
-      transition: all .25s ease;
-    }
+    .fade-in { opacity: 1; transform: translateY(0); transition: all .25s ease; }
+    .fade-out { opacity: 0; transform: translateY(6px); transition: all .25s ease; }
   </style>
 </head>
 
@@ -85,24 +77,22 @@
           <a href="/" class="text-gray-900 hover:text-primary transition">Hjem</a>
           <a href="/taksameter" class="text-gray-900 hover:text-primary transition">Taksameter</a>
           <a href="/priser" class="text-gray-900 hover:text-primary transition">Priser</a>
-          <a href="/fordeler/" class="text-primary font-semibold">Fordeler</a>
+          <a href="/fordeler" class="text-primary font-semibold">Fordeler</a>
           <a href="/bli-partner" class="text-gray-900 hover:text-primary transition">Bli partner</a>
         </div>
 
-        <!-- Kontakt knapp -->
+        <!-- Desktop knapper -->
         <div class="hidden md:flex items-center">
-  <a href="/kontakt" class="bg-accent text-white px-6 py-2 rounded-full hover:bg-red-700 transition mr-3">
-    Kontakt oss
-  </a>
-        <!-- Taksameter rapporter knapp -->
+          <a href="/kontakt" class="bg-accent text-white px-6 py-2 rounded-full hover:bg-red-700 transition mr-3">
+            Kontakt oss
+          </a>
           <a href="https://akarnet.no" target="_blank" rel="noopener noreferrer"
-     class="hidden md:inline-block border px-4 py-2 rounded-full text-sm hover:bg-gray-100 transition">
-    Taksameter rapporter
-  </a>
-</a>
+             class="hidden md:inline-block border px-4 py-2 rounded-full text-sm hover:bg-gray-100 transition">
+            Taksameter rapporter
+          </a>
         </div>
 
-        <!-- Mobilmeny knapp -->
+        <!-- Mobilknapp -->
         <div class="md:hidden flex items-center">
           <button id="menu-btn" class="text-gray-900 focus:outline-none" aria-label="Åpne meny">
             <i data-feather="menu"></i>
@@ -113,215 +103,276 @@
 
     <!-- Mobilmeny -->
     <div id="mobileMenu" class="hidden md:hidden bg-white shadow-md border-t">
-  <div class="max-w-7xl mx-auto py-2">
+      <div class="max-w-7xl mx-auto py-2">
+        <a href="/" class="block px-4 py-3 text-gray-900 hover:text-primary transition">Hjem</a>
+        <a href="/taksameter" class="block px-4 py-3 text-gray-900 hover:text-primary transition">Taksameter</a>
+        <a href="/priser" class="block px-4 py-3 text-gray-900 hover:text-primary transition">Priser</a>
+        <a href="/fordeler" class="block px-4 py-3 text-primary font-semibold bg-gray-50">Fordeler</a>
+        <a href="/bli-partner" class="block px-4 py-3 text-gray-900 hover:text-primary transition">Bli partner</a>
 
-    <a href="/" class="block px-4 py-3 text-gray-900 hover:text-primary transition">
-      Hjem
-    </a>
+        <div class="px-4 pt-3">
+          <a href="https://akarnet.no" target="_blank" rel="noopener noreferrer"
+             class="block w-full text-center bg-primary text-white py-3 rounded-xl font-semibold shadow-md hover:opacity-95 transition">
+            Taksameter rapporter
+          </a>
+        </div>
 
-    <a href="/taksameter" class="block px-4 py-3 text-gray-900 hover:text-primary transition">
-      Taksameter
-    </a>
-
-    <a href="/priser" class="block px-4 py-3 text-gray-900 hover:text-primary transition">
-      Priser
-    </a>
-
-    <a href="/fordeler/" class="block px-4 py-3 text-primary font-semibold bg-gray-50">
-      Fordeler
-    </a>
-
-    <a href="/bli-partner" class="block px-4 py-3 text-gray-900 hover:text-primary transition">
-      Bli partner
-    </a>
-
-    <div class="px-4 pt-3">
-      <a href="https://akarnet.no" target="_blank" rel="noopener noreferrer"
-         class="block w-full text-center bg-primary text-white py-3 rounded-xl font-semibold shadow-md hover:opacity-95 transition">
-        Taksameter rapporter
-      </a>
+        <div class="px-4 pt-3 pb-3">
+          <a href="/kontakt"
+             class="block w-full text-center bg-accent text-white py-3 rounded-xl font-semibold shadow-md hover:bg-red-700 transition">
+            Kontakt oss
+          </a>
+        </div>
+      </div>
     </div>
-
-    <div class="px-4 pt-3 pb-3">
-      <a href="/kontakt"
-         class="block w-full text-center bg-accent text-white py-3 rounded-xl font-semibold shadow-md hover:bg-red-700 transition">
-        Kontakt oss
-      </a>
-    </div>
-
-  </div>
-</div>
   </nav>
 
-  <!-- 🔹 Header / intro -->
-  <header class="pt-28 pb-10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 tracking-tight">
-        Fordeler hos <span class="text-primary">On</span><span class="text-accent">Taxi</span>
-      </h1>
-      <p class="mt-4 text-gray-600 max-w-3xl mx-auto">
-        Som løyvehaver hos OnTaxi får du tilgang til gunstige avtaler og samarbeid som kan redusere kostnader og gjøre hverdagen enklere.
-      </p>
-    </div>
-  </header>
+  <!-- 🔹 Hero -->
+  <section class="pt-28 pb-20 bg-gradient-to-br from-white via-gray-50 to-blue-50/70 overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
 
-  <!-- 🔹 Fordeler-kort -->
-  <main class="pb-16 flex-grow">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div>
+          <div class="inline-flex items-center bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-5">
+            Fordeler for OnTaxi-løyvehavere
+          </div>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 fade-in">
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-5">
+            Avtaler som gjør drosjedriften enklere
+          </h1>
 
-        <!-- Dekkverksted -->
-        <a href="/dekkverksted/" class="bg-white rounded-2xl border shadow-sm overflow-hidden hover:shadow-md transition group">
-          <div class="px-6 py-5 bg-primary text-white">
-            <div class="flex items-center justify-between">
-              <div>
-                <h2 class="text-lg font-bold">Dekkverksted</h2>
-                <p class="text-xs opacity-90">Dekk, omlegging og sesongtjenester</p>
+          <p class="text-lg text-gray-600 leading-relaxed max-w-xl mb-8">
+            Her finner du fordeler og avtaler som er tilgjengelige for løyvehavere og kjøretøy tilknyttet OnTaxi AS drosjesentral.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="/bli-partner"
+               class="bg-accent text-white px-6 py-3 rounded-full font-semibold hover:bg-red-700 transition text-center">
+              Bli løyvehaver
+            </a>
+
+            <a href="#fordelsliste"
+               class="border border-gray-300 bg-white px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition text-center">
+              Se fordeler
+            </a>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="absolute -top-6 -left-6 w-24 h-24 bg-primary/10 rounded-full blur-2xl"></div>
+          <div class="absolute -bottom-8 -right-8 w-32 h-32 bg-accent/10 rounded-full blur-3xl"></div>
+
+          <div class="relative bg-white border border-gray-100 rounded-3xl shadow-xl p-8 md:p-10">
+            <div class="bg-primary/10 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
+              <i data-feather="gift" class="text-primary w-8 h-8"></i>
+            </div>
+
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">
+              Samlede fordeler på ett sted
+            </h2>
+
+            <p class="text-gray-600 leading-relaxed mb-6">
+              OnTaxi jobber kontinuerlig med nye avtaler innen lading, verksted, bilvask, bilpleie og andre tjenester som kan redusere kostnader og gjøre hverdagen enklere.
+            </p>
+
+            <div class="grid grid-cols-2 gap-4">
+              <div class="bg-gray-50 rounded-2xl p-5 border">
+                <div class="text-sm text-gray-500 mb-1">Aktive avtaler</div>
+                <div class="text-2xl font-bold text-gray-900">3+</div>
               </div>
-              <i data-feather="tool" class="w-6 h-6"></i>
+
+              <div class="bg-gray-50 rounded-2xl p-5 border">
+                <div class="text-sm text-gray-500 mb-1">For</div>
+                <div class="text-2xl font-bold text-gray-900">Løyvehavere</div>
+              </div>
             </div>
           </div>
-          <div class="p-6">
-            <p class="text-gray-600 text-sm leading-relaxed">
-              Gunstige avtaler på dekk, omlegging og andre tjenester som er viktige i den daglige driften.
-            </p>
-            <div class="mt-5 text-primary font-semibold group-hover:underline">Les mer</div>
-          </div>
-        </a>
+        </div>
 
-        <!-- Ladestasjoner -->
-        <a href="/ladestasjoner/" class="bg-white rounded-2xl border shadow-sm overflow-hidden hover:shadow-md transition group">
-          <div class="px-6 py-5 bg-accent text-white">
-            <div class="flex items-center justify-between">
-              <div>
-                <h2 class="text-lg font-bold">Ladestasjoner</h2>
-                <p class="text-xs opacity-90">Lading og praktiske løsninger</p>
-              </div>
-              <i data-feather="zap" class="w-6 h-6"></i>
-            </div>
-          </div>
-          <div class="p-6">
-            <p class="text-gray-600 text-sm leading-relaxed">
-              Fordeler knyttet til lading og løsninger for løyvehavere som kjører elbil.
-            </p>
-            <div class="mt-5 text-primary font-semibold group-hover:underline">Les mer</div>
-          </div>
-        </a>
-
-        <!-- Verksted og service -->
-        <a href="/verksted-og-service/" class="bg-white rounded-2xl border shadow-sm overflow-hidden hover:shadow-md transition group">
-          <div class="px-6 py-5 bg-primary text-white">
-            <div class="flex items-center justify-between">
-              <div>
-                <h2 class="text-lg font-bold">Verksted og service</h2>
-                <p class="text-xs opacity-90">Vedlikehold og praktisk hjelp</p>
-              </div>
-              <i data-feather="settings" class="w-6 h-6"></i>
-            </div>
-          </div>
-          <div class="p-6">
-            <p class="text-gray-600 text-sm leading-relaxed">
-              Samarbeid som kan gjøre service, vedlikehold og praktiske behov enklere å håndtere.
-            </p>
-            <div class="mt-5 text-primary font-semibold group-hover:underline">Les mer</div>
-          </div>
-        </a>
-
-        <!-- Utstyr og drift -->
-        <a href="/utstyr-og-drift/" class="bg-white rounded-2xl border shadow-sm overflow-hidden hover:shadow-md transition group">
-          <div class="px-6 py-5 bg-accent text-white">
-            <div class="flex items-center justify-between">
-              <div>
-                <h2 class="text-lg font-bold">Utstyr og drift</h2>
-                <p class="text-xs opacity-90">Løsninger for hverdagen</p>
-              </div>
-              <i data-feather="credit-card" class="w-6 h-6"></i>
-            </div>
-          </div>
-          <div class="p-6">
-            <p class="text-gray-600 text-sm leading-relaxed">
-              Praktiske fordeler knyttet til utstyr, drift og løsninger som brukes i hverdagen som løyvehaver.
-            </p>
-            <div class="mt-5 text-primary font-semibold group-hover:underline">Les mer</div>
-          </div>
-        </a>
-
-        <!-- Flere fordeler -->
-        <a href="/flere-fordeler/" class="bg-white rounded-2xl border shadow-sm overflow-hidden hover:shadow-md transition group">
-          <div class="px-6 py-5 bg-primary text-white">
-            <div class="flex items-center justify-between">
-              <div>
-                <h2 class="text-lg font-bold">Flere fordeler på vei</h2>
-                <p class="text-xs opacity-90">Nye avtaler og samarbeid</p>
-              </div>
-              <i data-feather="plus-circle" class="w-6 h-6"></i>
-            </div>
-          </div>
-          <div class="p-6">
-            <p class="text-gray-600 text-sm leading-relaxed">
-              Vi jobber kontinuerlig med å forhandle frem nye fordeler som kan komme løyvehaverne våre til gode.
-            </p>
-            <div class="mt-5 text-primary font-semibold group-hover:underline">Les mer</div>
-          </div>
-        </a>
-
-      </div>
-
-      <!-- Nederste tekst -->
-      <div class="mt-10 text-center text-xs text-gray-500 px-4">
-        Avtalene og fordelene kan variere over tid. Ta kontakt med oss for oppdatert informasjon.
-      </div>
-
-      <div class="mt-8 text-center text-xs text-gray-500">
-        Har du spørsmål om fordelene eller ønsker mer informasjon? 
-        <a href="/kontakt" class="text-primary underline">Kontakt oss</a>.
       </div>
     </div>
-  </main>
+  </section>
+
+  <!-- 🔹 Fordelskort -->
+  <section id="fordelsliste" class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-3">Tilgjengelige fordeler</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          Trykk på en fordel for å lese mer om priser, vilkår og hvordan du kan benytte avtalen.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+
+        <!-- Ragde Charge -->
+        <a href="/fordeler/ragde-charge/" class="group bg-gray-50 border rounded-3xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 transition block">
+          <div class="bg-primary/10 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition">
+            <i data-feather="zap" class="text-primary group-hover:text-white w-8 h-8"></i>
+          </div>
+          <div class="text-sm font-semibold text-primary mb-2">Lading</div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">Ragde Charge</h3>
+          <p class="text-gray-600 leading-relaxed mb-6">
+            Lading til fast pris for OnTaxi-løyvehavere med elbil.
+          </p>
+          <div class="bg-white border rounded-2xl p-4 mb-6">
+            <div class="text-sm text-gray-500">Pris</div>
+            <div class="text-xl font-bold text-gray-900">2.8 kr/kWh</div>
+          </div>
+          <span class="inline-flex items-center text-primary font-semibold group-hover:underline">
+            Les mer <i data-feather="arrow-right" class="w-4 h-4 ml-2"></i>
+          </span>
+        </a>
+
+        <!-- Mekonomen -->
+        <a href="/fordeler/bilverksted-mekonomen/" class="group bg-gray-50 border rounded-3xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 transition block">
+          <div class="bg-yellow-100 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-yellow-300 transition">
+            <i data-feather="tool" class="text-gray-900 w-8 h-8"></i>
+          </div>
+          <div class="text-sm font-semibold text-primary mb-2">Verksted</div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">Mekonomen verkstedavtale</h3>
+          <p class="text-gray-600 leading-relaxed mb-6">
+            Gunstige priser på EU-kontroll, elbilservice og reparasjoner.
+          </p>
+          <div class="grid grid-cols-2 gap-3 mb-6">
+            <div class="bg-white border rounded-2xl p-4">
+              <div class="text-sm text-gray-500">EU-kontroll</div>
+              <div class="text-xl font-bold text-gray-900">800 kr</div>
+            </div>
+            <div class="bg-white border rounded-2xl p-4">
+              <div class="text-sm text-gray-500">Rabatt</div>
+              <div class="text-xl font-bold text-gray-900">25 %</div>
+            </div>
+          </div>
+          <span class="inline-flex items-center text-primary font-semibold group-hover:underline">
+            Les mer <i data-feather="arrow-right" class="w-4 h-4 ml-2"></i>
+          </span>
+        </a>
+
+        <!-- Carl Berner Bilvask -->
+        <a href="/fordeler/carlberner-bilvask/" class="group bg-gray-50 border rounded-3xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 transition block">
+          <div class="bg-accent/10 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-accent transition">
+            <i data-feather="droplet" class="text-accent group-hover:text-white w-8 h-8"></i>
+          </div>
+          <div class="text-sm font-semibold text-primary mb-2">Bilvask og bilpleie</div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">Carl Berner Bilvask & Bilpleie</h3>
+          <p class="text-gray-600 leading-relaxed mb-6">
+            Innvendig og utvendig vask samt detailing for OnTaxi-løyvehavere.
+          </p>
+          <div class="grid grid-cols-2 gap-3 mb-6">
+            <div class="bg-white border rounded-2xl p-4">
+              <div class="text-sm text-gray-500">Vask</div>
+              <div class="text-xl font-bold text-gray-900">400 kr</div>
+            </div>
+            <div class="bg-white border rounded-2xl p-4">
+              <div class="text-sm text-gray-500">Detailing</div>
+              <div class="text-xl font-bold text-gray-900">800 kr</div>
+            </div>
+          </div>
+          <span class="inline-flex items-center text-primary font-semibold group-hover:underline">
+            Les mer <i data-feather="arrow-right" class="w-4 h-4 ml-2"></i>
+          </span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 🔹 Kommende fordeler -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-8 items-start">
+        <div>
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Flere avtaler kommer</h2>
+          <p class="text-gray-600 leading-relaxed mb-6">
+            OnTaxi jobber videre med flere fordeler for løyvehavere. Her kan vi senere legge inn nye samarbeid innen dekk, forsikring, service, reservedeler, vask, lading og andre driftskostnader.
+          </p>
+          <a href="/kontakt" class="inline-block bg-accent text-white px-6 py-3 rounded-full font-semibold hover:bg-red-700 transition">
+            Foreslå en avtale
+          </a>
+        </div>
+
+        <div class="bg-white border rounded-3xl p-8 shadow-sm">
+          <h3 class="text-xl font-bold text-gray-900 mb-5">Mulige fremtidige fordeler</h3>
+          <div class="grid sm:grid-cols-2 gap-4 text-gray-600">
+            <div class="flex gap-3"><i data-feather="check" class="w-5 h-5 text-primary mt-1"></i><span>Dekk og felg</span></div>
+            <div class="flex gap-3"><i data-feather="check" class="w-5 h-5 text-primary mt-1"></i><span>Forsikring</span></div>
+            <div class="flex gap-3"><i data-feather="check" class="w-5 h-5 text-primary mt-1"></i><span>Serviceavtaler</span></div>
+            <div class="flex gap-3"><i data-feather="check" class="w-5 h-5 text-primary mt-1"></i><span>Bilrekvisita</span></div>
+            <div class="flex gap-3"><i data-feather="check" class="w-5 h-5 text-primary mt-1"></i><span>Finansiering</span></div>
+            <div class="flex gap-3"><i data-feather="check" class="w-5 h-5 text-primary mt-1"></i><span>Reservedeler</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🔹 Viktig info -->
+  <section class="py-12 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-blue-50 border border-blue-100 rounded-2xl p-6 md:p-8">
+        <div class="flex items-start gap-4">
+          <div class="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center shrink-0">
+            <i data-feather="info" class="text-primary w-5 h-5"></i>
+          </div>
+          <div>
+            <h2 class="text-xl font-bold text-gray-900 mb-2">Viktig informasjon</h2>
+            <p class="text-gray-600 leading-relaxed">
+              Fordelene gjelder for løyvehavere og kjøretøy tilknyttet OnTaxi AS drosjesentral. Enkelte avtaler kan kreve bestilling eller bekreftelse via OnTaxi før tjenesten benyttes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- 🔹 CTA -->
   <section class="py-16 bg-primary text-center text-white">
     <div class="max-w-3xl mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-4">Vil du vite mer om fordelene hos OnTaxi?</h2>
+      <h2 class="text-3xl font-bold mb-4">Vil du bli en del av OnTaxi?</h2>
       <p class="text-lg mb-8">
-        Ta kontakt med oss for mer informasjon om avtaler, samarbeid og hvordan du kan bli en del av OnTaxi.
+        Som løyvehaver hos OnTaxi får du tilgang til fordeler, avtaler og løsninger som kan gjøre driften enklere og mer lønnsom.
       </p>
-      <a href="/kontakt" class="bg-accent text-white px-8 py-3 rounded-full font-semibold hover:bg-red-700 transition">
-        Kontakt oss
-      </a>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="/bli-partner" class="bg-accent text-white px-8 py-3 rounded-full font-semibold hover:bg-red-700 transition">
+          Bli partner
+        </a>
+        <a href="/kontakt" class="bg-white text-primary px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition">
+          Kontakt oss
+        </a>
+      </div>
     </div>
   </section>
 
   <!-- 🔹 Footer -->
   <footer class="bg-gray-900 text-white pt-12 pb-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid md:grid-cols-3 gap-8 mb-10">
+      <div class="grid md:grid-cols-3 gap-12 mb-10 items-start">
 
         <div>
           <h3 class="text-xl font-bold mb-4">OnTaxi AS</h3>
           <p class="text-gray-400">
-            Tydelige vilkår og gode løsninger som gjør hverdagen enklere for løyvehavere og sjåfører.
+            Gode løsninger og tydelige vilkår for løyvehavere og sjåfører.
           </p>
         </div>
 
         <div>
-  <h4 class="text-lg font-semibold mb-4">Snarveier</h4>
-  <div class="grid grid-cols-2 gap-x-10 gap-y-2 text-gray-400">
-    <a href="/" class="hover:text-white transition">Startsiden</a>
-    <a href="/bli-partner" class="hover:text-white transition">Bli partner</a>
+          <h4 class="text-lg font-semibold mb-4">Snarveier</h4>
+          <div class="grid grid-cols-2 gap-x-10 gap-y-2 text-gray-400">
+            <a href="/" class="hover:text-white transition">Startsiden</a>
+            <a href="/bli-partner" class="hover:text-white transition">Bli partner</a>
 
-    <a href="/taksameter" class="hover:text-white transition">Taksameter</a>
-    <a href="/kontakt" class="hover:text-white transition">Kontakt oss</a>
+            <a href="/taksameter" class="hover:text-white transition">Taksameter</a>
+            <a href="/kontakt" class="hover:text-white transition">Kontakt</a>
 
-    <a href="/priser" class="hover:text-white transition">Priser</a>
-    <a href="https://akarnet.no" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">
-      Taksameter rapporter
-    </a>
+            <a href="/priser" class="hover:text-white transition">Priser</a>
+            <a href="https://akarnet.no" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">
+              Taksameter rapporter
+            </a>
 
-    <a href="/fordeler" class="hover:text-white transition">Fordeler</a>
-  </div>
-</div>
+            <a href="/fordeler" class="hover:text-white transition">Fordeler</a>
+          </div>
+        </div>
 
         <div>
           <h4 class="text-lg font-semibold mb-4">Kontakt oss</h4>
@@ -353,7 +404,7 @@
     </div>
   </footer>
 
-  <!-- 🔝 Scroll to top knapp -->
+  <!-- 🔝 Scroll to top -->
   <button id="scrollTopBtn"
     onclick="window.scrollTo({top:0, behavior:'smooth'})"
     class="opacity-0 pointer-events-none fixed bottom-5 right-5 bg-accent text-white p-3 rounded-full shadow-lg hover:bg-red-700 transition z-50"
@@ -361,7 +412,6 @@
     <i data-feather="arrow-up" class="w-5 h-5"></i>
   </button>
 
-  <!-- Scripts -->
   <script>
     feather.replace();
 
