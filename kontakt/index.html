@@ -218,54 +218,57 @@
 <div>
   <h2 class="text-3xl font-bold text-gray-900 mb-6">Send oss en melding</h2>
   <form action="https://formspree.io/f/xeornkeo" method="POST" class="space-y-5" id="kontaktSkjema">
-	<div>
-  <label class="block text-gray-700 mb-2">Hva gjelder henvendelsen?</label>
-  <select name="emne" required
-          class="w-full border border-gray-300 rounded-lg px-4 py-3 bg-white focus:ring-2 focus:ring-primary focus:border-primary outline-none">
-    <option value="">Velg emne</option>
-    <option value="Bli løyvehaver">Bli løyvehaver</option>
-    <option value="Bestille fordel / avtale">Bestille fordel / avtale</option>
-    <option value="Klage">Klage</option>
-    <option value="Teknisk støtte">Teknisk støtte</option>
-    <option value="Bedriftsavtale">Bedriftsavtale</option>
-    <option value="Annet">Annet</option>
-  </select>
-</div>
-      <label class="block text-gray-700 mb-2">Navn</label>
-      <input type="text" name="navn" required
-             class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary outline-none"
-             placeholder="Ditt navn">
-    </div>
-    <div>
-      <label class="block text-gray-700 mb-2">E-post</label>
-      <input type="email" name="epost" required
-             class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary outline-none"
-             placeholder="din@epost.no">
-		</div>
 
-<div>
-	  <!-- 📱 Mobilnummer -->
-<div>
-  <label class="block text-gray-700 mb-2">Mobilnummer</label>
-  <input type="tel" name="mobil" required
-         class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary outline-none"
-         placeholder="+47 400 24 400"
-         pattern="[0-9+\s]{8,15}"
-         title="Skriv inn et gyldig mobilnummer">
-</div>
+  <div>
+    <label class="block text-gray-700 mb-2">Hva gjelder henvendelsen?</label>
+    <select name="emne" required
+      class="w-full border border-gray-300 rounded-lg px-4 py-3 bg-white focus:ring-2 focus:ring-primary focus:border-primary outline-none">
+      <option value="">Velg emne</option>
+      <option value="Bli løyvehaver">Bli løyvehaver</option>
+      <option value="Bestille fordel / avtale">Bestille fordel / avtale</option>
+      <option value="Klage">Klage</option>
+      <option value="Teknisk støtte">Teknisk støtte</option>
+      <option value="Bedriftsavtale">Bedriftsavtale</option>
+      <option value="Annet">Annet</option>
+    </select>
+  </div>
 
-    </div>
-	<div>	  
-      <label class="block text-gray-700 mb-2">Melding</label>
-      <textarea name="melding" rows="5" required
-                class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary outline-none"
-                placeholder="Skriv din melding her..."></textarea>
-    </div>
-    <button type="submit"
-            class="bg-accent text-white px-8 py-3 rounded-full font-semibold hover:bg-red-700 transition">
-      Send melding
-    </button>
-  </form>
+  <div>
+    <label class="block text-gray-700 mb-2">Navn</label>
+    <input type="text" name="navn" required
+      class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary outline-none"
+      placeholder="Ditt navn">
+  </div>
+
+  <div>
+    <label class="block text-gray-700 mb-2">E-post</label>
+    <input type="email" name="epost" required
+      class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary outline-none"
+      placeholder="din@epost.no">
+  </div>
+
+  <div>
+    <label class="block text-gray-700 mb-2">Mobilnummer</label>
+    <input type="tel" name="mobil" required
+      class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary outline-none"
+      placeholder="+47 400 24 400"
+      pattern="[0-9+\s]{8,15}"
+      title="Skriv inn et gyldig mobilnummer">
+  </div>
+
+  <div>
+    <label class="block text-gray-700 mb-2">Melding</label>
+    <textarea name="melding" rows="5" required
+      class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary outline-none"
+      placeholder="Skriv din melding her..."></textarea>
+  </div>
+
+  <button type="submit"
+    class="bg-accent text-white px-8 py-3 rounded-full font-semibold hover:bg-red-700 transition">
+    Send melding
+  </button>
+
+</form>
   <p id="statusMelding" class="text-green-600 mt-4 hidden">✅ Meldingen din er sendt!</p>
 </div>
 
