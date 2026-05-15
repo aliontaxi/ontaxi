@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Regnskapsfører | OnTaxi Fordeler</title>
 
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WVLGSVQD9N"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -14,21 +13,19 @@
     gtag('config', 'G-WVLGSVQD9N');
   </script>
 
-  <!-- SEO -->
-  <meta name="description" content="OnTaxi-løyvehavere får regnskapsavtale hos Consolida Partner AS til 990 kr per løyve for bilagsføring, lønnskjøring og momsregistrering." />
-  <meta name="keywords" content="regnskapsfører taxi, drosje regnskap, løyvehaver regnskap, ontaxi fordeler, consolida partner, momsregistrering, lønnskjøring" />
+  <meta name="description" content="Regnskapsavtale for OnTaxi-løyvehavere. Regnskapsføring fra 990 kr per måned inkludert bokføring, innsending av mva og lønn." />
+  <meta name="keywords" content="regnskapsfører taxi, drosje regnskap, løyvehaver regnskap, ontaxi fordeler, regnskap drosje, mva innsending, lønnskjøring taxi" />
   <meta name="author" content="OnTaxi AS" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://ontaxi.no/fordeler/regnskapsforer/" />
 
   <meta property="og:title" content="Regnskapsfører | OnTaxi Fordeler" />
-  <meta property="og:description" content="Regnskapsavtale for OnTaxi-løyvehavere hos Consolida Partner AS." />
+  <meta property="og:description" content="Regnskapsavtale for OnTaxi-løyvehavere. Fra 990 kr per måned." />
   <meta property="og:image" content="https://ontaxi.no/OnTaxi-signatur-GIF.gif" />
   <meta property="og:url" content="https://ontaxi.no/fordeler/regnskapsforer/" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Favicons -->
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
@@ -62,17 +59,14 @@
 
 <body class="bg-gray-50 font-sans flex flex-col min-h-screen">
 
-  <!-- 🔹 Navigasjon -->
   <nav class="bg-white shadow-sm fixed w-full z-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between h-16 items-center">
 
-        <!-- Logo -->
         <a href="/" class="flex items-center">
           <img src="/OnTaxi-signatur-GIF.gif" alt="OnTaxi logo" class="h-10 mr-3">
         </a>
 
-        <!-- Desktop meny -->
         <div class="hidden md:flex items-center space-x-8">
           <a href="/" class="text-gray-900 hover:text-primary transition">Hjem</a>
           <a href="/taksameter" class="text-gray-900 hover:text-primary transition">Taksameter</a>
@@ -81,7 +75,6 @@
           <a href="/bli-partner" class="text-gray-900 hover:text-primary transition">Bli partner</a>
         </div>
 
-        <!-- Desktop knapper -->
         <div class="hidden md:flex items-center">
           <a href="/kontakt" class="bg-accent text-white px-6 py-2 rounded-full hover:bg-red-700 transition mr-3">
             Kontakt oss
@@ -92,7 +85,6 @@
           </a>
         </div>
 
-        <!-- Mobilknapp -->
         <div class="md:hidden flex items-center">
           <button id="menu-btn" class="text-gray-900 focus:outline-none" aria-label="Åpne meny">
             <i data-feather="menu"></i>
@@ -101,7 +93,6 @@
       </div>
     </div>
 
-    <!-- Mobilmeny -->
     <div id="mobileMenu" class="hidden md:hidden bg-white shadow-md border-t">
       <div class="max-w-7xl mx-auto py-2">
         <a href="/" class="block px-4 py-3 text-gray-900 hover:text-primary transition">Hjem</a>
@@ -127,208 +118,395 @@
     </div>
   </nav>
 
-  <!-- 🔹 Hero -->
-  <section class="pt-28 pb-20 bg-gradient-to-br from-white via-gray-50 to-blue-50/70 overflow-hidden">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
+  <!-- MOBILVERSJON -->
+  <main class="md:hidden bg-white">
 
-        <!-- Venstre side -->
-        <div>
-          <div class="inline-flex items-center bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-5">
-            Fordel for OnTaxi-løyvehavere
-          </div>
-
-          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-5">
-            Regnskapsfører
-          </h1>
-
-          <p class="text-lg text-gray-600 leading-relaxed max-w-xl mb-8">
-            Som løyvehaver hos OnTaxi får du tilgang til en gunstig regnskapsavtale hos
-            <strong>Consolida Partner AS</strong> for bilagsføring, lønnskjøring og momsregistrering.
-          </p>
-
-          <div class="flex flex-col sm:flex-row gap-4">
-            <a href="/kontakt"
-               class="bg-accent text-white px-6 py-3 rounded-full font-semibold hover:bg-red-700 transition text-center">
-              Bestill via OnTaxi
-            </a>
-
-            <a href="#pris"
-               class="border border-gray-300 bg-white px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition text-center">
-              Se pris
-            </a>
-          </div>
+    <section class="pt-24 pb-6 px-4 bg-gradient-to-b from-white via-blue-50/50 to-white">
+      <div class="max-w-md mx-auto text-center">
+        <div class="inline-flex items-center bg-primary/10 text-primary px-4 py-2 rounded-full text-xs font-semibold mb-4">
+          Fordel for OnTaxi-løyvehavere
         </div>
 
-        <!-- Høyre side -->
-        <div class="relative">
-          <div class="absolute -top-6 -left-6 w-24 h-24 bg-primary/10 rounded-full blur-2xl"></div>
-          <div class="absolute -bottom-8 -right-8 w-32 h-32 bg-accent/10 rounded-full blur-3xl"></div>
+        <div class="w-24 h-24 mx-auto rounded-3xl bg-primary text-white flex items-center justify-center shadow-xl mb-5">
+          <i data-feather="file-text" class="w-11 h-11"></i>
+        </div>
 
-          <div class="relative bg-white border border-gray-100 rounded-3xl shadow-xl p-8 md:p-10">
-            <div class="mb-6 inline-flex bg-primary text-white px-6 py-4 rounded-2xl shadow-sm">
-              <div class="text-2xl md:text-3xl font-extrabold tracking-tight">
-  Consolida Partner AS
-</div>
+        <h1 class="text-3xl font-extrabold text-gray-900 leading-tight mb-3">
+          Regnskapsføring for løyvehavere
+        </h1>
+
+        <p class="text-sm text-gray-600 leading-relaxed">
+          En enkel og ryddig regnskapsavtale via OnTaxi, tilpasset løyvehavere som ønsker fast pris og tydelige rammer.
+        </p>
+      </div>
+    </section>
+
+    <section class="px-4 pb-7 bg-white">
+      <div class="max-w-md mx-auto bg-primary text-white rounded-3xl p-6 shadow-xl text-center">
+        <div class="text-sm opacity-80 mb-2">Regnskapsføring</div>
+        <div class="text-5xl font-extrabold mb-1">990 kr</div>
+        <div class="text-sm opacity-90">per måned</div>
+
+        <div class="mt-5 grid grid-cols-3 gap-2 text-xs">
+          <div class="bg-white/10 rounded-2xl p-3">Bokføring</div>
+          <div class="bg-white/10 rounded-2xl p-3">MVA</div>
+          <div class="bg-white/10 rounded-2xl p-3">Lønn</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-4 pb-7 bg-white">
+      <div class="max-w-md mx-auto">
+        <h2 class="text-2xl font-bold text-gray-900 text-center mb-5">
+          Dette er inkludert
+        </h2>
+
+        <div class="space-y-3">
+          <div class="bg-gray-50 border rounded-2xl p-4 flex gap-4">
+            <div class="bg-primary/10 w-11 h-11 rounded-xl flex items-center justify-center shrink-0">
+              <i data-feather="book-open" class="w-5 h-5 text-primary"></i>
             </div>
-
-            <h2 class="text-2xl font-bold text-gray-900 mb-3">
-              Regnskap tilpasset løyvehavere
-            </h2>
-
-            <p class="text-gray-600 leading-relaxed mb-6">
-              En praktisk avtale for løyvehavere som ønsker ryddig håndtering av bilag, lønn og momsregistrering gjennom en samarbeidspartner.
-            </p>
-
-            <div class="grid grid-cols-2 gap-4">
-              <div class="bg-gray-50 rounded-2xl p-5 border">
-                <div class="text-sm text-gray-500 mb-1">Pris per løyve</div>
-                <div class="text-2xl font-bold text-gray-900">990 kr</div>
-              </div>
-
-              <div class="bg-gray-50 rounded-2xl p-5 border">
-                <div class="text-sm text-gray-500 mb-1">Flere biler</div>
-                <div class="text-2xl font-bold text-gray-900">Etter avtale</div>
-              </div>
+            <div>
+              <h3 class="font-bold text-gray-900">Bokføring</h3>
+              <p class="text-sm text-gray-600 mt-1">Bilag føres i valgt regnskapssystem.</p>
             </div>
+          </div>
 
-            <h1 class="sr-only">Regnskapsfører Consolida Partner AS</h1>
+          <div class="bg-gray-50 border rounded-2xl p-4 flex gap-4">
+            <div class="bg-accent/10 w-11 h-11 rounded-xl flex items-center justify-center shrink-0">
+              <i data-feather="percent" class="w-5 h-5 text-accent"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-gray-900">Innsending av MVA</h3>
+              <p class="text-sm text-gray-600 mt-1">MVA-melding håndteres og sendes inn.</p>
+            </div>
+          </div>
+
+          <div class="bg-gray-50 border rounded-2xl p-4 flex gap-4">
+            <div class="bg-primary/10 w-11 h-11 rounded-xl flex items-center justify-center shrink-0">
+              <i data-feather="users" class="w-5 h-5 text-primary"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-gray-900">Lønn</h3>
+              <p class="text-sm text-gray-600 mt-1">Én lønnskjøring er inkludert i avtalen.</p>
+            </div>
           </div>
         </div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- 🔹 Pris / fordeler -->
-  <section id="pris" class="py-16 bg-white">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid md:grid-cols-3 gap-8">
+    <section class="px-4 pb-7 bg-gray-50">
+      <div class="max-w-md mx-auto pt-7">
+        <h2 class="text-2xl font-bold text-gray-900 text-center mb-5">
+          Tilleggstjenester
+        </h2>
 
-        <div class="bg-gray-50 border rounded-2xl p-8">
-          <div class="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center mb-5">
-            <i data-feather="file-text" class="text-primary w-7 h-7"></i>
+        <div class="grid grid-cols-2 gap-3">
+          <div class="bg-white border rounded-2xl p-4 shadow-sm text-center">
+            <i data-feather="user-plus" class="w-6 h-6 text-primary mx-auto mb-3"></i>
+            <div class="text-sm text-gray-500">Ekstra lønnskjøring</div>
+            <div class="text-2xl font-extrabold text-gray-900 mt-1">150 kr</div>
+            <div class="text-xs text-gray-400">per måned</div>
           </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-3">Bilagsføring</h3>
-          <p class="text-gray-600 leading-relaxed">
-            Avtalen dekker bilagsføring for løyvehavere tilknyttet OnTaxi AS.
-          </p>
-        </div>
 
-        <div class="bg-gray-50 border rounded-2xl p-8">
-          <div class="bg-accent/10 w-14 h-14 rounded-full flex items-center justify-center mb-5">
-            <i data-feather="users" class="text-accent w-7 h-7"></i>
+          <div class="bg-white border rounded-2xl p-4 shadow-sm text-center">
+            <i data-feather="calendar" class="w-6 h-6 text-accent mx-auto mb-3"></i>
+            <div class="text-sm text-gray-500">Årsoppgjør</div>
+            <div class="text-2xl font-extrabold text-gray-900 mt-1">4 000 kr</div>
+            <div class="text-xs text-gray-400">etter avtale</div>
           </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-3">Lønnskjøring</h3>
-          <p class="text-gray-600 leading-relaxed">
-            Praktisk håndtering av lønnskjøring som del av regnskapsavtalen.
-          </p>
         </div>
-
-        <div class="bg-gray-50 border rounded-2xl p-8">
-          <div class="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center mb-5">
-            <i data-feather="percent" class="text-primary w-7 h-7"></i>
-          </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-3">Momsregistrering</h3>
-          <p class="text-gray-600 leading-relaxed">
-            Hjelp med momsregistrering for løyvehavere som trenger dette i forbindelse med drift.
-          </p>
-        </div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- 🔹 Avtalevilkår -->
-  <section class="py-16 bg-gray-50">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid md:grid-cols-2 gap-8">
-
-        <div class="bg-white rounded-2xl border p-8 shadow-sm">
-          <h2 class="text-2xl font-bold text-gray-900 mb-4">Pris og vilkår</h2>
-          <p class="text-gray-600 leading-relaxed mb-5">
-            Pris per løyve er <strong>990 kr</strong>. Dette gjelder bilagsføring, lønnskjøring og momsregistrering.
-          </p>
-          <p class="text-gray-600 leading-relaxed">
-            Dersom løyvehaver har flere biler, kan prisen reduseres etter nærmere avtale.
-          </p>
-        </div>
-
-        <div class="bg-white rounded-2xl border p-8 shadow-sm">
-          <h2 class="text-2xl font-bold text-gray-900 mb-4">Hvem gjelder avtalen for?</h2>
-          <p class="text-gray-600 leading-relaxed mb-5">
-            Prisen gjelder kun for løyvehavere som er tilknyttet <strong>OnTaxi AS</strong>.
-          </p>
-          <p class="text-gray-600 leading-relaxed">
-            For å benytte avtalen anbefales det å kontakte OnTaxi AS først, slik at vi kan bekrefte tilknytning og veilede deg videre.
-          </p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- 🔹 Slik benytter du avtalen -->
-  <section class="py-16 bg-white">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="bg-blue-50 border border-blue-100 rounded-2xl p-8 md:p-10">
-        <div class="flex items-start gap-4">
-          <div class="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center shrink-0">
-            <i data-feather="info" class="text-primary w-6 h-6"></i>
+    <section class="px-4 pb-7 bg-white">
+      <div class="max-w-md mx-auto bg-yellow-50 border border-yellow-200 rounded-3xl p-5">
+        <div class="flex gap-3">
+          <div class="bg-yellow-100 w-10 h-10 rounded-xl flex items-center justify-center shrink-0">
+            <i data-feather="info" class="w-5 h-5 text-yellow-700"></i>
           </div>
           <div>
-            <h2 class="text-2xl font-bold text-gray-900 mb-3">Slik benytter du fordelen</h2>
-            <p class="text-gray-600 leading-relaxed mb-5">
-              Regnskapsavtalen gjelder for løyvehavere tilknyttet OnTaxi AS. Ta kontakt med OnTaxi for mer informasjon eller for å bli satt i kontakt med Consolida Partner AS.
+            <h2 class="font-bold text-gray-900 mb-1">Viktig informasjon</h2>
+            <p class="text-sm text-gray-600 leading-relaxed">
+              Kunden må selv laste opp bilag, avregninger og nødvendig dokumentasjon i valgt regnskapssystem. Avtalen passer best for løyvehavere med ryddig bilagsmengde.
             </p>
-            <a href="/kontakt" class="inline-block bg-white border border-gray-300 px-5 py-3 rounded-full font-semibold hover:bg-gray-100 transition">
-              Kontakt OnTaxi
-            </a>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- 🔹 Ekstra redigerbare punkter -->
-  <section class="py-16 bg-gray-50">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid md:grid-cols-2 gap-8">
-        <div class="bg-white rounded-2xl border p-8 shadow-sm">
-          <h3 class="text-xl font-bold text-gray-900 mb-4">Mulige tillegg senere</h3>
-          <ul class="space-y-3 text-gray-600">
-            <li class="flex gap-3"><i data-feather="check" class="w-5 h-5 text-primary mt-1"></i><span>Årsoppgjør / skattemelding</span></li>
-            <li class="flex gap-3"><i data-feather="check" class="w-5 h-5 text-primary mt-1"></i><span>Tripletex-oppsett</span></li>
-            <li class="flex gap-3"><i data-feather="check" class="w-5 h-5 text-primary mt-1"></i><span>Rådgivning for løyvehavere</span></li>
-            <li class="flex gap-3"><i data-feather="check" class="w-5 h-5 text-primary mt-1"></i><span>Tilpasset pris ved flere biler</span></li>
+    <section class="px-4 pb-7 bg-white">
+      <div class="max-w-md mx-auto">
+        <div class="bg-gray-50 border rounded-3xl p-5">
+          <h2 class="font-bold text-gray-900 mb-3">Forutsetninger</h2>
+          <ul class="space-y-3 text-sm text-gray-600">
+            <li class="flex gap-2"><i data-feather="check" class="w-4 h-4 text-primary mt-1"></i><span>Bilag lastes opp av kunden.</span></li>
+            <li class="flex gap-2"><i data-feather="check" class="w-4 h-4 text-primary mt-1"></i><span>Avregninger leveres av kunden.</span></li>
+            <li class="flex gap-2"><i data-feather="check" class="w-4 h-4 text-primary mt-1"></i><span>Kunden bør bruke drivstoffkort.</span></li>
+            <li class="flex gap-2"><i data-feather="check" class="w-4 h-4 text-primary mt-1"></i><span>Maks 5 enkeltkvitteringer per måned.</span></li>
+            <li class="flex gap-2"><i data-feather="check" class="w-4 h-4 text-primary mt-1"></i><span>Løyvehavere bør bruke samlefaktura månedlig.</span></li>
           </ul>
         </div>
+      </div>
+    </section>
 
-        <div class="bg-white rounded-2xl border p-8 shadow-sm">
-          <h3 class="text-xl font-bold text-gray-900 mb-4">Viktig informasjon</h3>
-          <p class="text-gray-600 leading-relaxed">
-            Avtalen og prisen gjelder kun løyvehavere med aktiv tilknytning til OnTaxi AS. Flere biler kan gi grunnlag for redusert pris etter avtale.
-          </p>
-          <p class="text-xs text-gray-400 mt-5">Sist oppdatert: Mai 2026</p>
+    <section class="px-4 pb-8 bg-white">
+      <div class="max-w-md mx-auto">
+        <a href="/kontakt"
+           class="block w-full text-center bg-accent text-white py-4 rounded-2xl font-bold text-lg shadow-lg hover:bg-red-700 transition">
+          Kontakt OnTaxi
+        </a>
+        <p class="text-xs text-gray-400 text-center mt-3">
+          Vi hjelper deg med informasjon og tilgang til avtalen.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- DESKTOPVERSJON -->
+  <main class="hidden md:block">
+
+    <section class="pt-28 pb-20 bg-gradient-to-br from-white via-gray-50 to-blue-50/70 overflow-hidden">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+          <div>
+            <div class="inline-flex items-center bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-5">
+              Fordel for OnTaxi-løyvehavere
+            </div>
+
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-5">
+              Regnskapsføring for løyvehavere
+            </h1>
+
+            <p class="text-lg text-gray-600 leading-relaxed max-w-xl mb-8">
+              OnTaxi-løyvehavere kan få tilgang til en enkel og ryddig regnskapsavtale via vår samarbeidspartner.
+              Avtalen er laget for løyvehavere som ønsker fast pris, tydelige rammer og mindre administrasjon i hverdagen.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a href="/kontakt"
+                 class="bg-accent text-white px-6 py-3 rounded-full font-semibold hover:bg-red-700 transition text-center">
+                Bestill via OnTaxi
+              </a>
+
+              <a href="#pris"
+                 class="border border-gray-300 bg-white px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition text-center">
+                Se pris og vilkår
+              </a>
+            </div>
+          </div>
+
+          <div class="relative">
+            <div class="absolute -top-6 -left-6 w-24 h-24 bg-primary/10 rounded-full blur-2xl"></div>
+            <div class="absolute -bottom-8 -right-8 w-32 h-32 bg-accent/10 rounded-full blur-3xl"></div>
+
+            <div class="relative bg-white border border-gray-100 rounded-3xl shadow-xl p-8 md:p-10">
+              <div class="w-20 h-20 rounded-3xl bg-primary text-white flex items-center justify-center shadow-lg mb-6">
+                <i data-feather="file-text" class="w-10 h-10"></i>
+              </div>
+
+              <h2 class="text-2xl font-bold text-gray-900 mb-3">
+                Fast pris og tydelig innhold
+              </h2>
+
+              <p class="text-gray-600 leading-relaxed mb-6">
+                Regnskapsføring tilpasset drosjedrift, med bokføring, innsending av mva og lønn inkludert i månedsprisen.
+              </p>
+
+              <div class="grid grid-cols-2 gap-4">
+                <div class="bg-gray-50 rounded-2xl p-5 border">
+                  <div class="text-sm text-gray-500 mb-1">Pris per måned</div>
+                  <div class="text-3xl font-extrabold text-primary">990 kr</div>
+                </div>
+
+                <div class="bg-gray-50 rounded-2xl p-5 border">
+                  <div class="text-sm text-gray-500 mb-1">Inkluderer</div>
+                  <div class="text-2xl font-bold text-gray-900">3 tjenester</div>
+                </div>
+              </div>
+
+              <h1 class="sr-only">Regnskapsfører for OnTaxi-løyvehavere</h1>
+            </div>
+          </div>
+
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- 🔹 CTA -->
-  <section class="py-16 bg-primary text-center text-white">
-    <div class="max-w-3xl mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-4">Vil du benytte deg av regnskapsavtalen?</h2>
-      <p class="text-lg mb-8">
-        Kontakt oss dersom du ønsker mer informasjon om avtalen med Consolida Partner AS og fordelene for OnTaxi-løyvehavere.
-      </p>
-      <a href="/kontakt" class="bg-accent text-white px-8 py-3 rounded-full font-semibold hover:bg-red-700 transition">
-        Kontakt oss
-      </a>
-    </div>
-  </section>
+    <section id="pris" class="py-16 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
-  <!-- 🔹 Footer -->
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">
+            Hva er inkludert i 990 kr per måned?
+          </h2>
+          <p class="text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Avtalen dekker de viktigste regnskapsoppgavene en løyvehaver normalt trenger i den løpende driften.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-gray-50 border rounded-2xl p-8">
+            <div class="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center mb-5">
+              <i data-feather="book-open" class="text-primary w-7 h-7"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Bokføring</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Bilag og dokumentasjon bokføres i valgt regnskapssystem, basert på materiale kunden selv laster opp.
+            </p>
+          </div>
+
+          <div class="bg-gray-50 border rounded-2xl p-8">
+            <div class="bg-accent/10 w-14 h-14 rounded-full flex items-center justify-center mb-5">
+              <i data-feather="percent" class="text-accent w-7 h-7"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Innsending av MVA</h3>
+            <p class="text-gray-600 leading-relaxed">
+              MVA-melding håndteres og sendes inn basert på regnskapet og dokumentasjonen som er levert.
+            </p>
+          </div>
+
+          <div class="bg-gray-50 border rounded-2xl p-8">
+            <div class="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center mb-5">
+              <i data-feather="users" class="text-primary w-7 h-7"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Lønn</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Én lønnskjøring er inkludert i månedsprisen. Ekstra lønnskjøring kan bestilles ved behov.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="bg-white border rounded-3xl p-8 shadow-sm">
+            <div class="text-sm text-gray-500 mb-2">Fast månedlig pris</div>
+            <div class="text-5xl font-extrabold text-primary mb-3">990 kr</div>
+            <p class="text-gray-600 leading-relaxed">
+              Gjelder regnskapsføring med bokføring, mva og én lønnskjøring.
+            </p>
+          </div>
+
+          <div class="bg-white border rounded-3xl p-8 shadow-sm">
+            <div class="text-sm text-gray-500 mb-2">Ekstra lønnskjøring</div>
+            <div class="text-5xl font-extrabold text-accent mb-3">150 kr</div>
+            <p class="text-gray-600 leading-relaxed">
+              Pris per måned for én ekstra lønnskjøring.
+            </p>
+          </div>
+
+          <div class="bg-white border rounded-3xl p-8 shadow-sm">
+            <div class="text-sm text-gray-500 mb-2">Årsoppgjør</div>
+            <div class="text-5xl font-extrabold text-primary mb-3">4 000 kr</div>
+            <p class="text-gray-600 leading-relaxed">
+              Årsoppgjør kan ordnes etter avtale.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="py-16 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-8">
+
+          <div class="bg-blue-50 border border-blue-100 rounded-3xl p-8 md:p-10">
+            <div class="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center mb-5">
+              <i data-feather="info" class="text-primary w-7 h-7"></i>
+            </div>
+
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">
+              Viktig informasjon
+            </h2>
+
+            <p class="text-gray-600 leading-relaxed mb-5">
+              Kunden må selv laste opp bilag, avregninger og nødvendig dokumentasjon i valgt regnskapssystem.
+              Dette er viktig for at regnskapet skal kunne føres riktig og effektivt.
+            </p>
+
+            <p class="text-gray-600 leading-relaxed">
+              Avtalen er tilpasset løyvehavere med ryddig bilagsmengde og faste rutiner for dokumentasjon.
+            </p>
+          </div>
+
+          <div class="bg-white border rounded-3xl p-8 md:p-10 shadow-sm">
+            <h2 class="text-2xl font-bold text-gray-900 mb-5">
+              Forutsetninger for avtalen
+            </h2>
+
+            <ul class="space-y-4 text-gray-600">
+              <li class="flex gap-3">
+                <i data-feather="check" class="w-5 h-5 text-primary mt-1"></i>
+                <span>Bilagene skal lastes opp av kunden.</span>
+              </li>
+              <li class="flex gap-3">
+                <i data-feather="check" class="w-5 h-5 text-primary mt-1"></i>
+                <span>Avregninger og nødvendig dokumentasjon leveres av kunden.</span>
+              </li>
+              <li class="flex gap-3">
+                <i data-feather="check" class="w-5 h-5 text-primary mt-1"></i>
+                <span>Kunden bør ha drivstoffkort.</span>
+              </li>
+              <li class="flex gap-3">
+                <i data-feather="check" class="w-5 h-5 text-primary mt-1"></i>
+                <span>Maks 5 enkeltkvitteringer per måned er inkludert.</span>
+              </li>
+              <li class="flex gap-3">
+                <i data-feather="check" class="w-5 h-5 text-primary mt-1"></i>
+                <span>Løyvehavere bør bruke samlefaktura månedlig der det er mulig.</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white border rounded-3xl p-8 md:p-10 shadow-sm">
+          <div class="flex items-start gap-5">
+            <div class="bg-accent/10 w-14 h-14 rounded-full flex items-center justify-center shrink-0">
+              <i data-feather="shield" class="text-accent w-7 h-7"></i>
+            </div>
+            <div>
+              <h2 class="text-2xl font-bold text-gray-900 mb-3">
+                Diskré samarbeidspartner
+              </h2>
+              <p class="text-gray-600 leading-relaxed">
+                Regnskapsavtalen leveres via en samarbeidspartner, men bestilling og informasjon går gjennom OnTaxi.
+                Navn på regnskapsfører vises ikke offentlig på siden.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-primary text-center text-white">
+      <div class="max-w-3xl mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-4">
+          Vil du benytte regnskapsavtalen?
+        </h2>
+        <p class="text-lg mb-8">
+          Kontakt OnTaxi for mer informasjon om regnskapsføringen og hvordan du kan komme i gang.
+        </p>
+        <a href="/kontakt" class="bg-accent text-white px-8 py-3 rounded-full font-semibold hover:bg-red-700 transition">
+          Kontakt oss
+        </a>
+      </div>
+    </section>
+
+  </main>
+
   <footer class="bg-gray-900 text-white pt-12 pb-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid md:grid-cols-3 gap-12 mb-10 items-start">
@@ -345,15 +523,10 @@
           <div class="grid grid-cols-2 gap-x-10 gap-y-2 text-gray-400">
             <a href="/" class="hover:text-white transition">Startsiden</a>
             <a href="/bli-partner" class="hover:text-white transition">Bli partner</a>
-
             <a href="/taksameter" class="hover:text-white transition">Taksameter</a>
             <a href="/kontakt" class="hover:text-white transition">Kontakt</a>
-
             <a href="/priser" class="hover:text-white transition">Priser</a>
-            <a href="https://akarnet.no" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">
-              Taksameter rapporter
-            </a>
-
+            <a href="https://akarnet.no" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">Taksameter rapporter</a>
             <a href="/fordeler" class="hover:text-white transition">Fordeler</a>
           </div>
         </div>
@@ -388,7 +561,6 @@
     </div>
   </footer>
 
-  <!-- 🔝 Scroll to top -->
   <button id="scrollTopBtn"
     onclick="window.scrollTo({top:0, behavior:'smooth'})"
     class="opacity-0 pointer-events-none fixed bottom-5 right-5 bg-accent text-white p-3 rounded-full shadow-lg hover:bg-red-700 transition z-50"
