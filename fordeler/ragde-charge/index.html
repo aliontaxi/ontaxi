@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ragde Charge | OnTaxi Fordeler</title>
 
-  <!-- Google tag (gtag.js) -->
+  <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WVLGSVQD9N"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -15,27 +15,22 @@
   </script>
 
   <!-- SEO -->
-  <meta name="description" content="Les mer om Ragde Charge som fordel hos OnTaxi. Gunstige lademuligheter og fordeler for løyvehavere med elbil." />
-  <meta name="keywords" content="ragde charge, ontaxi fordeler, lading taxi, elbil taxi, løyvehaver lading, taxi ladeløsning" />
+  <meta name="description" content="Lading til fast pris gjennom Ragde Charge for OnTaxi-løyvehavere." />
+  <meta name="keywords" content="ragde charge, ontaxi fordeler, taxi lading, elbil taxi, ladekort taxi" />
   <meta name="author" content="OnTaxi AS" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://ontaxi.no/fordeler/ragde-charge/" />
 
   <meta property="og:title" content="Ragde Charge | OnTaxi Fordeler" />
-  <meta property="og:description" content="Gunstige lademuligheter og fordeler for løyvehavere hos OnTaxi." />
+  <meta property="og:description" content="Lading til 2.8 kr/kWh for OnTaxi-løyvehavere." />
   <meta property="og:image" content="https://ontaxi.no/fordeler/ragde-charge/ragde-charge-hero.jpg" />
   <meta property="og:url" content="https://ontaxi.no/fordeler/ragde-charge/" />
   <meta property="og:type" content="website" />
-  <meta name="twitter:card" content="summary_large_image" />
 
   <!-- Favicons -->
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/web-app-manifest-192x192.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <meta name="theme-color" content="#ffffff">
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/feather-icons"></script>
@@ -46,8 +41,7 @@
         extend: {
           colors: {
             primary: '#1a3b67',
-            accent: '#b33e3e',
-            dark: '#1F2937'
+            accent: '#b33e3e'
           }
         }
       }
@@ -60,34 +54,26 @@
       transform: translateY(0);
       transition: all .25s ease;
     }
+
     .fade-out {
       opacity: 0;
       transform: translateY(6px);
       transition: all .25s ease;
-    }
-
-    @media (max-width: 768px) {
-      section[style*="ragde-charge-hero.jpg"] {
-        background-position: center center !important;
-        background-size: cover !important;
-      }
     }
   </style>
 </head>
 
 <body class="bg-gray-50 font-sans flex flex-col min-h-screen">
 
-  <!-- 🔹 Navigasjon -->
+  <!-- NAV -->
   <nav class="bg-white shadow-sm fixed w-full z-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between h-16 items-center">
 
-        <!-- Logo -->
         <a href="/" class="flex items-center">
           <img src="/OnTaxi-signatur-GIF.gif" alt="OnTaxi logo" class="h-10 mr-3">
         </a>
 
-        <!-- Desktop meny -->
         <div class="hidden md:flex items-center space-x-8">
           <a href="/" class="text-gray-900 hover:text-primary transition">Hjem</a>
           <a href="/taksameter" class="text-gray-900 hover:text-primary transition">Taksameter</a>
@@ -96,23 +82,25 @@
           <a href="/bli-partner" class="text-gray-900 hover:text-primary transition">Bli partner</a>
         </div>
 
-        <!-- Desktop knapper -->
         <div class="hidden md:flex items-center">
           <a href="/kontakt" class="bg-accent text-white px-6 py-2 rounded-full hover:bg-red-700 transition mr-3">
             Kontakt oss
           </a>
-          <a href="https://akarnet.no" target="_blank" rel="noopener noreferrer"
+
+          <a href="https://akarnet.no"
+             target="_blank"
+             rel="noopener noreferrer"
              class="hidden md:inline-block border px-4 py-2 rounded-full text-sm hover:bg-gray-100 transition">
             Taksameter rapporter
           </a>
         </div>
 
-        <!-- Mobilknapp -->
         <div class="md:hidden flex items-center">
-          <button id="menu-btn" class="text-gray-900 focus:outline-none" aria-label="Åpne meny">
+          <button id="menu-btn" class="text-gray-900">
             <i data-feather="menu"></i>
           </button>
         </div>
+
       </div>
     </div>
 
@@ -120,36 +108,24 @@
     <div id="mobileMenu" class="hidden md:hidden bg-white shadow-md border-t">
       <div class="max-w-7xl mx-auto py-2">
 
-        <a href="/" class="block px-4 py-3 text-gray-900 hover:text-primary transition">
-          Hjem
-        </a>
-
-        <a href="/taksameter" class="block px-4 py-3 text-gray-900 hover:text-primary transition">
-          Taksameter
-        </a>
-
-        <a href="/priser" class="block px-4 py-3 text-gray-900 hover:text-primary transition">
-          Priser
-        </a>
-
-        <a href="/fordeler" class="block px-4 py-3 text-primary font-semibold bg-gray-50">
-          Fordeler
-        </a>
-
-        <a href="/bli-partner" class="block px-4 py-3 text-gray-900 hover:text-primary transition">
-          Bli partner
-        </a>
+        <a href="/" class="block px-4 py-3 text-gray-900">Hjem</a>
+        <a href="/taksameter" class="block px-4 py-3 text-gray-900">Taksameter</a>
+        <a href="/priser" class="block px-4 py-3 text-gray-900">Priser</a>
+        <a href="/fordeler" class="block px-4 py-3 text-primary font-semibold bg-gray-50">Fordeler</a>
+        <a href="/bli-partner" class="block px-4 py-3 text-gray-900">Bli partner</a>
 
         <div class="px-4 pt-3">
-          <a href="https://akarnet.no" target="_blank" rel="noopener noreferrer"
-             class="block w-full text-center bg-primary text-white py-3 rounded-xl font-semibold shadow-md hover:opacity-95 transition">
+          <a href="https://akarnet.no"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="block w-full text-center bg-primary text-white py-3 rounded-xl font-semibold">
             Taksameter rapporter
           </a>
         </div>
 
         <div class="px-4 pt-3 pb-3">
           <a href="/kontakt"
-             class="block w-full text-center bg-accent text-white py-3 rounded-xl font-semibold shadow-md hover:bg-red-700 transition">
+             class="block w-full text-center bg-accent text-white py-3 rounded-xl font-semibold">
             Kontakt oss
           </a>
         </div>
@@ -158,169 +134,460 @@
     </div>
   </nav>
 
-  <!-- 🔹 Hero -->
-  <section class="pt-28 pb-20 bg-gradient-to-br from-white via-gray-50 to-blue-50/60 overflow-hidden">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid lg:grid-cols-2 gap-12 items-center">
+  <!-- ================================================= -->
+  <!-- MOBILVERSJON -->
+  <!-- ================================================= -->
+  <main class="md:hidden bg-white">
 
-      <!-- Venstre side -->
-      <div>
-        <div class="inline-flex items-center bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-5">
+    <!-- Hero -->
+    <section class="pt-24 pb-6 px-4 bg-gradient-to-b from-white via-blue-50/50 to-white">
+      <div class="max-w-md mx-auto text-center">
+
+        <div class="inline-flex items-center bg-primary/10 text-primary px-4 py-2 rounded-full text-xs font-semibold mb-4">
           Fordel for OnTaxi-løyvehavere
         </div>
 
-        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-5">
+        <div class="bg-primary rounded-3xl p-5 inline-flex shadow-xl mb-5">
+          <img src="/fordeler/ragde-charge/ragde-logo.png"
+               alt="Ragde Charge"
+               class="h-12 object-contain">
+        </div>
+
+        <h1 class="text-3xl font-extrabold text-gray-900 leading-tight mb-3">
           Lading til fast pris
         </h1>
 
-        <p class="text-lg text-gray-600 leading-relaxed max-w-xl mb-8">
-          OnTaxi tilbyr lading gjennom Ragde Charge til <strong>2.8 kr/kWh</strong> for våre løyvehavere – uansett tid og dag.
+        <p class="text-sm text-gray-600 leading-relaxed">
+          OnTaxi tilbyr lading gjennom Ragde Charge til 2.8 kr/kWh – uansett tid og dag.
         </p>
 
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a href="/kontakt"
-             class="bg-accent text-white px-6 py-3 rounded-full font-semibold hover:bg-red-700 transition text-center">
-            Kontakt oss
-          </a>
-
-          <a href="https://ragde.no/charge/" target="_blank" rel="noopener noreferrer"
-             class="border border-gray-300 bg-white px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition text-center">
-            Se ladekart
-          </a>
-        </div>
       </div>
+    </section>
 
-      <!-- Høyre side -->
-      <div class="relative">
-        <div class="absolute -top-6 -left-6 w-24 h-24 bg-primary/10 rounded-full blur-2xl"></div>
-        <div class="absolute -bottom-8 -right-8 w-32 h-32 bg-accent/10 rounded-full blur-3xl"></div>
+    <!-- Pris -->
+    <section class="px-4 pb-7 bg-white">
+      <div class="max-w-md mx-auto bg-primary text-white rounded-3xl p-6 shadow-xl text-center">
 
-        <div class="relative bg-white border border-gray-100 rounded-3xl shadow-xl p-8 md:p-10">
-          <div class="mb-6 inline-flex bg-primary px-6 py-4 rounded-2xl shadow-sm">
-            <img src="/fordeler/ragde-charge/ragde-logo.png"
-                 alt="Ragde Charge"
-                 class="h-10 md:h-14 object-contain">
+        <div class="text-sm opacity-80 mb-2">
+          Fast ladepris
+        </div>
+
+        <div class="text-5xl font-extrabold mb-1">
+          2.8
+        </div>
+
+        <div class="text-lg font-semibold opacity-90">
+          kr/kWh
+        </div>
+
+        <div class="mt-5 grid grid-cols-2 gap-3">
+
+          <div class="bg-white/10 rounded-2xl p-3">
+            Hele døgnet
+          </div>
+
+          <div class="bg-white/10 rounded-2xl p-3">
+            Alle dager
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Fordeler -->
+    <section class="px-4 pb-7 bg-white">
+      <div class="max-w-md mx-auto">
+
+        <h2 class="text-2xl font-bold text-gray-900 text-center mb-5">
+          Hvorfor bruke Ragde Charge?
+        </h2>
+
+        <div class="space-y-3">
+
+          <div class="bg-gray-50 border rounded-2xl p-4 flex gap-4">
+            <div class="bg-primary/10 w-11 h-11 rounded-xl flex items-center justify-center shrink-0">
+              <i data-feather="dollar-sign" class="w-5 h-5 text-primary"></i>
+            </div>
+
+            <div>
+              <h3 class="font-bold text-gray-900">
+                Forutsigbar pris
+              </h3>
+
+              <p class="text-sm text-gray-600 mt-1">
+                Samme pris hele døgnet uten overraskelser.
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-gray-50 border rounded-2xl p-4 flex gap-4">
+            <div class="bg-accent/10 w-11 h-11 rounded-xl flex items-center justify-center shrink-0">
+              <i data-feather="clock" class="w-5 h-5 text-accent"></i>
+            </div>
+
+            <div>
+              <h3 class="font-bold text-gray-900">
+                Tilgjengelig hele tiden
+              </h3>
+
+              <p class="text-sm text-gray-600 mt-1">
+                Lading når det passer deg – dag og natt.
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-gray-50 border rounded-2xl p-4 flex gap-4">
+            <div class="bg-primary/10 w-11 h-11 rounded-xl flex items-center justify-center shrink-0">
+              <i data-feather="zap" class="w-5 h-5 text-primary"></i>
+            </div>
+
+            <div>
+              <h3 class="font-bold text-gray-900">
+                Perfekt for taxi
+              </h3>
+
+              <p class="text-sm text-gray-600 mt-1">
+                En løsning tilpasset løyvehavere med elbil.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Kart -->
+    <section class="px-4 pb-7 bg-gray-50">
+      <div class="max-w-md mx-auto pt-7">
+
+        <div class="bg-white border rounded-3xl p-5 shadow-sm text-center">
+
+          <div class="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i data-feather="map-pin" class="w-7 h-7 text-primary"></i>
           </div>
 
           <h2 class="text-2xl font-bold text-gray-900 mb-3">
-            Enkelt, forutsigbart og tilgjengelig
+            Finn ladestasjoner
           </h2>
 
-          <p class="text-gray-600 leading-relaxed mb-6">
-            En ladefordel for løyvehavere som ønsker bedre kontroll på kostnader og en enklere hverdag med elbil. Ta kontakt med OnTaxi for å få tildelt ladekort!
+          <p class="text-sm text-gray-600 leading-relaxed mb-5">
+            Se oversikt over tilgjengelige ladestasjoner direkte hos Ragde Charge.
           </p>
 
-          <div class="grid grid-cols-2 gap-4">
-            <div class="bg-gray-50 rounded-2xl p-5 border">
-              <div class="text-sm text-gray-500 mb-1">Pris</div>
-              <div class="text-2xl font-bold text-gray-900">2.8 kr/kWh</div>
-            </div>
+          <a href="https://ragde.no/charge/"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="block w-full text-center bg-primary text-white py-4 rounded-2xl font-bold">
+            Åpne ladekart
+          </a>
 
-            <div class="bg-gray-50 rounded-2xl p-5 border">
-              <div class="text-sm text-gray-500 mb-1">Gjelder</div>
-              <div class="text-2xl font-bold text-gray-900">Hele døgnet</div>
-            </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Info -->
+    <section class="px-4 pb-7 bg-white">
+      <div class="max-w-md mx-auto bg-yellow-50 border border-yellow-200 rounded-3xl p-5">
+
+        <div class="flex gap-3">
+
+          <div class="bg-yellow-100 w-10 h-10 rounded-xl flex items-center justify-center shrink-0">
+            <i data-feather="info" class="w-5 h-5 text-yellow-700"></i>
           </div>
 
-          <h1 class="sr-only">Ragde Charge</h1>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-  
-  <!-- 🔹 Intro -->
-<section class="py-16 bg-white">
-  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid md:grid-cols-3 gap-8">
-
-      <div class="bg-gray-50 border rounded-2xl p-8">
-        <div class="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center mb-5">
-          <i data-feather="dollar-sign" class="text-primary w-7 h-7"></i>
-        </div>
-        <h3 class="text-xl font-bold text-gray-900 mb-3">Fast pris</h3>
-        <p class="text-gray-600 leading-relaxed">
-          Våre løyvehavere får lading gjennom Ragde Charge til 2.8 kr/kWh.
-        </p>
-      </div>
-
-      <div class="bg-gray-50 border rounded-2xl p-8">
-        <div class="bg-accent/10 w-14 h-14 rounded-full flex items-center justify-center mb-5">
-          <i data-feather="clock" class="text-accent w-7 h-7"></i>
-        </div>
-        <h3 class="text-xl font-bold text-gray-900 mb-3">Hele døgnet</h3>
-        <p class="text-gray-600 leading-relaxed">
-          Prisen gjelder uansett tid på døgnet og uansett hvilken dag du lader.
-        </p>
-      </div>
-
-      <div class="bg-gray-50 border rounded-2xl p-8">
-        <div class="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center mb-5">
-          <i data-feather="map-pin" class="text-primary w-7 h-7"></i>
-        </div>
-        <h3 class="text-xl font-bold text-gray-900 mb-3">Finn ladestasjon</h3>
-        <p class="text-gray-600 leading-relaxed mb-5">
-          Se hvor du kan lade direkte i Ragde Charge sitt oversiktskart.
-        </p>
-        <a href="https://ragde.no/charge/" target="_blank" rel="noopener noreferrer"
-           class="inline-block text-primary font-semibold hover:underline">
-          Åpne ladekart
-        </a>
-      </div>
-
-    </div>
-  </div>
-</section>
-  
-
-  <!-- 🔹 Info-boks -->
-  <section class="py-16 bg-white">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="bg-blue-50 border border-blue-100 rounded-2xl p-8 md:p-10">
-        <div class="flex items-start gap-4">
-          <div class="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center shrink-0">
-            <i data-feather="info" class="text-primary w-6 h-6"></i>
-          </div>
           <div>
-            <h2 class="text-2xl font-bold text-gray-900 mb-3">Mer informasjon kommer</h2>
-            <p class="text-gray-600 leading-relaxed">
-              Denne fordelen er under videre oppbygging. Vi oppdaterer siden fortløpende med mer informasjon,
-              innhold og detaljer etter hvert som samarbeidet og fordelene blir tydeligere presentert.
+            <h2 class="font-bold text-gray-900 mb-1">
+              Viktig informasjon
+            </h2>
+
+            <p class="text-sm text-gray-600 leading-relaxed">
+              Ta kontakt med OnTaxi for å få tilgang til ladekort og informasjon om avtalen.
             </p>
           </div>
+
         </div>
+
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- 🔹 CTA -->
-  <section class="py-16 bg-primary text-center text-white">
-    <div class="max-w-3xl mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-4">Vil du vite mer om Ragde Charge?</h2>
-      <p class="text-lg mb-8">
-        Ta kontakt med oss hvis du ønsker mer informasjon om fordelen og hvordan OnTaxi jobber med nye avtaler for løyvehavere.
-      </p>
-      <a href="/kontakt" class="bg-accent text-white px-8 py-3 rounded-full font-semibold hover:bg-red-700 transition">
-        Kontakt oss
-      </a>
-    </div>
-  </section>
+    <!-- CTA -->
+    <section class="px-4 pb-8 bg-white">
+      <div class="max-w-md mx-auto">
 
-  <!-- 🔹 Footer -->
+        <a href="/kontakt"
+           class="block w-full text-center bg-accent text-white py-4 rounded-2xl font-bold text-lg shadow-lg">
+          Kontakt OnTaxi
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================================================= -->
+  <!-- DESKTOPVERSJON -->
+  <!-- ================================================= -->
+  <main class="hidden md:block">
+
+    <!-- Hero -->
+    <section class="pt-28 pb-20 bg-gradient-to-br from-white via-gray-50 to-blue-50/70 overflow-hidden">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+          <!-- Venstre -->
+          <div>
+
+            <div class="inline-flex items-center bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-5">
+              Fordel for OnTaxi-løyvehavere
+            </div>
+
+            <h1 class="text-5xl font-bold text-gray-900 leading-tight mb-5">
+              Lading til fast pris
+            </h1>
+
+            <p class="text-lg text-gray-600 leading-relaxed max-w-xl mb-8">
+              OnTaxi tilbyr lading gjennom Ragde Charge til
+              <strong>2.8 kr/kWh</strong>
+              for våre løyvehavere – uansett tid og dag.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4">
+
+              <a href="/kontakt"
+                 class="bg-accent text-white px-6 py-3 rounded-full font-semibold hover:bg-red-700 transition text-center">
+                Kontakt oss
+              </a>
+
+              <a href="https://ragde.no/charge/"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="border border-gray-300 bg-white px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition text-center">
+                Se ladekart
+              </a>
+
+            </div>
+
+          </div>
+
+          <!-- Høyre -->
+          <div class="relative">
+
+            <div class="absolute -top-6 -left-6 w-24 h-24 bg-primary/10 rounded-full blur-2xl"></div>
+            <div class="absolute -bottom-8 -right-8 w-32 h-32 bg-accent/10 rounded-full blur-3xl"></div>
+
+            <div class="relative bg-white border border-gray-100 rounded-3xl shadow-xl p-8 md:p-10">
+
+              <div class="mb-6 inline-flex bg-primary px-6 py-5 rounded-2xl shadow-sm">
+                <img src="/fordeler/ragde-charge/ragde-logo.png"
+                     alt="Ragde Charge"
+                     class="h-12 md:h-16 object-contain">
+              </div>
+
+              <h2 class="text-2xl font-bold text-gray-900 mb-3">
+                Enkelt og forutsigbart
+              </h2>
+
+              <p class="text-gray-600 leading-relaxed mb-6">
+                En ladefordel for løyvehavere som ønsker bedre kontroll på kostnader og en enklere hverdag med elbil.
+              </p>
+
+              <div class="grid grid-cols-2 gap-4">
+
+                <div class="bg-gray-50 rounded-2xl p-5 border">
+                  <div class="text-sm text-gray-500 mb-1">
+                    Pris
+                  </div>
+
+                  <div class="text-3xl font-bold text-gray-900">
+                    2.8 kr/kWh
+                  </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-2xl p-5 border">
+                  <div class="text-sm text-gray-500 mb-1">
+                    Gjelder
+                  </div>
+
+                  <div class="text-3xl font-bold text-gray-900">
+                    Hele døgnet
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Fordeler -->
+    <section class="py-16 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="grid md:grid-cols-3 gap-8">
+
+          <div class="bg-gray-50 border rounded-2xl p-8">
+            <div class="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center mb-5">
+              <i data-feather="dollar-sign" class="text-primary w-7 h-7"></i>
+            </div>
+
+            <h3 class="text-xl font-bold text-gray-900 mb-3">
+              Fast pris
+            </h3>
+
+            <p class="text-gray-600 leading-relaxed">
+              Våre løyvehavere får lading til 2.8 kr/kWh.
+            </p>
+          </div>
+
+          <div class="bg-gray-50 border rounded-2xl p-8">
+            <div class="bg-accent/10 w-14 h-14 rounded-full flex items-center justify-center mb-5">
+              <i data-feather="clock" class="text-accent w-7 h-7"></i>
+            </div>
+
+            <h3 class="text-xl font-bold text-gray-900 mb-3">
+              Hele døgnet
+            </h3>
+
+            <p class="text-gray-600 leading-relaxed">
+              Samme pris uansett tidspunkt og dag.
+            </p>
+          </div>
+
+          <div class="bg-gray-50 border rounded-2xl p-8">
+            <div class="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center mb-5">
+              <i data-feather="zap" class="text-primary w-7 h-7"></i>
+            </div>
+
+            <h3 class="text-xl font-bold text-gray-900 mb-3">
+              Perfekt for taxi
+            </h3>
+
+            <p class="text-gray-600 leading-relaxed">
+              Utviklet for løyvehavere med høyt ladebehov.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Kart -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="bg-white rounded-3xl border p-10 shadow-sm text-center">
+
+          <div class="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i data-feather="map-pin" class="w-8 h-8 text-primary"></i>
+          </div>
+
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">
+            Finn ladestasjoner
+          </h2>
+
+          <p class="text-gray-600 max-w-2xl mx-auto leading-relaxed mb-8">
+            Se alle tilgjengelige ladestasjoner direkte i Ragde Charge sitt kart.
+          </p>
+
+          <a href="https://ragde.no/charge/"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="inline-block bg-primary text-white px-8 py-4 rounded-full font-semibold hover:opacity-95 transition">
+            Åpne ladekart
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Info -->
+    <section class="py-16 bg-white">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="bg-blue-50 border border-blue-100 rounded-3xl p-8 md:p-10">
+
+          <div class="flex items-start gap-4">
+
+            <div class="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center shrink-0">
+              <i data-feather="info" class="text-primary w-6 h-6"></i>
+            </div>
+
+            <div>
+
+              <h2 class="text-2xl font-bold text-gray-900 mb-3">
+                Viktig informasjon
+              </h2>
+
+              <p class="text-gray-600 leading-relaxed mb-5">
+                Ta kontakt med OnTaxi for å få tildelt ladekort og mer informasjon om avtalen.
+              </p>
+
+              <p class="text-sm text-gray-500 leading-relaxed">
+                Vi oppdaterer siden fortløpende med flere detaljer om fordelen.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 bg-primary text-center text-white">
+      <div class="max-w-3xl mx-auto px-4">
+
+        <h2 class="text-3xl font-bold mb-4">
+          Vil du vite mer om Ragde Charge?
+        </h2>
+
+        <p class="text-lg mb-8">
+          Kontakt oss dersom du ønsker mer informasjon om ladeavtalen.
+        </p>
+
+        <a href="/kontakt"
+           class="bg-accent text-white px-8 py-3 rounded-full font-semibold hover:bg-red-700 transition">
+          Kontakt oss
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
   <footer class="bg-gray-900 text-white pt-12 pb-10">
+
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
       <div class="grid md:grid-cols-3 gap-12 mb-10 items-start">
 
         <div>
           <h3 class="text-xl font-bold mb-4">OnTaxi AS</h3>
+
           <p class="text-gray-400">
             Gode løsninger og tydelige vilkår for løyvehavere og sjåfører.
           </p>
         </div>
 
         <div>
-          <h4 class="text-lg font-semibold mb-4">Snarveier</h4>
+          <h4 class="text-lg font-semibold mb-4">
+            Snarveier
+          </h4>
+
           <div class="grid grid-cols-2 gap-x-10 gap-y-2 text-gray-400">
             <a href="/" class="hover:text-white transition">Startsiden</a>
             <a href="/bli-partner" class="hover:text-white transition">Bli partner</a>
@@ -329,33 +596,33 @@
             <a href="/kontakt" class="hover:text-white transition">Kontakt</a>
 
             <a href="/priser" class="hover:text-white transition">Priser</a>
-            <a href="https://akarnet.no" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">
-              Taksameter rapporter
-            </a>
-
             <a href="/fordeler" class="hover:text-white transition">Fordeler</a>
           </div>
         </div>
 
         <div>
-          <h4 class="text-lg font-semibold mb-4">Kontakt oss</h4>
+          <h4 class="text-lg font-semibold mb-4">
+            Kontakt oss
+          </h4>
+
           <ul class="space-y-2 text-gray-400">
+
             <li class="flex items-center">
               <i data-feather="mail" class="w-5 h-5 mr-2"></i>
-              <a href="mailto:post@ontaxi.no" class="hover:text-white transition">post@ontaxi.no</a>
-            </li>
-            <li class="flex items-center">
-              <i data-feather="phone" class="w-5 h-5 mr-2"></i>
-              <a href="tel:+4740024400" class="hover:text-white transition">+47 400 24 400</a>
-            </li>
-            <li class="flex items-center">
-              <i data-feather="map-pin" class="w-5 h-5 mr-2"></i>
-              <a href="https://www.google.com/maps?q=Trondheimsveien+436,+0962+Oslo,+Norge"
-                 target="_blank" rel="noopener noreferrer"
-                 class="hover:text-white transition">
-                Trondheimsveien 436 – 0962 Oslo, Norge
+
+              <a href="mailto:post@ontaxi.no" class="hover:text-white transition">
+                post@ontaxi.no
               </a>
             </li>
+
+            <li class="flex items-center">
+              <i data-feather="phone" class="w-5 h-5 mr-2"></i>
+
+              <a href="tel:+4740024400" class="hover:text-white transition">
+                +47 400 24 400
+              </a>
+            </li>
+
           </ul>
         </div>
 
@@ -364,14 +631,16 @@
       <div class="border-t border-gray-800 pt-6 text-center text-gray-400 text-sm">
         © 2026 OnTaxi AS – Alle rettigheter forbeholdt.
       </div>
+
     </div>
+
   </footer>
 
-  <!-- 🔝 Scroll to top -->
+  <!-- Scroll -->
   <button id="scrollTopBtn"
     onclick="window.scrollTo({top:0, behavior:'smooth'})"
-    class="opacity-0 pointer-events-none fixed bottom-5 right-5 bg-accent text-white p-3 rounded-full shadow-lg hover:bg-red-700 transition z-50"
-    aria-label="Til toppen">
+    class="opacity-0 pointer-events-none fixed bottom-5 right-5 bg-accent text-white p-3 rounded-full shadow-lg z-50">
+
     <i data-feather="arrow-up" class="w-5 h-5"></i>
   </button>
 
@@ -391,21 +660,25 @@
     let isVisible = false;
 
     window.addEventListener('scroll', () => {
+
       if (window.scrollY > 200 && !isVisible) {
+
         scrollTopBtn.classList.remove('fade-out');
         scrollTopBtn.classList.add('fade-in');
         scrollTopBtn.classList.remove('pointer-events-none');
+
         isVisible = true;
+
       } else if (window.scrollY <= 200 && isVisible) {
+
         scrollTopBtn.classList.remove('fade-in');
         scrollTopBtn.classList.add('fade-out');
         scrollTopBtn.classList.add('pointer-events-none');
+
         isVisible = false;
       }
     });
   </script>
 
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2609991072523085"
-     crossorigin="anonymous"></script>
 </body>
 </html>
