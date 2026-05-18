@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Carl Berner Bilvask & Bilpleie | OnTaxi Fordeler</title>
 
-  <!-- Google tag (gtag.js) -->
+  <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WVLGSVQD9N"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -67,12 +67,10 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between h-16 items-center">
 
-        <!-- Logo -->
         <a href="/" class="flex items-center">
           <img src="/OnTaxi-signatur-GIF.gif" alt="OnTaxi logo" class="h-10 mr-3">
         </a>
 
-        <!-- Desktop meny -->
         <div class="hidden md:flex items-center space-x-8">
           <a href="/" class="text-gray-900 hover:text-primary transition">Hjem</a>
           <a href="/taksameter" class="text-gray-900 hover:text-primary transition">Taksameter</a>
@@ -81,7 +79,6 @@
           <a href="/bli-partner" class="text-gray-900 hover:text-primary transition">Bli partner</a>
         </div>
 
-        <!-- Desktop knapper -->
         <div class="hidden md:flex items-center">
           <a href="/kontakt" class="bg-accent text-white px-6 py-2 rounded-full hover:bg-red-700 transition mr-3">
             Kontakt oss
@@ -92,7 +89,6 @@
           </a>
         </div>
 
-        <!-- Mobilknapp -->
         <div class="md:hidden flex items-center">
           <button id="menu-btn" class="text-gray-900 focus:outline-none" aria-label="Åpne meny">
             <i data-feather="menu"></i>
@@ -101,7 +97,6 @@
       </div>
     </div>
 
-    <!-- Mobilmeny -->
     <div id="mobileMenu" class="hidden md:hidden bg-white shadow-md border-t">
       <div class="max-w-7xl mx-auto py-2">
         <a href="/" class="block px-4 py-3 text-gray-900 hover:text-primary transition">Hjem</a>
@@ -127,348 +122,474 @@
     </div>
   </nav>
 
-  <!-- 🔹 Hero -->
-  <section class="pt-28 pb-20 bg-gradient-to-br from-white via-gray-50 to-blue-50/70 overflow-hidden">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
+  <!-- ========================================================= -->
+  <!-- 🔹 MOBILVERSJON -->
+  <!-- ========================================================= -->
+  <main class="md:hidden bg-white">
 
-        <!-- Venstre side -->
-        <div>
-          <div class="inline-flex items-center bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-5">
-            Fordel for OnTaxi-løyvehavere
-          </div>
+    <!-- Mobil Hero -->
+    <section class="pt-24 pb-6 px-4 bg-gradient-to-b from-white via-blue-50/40 to-white">
+      <div class="max-w-md mx-auto text-center">
 
-          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-5">
-            Carl Berner Bilvask & Bilpleie
-          </h1>
+        <div class="inline-flex items-center bg-primary/10 text-primary px-4 py-2 rounded-full text-xs font-semibold mb-4">
+          Fordel for OnTaxi-løyvehavere
+        </div>
 
-          <p class="text-lg text-gray-600 leading-relaxed max-w-xl mb-8">
-            Som løyvehaver hos OnTaxi får du tilgang til gunstige priser på bilvask, bilpleie og detailing hos
-            <strong>Carl Berner Bilvask & Bilpleie</strong>.
-          </p>
+        <h1 class="text-3xl font-extrabold text-gray-900 leading-tight mb-3">
+          Bilvask og bilpleie
+        </h1>
 
-          <div class="flex flex-col sm:flex-row gap-4">
-            <a href="/kontakt"
-               class="bg-accent text-white px-6 py-3 rounded-full font-semibold hover:bg-red-700 transition text-center">
-              Bestill via OnTaxi
-            </a>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          OnTaxi-løyvehavere får gunstige priser på innvendig og utvendig bilvask, bilpleie og detailing hos Carl Berner Bilvask & Bilpleie.
+        </p>
 
-            <a href="#priser"
-               class="border border-gray-300 bg-white px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition text-center">
-              Se priser
-            </a>
+      </div>
+    </section>
+
+    <!-- Mobil Pris -->
+    <section class="px-4 pb-7 bg-white">
+      <div class="max-w-md mx-auto bg-primary text-white rounded-3xl p-6 shadow-xl text-center">
+
+        <div class="flex justify-center mb-4">
+          <div class="bg-white rounded-2xl border border-white/20 p-3 shadow-sm">
+            <img src="/fordeler/carlberner-bilvask/bilvask-2.jpg"
+                 alt="Carl Berner Bilvask & Bilpleie"
+                 class="h-16 object-contain">
           </div>
         </div>
 
-        <!-- Høyre side -->
-        <div class="relative">
-          <div class="absolute -top-6 -left-6 w-24 h-24 bg-primary/10 rounded-full blur-2xl"></div>
-          <div class="absolute -bottom-8 -right-8 w-32 h-32 bg-accent/10 rounded-full blur-3xl"></div>
+        <div class="text-sm opacity-80 mb-4">
+          Vaskefordel
+        </div>
 
-          <div class="relative bg-white border border-gray-100 rounded-3xl shadow-xl p-8 md:p-10">
-            <div class="mb-6 bg-white rounded-2xl border p-4 inline-block shadow-sm">
-  <img src="/fordeler/carlberner-bilvask/bilvask-2.jpg"
-       alt="Carl Berner Bilvask & Bilpleie"
-       class="h-24 object-contain">
-</div>
+        <div class="grid grid-cols-2 gap-3">
 
-            <h2 class="text-2xl font-bold text-gray-900 mb-3">
-              Ren bil gir bedre kundeopplevelse
+          <div class="bg-white/10 rounded-2xl p-4">
+            <div class="text-xs opacity-80 mb-1">Innvendig + utvendig</div>
+            <div class="text-2xl font-extrabold">400 kr</div>
+          </div>
+
+          <div class="bg-white/10 rounded-2xl p-4">
+            <div class="text-xs opacity-80 mb-1">Detailing</div>
+            <div class="text-2xl font-extrabold">800 kr</div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Mobil Tjenester -->
+    <section class="px-4 pb-7 bg-white">
+      <div class="max-w-md mx-auto">
+
+        <h2 class="text-2xl font-bold text-gray-900 text-center mb-5">
+          Dette får du
+        </h2>
+
+        <div class="grid grid-cols-3 gap-3">
+
+          <div class="bg-gray-50 border rounded-2xl p-3 text-center shadow-sm">
+            <div class="bg-primary/10 w-10 h-10 rounded-xl flex items-center justify-center mx-auto mb-3">
+              <i data-feather="droplet" class="w-5 h-5 text-primary"></i>
+            </div>
+            <h3 class="font-bold text-gray-900 text-sm leading-tight">
+              Vask
+            </h3>
+            <p class="text-[11px] text-gray-600 mt-1 leading-snug">
+              400 kr
+            </p>
+          </div>
+
+          <div class="bg-gray-50 border rounded-2xl p-3 text-center shadow-sm">
+            <div class="bg-accent/10 w-10 h-10 rounded-xl flex items-center justify-center mx-auto mb-3">
+              <i data-feather="star" class="w-5 h-5 text-accent"></i>
+            </div>
+            <h3 class="font-bold text-gray-900 text-sm leading-tight">
+              Detailing
+            </h3>
+            <p class="text-[11px] text-gray-600 mt-1 leading-snug">
+              800 kr
+            </p>
+          </div>
+
+          <div class="bg-gray-50 border rounded-2xl p-3 text-center shadow-sm">
+            <div class="bg-primary/10 w-10 h-10 rounded-xl flex items-center justify-center mx-auto mb-3">
+              <i data-feather="check-circle" class="w-5 h-5 text-primary"></i>
+            </div>
+            <h3 class="font-bold text-gray-900 text-sm leading-tight">
+              Bilpleie
+            </h3>
+            <p class="text-[11px] text-gray-600 mt-1 leading-snug">
+              Etter avtale
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Mobil Info -->
+    <section class="px-4 pb-7 bg-gray-50">
+      <div class="max-w-md mx-auto pt-7">
+
+        <div class="bg-white border rounded-3xl p-5 shadow-sm">
+          <div class="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i data-feather="info" class="w-7 h-7 text-primary"></i>
+          </div>
+
+          <h2 class="text-2xl font-bold text-gray-900 mb-3">
+            Slik benytter du fordelen
+          </h2>
+
+          <p class="text-sm text-gray-600 leading-relaxed mb-5">
+            Fordelen gjelder for løyvehavere og kjøretøy tilknyttet OnTaxi AS drosjesentral. Kontakt OnTaxi først, slik at vi kan bekrefte avtalen og veilede deg videre.
+          </p>
+
+          <a href="/kontakt"
+             class="block w-full text-center bg-primary text-white py-4 rounded-2xl font-bold">
+            Kontakt OnTaxi
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Mobil Ekstra info -->
+    <section class="px-4 pb-7 bg-white">
+      <div class="max-w-md mx-auto bg-yellow-50 border border-yellow-200 rounded-3xl p-5">
+
+        <div class="flex gap-3">
+          <div class="bg-yellow-100 w-10 h-10 rounded-xl flex items-center justify-center shrink-0">
+            <i data-feather="info" class="w-5 h-5 text-yellow-700"></i>
+          </div>
+
+          <div>
+            <h2 class="font-bold text-gray-900 mb-1">
+              Viktig informasjon
             </h2>
 
-            <p class="text-gray-600 leading-relaxed mb-6">
-              En enkel og praktisk fordel for løyvehavere som ønsker å holde bilen presentabel, ren og klar for daglig drosjedrift.
+            <p class="text-sm text-gray-600 leading-relaxed">
+              Prisene gjelder for OnTaxi-løyvehavere etter avtale. Innholdet i vask og detailing kan tilpasses etter bilens tilstand og tilgjengelighet hos leverandør.
             </p>
+          </div>
+        </div>
 
-            <div class="grid grid-cols-2 gap-4">
-              <div class="bg-gray-50 rounded-2xl p-5 border">
-                <div class="text-sm text-gray-500 mb-1">Innvendig + utvendig</div>
-                <div class="text-2xl font-bold text-gray-900">400 kr</div>
-              </div>
+      </div>
+    </section>
 
-              <div class="bg-gray-50 rounded-2xl p-5 border">
-                <div class="text-sm text-gray-500 mb-1">Detailing</div>
-                <div class="text-2xl font-bold text-gray-900">800 kr</div>
-              </div>
+    <!-- Mobil CTA -->
+    <section class="px-4 pb-8 bg-white">
+      <div class="max-w-md mx-auto">
+
+        <a href="/kontakt"
+           class="block w-full text-center bg-accent text-white py-4 rounded-2xl font-bold text-lg shadow-lg hover:bg-red-700 transition">
+          Bestill via OnTaxi
+        </a>
+
+        <p class="text-xs text-gray-400 text-center mt-3">
+          Vi hjelper deg med informasjon og bruk av avtalen.
+        </p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================= -->
+  <!-- 🔹 DESKTOPVERSJON -->
+  <!-- ========================================================= -->
+  <main class="hidden md:block">
+
+    <!-- Hero -->
+    <section class="pt-28 pb-20 bg-gradient-to-br from-white via-gray-50 to-blue-50/70 overflow-hidden">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+          <div>
+            <div class="inline-flex items-center bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-5">
+              Fordel for OnTaxi-løyvehavere
             </div>
 
-            <h1 class="sr-only">Carl Berner Bilvask & Bilpleie</h1>
-          </div>
-        </div>
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-5">
+              Carl Berner Bilvask & Bilpleie
+            </h1>
 
-      </div>
-    </div>
-  </section>
-
-  <!-- 🔹 Priser / fordeler -->
-  <section id="priser" class="py-16 bg-gray-50">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid md:grid-cols-3 gap-8">
-
-        <div class="bg-white border rounded-2xl p-8 shadow-sm">
-          <div class="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center mb-5">
-            <i data-feather="droplet" class="text-primary w-7 h-7"></i>
-          </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-3">Innvendig og utvendig vask</h3>
-          <p class="text-gray-600 leading-relaxed">
-            Komplett innvendig og utvendig vask til <strong>400 kr</strong> for OnTaxi-løyvehavere.
-          </p>
-        </div>
-
-        <div class="bg-white border rounded-2xl p-8 shadow-sm">
-          <div class="bg-accent/10 w-14 h-14 rounded-full flex items-center justify-center mb-5">
-            <i data-feather="star" class="text-accent w-7 h-7"></i>
-          </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-3">Detailing</h3>
-          <p class="text-gray-600 leading-relaxed">
-            Grundigere bilpleie/detailing til <strong>800 kr</strong>. Passer godt når bilen trenger ekstra oppfriskning.
-          </p>
-        </div>
-
-        <div class="bg-white border rounded-2xl p-8 shadow-sm">
-          <div class="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center mb-5">
-            <i data-feather="check-circle" class="text-primary w-7 h-7"></i>
-          </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-3">Flere fordeler kommer</h3>
-          <p class="text-gray-600 leading-relaxed mb-4">
-            Her kan du senere legge inn flere punkter, som polering, seterens, tepperens, voksbehandling eller prioritetstime.
-          </p>
-          <ul class="space-y-2 text-sm text-gray-500">
-            <li>• Polering / voksbehandling</li>
-            <li>• Seterens / tepperens</li>
-            <li>• Hurtigvask / faste vaskepakker</li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- 🔹 Slik benytter du avtalen -->
-  <section class="py-16 bg-white">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="bg-blue-50 border border-blue-100 rounded-2xl p-8 md:p-10">
-        <div class="flex items-start gap-4">
-          <div class="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center shrink-0">
-            <i data-feather="info" class="text-primary w-6 h-6"></i>
-          </div>
-          <div>
-            <h2 class="text-2xl font-bold text-gray-900 mb-3">Slik benytter du fordelen</h2>
-            <p class="text-gray-600 leading-relaxed mb-5">
-              Fordelen gjelder for løyvehavere/kjøretøy tilknyttet OnTaxi AS drosjesentral. For å benytte avtalen anbefales det å kontakte OnTaxi AS først, slik at vi kan bekrefte avtalen og veilede deg videre.
+            <p class="text-lg text-gray-600 leading-relaxed max-w-xl mb-8">
+              Som løyvehaver hos OnTaxi får du tilgang til gunstige priser på bilvask, bilpleie og detailing hos
+              <strong>Carl Berner Bilvask & Bilpleie</strong>.
             </p>
-            <a href="/kontakt" class="inline-block bg-white border border-gray-300 px-5 py-3 rounded-full font-semibold hover:bg-gray-100 transition">
-              Kontakt OnTaxi
-            </a>
+
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a href="/kontakt"
+                 class="bg-accent text-white px-6 py-3 rounded-full font-semibold hover:bg-red-700 transition text-center">
+                Bestill via OnTaxi
+              </a>
+
+              <a href="#priser"
+                 class="border border-gray-300 bg-white px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition text-center">
+                Se priser
+              </a>
+            </div>
+          </div>
+
+          <div class="relative">
+            <div class="absolute -top-6 -left-6 w-24 h-24 bg-primary/10 rounded-full blur-2xl"></div>
+            <div class="absolute -bottom-8 -right-8 w-32 h-32 bg-accent/10 rounded-full blur-3xl"></div>
+
+            <div class="relative bg-white border border-gray-100 rounded-3xl shadow-xl p-8 md:p-10">
+              <div class="mb-6 bg-white rounded-2xl border p-4 inline-block shadow-sm">
+                <img src="/fordeler/carlberner-bilvask/bilvask-2.jpg"
+                     alt="Carl Berner Bilvask & Bilpleie"
+                     class="h-24 object-contain">
+              </div>
+
+              <h2 class="text-2xl font-bold text-gray-900 mb-3">
+                Ren bil gir bedre kundeopplevelse
+              </h2>
+
+              <p class="text-gray-600 leading-relaxed mb-6">
+                En enkel og praktisk fordel for løyvehavere som ønsker å holde bilen presentabel, ren og klar for daglig drosjedrift.
+              </p>
+
+              <div class="grid grid-cols-2 gap-4">
+                <div class="bg-gray-50 rounded-2xl p-5 border">
+                  <div class="text-sm text-gray-500 mb-1">Innvendig + utvendig</div>
+                  <div class="text-2xl font-bold text-gray-900">400 kr</div>
+                </div>
+
+                <div class="bg-gray-50 rounded-2xl p-5 border">
+                  <div class="text-sm text-gray-500 mb-1">Detailing</div>
+                  <div class="text-2xl font-bold text-gray-900">800 kr</div>
+                </div>
+              </div>
+
+              <h1 class="sr-only">Carl Berner Bilvask & Bilpleie</h1>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Priser / fordeler -->
+    <section id="priser" class="py-16 bg-gray-50">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-3 gap-8">
+
+          <div class="bg-white border rounded-2xl p-8 shadow-sm">
+            <div class="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center mb-5">
+              <i data-feather="droplet" class="text-primary w-7 h-7"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Innvendig og utvendig vask</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Komplett innvendig og utvendig vask til <strong>400 kr</strong> for OnTaxi-løyvehavere.
+            </p>
+          </div>
+
+          <div class="bg-white border rounded-2xl p-8 shadow-sm">
+            <div class="bg-accent/10 w-14 h-14 rounded-full flex items-center justify-center mb-5">
+              <i data-feather="star" class="text-accent w-7 h-7"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Detailing</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Grundigere bilpleie/detailing til <strong>800 kr</strong>. Passer godt når bilen trenger ekstra oppfriskning.
+            </p>
+          </div>
+
+          <div class="bg-white border rounded-2xl p-8 shadow-sm">
+            <div class="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center mb-5">
+              <i data-feather="check-circle" class="text-primary w-7 h-7"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Flere fordeler kommer</h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              Her kan du senere legge inn flere punkter, som polering, seterens, tepperens, voksbehandling eller prioritetstime.
+            </p>
+            <ul class="space-y-2 text-sm text-gray-500">
+              <li>• Polering / voksbehandling</li>
+              <li>• Seterens / tepperens</li>
+              <li>• Hurtigvask / faste vaskepakker</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Slik benytter du avtalen -->
+    <section class="py-16 bg-white">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-blue-50 border border-blue-100 rounded-2xl p-8 md:p-10">
+          <div class="flex items-start gap-4">
+            <div class="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center shrink-0">
+              <i data-feather="info" class="text-primary w-6 h-6"></i>
+            </div>
+
+            <div>
+              <h2 class="text-2xl font-bold text-gray-900 mb-3">Slik benytter du fordelen</h2>
+              <p class="text-gray-600 leading-relaxed mb-5">
+                Fordelen gjelder for løyvehavere/kjøretøy tilknyttet OnTaxi AS drosjesentral.
+                For å benytte avtalen anbefales det å kontakte OnTaxi AS først, slik at vi kan bekrefte avtalen og veilede deg videre.
+              </p>
+
+              <a href="/kontakt" class="inline-block bg-white border border-gray-300 px-5 py-3 rounded-full font-semibold hover:bg-gray-100 transition">
+                Kontakt OnTaxi
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- 🔹 Ekstra redigerbare punkter -->
-  <section class="py-16 bg-gray-50">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid md:grid-cols-2 gap-8">
-        <div class="bg-white rounded-2xl border p-8 shadow-sm">
-          <h3 class="text-xl font-bold text-gray-900 mb-4">Hva kan du legge til senere?</h3>
-          <ul class="space-y-3 text-gray-600">
-            <li class="flex gap-3"><i data-feather="check" class="w-5 h-5 text-primary mt-1"></i><span>Åpningstider</span></li>
-            <li class="flex gap-3"><i data-feather="check" class="w-5 h-5 text-primary mt-1"></i><span>Adresse og kart</span></li>
-            <li class="flex gap-3"><i data-feather="check" class="w-5 h-5 text-primary mt-1"></i><span>Flere vaskepakker</span></li>
-            <li class="flex gap-3"><i data-feather="check" class="w-5 h-5 text-primary mt-1"></i><span>Før- og etterbilder</span></li>
-          </ul>
-        </div>
+    <!-- Ekstra redigerbare punkter -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-8">
 
-        <div class="bg-white rounded-2xl border p-8 shadow-sm">
-          <h3 class="text-xl font-bold text-gray-900 mb-4">Viktig informasjon</h3>
-          <p class="text-gray-600 leading-relaxed">
-            Prisene gjelder for OnTaxi-løyvehavere etter avtale. Innholdet i vask/detailing kan tilpasses etter bilens tilstand og tilgjengelighet hos leverandør.
-          </p>
-          <p class="text-xs text-gray-400 mt-5">Sist oppdatert: Mai 2026</p>
+          <div class="bg-white rounded-2xl border p-8 shadow-sm">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Hva kan du legge til senere?</h3>
+            <ul class="space-y-3 text-gray-600">
+              <li class="flex gap-3"><i data-feather="check" class="w-5 h-5 text-primary mt-1"></i><span>Åpningstider</span></li>
+              <li class="flex gap-3"><i data-feather="check" class="w-5 h-5 text-primary mt-1"></i><span>Adresse og kart</span></li>
+              <li class="flex gap-3"><i data-feather="check" class="w-5 h-5 text-primary mt-1"></i><span>Flere vaskepakker</span></li>
+              <li class="flex gap-3"><i data-feather="check" class="w-5 h-5 text-primary mt-1"></i><span>Før- og etterbilder</span></li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-2xl border p-8 shadow-sm">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Viktig informasjon</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Prisene gjelder for OnTaxi-løyvehavere etter avtale. Innholdet i vask/detailing kan tilpasses etter bilens tilstand og tilgjengelighet hos leverandør.
+            </p>
+            <p class="text-xs text-gray-400 mt-5">Sist oppdatert: Mai 2026</p>
+          </div>
+
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- 🔹 CTA -->
-  <section class="py-16 bg-primary text-center text-white">
-    <div class="max-w-3xl mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-4">Vil du benytte deg av bilvask-avtalen?</h2>
-      <p class="text-lg mb-8">
-        Kontakt oss dersom du ønsker mer informasjon om avtalen og hvordan OnTaxi-løyvehavere kan benytte fordelen.
-      </p>
-      <a href="/kontakt" class="bg-accent text-white px-8 py-3 rounded-full font-semibold hover:bg-red-700 transition">
-        Kontakt oss
-      </a>
-    </div>
-  </section>
+    <!-- CTA -->
+    <section class="py-16 bg-primary text-center text-white">
+      <div class="max-w-3xl mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-4">Vil du benytte deg av bilvask-avtalen?</h2>
+        <p class="text-lg mb-8">
+          Kontakt oss dersom du ønsker mer informasjon om avtalen og hvordan OnTaxi-løyvehavere kan benytte fordelen.
+        </p>
+        <a href="/kontakt" class="bg-accent text-white px-8 py-3 rounded-full font-semibold hover:bg-red-700 transition">
+          Kontakt oss
+        </a>
+      </div>
+    </section>
+
+  </main>
 
   <!-- 🔹 Footer -->
-<footer class="bg-gray-900 text-white pt-12 pb-10">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <footer class="bg-gray-900 text-white pt-12 pb-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-    <div class="grid md:grid-cols-3 gap-12 mb-10 items-start">
+      <div class="grid md:grid-cols-3 gap-12 mb-10 items-start">
 
-      <!-- Om -->
-      <div>
-        <h3 class="text-xl font-bold mb-4">
-          OnTaxi AS
-        </h3>
-
-        <p class="text-gray-400 leading-relaxed">
-          Gode løsninger og tydelige vilkår for løyvehavere og sjåfører.
-        </p>
-      </div>
-
-      <!-- Snarveier -->
-      <div>
-        <h4 class="text-lg font-semibold mb-4">
-          Snarveier
-        </h4>
-
-        <div class="grid grid-cols-2 gap-x-10 gap-y-2 text-gray-400">
-
-          <a href="/" class="hover:text-white transition">
-            Startsiden
-          </a>
-
-          <a href="/bli-partner" class="hover:text-white transition">
-            Bli partner
-          </a>
-
-          <a href="/taksameter" class="hover:text-white transition">
-            Taksameter
-          </a>
-
-          <a href="/kontakt" class="hover:text-white transition">
-            Kontakt oss
-          </a>
-
-          <a href="/priser" class="hover:text-white transition">
-            Priser
-          </a>
-
-          <a href="https://akarnet.no"
-             target="_blank"
-             rel="noopener noreferrer"
-             class="hover:text-white transition">
-            Taksameter rapporter
-          </a>
-
-          <a href="/fordeler" class="hover:text-white transition">
-            Fordeler
-          </a>
-
+        <div>
+          <h3 class="text-xl font-bold mb-4">OnTaxi AS</h3>
+          <p class="text-gray-400 leading-relaxed">
+            Gode løsninger og tydelige vilkår for løyvehavere og sjåfører.
+          </p>
         </div>
+
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Snarveier</h4>
+
+          <div class="grid grid-cols-2 gap-x-10 gap-y-2 text-gray-400">
+            <a href="/" class="hover:text-white transition">Startsiden</a>
+            <a href="/bli-partner" class="hover:text-white transition">Bli partner</a>
+
+            <a href="/taksameter" class="hover:text-white transition">Taksameter</a>
+            <a href="/kontakt" class="hover:text-white transition">Kontakt oss</a>
+
+            <a href="/priser" class="hover:text-white transition">Priser</a>
+            <a href="https://akarnet.no" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">
+              Taksameter rapporter
+            </a>
+
+            <a href="/fordeler" class="hover:text-white transition">Fordeler</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Kontakt oss</h4>
+
+          <ul class="space-y-2 text-gray-400">
+            <li class="flex items-center">
+              <i data-feather="mail" class="w-5 h-5 mr-2"></i>
+              <a href="mailto:post@ontaxi.no" class="hover:text-white transition">post@ontaxi.no</a>
+            </li>
+
+            <li class="flex items-center">
+              <i data-feather="phone" class="w-5 h-5 mr-2"></i>
+              <a href="tel:+4740024400" class="hover:text-white transition">+47 400 24 400</a>
+            </li>
+
+            <li class="flex items-center">
+              <i data-feather="map-pin" class="w-5 h-5 mr-2"></i>
+              <a href="https://maps.app.goo.gl/64tCr7qhbAhwRLcq6"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="hover:text-white transition">
+                Trondheimsveien 436b – 0962 Oslo, Norge
+              </a>
+            </li>
+          </ul>
+        </div>
+
       </div>
 
-      <!-- Kontakt -->
-      <div>
-
-        <h4 class="text-lg font-semibold mb-4">
-          Kontakt oss
-        </h4>
-
-        <ul class="space-y-2 text-gray-400">
-
-          <li class="flex items-center">
-            <i data-feather="mail" class="w-5 h-5 mr-2"></i>
-
-            <a href="mailto:post@ontaxi.no"
-               class="hover:text-white transition">
-              post@ontaxi.no
-            </a>
-          </li>
-
-          <li class="flex items-center">
-            <i data-feather="phone" class="w-5 h-5 mr-2"></i>
-
-            <a href="tel:+4740024400"
-               class="hover:text-white transition">
-              +47 400 24 400
-            </a>
-          </li>
-
-          <li class="flex items-center">
-            <i data-feather="map-pin" class="w-5 h-5 mr-2"></i>
-
-            <a href="https://maps.app.goo.gl/64tCr7qhbAhwRLcq6"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="hover:text-white transition">
-              Trondheimsveien 436b – 0962 Oslo, Norge
-            </a>
-          </li>
-
-        </ul>
-
+      <div class="border-t border-gray-800 pt-6 text-center text-gray-400 text-sm">
+        © 2026 OnTaxi AS – Alle rettigheter forbeholdt.
       </div>
 
     </div>
+  </footer>
 
-    <!-- Copyright -->
-    <div class="border-t border-gray-800 pt-6 text-center text-gray-400 text-sm">
-      © 2026 OnTaxi AS – Alle rettigheter forbeholdt.
-    </div>
+  <!-- 🔝 Scroll to top -->
+  <button id="scrollTopBtn"
+    onclick="window.scrollTo({top:0, behavior:'smooth'})"
+    class="fade-out opacity-0 pointer-events-none fixed bottom-5 right-5 bg-accent text-white p-3 rounded-full shadow-lg hover:bg-red-700 transition z-50"
+    aria-label="Til toppen">
+    <i data-feather="arrow-up" class="w-5 h-5"></i>
+  </button>
 
-  </div>
-</footer>
+  <!-- Scripts -->
+  <script>
+    feather.replace();
 
-<!-- 🔝 Scroll to top -->
-<button id="scrollTopBtn"
-  onclick="window.scrollTo({top:0, behavior:'smooth'})"
-  class="fade-out opacity-0 pointer-events-none fixed bottom-5 right-5 bg-accent text-white p-3 rounded-full shadow-lg hover:bg-red-700 transition z-50"
-  aria-label="Til toppen">
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobileMenu');
 
-  <i data-feather="arrow-up" class="w-5 h-5"></i>
-</button>
-
-<!-- 🔹 Scripts -->
-<script>
-  feather.replace();
-
-  const menuBtn = document.getElementById('menu-btn');
-  const mobileMenu = document.getElementById('mobileMenu');
-
-  if (menuBtn && mobileMenu) {
-    menuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-  }
-
-  const scrollTopBtn = document.getElementById('scrollTopBtn');
-
-  window.addEventListener('scroll', () => {
-
-    if (window.scrollY > 200) {
-
-      scrollTopBtn.classList.remove(
-        'opacity-0',
-        'pointer-events-none',
-        'fade-out'
-      );
-
-      scrollTopBtn.classList.add('fade-in');
-
-    } else {
-
-      scrollTopBtn.classList.add(
-        'opacity-0',
-        'pointer-events-none',
-        'fade-out'
-      );
-
-      scrollTopBtn.classList.remove('fade-in');
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
     }
 
-  });
-</script>
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
 
-<!-- Google Adsense -->
-<script async
-  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2609991072523085"
-  crossorigin="anonymous">
-</script>
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 200) {
+        scrollTopBtn.classList.remove('opacity-0', 'pointer-events-none', 'fade-out');
+        scrollTopBtn.classList.add('fade-in');
+      } else {
+        scrollTopBtn.classList.add('opacity-0', 'pointer-events-none', 'fade-out');
+        scrollTopBtn.classList.remove('fade-in');
+      }
+    });
+  </script>
+
+  <!-- Google Adsense -->
+  <script async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2609991072523085"
+    crossorigin="anonymous">
+  </script>
+
 </body>
 </html>
