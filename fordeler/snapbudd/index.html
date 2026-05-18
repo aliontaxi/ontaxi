@@ -743,21 +743,16 @@
     }
 
     const scrollTopBtn = document.getElementById('scrollTopBtn');
-    let isVisible = false;
 
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 200 && !isVisible) {
-        scrollTopBtn.classList.remove('fade-out');
-        scrollTopBtn.classList.add('fade-in');
-        scrollTopBtn.classList.remove('pointer-events-none');
-        isVisible = true;
-      } else if (window.scrollY <= 200 && isVisible) {
-        scrollTopBtn.classList.remove('fade-in');
-        scrollTopBtn.classList.add('fade-out');
-        scrollTopBtn.classList.add('pointer-events-none');
-        isVisible = false;
-      }
-    });
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 200) {
+    scrollTopBtn.classList.remove('opacity-0', 'pointer-events-none', 'fade-out');
+    scrollTopBtn.classList.add('fade-in');
+  } else {
+    scrollTopBtn.classList.add('opacity-0', 'pointer-events-none', 'fade-out');
+    scrollTopBtn.classList.remove('fade-in');
+  }
+});
   </script>
 
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2609991072523085" crossorigin="anonymous"></script>
