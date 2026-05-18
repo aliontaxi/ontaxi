@@ -1,33 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Hovedsider -->
 
   <url>
     <loc>https://ontaxi.no/</loc>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-05-18</lastmod>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://ontaxi.no/taksameter</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://ontaxi.no/taksameter/</loc>
+    <lastmod>2026-05-18</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://ontaxi.no/priser/</loc>
+    <lastmod>2026-05-18</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://ontaxi.no/bli-partner/</loc>
+    <lastmod>2026-05-18</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://ontaxi.no/kontakt/</loc>
+    <lastmod>2026-05-18</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Fordeler -->
+
+  <url>
+    <loc>https://ontaxi.no/fordeler/</loc>
+    <lastmod>2026-05-18</lastmod>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://ontaxi.no/priser</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://ontaxi.no/fordeler/snappbudd/</loc>
+    <lastmod>2026-05-18</lastmod>
+    <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://ontaxi.no/bli-partner</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://ontaxi.no/fordeler/ragde-charge/</loc>
+    <lastmod>2026-05-18</lastmod>
+    <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://ontaxi.no/kontakt</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://ontaxi.no/fordeler/bilverksted-mekonomen/</loc>
+    <lastmod>2026-05-18</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://ontaxi.no/fordeler/carlberner-bilvask/</loc>
+    <lastmod>2026-05-18</lastmod>
     <priority>0.7</priority>
   </url>
 
