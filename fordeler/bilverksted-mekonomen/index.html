@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mekonomen verkstedavtale | OnTaxi Fordeler</title>
 
-  <!-- Google tag (gtag.js) -->
+  <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WVLGSVQD9N"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -55,16 +55,8 @@
   </script>
 
   <style>
-    .fade-in {
-      opacity: 1;
-      transform: translateY(0);
-      transition: all .25s ease;
-    }
-    .fade-out {
-      opacity: 0;
-      transform: translateY(6px);
-      transition: all .25s ease;
-    }
+    .fade-in { opacity: 1; transform: translateY(0); transition: all .25s ease; }
+    .fade-out { opacity: 0; transform: translateY(6px); transition: all .25s ease; }
   </style>
 </head>
 
@@ -75,12 +67,10 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between h-16 items-center">
 
-        <!-- Logo -->
         <a href="/" class="flex items-center">
           <img src="/OnTaxi-signatur-GIF.gif" alt="OnTaxi logo" class="h-10 mr-3">
         </a>
 
-        <!-- Desktop meny -->
         <div class="hidden md:flex items-center space-x-8">
           <a href="/" class="text-gray-900 hover:text-primary transition">Hjem</a>
           <a href="/taksameter" class="text-gray-900 hover:text-primary transition">Taksameter</a>
@@ -89,7 +79,6 @@
           <a href="/bli-partner" class="text-gray-900 hover:text-primary transition">Bli partner</a>
         </div>
 
-        <!-- Desktop knapper -->
         <div class="hidden md:flex items-center">
           <a href="/kontakt" class="bg-accent text-white px-6 py-2 rounded-full hover:bg-red-700 transition mr-3">
             Kontakt oss
@@ -100,7 +89,6 @@
           </a>
         </div>
 
-        <!-- Mobilknapp -->
         <div class="md:hidden flex items-center">
           <button id="menu-btn" class="text-gray-900 focus:outline-none" aria-label="Åpne meny">
             <i data-feather="menu"></i>
@@ -109,29 +97,13 @@
       </div>
     </div>
 
-    <!-- Mobilmeny -->
     <div id="mobileMenu" class="hidden md:hidden bg-white shadow-md border-t">
       <div class="max-w-7xl mx-auto py-2">
-
-        <a href="/" class="block px-4 py-3 text-gray-900 hover:text-primary transition">
-          Hjem
-        </a>
-
-        <a href="/taksameter" class="block px-4 py-3 text-gray-900 hover:text-primary transition">
-          Taksameter
-        </a>
-
-        <a href="/priser" class="block px-4 py-3 text-gray-900 hover:text-primary transition">
-          Priser
-        </a>
-
-        <a href="/fordeler" class="block px-4 py-3 text-primary font-semibold bg-gray-50">
-          Fordeler
-        </a>
-
-        <a href="/bli-partner" class="block px-4 py-3 text-gray-900 hover:text-primary transition">
-          Bli partner
-        </a>
+        <a href="/" class="block px-4 py-3 text-gray-900 hover:text-primary transition">Hjem</a>
+        <a href="/taksameter" class="block px-4 py-3 text-gray-900 hover:text-primary transition">Taksameter</a>
+        <a href="/priser" class="block px-4 py-3 text-gray-900 hover:text-primary transition">Priser</a>
+        <a href="/fordeler" class="block px-4 py-3 text-primary font-semibold bg-gray-50">Fordeler</a>
+        <a href="/bli-partner" class="block px-4 py-3 text-gray-900 hover:text-primary transition">Bli partner</a>
 
         <div class="px-4 pt-3">
           <a href="https://akarnet.no" target="_blank" rel="noopener noreferrer"
@@ -146,364 +118,508 @@
             Kontakt oss
           </a>
         </div>
-
       </div>
     </div>
   </nav>
 
-  <!-- 🔹 Hero -->
-  <section class="pt-28 pb-20 bg-gradient-to-br from-white via-gray-50 to-yellow-50/70 overflow-hidden">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
+  <!-- ========================================================= -->
+  <!-- 🔹 MOBILVERSJON -->
+  <!-- ========================================================= -->
+  <main class="md:hidden bg-white">
 
-        <!-- Venstre side -->
-        <div>
-          <div class="inline-flex items-center bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-5">
-            Fordel for OnTaxi-løyvehavere
-          </div>
+    <!-- Mobil Hero -->
+    <section class="pt-24 pb-6 px-4 bg-gradient-to-b from-white via-yellow-50/60 to-white">
+      <div class="max-w-md mx-auto text-center">
 
-          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-5">
-            Mekonomen verkstedavtale
-          </h1>
+        <div class="inline-flex items-center bg-primary/10 text-primary px-4 py-2 rounded-full text-xs font-semibold mb-4">
+          Fordel for OnTaxi-løyvehavere
+        </div>
 
-          <p class="text-lg text-gray-600 leading-relaxed max-w-xl mb-8">
-            Som løyvehaver hos OnTaxi får du tilgang til gunstige priser hos
-            <strong>Mekonomen Rødtvet Bilsenter AS</strong> på EU-kontroll, elbilservice og reparasjoner.
-          </p>
-
-          <div class="flex flex-col sm:flex-row gap-4">
-            <a href="/kontakt"
-               class="bg-accent text-white px-6 py-3 rounded-full font-semibold hover:bg-red-700 transition text-center">
-              Kontakt oss
-            </a>
-
-            <a href="https://maps.app.goo.gl/25NVb1KbwA2dar2QA"
-   target="_blank" rel="noopener noreferrer"
-   class="border border-gray-300 bg-white px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition text-center">
-  Åpne i kart
-</a>
+        <div class="inline-flex bg-yellow-300 px-5 py-4 rounded-2xl shadow-sm mb-5">
+          <div class="text-2xl font-extrabold text-gray-900 tracking-tight">
+            Mekonomen
+            <span class="block text-sm font-semibold text-gray-800 -mt-1">Bilverksted</span>
           </div>
         </div>
 
-        <!-- Høyre side -->
-        <div class="relative">
-          <div class="absolute -top-6 -left-6 w-24 h-24 bg-primary/10 rounded-full blur-2xl"></div>
-          <div class="absolute -bottom-8 -right-8 w-32 h-32 bg-accent/10 rounded-full blur-3xl"></div>
+        <h1 class="text-3xl font-extrabold text-gray-900 leading-tight mb-3">
+          Verkstedavtale for taxi
+        </h1>
 
-          <div class="relative bg-white border border-gray-100 rounded-3xl shadow-xl p-8 md:p-10">
-            <div class="mb-6 inline-flex bg-yellow-300 px-6 py-4 rounded-2xl shadow-sm">
-              <div class="text-2xl md:text-3xl font-extrabold text-gray-900 tracking-tight">
-                Mekonomen
-                <span class="block text-sm md:text-base font-semibold text-gray-800 -mt-1">Bilverksted</span>
-              </div>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          OnTaxi-løyvehavere får gunstige priser på EU-kontroll, elbilservice og reparasjoner hos Mekonomen Rødtvet Bilsenter AS.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- Mobil Pris -->
+    <section class="px-4 pb-7 bg-white">
+      <div class="max-w-md mx-auto bg-primary text-white rounded-3xl p-6 shadow-xl text-center">
+
+        <div class="text-sm opacity-80 mb-2">
+          Verkstedfordel
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+
+          <div class="bg-white/10 rounded-2xl p-4">
+            <div class="text-xs opacity-80 mb-1">EU-kontroll</div>
+            <div class="text-2xl font-extrabold">800 kr</div>
+            <div class="text-[11px] opacity-80">eks. mva.</div>
+          </div>
+
+          <div class="bg-white/10 rounded-2xl p-4">
+            <div class="text-xs opacity-80 mb-1">Rabatt</div>
+            <div class="text-2xl font-extrabold">25 %</div>
+            <div class="text-[11px] opacity-80">deler/arbeid</div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Mobil Tjenester -->
+    <section class="px-4 pb-7 bg-white">
+      <div class="max-w-md mx-auto">
+
+        <h2 class="text-2xl font-bold text-gray-900 text-center mb-5">
+          Dette får du
+        </h2>
+
+        <div class="grid grid-cols-3 gap-3">
+
+          <div class="bg-gray-50 border rounded-2xl p-3 text-center shadow-sm">
+            <div class="bg-primary/10 w-10 h-10 rounded-xl flex items-center justify-center mx-auto mb-3">
+              <i data-feather="check-circle" class="w-5 h-5 text-primary"></i>
             </div>
-
-            <h2 class="text-2xl font-bold text-gray-900 mb-3">
-              Gunstige verkstedtjenester for løyvehavere
-            </h2>
-
-            <p class="text-gray-600 leading-relaxed mb-6">
-              Avtalen gjelder EU-kontroll, elbilservice og reparasjoner for OnTaxi sine løyvehavere og kunder med aktiv taxiavtale.
+            <h3 class="font-bold text-gray-900 text-sm leading-tight">
+              EU-kontroll
+            </h3>
+            <p class="text-[11px] text-gray-600 mt-1 leading-snug">
+              800 kr
             </p>
+          </div>
 
-            <div class="grid grid-cols-2 gap-4">
-              <div class="bg-gray-50 rounded-2xl p-5 border">
-                <div class="text-sm text-gray-500 mb-1">EU-kontroll</div>
-                <div class="text-2xl font-bold text-gray-900">800 kr</div>
-                <div class="text-xs text-gray-500 mt-1">eks. mva.</div>
-              </div>
-
-              <div class="bg-gray-50 rounded-2xl p-5 border">
-                <div class="text-sm text-gray-500 mb-1">Rabatt</div>
-                <div class="text-2xl font-bold text-gray-900">25 %</div>
-                <div class="text-xs text-gray-500 mt-1">på deler og arbeid</div>
-              </div>
+          <div class="bg-gray-50 border rounded-2xl p-3 text-center shadow-sm">
+            <div class="bg-accent/10 w-10 h-10 rounded-xl flex items-center justify-center mx-auto mb-3">
+              <i data-feather="zap" class="w-5 h-5 text-accent"></i>
             </div>
-
-            <h1 class="sr-only">Mekonomen verkstedavtale</h1>
+            <h3 class="font-bold text-gray-900 text-sm leading-tight">
+              Elbilservice
+            </h3>
+            <p class="text-[11px] text-gray-600 mt-1 leading-snug">
+              fra 1500 kr
+            </p>
           </div>
+
+          <div class="bg-gray-50 border rounded-2xl p-3 text-center shadow-sm">
+            <div class="bg-primary/10 w-10 h-10 rounded-xl flex items-center justify-center mx-auto mb-3">
+              <i data-feather="tool" class="w-5 h-5 text-primary"></i>
+            </div>
+            <h3 class="font-bold text-gray-900 text-sm leading-tight">
+              Reparasjon
+            </h3>
+            <p class="text-[11px] text-gray-600 mt-1 leading-snug">
+              25 % rabatt
+            </p>
+          </div>
+
         </div>
 
       </div>
-    </div>
-  </section>
-  
-  <!-- 🔹 Fordeler -->
-  <section class="py-16 bg-white">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid md:grid-cols-3 gap-8">
+    </section>
 
-        <div class="bg-gray-50 border rounded-2xl p-8">
-          <div class="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center mb-5">
-            <i data-feather="check-circle" class="text-primary w-7 h-7"></i>
+    <!-- Mobil Adresse -->
+    <section class="px-4 pb-7 bg-gray-50">
+      <div class="max-w-md mx-auto pt-7">
+
+        <div class="bg-white border rounded-3xl p-5 shadow-sm">
+          <div class="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i data-feather="map-pin" class="w-7 h-7 text-primary"></i>
           </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-3">EU-kontroll</h3>
-          <p class="text-gray-600 leading-relaxed">
-            EU-kontroll for drosjer til <strong>800 kr eks. mva.</strong>
-          </p>
-        </div>
 
-        <div class="bg-gray-50 border rounded-2xl p-8">
-          <div class="bg-accent/10 w-14 h-14 rounded-full flex items-center justify-center mb-5">
-            <i data-feather="zap" class="text-accent w-7 h-7"></i>
-          </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-3">Elbilservice</h3>
-          <p class="text-gray-600 leading-relaxed">
-            Elbilservice fra <strong>1500 kr eks. mva.</strong> Kupéfilter kommer i tillegg.
-          </p>
-        </div>
+          <h2 class="text-2xl font-bold text-gray-900 mb-3">
+            Adresse og bestilling
+          </h2>
 
-        <div class="bg-gray-50 border rounded-2xl p-8">
-          <div class="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center mb-5">
-            <i data-feather="tool" class="text-primary w-7 h-7"></i>
-          </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-3">Reparasjoner</h3>
-          <p class="text-gray-600 leading-relaxed mb-5">
-            25 % rabatt på deler og arbeid hos Mekonomen Rødtvet Bilsenter AS.
-          </p>
-          <a href="/kontakt"
-             class="inline-block text-primary font-semibold hover:underline">
-            Kontakt OnTaxi AS
-          </a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-  
-
-  <!-- 🔹 Adresse -->
-<section class="py-16 bg-white">
-  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid md:grid-cols-2 gap-8 bg-blue-50 border border-blue-100 rounded-2xl p-8 md:p-10 items-center">
-      
-      <div class="flex items-start gap-4">
-        <div class="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center shrink-0">
-          <i data-feather="map-pin" class="text-primary w-6 h-6"></i>
-        </div>
-
-        <div>
-          <h2 class="text-2xl font-bold text-gray-900 mb-3">Adresse og kontakt</h2>
-          <p class="text-gray-600 leading-relaxed mb-5">
+          <p class="text-sm text-gray-600 leading-relaxed mb-5">
             <strong>Mekonomen Rødtvet Bilsenter AS</strong><br>
-            Kakkelovnskroken 2, 0957 Oslo<br><br>
-            Avtalen gjelder kun bilen som er tilknyttet OnTaxi AS drosjesentral.
+            Kakkelovnskroken 2, 0957 Oslo
+          </p>
+
+          <p class="text-sm text-gray-600 leading-relaxed mb-5">
             For å benytte avtalen må løyvehaver kontakte OnTaxi AS for bestilling og oppsett av time hos verkstedet.
           </p>
 
           <a href="https://maps.app.goo.gl/25NVb1KbwA2dar2QA"
-             target="_blank" rel="noopener noreferrer"
-             class="inline-block bg-white border border-gray-300 px-5 py-3 rounded-full font-semibold hover:bg-gray-100 transition">
+             target="_blank"
+             rel="noopener noreferrer"
+             class="block w-full text-center bg-primary text-white py-4 rounded-2xl font-bold">
             Åpne i kart
           </a>
         </div>
+
       </div>
+    </section>
 
-      <div class="rounded-2xl overflow-hidden shadow-sm border bg-white">
-        <iframe
-          src="https://www.google.com/maps?q=Kakkelovnskroken+2,+0957+Oslo,+Norge&output=embed"
-          width="100%"
-          height="300"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy">
-        </iframe>
+    <!-- Mobil Kart -->
+    <section class="px-4 pb-7 bg-gray-50">
+      <div class="max-w-md mx-auto">
+        <div class="rounded-3xl overflow-hidden shadow-sm border bg-white">
+          <iframe
+            src="https://www.google.com/maps?q=Kakkelovnskroken+2,+0957+Oslo,+Norge&output=embed"
+            width="100%"
+            height="260"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy">
+          </iframe>
+        </div>
       </div>
+    </section>
 
-    </div>
-  </div>
-</section>
+    <!-- Mobil Viktig info -->
+    <section class="px-4 pb-7 bg-white">
+      <div class="max-w-md mx-auto bg-yellow-50 border border-yellow-200 rounded-3xl p-5">
 
-  <!-- 🔹 Viktig info -->
-  <section class="py-4 bg-white">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="bg-gray-50 border rounded-2xl p-6">
-        <p class="text-sm text-gray-600 leading-relaxed">
-          Avtalen gjelder for OnTaxi sine løyvehavere/kunder med aktiv taxiavtale hos OnTaxi.
-          Priser er oppgitt eks. mva. og kan endres etter avtale.
+        <div class="flex gap-3">
+          <div class="bg-yellow-100 w-10 h-10 rounded-xl flex items-center justify-center shrink-0">
+            <i data-feather="info" class="w-5 h-5 text-yellow-700"></i>
+          </div>
+
+          <div>
+            <h2 class="font-bold text-gray-900 mb-1">
+              Viktig informasjon
+            </h2>
+
+            <p class="text-sm text-gray-600 leading-relaxed">
+              Avtalen gjelder kun bilen som er tilknyttet OnTaxi AS drosjesentral. Priser er oppgitt eks. mva. og kan endres etter avtale.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Mobil CTA -->
+    <section class="px-4 pb-8 bg-white">
+      <div class="max-w-md mx-auto">
+
+        <a href="/kontakt"
+           class="block w-full text-center bg-accent text-white py-4 rounded-2xl font-bold text-lg shadow-lg hover:bg-red-700 transition">
+          Kontakt OnTaxi
+        </a>
+
+        <p class="text-xs text-gray-400 text-center mt-3">
+          Vi hjelper deg med informasjon og bestilling av time.
         </p>
+
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- 🔹 CTA -->
-  <section class="py-16 bg-primary text-center text-white">
-    <div class="max-w-3xl mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-4">Vil du benytte deg av verkstedavtalen?</h2>
-      <p class="text-lg mb-8">
-        Kontakt oss dersom du ønsker mer informasjon om Mekonomen-avtalen og fordelene for OnTaxi-løyvehavere.
-      </p>
-      <a href="/kontakt" class="bg-accent text-white px-8 py-3 rounded-full font-semibold hover:bg-red-700 transition">
-        Kontakt oss
-      </a>
-    </div>
-  </section>
+  </main>
 
-  <!-- 🔹 Footer -->
-<footer class="bg-gray-900 text-white pt-12 pb-10">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <!-- ========================================================= -->
+  <!-- 🔹 DESKTOPVERSJON -->
+  <!-- ========================================================= -->
+  <main class="hidden md:block">
 
-    <div class="grid md:grid-cols-3 gap-12 mb-10 items-start">
+    <!-- Hero -->
+    <section class="pt-28 pb-20 bg-gradient-to-br from-white via-gray-50 to-yellow-50/70 overflow-hidden">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
 
-      <!-- Om -->
-      <div>
-        <h3 class="text-xl font-bold mb-4">
-          OnTaxi AS
-        </h3>
+          <div>
+            <div class="inline-flex items-center bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-5">
+              Fordel for OnTaxi-løyvehavere
+            </div>
 
-        <p class="text-gray-400 leading-relaxed">
-          Gode løsninger og tydelige vilkår for løyvehavere og sjåfører.
-        </p>
-      </div>
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-5">
+              Mekonomen verkstedavtale
+            </h1>
 
-      <!-- Snarveier -->
-      <div>
-        <h4 class="text-lg font-semibold mb-4">
-          Snarveier
-        </h4>
+            <p class="text-lg text-gray-600 leading-relaxed max-w-xl mb-8">
+              Som løyvehaver hos OnTaxi får du tilgang til gunstige priser hos
+              <strong>Mekonomen Rødtvet Bilsenter AS</strong> på EU-kontroll, elbilservice og reparasjoner.
+            </p>
 
-        <div class="grid grid-cols-2 gap-x-10 gap-y-2 text-gray-400">
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a href="/kontakt"
+                 class="bg-accent text-white px-6 py-3 rounded-full font-semibold hover:bg-red-700 transition text-center">
+                Kontakt oss
+              </a>
 
-          <a href="/" class="hover:text-white transition">
-            Startsiden
-          </a>
+              <a href="https://maps.app.goo.gl/25NVb1KbwA2dar2QA"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="border border-gray-300 bg-white px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition text-center">
+                Åpne i kart
+              </a>
+            </div>
+          </div>
 
-          <a href="/bli-partner" class="hover:text-white transition">
-            Bli partner
-          </a>
+          <div class="relative">
+            <div class="absolute -top-6 -left-6 w-24 h-24 bg-primary/10 rounded-full blur-2xl"></div>
+            <div class="absolute -bottom-8 -right-8 w-32 h-32 bg-accent/10 rounded-full blur-3xl"></div>
 
-          <a href="/taksameter" class="hover:text-white transition">
-            Taksameter
-          </a>
+            <div class="relative bg-white border border-gray-100 rounded-3xl shadow-xl p-8 md:p-10">
+              <div class="mb-6 inline-flex bg-yellow-300 px-6 py-4 rounded-2xl shadow-sm">
+                <div class="text-2xl md:text-3xl font-extrabold text-gray-900 tracking-tight">
+                  Mekonomen
+                  <span class="block text-sm md:text-base font-semibold text-gray-800 -mt-1">Bilverksted</span>
+                </div>
+              </div>
 
-          <a href="/kontakt" class="hover:text-white transition">
-            Kontakt oss
-          </a>
+              <h2 class="text-2xl font-bold text-gray-900 mb-3">
+                Gunstige verkstedtjenester for løyvehavere
+              </h2>
 
-          <a href="/priser" class="hover:text-white transition">
-            Priser
-          </a>
+              <p class="text-gray-600 leading-relaxed mb-6">
+                Avtalen gjelder EU-kontroll, elbilservice og reparasjoner for OnTaxi sine løyvehavere og kunder med aktiv taxiavtale.
+              </p>
 
-          <a href="https://akarnet.no"
-             target="_blank"
-             rel="noopener noreferrer"
-             class="hover:text-white transition">
-            Taksameter rapporter
-          </a>
+              <div class="grid grid-cols-2 gap-4">
+                <div class="bg-gray-50 rounded-2xl p-5 border">
+                  <div class="text-sm text-gray-500 mb-1">EU-kontroll</div>
+                  <div class="text-2xl font-bold text-gray-900">800 kr</div>
+                  <div class="text-xs text-gray-500 mt-1">eks. mva.</div>
+                </div>
 
-          <a href="/fordeler" class="hover:text-white transition">
-            Fordeler
-          </a>
+                <div class="bg-gray-50 rounded-2xl p-5 border">
+                  <div class="text-sm text-gray-500 mb-1">Rabatt</div>
+                  <div class="text-2xl font-bold text-gray-900">25 %</div>
+                  <div class="text-xs text-gray-500 mt-1">på deler og arbeid</div>
+                </div>
+              </div>
+
+              <h1 class="sr-only">Mekonomen verkstedavtale</h1>
+            </div>
+          </div>
 
         </div>
       </div>
+    </section>
 
-      <!-- Kontakt -->
-      <div>
+    <!-- Fordeler -->
+    <section class="py-16 bg-white">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-3 gap-8">
 
-        <h4 class="text-lg font-semibold mb-4">
+          <div class="bg-gray-50 border rounded-2xl p-8">
+            <div class="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center mb-5">
+              <i data-feather="check-circle" class="text-primary w-7 h-7"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">EU-kontroll</h3>
+            <p class="text-gray-600 leading-relaxed">
+              EU-kontroll for drosjer til <strong>800 kr eks. mva.</strong>
+            </p>
+          </div>
+
+          <div class="bg-gray-50 border rounded-2xl p-8">
+            <div class="bg-accent/10 w-14 h-14 rounded-full flex items-center justify-center mb-5">
+              <i data-feather="zap" class="text-accent w-7 h-7"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Elbilservice</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Elbilservice fra <strong>1500 kr eks. mva.</strong> Kupéfilter kommer i tillegg.
+            </p>
+          </div>
+
+          <div class="bg-gray-50 border rounded-2xl p-8">
+            <div class="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center mb-5">
+              <i data-feather="tool" class="text-primary w-7 h-7"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Reparasjoner</h3>
+            <p class="text-gray-600 leading-relaxed mb-5">
+              25 % rabatt på deler og arbeid hos Mekonomen Rødtvet Bilsenter AS.
+            </p>
+            <a href="/kontakt" class="inline-block text-primary font-semibold hover:underline">
+              Kontakt OnTaxi AS
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Adresse -->
+    <section class="py-16 bg-white">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-8 bg-blue-50 border border-blue-100 rounded-2xl p-8 md:p-10 items-center">
+
+          <div class="flex items-start gap-4">
+            <div class="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center shrink-0">
+              <i data-feather="map-pin" class="text-primary w-6 h-6"></i>
+            </div>
+
+            <div>
+              <h2 class="text-2xl font-bold text-gray-900 mb-3">Adresse og kontakt</h2>
+              <p class="text-gray-600 leading-relaxed mb-5">
+                <strong>Mekonomen Rødtvet Bilsenter AS</strong><br>
+                Kakkelovnskroken 2, 0957 Oslo<br><br>
+                Avtalen gjelder kun bilen som er tilknyttet OnTaxi AS drosjesentral.
+                For å benytte avtalen må løyvehaver kontakte OnTaxi AS for bestilling og oppsett av time hos verkstedet.
+              </p>
+
+              <a href="https://maps.app.goo.gl/25NVb1KbwA2dar2QA"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="inline-block bg-white border border-gray-300 px-5 py-3 rounded-full font-semibold hover:bg-gray-100 transition">
+                Åpne i kart
+              </a>
+            </div>
+          </div>
+
+          <div class="rounded-2xl overflow-hidden shadow-sm border bg-white">
+            <iframe
+              src="https://www.google.com/maps?q=Kakkelovnskroken+2,+0957+Oslo,+Norge&output=embed"
+              width="100%"
+              height="300"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy">
+            </iframe>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Viktig info -->
+    <section class="py-4 bg-white">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-gray-50 border rounded-2xl p-6">
+          <p class="text-sm text-gray-600 leading-relaxed">
+            Avtalen gjelder for OnTaxi sine løyvehavere/kunder med aktiv taxiavtale hos OnTaxi.
+            Priser er oppgitt eks. mva. og kan endres etter avtale.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 bg-primary text-center text-white">
+      <div class="max-w-3xl mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-4">Vil du benytte deg av verkstedavtalen?</h2>
+        <p class="text-lg mb-8">
+          Kontakt oss dersom du ønsker mer informasjon om Mekonomen-avtalen og fordelene for OnTaxi-løyvehavere.
+        </p>
+        <a href="/kontakt" class="bg-accent text-white px-8 py-3 rounded-full font-semibold hover:bg-red-700 transition">
           Kontakt oss
-        </h4>
+        </a>
+      </div>
+    </section>
 
-        <ul class="space-y-2 text-gray-400">
+  </main>
 
-          <li class="flex items-center">
-            <i data-feather="mail" class="w-5 h-5 mr-2"></i>
+  <!-- 🔹 Footer -->
+  <footer class="bg-gray-900 text-white pt-12 pb-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-            <a href="mailto:post@ontaxi.no"
-               class="hover:text-white transition">
-              post@ontaxi.no
+      <div class="grid md:grid-cols-3 gap-12 mb-10 items-start">
+
+        <div>
+          <h3 class="text-xl font-bold mb-4">OnTaxi AS</h3>
+          <p class="text-gray-400 leading-relaxed">
+            Tydelige vilkår og gode løsninger som gjør hverdagen enklere for løyvehavere og sjåfører.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Snarveier</h4>
+
+          <div class="grid grid-cols-2 gap-x-10 gap-y-2 text-gray-400">
+            <a href="/" class="hover:text-white transition">Startsiden</a>
+            <a href="/bli-partner" class="hover:text-white transition">Bli partner</a>
+
+            <a href="/taksameter" class="hover:text-white transition">Taksameter</a>
+            <a href="/kontakt" class="hover:text-white transition">Kontakt oss</a>
+
+            <a href="/priser" class="hover:text-white transition">Priser</a>
+            <a href="https://akarnet.no" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">
+              Taksameter rapporter
             </a>
-          </li>
 
-          <li class="flex items-center">
-            <i data-feather="phone" class="w-5 h-5 mr-2"></i>
+            <a href="/fordeler" class="hover:text-white transition">Fordeler</a>
+          </div>
+        </div>
 
-            <a href="tel:+4740024400"
-               class="hover:text-white transition">
-              +47 400 24 400
-            </a>
-          </li>
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Kontakt oss</h4>
 
-          <li class="flex items-center">
-            <i data-feather="map-pin" class="w-5 h-5 mr-2"></i>
+          <ul class="space-y-2 text-gray-400">
+            <li class="flex items-center">
+              <i data-feather="mail" class="w-5 h-5 mr-2"></i>
+              <a href="mailto:post@ontaxi.no" class="hover:text-white transition">post@ontaxi.no</a>
+            </li>
 
-            <a href="https://maps.app.goo.gl/64tCr7qhbAhwRLcq6"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="hover:text-white transition">
-              Trondheimsveien 436b – 0962 Oslo, Norge
-            </a>
-          </li>
+            <li class="flex items-center">
+              <i data-feather="phone" class="w-5 h-5 mr-2"></i>
+              <a href="tel:+4740024400" class="hover:text-white transition">+47 400 24 400</a>
+            </li>
 
-        </ul>
+            <li class="flex items-center">
+              <i data-feather="map-pin" class="w-5 h-5 mr-2"></i>
+              <a href="https://maps.app.goo.gl/64tCr7qhbAhwRLcq6"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="hover:text-white transition">
+                Trondheimsveien 436B – 0962 Oslo, Norge
+              </a>
+            </li>
+          </ul>
+        </div>
 
       </div>
 
+      <div class="border-t border-gray-800 pt-6 text-center text-gray-400 text-sm">
+        © 2026 OnTaxi AS – Alle rettigheter forbeholdt.
+      </div>
+
     </div>
+  </footer>
 
-    <!-- Copyright -->
-    <div class="border-t border-gray-800 pt-6 text-center text-gray-400 text-sm">
-      © 2026 OnTaxi AS – Alle rettigheter forbeholdt.
-    </div>
+  <!-- 🔝 Scroll to top -->
+  <button id="scrollTopBtn"
+    onclick="window.scrollTo({top:0, behavior:'smooth'})"
+    class="fade-out opacity-0 pointer-events-none fixed bottom-5 right-5 bg-accent text-white p-3 rounded-full shadow-lg hover:bg-red-700 transition z-50"
+    aria-label="Til toppen">
+    <i data-feather="arrow-up" class="w-5 h-5"></i>
+  </button>
 
-  </div>
-</footer>
+  <!-- Scripts -->
+  <script>
+    feather.replace();
 
-<!-- 🔝 Scroll to top -->
-<button id="scrollTopBtn"
-  onclick="window.scrollTo({top:0, behavior:'smooth'})"
-  class="fade-out opacity-0 pointer-events-none fixed bottom-5 right-5 bg-accent text-white p-3 rounded-full shadow-lg hover:bg-red-700 transition z-50"
-  aria-label="Til toppen">
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobileMenu');
 
-  <i data-feather="arrow-up" class="w-5 h-5"></i>
-</button>
-
-<!-- 🔹 Scripts -->
-<script>
-  feather.replace();
-
-  const menuBtn = document.getElementById('menu-btn');
-  const mobileMenu = document.getElementById('mobileMenu');
-
-  if (menuBtn && mobileMenu) {
-    menuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-  }
-
-  const scrollTopBtn = document.getElementById('scrollTopBtn');
-
-  window.addEventListener('scroll', () => {
-
-    if (window.scrollY > 200) {
-
-      scrollTopBtn.classList.remove(
-        'opacity-0',
-        'pointer-events-none',
-        'fade-out'
-      );
-
-      scrollTopBtn.classList.add('fade-in');
-
-    } else {
-
-      scrollTopBtn.classList.add(
-        'opacity-0',
-        'pointer-events-none',
-        'fade-out'
-      );
-
-      scrollTopBtn.classList.remove('fade-in');
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
     }
 
-  });
-</script>
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
 
-<!-- Google Adsense -->
-<script async
-  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2609991072523085"
-  crossorigin="anonymous">
-</script>
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 200) {
+        scrollTopBtn.classList.remove('opacity-0', 'pointer-events-none', 'fade-out');
+        scrollTopBtn.classList.add('fade-in');
+      } else {
+        scrollTopBtn.classList.add('opacity-0', 'pointer-events-none', 'fade-out');
+        scrollTopBtn.classList.remove('fade-in');
+      }
+    });
+  </script>
+
+  <!-- Google Adsense -->
+  <script async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2609991072523085"
+    crossorigin="anonymous">
+  </script>
+
 </body>
 </html>
