@@ -1,1 +1,1393 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){
+      w[l]=w[l]||[];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event:'gtm.js'
+      });
 
+      var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),
+          dl=l!='dataLayer'?'&l='+l:'';
+
+      j.async=true;
+      j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+      f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KFRQP29F');
+  </script>
+  <!-- End Google Tag Manager -->
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Bærum Bilpleie | OnTaxi Fordeler</title>
+
+  <!-- SEO -->
+  <meta
+    name="description"
+    content="OnTaxi-løyvehavere får avtalepriser hos Bærum Bilpleie AS på bilvask, grundig bilpleie, polering, dekkhotell og dekktjenester."
+  />
+
+  <meta
+    name="keywords"
+    content="bærum bilpleie, ontaxi fordeler, bilvask taxi, bilpleie taxi, polering taxi, dekkhotell taxi, dekkskift drosje"
+  />
+
+  <meta name="author" content="OnTaxi AS" />
+  <meta name="robots" content="index, follow" />
+
+  <link
+    rel="canonical"
+    href="https://ontaxi.no/fordeler/barum-bilvask/"
+  />
+
+  <meta
+    property="og:title"
+    content="Bærum Bilpleie | OnTaxi Fordeler"
+  />
+
+  <meta
+    property="og:description"
+    content="Avtalepriser på bilvask, bilpleie, polering og dekktjenester for OnTaxi-løyvehavere."
+  />
+
+  <meta
+    property="og:image"
+    content="https://ontaxi.no/OnTaxi-signatur-GIF.gif"
+  />
+
+  <meta
+    property="og:url"
+    content="https://ontaxi.no/fordeler/barum-bilvask/"
+  />
+
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/web-app-manifest-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Tailwind + Feather Icons -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1a3b67',
+            accent: '#b33e3e',
+            dark: '#1F2937'
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    .fade-in {
+      opacity: 1;
+      transform: translateY(0);
+      transition: all .25s ease;
+    }
+
+    .fade-out {
+      opacity: 0;
+      transform: translateY(6px);
+      transition: all .25s ease;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 font-sans flex flex-col min-h-screen">
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe
+      src="https://www.googletagmanager.com/ns.html?id=GTM-KFRQP29F"
+      height="0"
+      width="0"
+      style="display:none;visibility:hidden">
+    </iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- ========================================================= -->
+  <!-- NAVIGASJON -->
+  <!-- ========================================================= -->
+  <nav class="bg-white shadow-sm fixed w-full z-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="flex justify-between h-16 items-center">
+
+        <!-- Logo -->
+        <a href="/" class="flex items-center">
+          <img
+            src="/OnTaxi-signatur-GIF.gif"
+            alt="OnTaxi logo"
+            class="h-10 mr-3"
+          >
+        </a>
+
+        <!-- Desktop-meny -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="/" class="text-gray-900 hover:text-primary transition">
+            Hjem
+          </a>
+
+          <a href="/taksameter" class="text-gray-900 hover:text-primary transition">
+            Taksameter
+          </a>
+
+          <a href="/priser" class="text-gray-900 hover:text-primary transition">
+            Priser
+          </a>
+
+          <a href="/fordeler" class="text-primary font-semibold">
+            Fordeler
+          </a>
+
+          <a href="/bli-partner" class="text-gray-900 hover:text-primary transition">
+            Bli partner
+          </a>
+        </div>
+
+        <!-- Desktop-knapper -->
+        <div class="hidden md:flex items-center">
+          <a
+            href="/kontakt"
+            class="bg-accent text-white px-6 py-2 rounded-full hover:bg-red-700 transition mr-3"
+          >
+            Kontakt oss
+          </a>
+
+          <a
+            href="https://akarnet.no"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="border px-4 py-2 rounded-full text-sm hover:bg-gray-100 transition"
+          >
+            Taksameter rapporter
+          </a>
+        </div>
+
+        <!-- Mobilmenyknapp -->
+        <div class="md:hidden flex items-center">
+          <button
+            id="menu-btn"
+            class="text-gray-900 focus:outline-none"
+            aria-label="Åpne meny"
+          >
+            <i data-feather="menu"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobilmeny -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white shadow-md border-t">
+      <div class="max-w-7xl mx-auto py-2">
+
+        <a
+          href="/"
+          class="block px-4 py-3 text-gray-900 hover:text-primary transition"
+        >
+          Hjem
+        </a>
+
+        <a
+          href="/taksameter"
+          class="block px-4 py-3 text-gray-900 hover:text-primary transition"
+        >
+          Taksameter
+        </a>
+
+        <a
+          href="/priser"
+          class="block px-4 py-3 text-gray-900 hover:text-primary transition"
+        >
+          Priser
+        </a>
+
+        <a
+          href="/fordeler"
+          class="block px-4 py-3 text-primary font-semibold bg-gray-50"
+        >
+          Fordeler
+        </a>
+
+        <a
+          href="/bli-partner"
+          class="block px-4 py-3 text-gray-900 hover:text-primary transition"
+        >
+          Bli partner
+        </a>
+
+        <div class="px-4 pt-3">
+          <a
+            href="https://akarnet.no"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block w-full text-center bg-primary text-white py-3 rounded-xl font-semibold shadow-md hover:opacity-95 transition"
+          >
+            Taksameter rapporter
+          </a>
+        </div>
+
+        <div class="px-4 pt-3 pb-3">
+          <a
+            href="/kontakt"
+            class="block w-full text-center bg-accent text-white py-3 rounded-xl font-semibold shadow-md hover:bg-red-700 transition"
+          >
+            Kontakt oss
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========================================================= -->
+  <!-- MOBILVERSJON -->
+  <!-- ========================================================= -->
+  <main class="md:hidden bg-white">
+
+    <!-- Mobil hero -->
+    <section class="pt-24 pb-6 px-4 bg-gradient-to-b from-white via-blue-50/40 to-white">
+      <div class="max-w-md mx-auto text-center">
+
+        <div class="inline-flex items-center bg-primary/10 text-primary px-4 py-2 rounded-full text-xs font-semibold mb-4">
+          Fordel for OnTaxi-løyvehavere
+        </div>
+
+        <h1 class="text-3xl font-extrabold text-gray-900 leading-tight mb-3">
+          Bilvask, bilpleie og dekk
+        </h1>
+
+        <p class="text-sm text-gray-600 leading-relaxed">
+          OnTaxi-løyvehavere får avtalepriser hos Bærum Bilpleie AS på bilvask, polering, dekkhotell og dekktjenester.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- Mobil hovedboks -->
+    <section class="px-4 pb-7 bg-white">
+      <div class="max-w-md mx-auto bg-primary text-white rounded-3xl p-6 shadow-xl text-center">
+
+        <!-- Partnernavn inne i blå boks -->
+        <div class="flex justify-center mb-4">
+          <div class="bg-white text-primary rounded-2xl px-5 py-3 shadow-sm">
+            <div class="text-xl font-extrabold leading-tight">
+              Bærum Bilpleie
+            </div>
+            <div class="text-xs text-gray-500 font-semibold mt-1">
+              Bilvask • Bilpleie • Dekk
+            </div>
+          </div>
+        </div>
+
+        <div class="text-sm text-white/80 mb-4">
+          Avtalepriser for OnTaxi
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+
+          <div class="bg-white/10 rounded-2xl p-4">
+            <div class="text-xs text-white/80 mb-1">
+              Standard vask
+            </div>
+
+            <div class="text-2xl font-extrabold">
+              Fra 399 kr
+            </div>
+
+            <div class="text-[11px] text-white/70 mt-1">
+              eks. mva.
+            </div>
+          </div>
+
+          <div class="bg-white/10 rounded-2xl p-4">
+            <div class="text-xs text-white/80 mb-1">
+              Grundig vask
+            </div>
+
+            <div class="text-2xl font-extrabold">
+              Fra 799 kr
+            </div>
+
+            <div class="text-[11px] text-white/70 mt-1">
+              eks. mva.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Mobil tjenesteoversikt -->
+    <section class="px-4 pb-7 bg-white">
+      <div class="max-w-md mx-auto">
+
+        <h2 class="text-2xl font-bold text-gray-900 text-center mb-5">
+          Våre avtaleområder
+        </h2>
+
+        <div class="grid grid-cols-3 gap-3">
+
+          <div class="bg-gray-50 border rounded-2xl p-3 text-center shadow-sm">
+            <div class="bg-primary/10 w-10 h-10 rounded-xl flex items-center justify-center mx-auto mb-3">
+              <i data-feather="droplet" class="w-5 h-5 text-primary"></i>
+            </div>
+
+            <h3 class="font-bold text-gray-900 text-sm leading-tight">
+              Bilvask
+            </h3>
+
+            <p class="text-[11px] text-gray-600 mt-1">
+              Fra 399 kr
+            </p>
+          </div>
+
+          <div class="bg-gray-50 border rounded-2xl p-3 text-center shadow-sm">
+            <div class="bg-accent/10 w-10 h-10 rounded-xl flex items-center justify-center mx-auto mb-3">
+              <i data-feather="star" class="w-5 h-5 text-accent"></i>
+            </div>
+
+            <h3 class="font-bold text-gray-900 text-sm leading-tight">
+              Polering
+            </h3>
+
+            <p class="text-[11px] text-gray-600 mt-1">
+              Fra 2500 kr
+            </p>
+          </div>
+
+          <div class="bg-gray-50 border rounded-2xl p-3 text-center shadow-sm">
+            <div class="bg-primary/10 w-10 h-10 rounded-xl flex items-center justify-center mx-auto mb-3">
+              <i data-feather="disc" class="w-5 h-5 text-primary"></i>
+            </div>
+
+            <h3 class="font-bold text-gray-900 text-sm leading-tight">
+              Dekk
+            </h3>
+
+            <p class="text-[11px] text-gray-600 mt-1">
+              Fra 450 kr
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Standard vask mobil -->
+    <section class="px-4 pb-7 bg-gray-50">
+      <div class="max-w-md mx-auto pt-7">
+
+        <div class="bg-white border rounded-3xl p-5 shadow-sm">
+
+          <div class="flex items-center gap-3 mb-4">
+            <div class="bg-primary/10 w-12 h-12 rounded-xl flex items-center justify-center shrink-0">
+              <i data-feather="droplet" class="w-6 h-6 text-primary"></i>
+            </div>
+
+            <div>
+              <div class="text-xs text-primary font-semibold">
+                Vaskepakke 1
+              </div>
+
+              <h2 class="text-xl font-bold text-gray-900">
+                Innvendig og utvendig vask
+              </h2>
+            </div>
+          </div>
+
+          <p class="text-sm text-gray-600 leading-relaxed mb-5">
+            En grunnleggende innvendig og utvendig vask som holder bilen ren, ryddig og presentabel i den daglige drosjedriften.
+          </p>
+
+          <div class="grid grid-cols-2 gap-2 mb-5 text-xs text-gray-700">
+            <div class="bg-gray-50 border rounded-xl p-3">Støvsuging</div>
+            <div class="bg-gray-50 border rounded-xl p-3">Dashboard</div>
+            <div class="bg-gray-50 border rounded-xl p-3">Vinduer</div>
+            <div class="bg-gray-50 border rounded-xl p-3">Vask av matter</div>
+          </div>
+
+          <div class="space-y-3">
+
+            <div class="bg-blue-50 border border-blue-100 rounded-2xl p-4">
+              <div class="text-xs text-gray-500 mb-1">
+                Liten og medium bil
+              </div>
+
+              <div class="text-xl font-extrabold text-primary">
+                399 kr eks. mva.
+              </div>
+
+              <div class="text-[11px] text-gray-500 mt-2 leading-relaxed">
+                Eksempler: Kia Niro, Tesla Model 3 og NIO ET5.
+              </div>
+            </div>
+
+            <div class="bg-gray-50 border rounded-2xl p-4">
+              <div class="text-xs text-gray-500 mb-1">
+                Stor bil
+              </div>
+
+              <div class="text-xl font-extrabold text-gray-900">
+                499 kr eks. mva.
+              </div>
+
+              <div class="text-[11px] text-gray-500 mt-2 leading-relaxed">
+                Eksempler: Tesla Model Y/X, NIO EL6, Toyota bZ4X og Volkswagen ID.4.
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Grundig vask mobil -->
+    <section class="px-4 pb-7 bg-white">
+      <div class="max-w-md mx-auto">
+
+        <div class="bg-white border rounded-3xl p-5 shadow-sm">
+
+          <div class="flex items-center gap-3 mb-4">
+            <div class="bg-accent/10 w-12 h-12 rounded-xl flex items-center justify-center shrink-0">
+              <i data-feather="star" class="w-6 h-6 text-accent"></i>
+            </div>
+
+            <div>
+              <div class="text-xs text-accent font-semibold">
+                Vaskepakke 2
+              </div>
+
+              <h2 class="text-xl font-bold text-gray-900">
+                Grundig innvendig og utvendig vask
+              </h2>
+            </div>
+          </div>
+
+          <p class="text-sm text-gray-600 leading-relaxed mb-5">
+            En mer omfattende rengjøring som gir både eksteriør og interiør en grundig pleie.
+          </p>
+
+          <div class="grid grid-cols-2 gap-2 mb-5 text-xs text-gray-700">
+            <div class="bg-gray-50 border rounded-xl p-3">Avfetting</div>
+            <div class="bg-gray-50 border rounded-xl p-3">Sjampo</div>
+            <div class="bg-gray-50 border rounded-xl p-3">Felgrens</div>
+            <div class="bg-gray-50 border rounded-xl p-3">Håndvask</div>
+            <div class="bg-gray-50 border rounded-xl p-3">Asfaltfjerning</div>
+            <div class="bg-gray-50 border rounded-xl p-3">Dørkarmer</div>
+            <div class="bg-gray-50 border rounded-xl p-3">Dekkgummi</div>
+            <div class="bg-gray-50 border rounded-xl p-3">Full støvsuging</div>
+            <div class="bg-gray-50 border rounded-xl p-3">Interiør</div>
+            <div class="bg-gray-50 border rounded-xl p-3">Vinduer</div>
+          </div>
+
+          <div class="space-y-3">
+
+            <div class="bg-blue-50 border border-blue-100 rounded-2xl p-4">
+              <div class="text-xs text-gray-500 mb-1">
+                Liten og medium bil
+              </div>
+
+              <div class="text-xl font-extrabold text-primary">
+                799 kr eks. mva.
+              </div>
+
+              <div class="text-[11px] text-gray-500 mt-2 leading-relaxed">
+                Eksempler: Kia Niro, Tesla Model 3 og NIO ET5.
+              </div>
+            </div>
+
+            <div class="bg-gray-50 border rounded-2xl p-4">
+              <div class="text-xs text-gray-500 mb-1">
+                Stor bil
+              </div>
+
+              <div class="text-xl font-extrabold text-gray-900">
+                899 kr eks. mva.
+              </div>
+
+              <div class="text-[11px] text-gray-500 mt-2 leading-relaxed">
+                Eksempler: Tesla Model Y/X, NIO EL6, Toyota bZ4X og Volkswagen ID.4.
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Polering mobil -->
+    <section class="px-4 pb-7 bg-gray-50">
+      <div class="max-w-md mx-auto pt-7">
+
+        <div class="bg-primary text-white rounded-3xl p-6 shadow-xl">
+          <div class="flex items-center gap-4 mb-4">
+
+            <div class="bg-white/10 w-14 h-14 rounded-2xl flex items-center justify-center shrink-0">
+              <i data-feather="sun" class="w-7 h-7"></i>
+            </div>
+
+            <div>
+              <div class="text-sm text-white/75">
+                Profesjonell bilpleie
+              </div>
+
+              <h2 class="text-2xl font-bold">
+                Polering
+              </h2>
+            </div>
+
+          </div>
+
+          <p class="text-sm text-white/85 leading-relaxed mb-5">
+            Polering kan bestilles når bilen trenger ekstra oppfriskning og pleie av lakken.
+          </p>
+
+          <div class="bg-white/10 rounded-2xl p-4 text-center">
+            <div class="text-sm text-white/75">
+              Pris fra
+            </div>
+
+            <div class="text-3xl font-extrabold mt-1">
+              2500 kr
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dekk mobil -->
+    <section class="px-4 pb-7 bg-white">
+      <div class="max-w-md mx-auto">
+
+        <div class="text-center mb-5">
+          <h2 class="text-2xl font-bold text-gray-900">
+            Dekkavtale
+          </h2>
+
+          <p class="text-sm text-gray-600 mt-2">
+            Praktiske dekktjenester og gode priser gjennom OnTaxi.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+
+          <div class="bg-gray-50 border rounded-2xl p-4 shadow-sm">
+            <i data-feather="archive" class="w-6 h-6 text-primary mb-3"></i>
+
+            <h3 class="font-bold text-gray-900">
+              Dekkhotell
+            </h3>
+
+            <p class="text-sm text-gray-600 mt-1">
+              750 kr per sesong
+            </p>
+          </div>
+
+          <div class="bg-gray-50 border rounded-2xl p-4 shadow-sm">
+            <i data-feather="refresh-cw" class="w-6 h-6 text-accent mb-3"></i>
+
+            <h3 class="font-bold text-gray-900">
+              Dekkskift
+            </h3>
+
+            <p class="text-sm text-gray-600 mt-1">
+              450 kr
+            </p>
+          </div>
+
+          <div class="bg-gray-50 border rounded-2xl p-4 shadow-sm">
+            <i data-feather="settings" class="w-6 h-6 text-primary mb-3"></i>
+
+            <h3 class="font-bold text-gray-900">
+              Omlegg
+            </h3>
+
+            <p class="text-sm text-gray-600 mt-1">
+              Balansering og omlegging
+            </p>
+          </div>
+
+          <div class="bg-gray-50 border rounded-2xl p-4 shadow-sm">
+            <i data-feather="shopping-cart" class="w-6 h-6 text-accent mb-3"></i>
+
+            <h3 class="font-bold text-gray-900">
+              Nye dekk
+            </h3>
+
+            <p class="text-sm text-gray-600 mt-1">
+              Beste pris via OnTaxi
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Dekkinfo mobil -->
+    <section class="px-4 pb-7 bg-white">
+      <div class="max-w-md mx-auto bg-yellow-50 border border-yellow-200 rounded-3xl p-5">
+
+        <div class="flex gap-3">
+
+          <div class="bg-yellow-100 w-10 h-10 rounded-xl flex items-center justify-center shrink-0">
+            <i data-feather="info" class="w-5 h-5 text-yellow-700"></i>
+          </div>
+
+          <div>
+            <h2 class="font-bold text-gray-900 mb-1">
+              Kjøp av nye dekk
+            </h2>
+
+            <p class="text-sm text-gray-600 leading-relaxed">
+              Ved kjøp av dekk gjennom OnTaxi får du tilgang til den beste tilgjengelige prisen. Dekkskift er inkludert ved kjøp av dekk.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Mobil CTA -->
+    <section class="px-4 pb-8 bg-white">
+      <div class="max-w-md mx-auto space-y-3">
+
+        <a
+          href="https://bbilpleie.no/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block w-full text-center bg-primary text-white py-4 rounded-2xl font-bold shadow-lg"
+        >
+          Besøk Bærum Bilpleie
+        </a>
+
+        <a
+          href="/kontakt"
+          class="block w-full text-center bg-accent text-white py-4 rounded-2xl font-bold shadow-lg"
+        >
+          Kontakt OnTaxi
+        </a>
+
+        <p class="text-xs text-gray-400 text-center">
+          Kontakt OnTaxi dersom du trenger informasjon om avtalen.
+        </p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================= -->
+  <!-- DESKTOPVERSJON -->
+  <!-- ========================================================= -->
+  <main class="hidden md:block">
+
+    <!-- Desktop hero -->
+    <section class="pt-28 pb-20 bg-gradient-to-br from-white via-gray-50 to-blue-50/70 overflow-hidden">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+          <!-- Venstre -->
+          <div>
+            <div class="inline-flex items-center bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-5">
+              Fordel for OnTaxi-løyvehavere
+            </div>
+
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-5">
+              Bærum Bilpleie AS
+            </h1>
+
+            <p class="text-lg text-gray-600 leading-relaxed max-w-xl mb-8">
+              OnTaxi-løyvehavere får tilgang til avtalepriser på bilvask, grundig bilpleie, polering, dekkhotell og dekktjenester.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4">
+
+              <a
+                href="https://bbilpleie.no/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="bg-primary text-white px-6 py-3 rounded-full font-semibold hover:opacity-95 transition text-center"
+              >
+                Besøk nettsiden
+              </a>
+
+              <a
+                href="#priser"
+                class="border border-gray-300 bg-white px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition text-center"
+              >
+                Se avtalepriser
+              </a>
+
+            </div>
+          </div>
+
+          <!-- Høyre -->
+          <div class="relative">
+
+            <div class="absolute -top-6 -left-6 w-24 h-24 bg-primary/10 rounded-full blur-2xl"></div>
+            <div class="absolute -bottom-8 -right-8 w-32 h-32 bg-accent/10 rounded-full blur-3xl"></div>
+
+            <div class="relative bg-primary text-white rounded-3xl shadow-xl p-8 md:p-10">
+
+              <div class="inline-flex bg-white text-primary rounded-2xl px-6 py-4 shadow-sm mb-6">
+                <div>
+                  <div class="text-2xl md:text-3xl font-extrabold leading-tight">
+                    Bærum Bilpleie
+                  </div>
+
+                  <div class="text-sm text-gray-500 font-semibold mt-1">
+                    Bilvask • Bilpleie • Dekk
+                  </div>
+                </div>
+              </div>
+
+              <h2 class="text-2xl font-bold mb-3">
+                Alt bilen trenger på ett sted
+              </h2>
+
+              <p class="text-white/85 leading-relaxed mb-6">
+                En praktisk avtale for løyvehavere som ønsker å holde bilen ren, presentabel og klar for daglig drosjedrift.
+              </p>
+
+              <div class="grid grid-cols-2 gap-4">
+
+                <div class="bg-white/10 rounded-2xl p-5">
+                  <div class="text-sm text-white/70 mb-1">
+                    Standard vask
+                  </div>
+
+                  <div class="text-2xl font-bold">
+                    Fra 399 kr
+                  </div>
+
+                  <div class="text-xs text-white/70 mt-1">
+                    eks. mva.
+                  </div>
+                </div>
+
+                <div class="bg-white/10 rounded-2xl p-5">
+                  <div class="text-sm text-white/70 mb-1">
+                    Grundig vask
+                  </div>
+
+                  <div class="text-2xl font-bold">
+                    Fra 799 kr
+                  </div>
+
+                  <div class="text-xs text-white/70 mt-1">
+                    eks. mva.
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Desktop hovedpriser -->
+    <section id="priser" class="py-16 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-3">
+            Avtalepriser for OnTaxi
+          </h2>
+
+          <p class="text-gray-600 max-w-3xl mx-auto">
+            Velg mellom grunnleggende vask, grundig bilpleie, polering og dekktjenester.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-4 gap-6">
+
+          <div class="bg-gray-50 border rounded-3xl p-6 shadow-sm">
+            <div class="bg-primary/10 w-14 h-14 rounded-2xl flex items-center justify-center mb-5">
+              <i data-feather="droplet" class="w-7 h-7 text-primary"></i>
+            </div>
+
+            <div class="text-sm text-gray-500 mb-1">
+              Standard vask
+            </div>
+
+            <div class="text-3xl font-extrabold text-gray-900">
+              Fra 399 kr
+            </div>
+
+            <div class="text-xs text-gray-500 mt-2">
+              eks. mva.
+            </div>
+          </div>
+
+          <div class="bg-gray-50 border rounded-3xl p-6 shadow-sm">
+            <div class="bg-accent/10 w-14 h-14 rounded-2xl flex items-center justify-center mb-5">
+              <i data-feather="star" class="w-7 h-7 text-accent"></i>
+            </div>
+
+            <div class="text-sm text-gray-500 mb-1">
+              Grundig vask
+            </div>
+
+            <div class="text-3xl font-extrabold text-gray-900">
+              Fra 799 kr
+            </div>
+
+            <div class="text-xs text-gray-500 mt-2">
+              eks. mva.
+            </div>
+          </div>
+
+          <div class="bg-gray-50 border rounded-3xl p-6 shadow-sm">
+            <div class="bg-primary/10 w-14 h-14 rounded-2xl flex items-center justify-center mb-5">
+              <i data-feather="sun" class="w-7 h-7 text-primary"></i>
+            </div>
+
+            <div class="text-sm text-gray-500 mb-1">
+              Polering
+            </div>
+
+            <div class="text-3xl font-extrabold text-gray-900">
+              Fra 2500 kr
+            </div>
+          </div>
+
+          <div class="bg-gray-50 border rounded-3xl p-6 shadow-sm">
+            <div class="bg-accent/10 w-14 h-14 rounded-2xl flex items-center justify-center mb-5">
+              <i data-feather="disc" class="w-7 h-7 text-accent"></i>
+            </div>
+
+            <div class="text-sm text-gray-500 mb-1">
+              Dekkskift
+            </div>
+
+            <div class="text-3xl font-extrabold text-gray-900">
+              450 kr
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Desktop vaskepakker -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="grid lg:grid-cols-2 gap-8">
+
+          <!-- Standard vask -->
+          <div class="bg-white border rounded-3xl p-8 shadow-sm">
+
+            <div class="flex items-center gap-4 mb-6">
+              <div class="bg-primary/10 w-14 h-14 rounded-2xl flex items-center justify-center shrink-0">
+                <i data-feather="droplet" class="w-7 h-7 text-primary"></i>
+              </div>
+
+              <div>
+                <div class="text-sm text-primary font-semibold">
+                  Vaskepakke 1
+                </div>
+
+                <h2 class="text-2xl font-bold text-gray-900">
+                  Innvendig og utvendig vask
+                </h2>
+              </div>
+            </div>
+
+            <p class="text-gray-600 leading-relaxed mb-6">
+              Inkluderer støvsuging, tørk av dashboard, rengjøring av vinduer og vask av matter. Dette er en grunnleggende innvendig vask som holder interiøret rent og ryddig.
+            </p>
+
+            <div class="grid grid-cols-2 gap-4 mb-6">
+
+              <div class="bg-blue-50 border border-blue-100 rounded-2xl p-5">
+                <div class="text-sm text-gray-500">
+                  Liten og medium
+                </div>
+
+                <div class="text-2xl font-extrabold text-primary mt-1">
+                  399 kr
+                </div>
+
+                <div class="text-xs text-gray-500 mt-1">
+                  eks. mva.
+                </div>
+              </div>
+
+              <div class="bg-gray-50 border rounded-2xl p-5">
+                <div class="text-sm text-gray-500">
+                  Stor bil
+                </div>
+
+                <div class="text-2xl font-extrabold text-gray-900 mt-1">
+                  499 kr
+                </div>
+
+                <div class="text-xs text-gray-500 mt-1">
+                  eks. mva.
+                </div>
+              </div>
+
+            </div>
+
+            <div class="bg-gray-50 border rounded-2xl p-5">
+              <h3 class="font-bold text-gray-900 mb-3">
+                Eksempler på bilstørrelse
+              </h3>
+
+              <div class="grid sm:grid-cols-2 gap-4 text-sm text-gray-600">
+
+                <div>
+                  <strong class="text-gray-900">Liten og medium:</strong><br>
+                  Kia Niro, Tesla Model 3 og NIO ET5.
+                </div>
+
+                <div>
+                  <strong class="text-gray-900">Stor:</strong><br>
+                  Tesla Model Y/X, NIO EL6, Toyota bZ4X og Volkswagen ID.4.
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Grundig vask -->
+          <div class="bg-white border rounded-3xl p-8 shadow-sm">
+
+            <div class="flex items-center gap-4 mb-6">
+              <div class="bg-accent/10 w-14 h-14 rounded-2xl flex items-center justify-center shrink-0">
+                <i data-feather="star" class="w-7 h-7 text-accent"></i>
+              </div>
+
+              <div>
+                <div class="text-sm text-accent font-semibold">
+                  Vaskepakke 2
+                </div>
+
+                <h2 class="text-2xl font-bold text-gray-900">
+                  Grundig innvendig og utvendig vask
+                </h2>
+              </div>
+            </div>
+
+            <p class="text-gray-600 leading-relaxed mb-6">
+              Inkluderer avfetting, sjampo, felgrens, avspyling, håndvask, asfaltfjerning, vask av dørkarmer, gummifornyer på dekk, støvsuging av hele bilen og rengjøring av interiør, dashboard, matter og vinduer.
+            </p>
+
+            <div class="grid grid-cols-2 gap-4 mb-6">
+
+              <div class="bg-blue-50 border border-blue-100 rounded-2xl p-5">
+                <div class="text-sm text-gray-500">
+                  Liten og medium
+                </div>
+
+                <div class="text-2xl font-extrabold text-primary mt-1">
+                  799 kr
+                </div>
+
+                <div class="text-xs text-gray-500 mt-1">
+                  eks. mva.
+                </div>
+              </div>
+
+              <div class="bg-gray-50 border rounded-2xl p-5">
+                <div class="text-sm text-gray-500">
+                  Stor bil
+                </div>
+
+                <div class="text-2xl font-extrabold text-gray-900 mt-1">
+                  899 kr
+                </div>
+
+                <div class="text-xs text-gray-500 mt-1">
+                  eks. mva.
+                </div>
+              </div>
+
+            </div>
+
+            <div class="grid grid-cols-2 gap-3 text-sm text-gray-600">
+              <div class="bg-gray-50 border rounded-xl p-3">Avfetting og sjampo</div>
+              <div class="bg-gray-50 border rounded-xl p-3">Felgrens</div>
+              <div class="bg-gray-50 border rounded-xl p-3">Håndvask</div>
+              <div class="bg-gray-50 border rounded-xl p-3">Asfaltfjerning</div>
+              <div class="bg-gray-50 border rounded-xl p-3">Dørkarmer</div>
+              <div class="bg-gray-50 border rounded-xl p-3">Gummifornyer</div>
+              <div class="bg-gray-50 border rounded-xl p-3">Full støvsuging</div>
+              <div class="bg-gray-50 border rounded-xl p-3">Interiør og vinduer</div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Desktop polering -->
+    <section class="py-16 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="bg-primary text-white rounded-3xl p-8 md:p-10 shadow-xl">
+          <div class="grid md:grid-cols-2 gap-10 items-center">
+
+            <div>
+              <div class="inline-flex items-center bg-white/10 px-4 py-2 rounded-full text-sm font-semibold mb-5">
+                Profesjonell bilpleie
+              </div>
+
+              <h2 class="text-3xl font-bold mb-4">
+                Polering fra 2500 kr
+              </h2>
+
+              <p class="text-white/85 leading-relaxed">
+                Polering kan bestilles når bilen trenger ekstra oppfriskning og pleie av lakken. Endelig pris avhenger av bilens størrelse og tilstand.
+              </p>
+            </div>
+
+            <div class="bg-white/10 rounded-3xl p-8 text-center">
+              <i data-feather="sun" class="w-10 h-10 mx-auto mb-4"></i>
+
+              <div class="text-sm text-white/70">
+                Pris fra
+              </div>
+
+              <div class="text-5xl font-extrabold mt-2">
+                2500 kr
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Desktop dekk -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-3">
+            Dekkavtale
+          </h2>
+
+          <p class="text-gray-600 max-w-3xl mx-auto">
+            Oppbevaring, dekkskift, balansering, omlegging og gode priser på nye dekk.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-4 gap-6">
+
+          <div class="bg-white border rounded-3xl p-6 shadow-sm">
+            <div class="bg-primary/10 w-14 h-14 rounded-2xl flex items-center justify-center mb-5">
+              <i data-feather="archive" class="w-7 h-7 text-primary"></i>
+            </div>
+
+            <h3 class="text-xl font-bold text-gray-900 mb-2">
+              Dekkhotell
+            </h3>
+
+            <p class="text-gray-600">
+              750 kr per sesong.
+            </p>
+          </div>
+
+          <div class="bg-white border rounded-3xl p-6 shadow-sm">
+            <div class="bg-accent/10 w-14 h-14 rounded-2xl flex items-center justify-center mb-5">
+              <i data-feather="refresh-cw" class="w-7 h-7 text-accent"></i>
+            </div>
+
+            <h3 class="text-xl font-bold text-gray-900 mb-2">
+              Dekkskift
+            </h3>
+
+            <p class="text-gray-600">
+              450 kr.
+            </p>
+          </div>
+
+          <div class="bg-white border rounded-3xl p-6 shadow-sm">
+            <div class="bg-primary/10 w-14 h-14 rounded-2xl flex items-center justify-center mb-5">
+              <i data-feather="settings" class="w-7 h-7 text-primary"></i>
+            </div>
+
+            <h3 class="text-xl font-bold text-gray-900 mb-2">
+              Omlegging
+            </h3>
+
+            <p class="text-gray-600">
+              Balansering og omlegging etter avtale.
+            </p>
+          </div>
+
+          <div class="bg-white border rounded-3xl p-6 shadow-sm">
+            <div class="bg-accent/10 w-14 h-14 rounded-2xl flex items-center justify-center mb-5">
+              <i data-feather="shopping-cart" class="w-7 h-7 text-accent"></i>
+            </div>
+
+            <h3 class="text-xl font-bold text-gray-900 mb-2">
+              Nye dekk
+            </h3>
+
+            <p class="text-gray-600">
+              Beste tilgjengelige pris gjennom OnTaxi.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="mt-8 bg-yellow-50 border border-yellow-200 rounded-3xl p-6 md:p-8">
+          <div class="flex items-start gap-4">
+
+            <div class="bg-yellow-100 w-12 h-12 rounded-xl flex items-center justify-center shrink-0">
+              <i data-feather="info" class="w-6 h-6 text-yellow-700"></i>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">
+                Dekkskift inkludert ved kjøp av dekk
+              </h3>
+
+              <p class="text-gray-600 leading-relaxed">
+                Ved kjøp av nye dekk gjennom OnTaxi får du tilgang til den beste tilgjengelige prisen. Dekkskift er inkludert når dekk kjøpes gjennom avtalen.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Desktop CTA -->
+    <section class="py-16 bg-primary text-center text-white">
+      <div class="max-w-3xl mx-auto px-4">
+
+        <h2 class="text-3xl font-bold mb-4">
+          Vil du benytte avtalen?
+        </h2>
+
+        <p class="text-lg text-white/85 mb-8">
+          Besøk Bærum Bilpleie sin nettside eller kontakt OnTaxi dersom du trenger mer informasjon om avtaleprisene.
+        </p>
+
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+
+          <a
+            href="https://bbilpleie.no/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-white text-primary px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition"
+          >
+            Besøk Bærum Bilpleie
+          </a>
+
+          <a
+            href="/kontakt"
+            class="bg-accent text-white px-8 py-3 rounded-full font-semibold hover:bg-red-700 transition"
+          >
+            Kontakt OnTaxi
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================= -->
+  <!-- FOOTER -->
+  <!-- ========================================================= -->
+  <footer class="bg-gray-900 text-white pt-12 pb-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="grid md:grid-cols-3 gap-12 mb-10 items-start">
+
+        <!-- Om -->
+        <div>
+          <h3 class="text-xl font-bold mb-4">
+            OnTaxi AS
+          </h3>
+
+          <p class="text-gray-400 leading-relaxed">
+            Tydelige vilkår og gode løsninger som gjør hverdagen enklere for løyvehavere og sjåfører.
+          </p>
+        </div>
+
+        <!-- Snarveier -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4">
+            Snarveier
+          </h4>
+
+          <div class="grid grid-cols-2 gap-x-10 gap-y-2 text-gray-400">
+
+            <a href="/" class="hover:text-white transition">
+              Startsiden
+            </a>
+
+            <a href="/bli-partner" class="hover:text-white transition">
+              Bli partner
+            </a>
+
+            <a href="/taksameter" class="hover:text-white transition">
+              Taksameter
+            </a>
+
+            <a href="/kontakt" class="hover:text-white transition">
+              Kontakt oss
+            </a>
+
+            <a href="/priser" class="hover:text-white transition">
+              Priser
+            </a>
+
+            <a
+              href="https://akarnet.no"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:text-white transition"
+            >
+              Taksameter rapporter
+            </a>
+
+            <a href="/fordeler" class="hover:text-white transition">
+              Fordeler
+            </a>
+
+          </div>
+        </div>
+
+        <!-- Kontakt -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4">
+            Kontakt oss
+          </h4>
+
+          <ul class="space-y-2 text-gray-400">
+
+            <li class="flex items-center">
+              <i data-feather="mail" class="w-5 h-5 mr-2 shrink-0"></i>
+
+              <a
+                href="mailto:post@ontaxi.no"
+                class="hover:text-white transition"
+              >
+                post@ontaxi.no
+              </a>
+            </li>
+
+            <li class="flex items-center">
+              <i data-feather="phone" class="w-5 h-5 mr-2 shrink-0"></i>
+
+              <a
+                href="tel:+4740024400"
+                class="hover:text-white transition"
+              >
+                +47 400 24 400
+              </a>
+            </li>
+
+            <li class="flex items-center">
+              <i data-feather="map-pin" class="w-5 h-5 mr-2 shrink-0"></i>
+
+              <a
+                href="https://maps.app.goo.gl/64tCr7qhbAhwRLcq6"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="hover:text-white transition"
+              >
+                Trondheimsveien 436B – 0962 Oslo, Norge
+              </a>
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="border-t border-gray-800 pt-6 text-center text-gray-400 text-sm">
+        © 2026 OnTaxi AS – Alle rettigheter forbeholdt.
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scroll to top -->
+  <button
+    id="scrollTopBtn"
+    onclick="window.scrollTo({top:0, behavior:'smooth'})"
+    class="fade-out opacity-0 pointer-events-none fixed bottom-5 right-5 bg-accent text-white p-3 rounded-full shadow-lg hover:bg-red-700 transition z-50"
+    aria-label="Til toppen"
+  >
+    <i data-feather="arrow-up" class="w-5 h-5"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script>
+    feather.replace();
+
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', function () {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+
+    if (scrollTopBtn) {
+      window.addEventListener('scroll', function () {
+        if (window.scrollY > 200) {
+          scrollTopBtn.classList.remove(
+            'opacity-0',
+            'pointer-events-none',
+            'fade-out'
+          );
+
+          scrollTopBtn.classList.add('fade-in');
+        } else {
+          scrollTopBtn.classList.add(
+            'opacity-0',
+            'pointer-events-none',
+            'fade-out'
+          );
+
+          scrollTopBtn.classList.remove('fade-in');
+        }
+      });
+    }
+  </script>
+
+  <!-- Google AdSense -->
+  <script
+    async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2609991072523085"
+    crossorigin="anonymous">
+  </script>
+
+</body>
+</html>
