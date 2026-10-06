@@ -3,12 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Opplæring i taksameter | OnTaxi</title>
-  <meta name="description" content="Opplæring for OnTaxi-sjåfører. Finn spørsmål om taksameter, Uber, Bolt, betaling, kvitteringer og skift.">
+
+  <meta
+    name="description"
+    content="Opplæring for OnTaxi-sjåfører. Finn spørsmål om taksameter, Uber, Bolt, betaling, kvitteringer og skift."
+  >
   <meta name="robots" content="noindex, follow">
   <meta name="theme-color" content="#1a3b67">
+
   <link rel="canonical" href="https://ontaxi.no/learn/">
   <link rel="icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
   <style>
     :root {
@@ -20,11 +27,18 @@
       --light: #f4f7fb;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
       color: var(--ink);
       background: var(--light);
       line-height: 1.6;
@@ -35,13 +49,21 @@
       text-underline-offset: 4px;
     }
 
-    button, input { font: inherit; }
+    button,
+    input {
+      font: inherit;
+    }
 
-    button, a, input, summary {
+    button,
+    a,
+    input,
+    summary {
       -webkit-tap-highlight-color: transparent;
     }
 
-    button { cursor: pointer; }
+    button {
+      cursor: pointer;
+    }
 
     button:focus-visible,
     a:focus-visible,
@@ -51,11 +73,14 @@
       outline-offset: 4px;
     }
 
-    [hidden] { display: none !important; }
+    [hidden] {
+      display: none !important;
+    }
 
     .wrap {
+      width: 100%;
       max-width: 1120px;
-      margin: auto;
+      margin: 0 auto;
       padding: 0 24px;
     }
 
@@ -68,11 +93,13 @@
       z-index: 20;
     }
 
-    .skip:focus { top: 12px; }
+    .skip:focus {
+      top: 12px;
+    }
 
     /* Toppmeny */
 
-    header {
+    .site-header {
       background: white;
       border-bottom: 1px solid var(--line);
     }
@@ -91,25 +118,28 @@
     }
 
     .logo img {
+      display: block;
       height: 44px;
       width: auto;
       max-width: 160px;
       object-fit: contain;
     }
 
-    nav {
+    .main-nav {
       display: flex;
       align-items: center;
       gap: 28px;
     }
 
-    nav a {
+    .main-nav a {
       text-decoration: none;
       font-size: 14px;
       font-weight: 600;
     }
 
-    nav a[aria-current] { color: var(--red); }
+    .main-nav a[aria-current="page"] {
+      color: var(--red);
+    }
 
     .contact-link {
       border: 1px solid var(--line);
@@ -120,11 +150,11 @@
     /* Overskrift og søk */
 
     .hero {
+      position: relative;
+      overflow: hidden;
       background: var(--blue);
       color: white;
       padding: 48px 0 62px;
-      position: relative;
-      overflow: hidden;
     }
 
     .hero::after {
@@ -156,7 +186,7 @@
       max-width: 800px;
     }
 
-    .hero p.intro {
+    .hero .intro {
       font-size: 17px;
       color: #e0e8f2;
       max-width: 640px;
@@ -195,9 +225,12 @@
       background: transparent;
       outline-offset: 0;
       border-radius: 4px;
+      font-size: 16px;
     }
 
-    .search input::placeholder { color: #6b7788; }
+    .search input::placeholder {
+      color: #6b7788;
+    }
 
     .clear {
       background: var(--light);
@@ -209,13 +242,13 @@
     }
 
     .quick {
-      font-size: 13px;
-      margin-top: 16px;
-      color: #d4e1f0;
       display: flex;
       gap: 10px;
       align-items: center;
       flex-wrap: wrap;
+      font-size: 13px;
+      margin-top: 16px;
+      color: #d4e1f0;
     }
 
     .quick a {
@@ -227,11 +260,16 @@
       padding: 5px 12px;
     }
 
-    .quick a:hover { background: #ffffff26; }
+    .quick a:hover {
+      background: #ffffff26;
+    }
 
-    /* Innhold og kategorier */
+    /* Hovedinnhold */
 
-    main { padding: 28px 0 64px; }
+    .learn-main {
+      padding-top: 28px;
+      padding-bottom: 64px;
+    }
 
     .notice {
       display: flex;
@@ -278,12 +316,12 @@
     }
 
     .category {
-      border: 1px solid transparent;
-      background: transparent;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 12px;
+      border: 1px solid transparent;
+      background: transparent;
       padding: 12px 14px;
       text-align: left;
       border-radius: 9px;
@@ -291,7 +329,9 @@
       font-size: 14px;
     }
 
-    .category:hover { background: #e8eef6; }
+    .category:hover {
+      background: #e8eef6;
+    }
 
     .category[aria-pressed="true"] {
       background: var(--blue);
@@ -311,7 +351,9 @@
       color: var(--muted);
     }
 
-    .side-help strong { color: var(--ink); }
+    .side-help strong {
+      color: var(--ink);
+    }
 
     .side-help a {
       display: inline-block;
@@ -341,7 +383,7 @@
 
     /* Spørsmål og svar */
 
-    details {
+    .lesson {
       border: 1px solid var(--line);
       border-radius: 12px;
       background: white;
@@ -350,12 +392,12 @@
       overflow: hidden;
     }
 
-    details[open] {
+    .lesson[open] {
       border-color: #9fb5d0;
       box-shadow: 0 5px 20px #1a3b6708;
     }
 
-    summary {
+    .lesson summary {
       list-style: none;
       display: flex;
       align-items: center;
@@ -364,24 +406,30 @@
       padding: 21px 22px;
     }
 
-    summary::-webkit-details-marker { display: none; }
-    summary:hover { background: #fbfcfe; }
+    .lesson summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .lesson summary:hover {
+      background: #fbfcfe;
+    }
 
     .question-number {
+      display: grid;
+      place-items: center;
+      width: 36px;
+      height: 36px;
+      flex-shrink: 0;
       font-size: 12px;
       font-weight: 600;
       color: #708199;
       border: 1px solid var(--line);
       border-radius: 9px;
-      width: 36px;
-      height: 36px;
-      display: grid;
-      place-items: center;
-      flex-shrink: 0;
     }
 
     .question {
       flex: 1;
+      min-width: 0;
       font-weight: 650;
       font-size: 16px;
       line-height: 1.45;
@@ -398,12 +446,15 @@
 
     .chevron {
       width: 18px;
+      height: 18px;
       flex-shrink: 0;
       transition: transform .15s;
       color: var(--blue);
     }
 
-    details[open] .chevron { transform: rotate(180deg); }
+    .lesson[open] .chevron {
+      transform: rotate(180deg);
+    }
 
     .answer {
       padding: 0 22px 24px;
@@ -433,21 +484,21 @@
 
     .lesson-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
       gap: 24px;
       align-items: start;
     }
 
     .video-placeholder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       min-height: 175px;
       aspect-ratio: 16 / 10;
       border: 1px dashed #b8c8dd;
       border-radius: 10px;
       background: var(--light);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
       text-align: center;
       padding: 20px;
       color: var(--muted);
@@ -482,9 +533,11 @@
       font-size: 14px;
     }
 
-    .steps li { padding-bottom: 12px; }
+    .steps li {
+      padding-bottom: 12px;
+    }
 
-    .steps .help-inline {
+    .help-inline {
       display: inline-block;
       margin-top: 18px;
       font-size: 13px;
@@ -505,7 +558,9 @@
       color: var(--muted);
     }
 
-    iframe, video {
+    .lesson iframe,
+    .lesson video {
+      display: block;
       width: 100%;
       aspect-ratio: 16 / 9;
       border: 0;
@@ -521,7 +576,9 @@
       text-align: center;
     }
 
-    .empty h3 { margin: 0 0 10px; }
+    .empty h3 {
+      margin: 0 0 10px;
+    }
 
     .empty p {
       color: var(--muted);
@@ -536,7 +593,7 @@
       border-radius: 8px;
     }
 
-    /* Kontakt og bunntekst */
+    /* Kontaktfelt */
 
     .support {
       display: flex;
@@ -580,33 +637,102 @@
       color: white;
     }
 
-    footer {
-      background: #152237;
-      color: #b9c6d8;
-      font-size: 13px;
-      padding: 28px 0;
+    /* Bunntekst – samme oppsett som taksametersiden */
+
+    .ontaxi-footer {
+      background: #111827;
+      color: #ffffff;
+      padding: 48px 0 40px;
+      font-size: 16px;
+      line-height: 1.5;
     }
 
-    .footer-row {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;
+    .footer-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 16px;
     }
 
-    footer strong { color: white; }
+    .footer-columns {
+      display: grid;
+      grid-template-columns: 1fr;
+      align-items: start;
+      gap: 48px;
+      margin-bottom: 40px;
+    }
 
-    footer a {
-      color: #dce5f0;
+    .ontaxi-footer h3 {
+      margin: 0 0 16px;
+      color: #ffffff;
+      font-size: 20px;
+      line-height: 28px;
+      font-weight: 700;
+    }
+
+    .ontaxi-footer h4 {
+      margin: 0 0 16px;
+      color: #ffffff;
+      font-size: 18px;
+      line-height: 28px;
+      font-weight: 600;
+    }
+
+    .ontaxi-footer p {
+      margin: 0;
+      color: #9ca3af;
+      line-height: 1.625;
+    }
+
+    .ontaxi-footer a {
+      color: #9ca3af;
       text-decoration: none;
+      transition: color .15s ease;
     }
 
-    .footer-links {
+    .ontaxi-footer a:hover {
+      color: #ffffff;
+    }
+
+    .footer-shortcuts {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      column-gap: 40px;
+      row-gap: 8px;
+    }
+
+    .footer-contact {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      color: #9ca3af;
+    }
+
+    .footer-contact li {
       display: flex;
-      gap: 22px;
+      align-items: center;
     }
 
-    /* Nettbrett */
+    .footer-contact li + li {
+      margin-top: 8px;
+    }
+
+    .footer-contact svg {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      margin-right: 8px;
+    }
+
+    .footer-copyright {
+      border-top: 1px solid #1f2937;
+      padding-top: 24px;
+      text-align: center;
+      color: #9ca3af;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    /* Nettbrett og mobil */
 
     @media (max-width: 850px) {
       .layout {
@@ -626,21 +752,29 @@
         padding: 10px 14px;
       }
 
-      .side-help { display: none; }
-      .sidebar-title { margin-top: 0; }
+      .side-help {
+        display: none;
+      }
+
+      .sidebar-title {
+        margin-top: 0;
+      }
 
       .support {
         align-items: flex-start;
         flex-direction: column;
       }
 
-      nav { gap: 18px; }
+      .main-nav {
+        gap: 18px;
+      }
     }
 
-    /* Mobil */
-
     @media (max-width: 540px) {
-      .wrap { padding: 0 18px; }
+      .wrap {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
 
       .header-row {
         min-height: 70px;
@@ -652,18 +786,41 @@
         max-width: 115px;
       }
 
-      nav { gap: 14px; }
-      nav .desktop-link { display: none; }
-      .contact-link { padding: 7px 12px; }
-      nav a { font-size: 12px; }
+      .main-nav {
+        gap: 14px;
+      }
 
-      .hero { padding: 34px 0 38px; }
-      .hero h1 { letter-spacing: -1px; }
-      .hero p.intro { font-size: 15px; }
+      .main-nav .desktop-link {
+        display: none;
+      }
 
-      .search input { font-size: 14px; }
-      .search { padding-left: 12px; }
-      .search svg { width: 18px; }
+      .contact-link {
+        padding: 7px 12px;
+      }
+
+      .main-nav a {
+        font-size: 12px;
+      }
+
+      .hero {
+        padding: 34px 0 38px;
+      }
+
+      .hero h1 {
+        letter-spacing: -1px;
+      }
+
+      .hero .intro {
+        font-size: 15px;
+      }
+
+      .search {
+        padding-left: 12px;
+      }
+
+      .search svg {
+        width: 18px;
+      }
 
       .notice {
         padding: 14px;
@@ -677,17 +834,30 @@
         gap: 8px;
       }
 
-      .list-head h2 { font-size: 21px; }
-      .list-head span { font-size: 12px; }
+      .list-head h2 {
+        font-size: 21px;
+      }
 
-      summary {
+      .list-head span {
+        font-size: 12px;
+      }
+
+      .lesson summary {
         padding: 18px 16px;
         gap: 12px;
       }
 
-      .question { font-size: 15px; }
-      .question-number { display: none; }
-      .answer { padding: 0 16px 20px; }
+      .question {
+        font-size: 15px;
+      }
+
+      .question-number {
+        display: none;
+      }
+
+      .answer {
+        padding: 0 16px 20px;
+      }
 
       .lesson-grid {
         grid-template-columns: 1fr;
@@ -699,14 +869,41 @@
         aspect-ratio: 16 / 9;
       }
 
-      .support { padding: 24px; }
-      .support-actions { flex-wrap: wrap; }
-      .support-actions a { font-size: 13px; }
-      .footer-row { flex-direction: column; }
+      .support {
+        padding: 24px;
+      }
+
+      .support-actions {
+        flex-wrap: wrap;
+      }
+
+      .support-actions a {
+        font-size: 13px;
+      }
+    }
+
+    @media (min-width: 640px) {
+      .footer-container {
+        padding: 0 24px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .footer-columns {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .footer-container {
+        padding: 0 32px;
+      }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      * { transition: none !important; }
+      * {
+        transition: none !important;
+      }
     }
   </style>
 </head>
@@ -714,13 +911,14 @@
 <body>
   <a class="skip" href="#guides">Hopp til veiledninger</a>
 
-  <header>
+  <!-- Toppmeny -->
+  <header class="site-header">
     <div class="wrap header-row">
       <a class="logo" href="/" aria-label="OnTaxi – hjem">
         <img src="/OnTaxi-signatur-GIF.gif" alt="OnTaxi">
       </a>
 
-      <nav aria-label="Hovedmeny">
+      <nav class="main-nav" aria-label="Hovedmeny">
         <a class="desktop-link" href="/">Hjem</a>
         <a class="desktop-link" href="/taksameter/">Taksameter</a>
         <a href="/learn/" aria-current="page">Opplæring</a>
@@ -729,6 +927,7 @@
     </div>
   </header>
 
+  <!-- Overskrift og søk -->
   <section class="hero" aria-labelledby="page-title">
     <div class="wrap">
       <p class="eyebrow">OnTaxi · Sjåførhjelp</p>
@@ -745,9 +944,15 @@
       </label>
 
       <div class="search">
-        <svg width="22" height="22" viewBox="0 0 24 24"
-             fill="none" stroke="currentColor" stroke-width="1.8"
-             aria-hidden="true">
+        <svg
+          width="22"
+          height="22"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          aria-hidden="true"
+        >
           <circle cx="10.5" cy="10.5" r="6.5"/>
           <path d="m16 16 5 5"/>
         </svg>
@@ -774,11 +979,18 @@
     </div>
   </section>
 
-  <main class="wrap">
+  <!-- Opplæring -->
+  <main class="wrap learn-main">
     <div class="notice">
-      <svg width="20" height="20" viewBox="0 0 24 24"
-           fill="none" stroke="currentColor" stroke-width="1.7"
-           aria-hidden="true">
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.7"
+        aria-hidden="true"
+      >
         <circle cx="12" cy="12" r="9"/>
         <path d="M12 11v6m0-10v2"/>
       </svg>
@@ -795,9 +1007,12 @@
       <aside aria-label="Velg tema">
         <p class="sidebar-title">Finn ditt tema</p>
 
-        <div id="categories"
-             class="categories"
-             aria-label="Filtrer etter kategori"></div>
+        <div
+          id="categories"
+          class="categories"
+          role="group"
+          aria-label="Filtrer etter kategori"
+        ></div>
 
         <div class="side-help">
           <strong>Vi hjelper deg videre.</strong><br>
@@ -809,7 +1024,11 @@
       <section id="guides" aria-labelledby="list-title">
         <div class="list-head">
           <h2 id="list-title">Alle spørsmål</h2>
-          <span id="result-count" role="status" aria-live="polite"></span>
+          <span
+            id="result-count"
+            role="status"
+            aria-live="polite"
+          ></span>
         </div>
 
         <div id="questions"></div>
@@ -817,6 +1036,7 @@
         <div id="empty" class="empty" hidden>
           <h3>Ingen spørsmål funnet</h3>
           <p>Prøv et annet søkeord, eller vis alle spørsmål.</p>
+
           <button id="reset" class="reset" type="button">
             Vis alle spørsmål
           </button>
@@ -825,7 +1045,8 @@
         <noscript>
           <p>
             Slå på JavaScript for å søke og vise spørsmålene.
-            Du kan også <a href="/kontakt/">kontakte OnTaxi for hjelp</a>.
+            Du kan også
+            <a href="/kontakt/">kontakte OnTaxi for hjelp</a>.
           </p>
         </noscript>
       </section>
@@ -846,18 +1067,113 @@
     </section>
   </main>
 
-  <footer>
-    <div class="wrap footer-row">
-      <div>
-        <strong>OnTaxi AS</strong> · En enklere hverdag bak rattet.
+  <!-- Bunntekst -->
+  <footer class="ontaxi-footer">
+    <div class="footer-container">
+      <div class="footer-columns">
+
+        <div>
+          <h3>OnTaxi AS</h3>
+          <p>
+            Tydelige vilkår og gode løsninger som gjør hverdagen
+            enklere for løyvehavere og sjåfører.
+          </p>
+        </div>
+
+        <div>
+          <h4>Snarveier</h4>
+
+          <div class="footer-shortcuts">
+            <a href="/">Startsiden</a>
+            <a href="/bli-partner/">Bli partner</a>
+
+            <a href="/taksameter/">Taksameter</a>
+            <a href="/kontakt/">Kontakt oss</a>
+
+            <a href="/priser/">Priser</a>
+
+            <a
+              href="https://akarnet.no"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Taksameter rapporter
+            </a>
+
+            <a href="/fordeler/">Fordeler</a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Kontakt oss</h4>
+
+          <ul class="footer-contact">
+            <li>
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+
+              <a href="mailto:post@ontaxi.no">
+                post@ontaxi.no
+              </a>
+            </li>
+
+            <li>
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.35 1.9.69 2.79a2 2 0 0 1-.45 2.11L8.08 9.89a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.89.34 1.83.57 2.79.69A2 2 0 0 1 22 16.92z"/>
+              </svg>
+
+              <a href="tel:+4740024400">
+                +47 400 24 400
+              </a>
+            </li>
+
+            <li>
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+
+              <a
+                href="https://maps.app.goo.gl/64tCr7qhbAhwRLcq6"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Trondheimsveien 436B – 0962 Oslo, Norge
+              </a>
+            </li>
+          </ul>
+        </div>
+
       </div>
 
-      <div class="footer-links">
-        <a href="/">ontaxi.no</a>
-        <a href="/kontakt/">Kontakt oss</a>
-        <a href="https://akarnet.no"
-           target="_blank"
-           rel="noopener noreferrer">Åkarnet ↗</a>
+      <div class="footer-copyright">
+        © 2026 OnTaxi AS – Alle rettigheter forbeholdt.
       </div>
     </div>
   </footer>
@@ -866,27 +1182,31 @@
     'use strict';
 
     /*
-      REDIGER SPØRSMÅL OG INNHOLD HER
+      REDIGER SPØRSMÅL, FORKLARINGER OG VIDEOER HER.
 
-      steps: []
-      Fyll senere inn forklaringer som en liste med tekst.
-
-      Eksempel på format:
+      Forklaring:
       steps: [
-        'Første trinn i den kontrollerte veiledningen.',
-        'Andre trinn i den kontrollerte veiledningen.'
+        'Første trinn.',
+        'Andre trinn.',
+        'Tredje trinn.'
       ]
 
-      Video fra YouTube:
-      video: { type: 'youtube', id: 'VIDEO_ID' }
+      MP4-video på GitHub:
+      video: {
+        type: 'mp4',
+        src: '/learn/videos/uber.mp4'
+      }
 
-      Video fra en MP4-fil:
-      video: { type: 'mp4', src: '/learn/video.mp4' }
+      YouTube-video:
+      video: {
+        type: 'youtube',
+        id: 'VIDEO_ID'
+      }
 
       Ingen video ennå:
       video: null
 
-      YouTube lastes først når brukeren trykker på Spill av.
+      Behold steps: [] til riktig forklaring er klar.
     */
 
     const lessons = [
@@ -986,174 +1306,299 @@
 
     let selected = 'Alle spørsmål';
 
-    const names = [
+    const categoryNames = [
       'Alle spørsmål',
       ...new Set(lessons.map(lesson => lesson.category))
     ];
 
-    const normalize = value => value
-      .toLocaleLowerCase('nb')
-      .normalize('NFD')
-      .replace(/[\u0300-\u036f]/g, '')
-      .replace(/ø/g, 'o')
-      .replace(/æ/g, 'ae');
+    function normalize(value) {
+      return value
+        .toLocaleLowerCase('nb')
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/ø/g, 'o')
+        .replace(/æ/g, 'ae');
+    }
 
-    function el(tag, className, text) {
+    function createElement(tag, className, text) {
       const node = document.createElement(tag);
 
-      if (className) node.className = className;
-      if (text !== undefined) node.textContent = text;
+      if (className) {
+        node.className = className;
+      }
+
+      if (text !== undefined) {
+        node.textContent = text;
+      }
 
       return node;
     }
 
     const chevronIcon = `
-      <svg class="chevron" viewBox="0 0 24 24"
-           fill="none" stroke="currentColor"
-           stroke-width="1.8" aria-hidden="true">
+      <svg
+        class="chevron"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.8"
+        aria-hidden="true"
+      >
         <path d="m6 9 6 6 6-6"/>
       </svg>
     `;
 
-    /* Lag kategoriknappene */
+    /* Kategorier */
 
-    names.forEach(name => {
-      const button = el('button', 'category');
+    categoryNames.forEach(name => {
+      const button = createElement('button', 'category');
       button.type = 'button';
+      button.dataset.category = name;
 
-      const count = name === names[0]
+      const count = name === categoryNames[0]
         ? lessons.length
         : lessons.filter(lesson => lesson.category === name).length;
 
       button.append(
-        el('span', '', name),
-        el('span', 'count', String(count))
+        createElement('span', '', name),
+        createElement('span', 'count', String(count))
       );
 
-      button.setAttribute('aria-pressed', String(name === selected));
-      button.dataset.category = name;
+      button.setAttribute(
+        'aria-pressed',
+        String(name === selected)
+      );
 
       button.addEventListener('click', () => {
         selected = name;
-        filter();
+        filterLessons();
       });
 
       categories.append(button);
     });
 
-    /* Lag spørsmål, videofelt og forklaring */
+    /* Spørsmål */
 
     lessons.forEach((lesson, index) => {
-      const detail = el('details');
+      const detail = createElement('details', 'lesson');
       detail.id = lesson.id;
 
-      const summary = el('summary');
+      const summary = createElement('summary');
 
       summary.append(
-        el('span', 'question-number', String(index + 1).padStart(2, '0'))
+        createElement(
+          'span',
+          'question-number',
+          String(index + 1).padStart(2, '0')
+        )
       );
 
-      const question = el('span', 'question', lesson.title);
-      question.append(el('small', '', lesson.category));
+      const question = createElement(
+        'span',
+        'question',
+        lesson.title
+      );
+
+      question.append(
+        createElement('small', '', lesson.category)
+      );
 
       summary.append(question);
       summary.insertAdjacentHTML('beforeend', chevronIcon);
       detail.append(summary);
 
-      const answer = el('div', 'answer');
-      const tools = el('div', 'answer-tools');
+      const answer = createElement('div', 'answer');
+      const answerTools = createElement('div', 'answer-tools');
 
-      tools.append(
-        el('span', 'status', lesson.steps.length ? 'Veiledning' : 'Kommer snart')
+      answerTools.append(
+        createElement(
+          'span',
+          'status',
+          lesson.steps.length ? 'Veiledning' : 'Kommer snart'
+        )
       );
 
-      const link = el('a', 'permalink', 'Lenke til spørsmålet');
-      link.href = '#' + lesson.id;
+      const permalink = createElement(
+        'a',
+        'permalink',
+        'Lenke til spørsmålet'
+      );
 
-      tools.append(link);
-      answer.append(tools);
+      permalink.href = '#' + lesson.id;
 
-      const grid = el('div', 'lesson-grid');
-      const media = el('div');
+      answerTools.append(permalink);
+      answer.append(answerTools);
+
+      const grid = createElement('div', 'lesson-grid');
+      const media = createElement('div');
+
+      let stopVideo = () => {};
+
+      /* YouTube-video */
 
       if (
         lesson.video &&
         lesson.video.type === 'youtube' &&
         /^[\w-]{11}$/.test(lesson.video.id)
       ) {
-        const play = el('button', 'video-button', '▶ Spill av video');
+        function showPlayButton() {
+          const playButton = createElement(
+            'button',
+            'video-button',
+            '▶ Spill av video'
+          );
 
-        play.type = 'button';
-        play.setAttribute('aria-label', 'Spill av: ' + lesson.title);
+          playButton.type = 'button';
 
-        play.addEventListener('click', () => {
-          const frame = el('iframe');
+          playButton.setAttribute(
+            'aria-label',
+            'Spill av: ' + lesson.title
+          );
 
-          frame.src =
-            'https://www.youtube-nocookie.com/embed/' +
-            lesson.video.id +
-            '?autoplay=1';
+          playButton.addEventListener('click', () => {
+            const frame = createElement('iframe');
 
-          frame.title = lesson.title;
-          frame.allow =
-            'autoplay; encrypted-media; picture-in-picture; fullscreen';
+            frame.src =
+              'https://www.youtube-nocookie.com/embed/' +
+              lesson.video.id +
+              '?autoplay=1';
 
-          frame.allowFullscreen = true;
-          media.replaceChildren(frame);
-        });
+            frame.title = lesson.title;
+            frame.allow =
+              'autoplay; encrypted-media; picture-in-picture; fullscreen';
 
-        media.append(
-          play,
-          el(
+            frame.allowFullscreen = true;
+            media.replaceChildren(frame);
+          });
+
+          const note = createElement(
             'p',
             'video-note',
             'Videoen lastes fra YouTube når du trykker på Spill av.'
-          )
-        );
-      } else if (lesson.video && lesson.video.type === 'mp4') {
-        const video = el('video');
+          );
+
+          media.replaceChildren(playButton, note);
+        }
+
+        showPlayButton();
+
+        stopVideo = () => {
+          if (media.querySelector('iframe')) {
+            showPlayButton();
+          }
+        };
+
+      /* MP4-video */
+
+      } else if (
+        lesson.video &&
+        lesson.video.type === 'mp4'
+      ) {
+        const video = createElement('video');
 
         video.controls = true;
         video.preload = 'none';
         video.playsInline = true;
-        video.src = lesson.video.src;
+
         video.setAttribute('aria-label', lesson.title);
 
+        if (lesson.video.poster) {
+          video.poster = lesson.video.poster;
+        }
+
+        const source = createElement('source');
+        source.src = lesson.video.src;
+        source.type = 'video/mp4';
+
+        video.append(source);
+
+        const fallback = createElement(
+          'a',
+          '',
+          'Åpne videoen'
+        );
+
+        fallback.href = lesson.video.src;
+        video.append(fallback);
+
         media.append(video);
+
+        const errorMessage = createElement(
+          'p',
+          'video-note',
+          'Videoen kunne ikke lastes. Prøv igjen senere eller kontakt OnTaxi.'
+        );
+
+        errorMessage.hidden = true;
+        media.append(errorMessage);
+
+        video.addEventListener('error', () => {
+          errorMessage.hidden = false;
+        });
+
+        source.addEventListener('error', () => {
+          errorMessage.hidden = false;
+        });
+
+        stopVideo = () => {
+          video.pause();
+        };
+
+      /* Video kommer snart */
+
       } else {
-        const placeholder = el('div', 'video-placeholder');
+        const placeholder = createElement(
+          'div',
+          'video-placeholder'
+        );
 
         placeholder.innerHTML = `
-          <svg width="36" height="36" viewBox="0 0 24 24"
-               fill="none" stroke="currentColor"
-               stroke-width="1.4" aria-hidden="true">
+          <svg
+            width="36"
+            height="36"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.4"
+            aria-hidden="true"
+          >
             <rect x="3" y="4" width="18" height="16" rx="3"/>
             <path d="m10 8 6 4-6 4Z"/>
           </svg>
         `;
 
         placeholder.append(
-          el('strong', '', 'Video kommer snart'),
-          el('span', '', 'Se fremgangsmåten her når videoen er klar.')
+          createElement('strong', '', 'Video kommer snart'),
+          createElement(
+            'span',
+            '',
+            'Se fremgangsmåten her når videoen er klar.'
+          )
         );
 
         media.append(placeholder);
       }
 
-      const text = el('div', 'steps');
-      text.append(el('h3', '', 'Steg for steg'));
+      /* Tekstforklaring */
+
+      const explanation = createElement('div', 'steps');
+
+      explanation.append(
+        createElement('h3', '', 'Steg for steg')
+      );
 
       if (lesson.steps.length) {
-        const orderedList = el('ol');
+        const orderedList = createElement('ol');
 
         lesson.steps.forEach(step => {
-          orderedList.append(el('li', '', step));
+          orderedList.append(
+            createElement('li', '', step)
+          );
         });
 
-        text.append(orderedList);
+        explanation.append(orderedList);
       } else {
-        text.append(
-          el(
+        explanation.append(
+          createElement(
             'p',
             '',
             'Vi gjør klar en enkel forklaring til dette spørsmålet. ' +
@@ -1162,33 +1607,30 @@
         );
       }
 
-      const help = el('a', 'help-inline', 'Kontakt OnTaxi →');
-      help.href = '/kontakt/';
-      text.append(help);
+      const helpLink = createElement(
+        'a',
+        'help-inline',
+        'Kontakt OnTaxi →'
+      );
 
-      grid.append(media, text);
+      helpLink.href = '/kontakt/';
+      explanation.append(helpLink);
+
+      grid.append(media, explanation);
       answer.append(grid);
       detail.append(answer);
       list.append(detail);
 
-      /* Stopp videoen når spørsmålet lukkes */
-
       detail.addEventListener('toggle', () => {
         if (!detail.open) {
-          detail.querySelectorAll('iframe').forEach(frame => {
-            frame.src = frame.src.replace('?autoplay=1', '');
-          });
-
-          detail.querySelectorAll('video').forEach(video => {
-            video.pause();
-          });
+          stopVideo();
         }
       });
     });
 
-    /* Søk og kategorifilter */
+    /* Søk og filtrering */
 
-    function filter() {
+    function filterLessons() {
       const words = normalize(search.value.trim())
         .split(/\s+/)
         .filter(Boolean);
@@ -1197,7 +1639,8 @@
 
       lessons.forEach(lesson => {
         const categoryMatches =
-          selected === names[0] || selected === lesson.category;
+          selected === categoryNames[0] ||
+          selected === lesson.category;
 
         const searchableText = normalize([
           lesson.title,
@@ -1215,8 +1658,13 @@
 
         detail.hidden = !match;
 
-        if (!match) detail.open = false;
-        if (match) count++;
+        if (!match) {
+          detail.open = false;
+        }
+
+        if (match) {
+          count++;
+        }
       });
 
       categories.querySelectorAll('button').forEach(button => {
@@ -1236,13 +1684,13 @@
       document.getElementById('clear').hidden = !search.value;
     }
 
-    function reset() {
+    function resetFilters() {
       search.value = '';
-      selected = names[0];
-      filter();
+      selected = categoryNames[0];
+      filterLessons();
     }
 
-    /* Åpne et spørsmål direkte fra lenken */
+    /* Åpne spørsmål fra direkte lenke */
 
     function openHash() {
       let id;
@@ -1253,28 +1701,32 @@
         return;
       }
 
-      if (!lessons.some(lesson => lesson.id === id)) return;
+      if (!lessons.some(lesson => lesson.id === id)) {
+        return;
+      }
 
-      reset();
+      resetFilters();
 
       const detail = document.getElementById(id);
       detail.open = true;
 
       requestAnimationFrame(() => {
-        detail.scrollIntoView({ block: 'start' });
+        detail.scrollIntoView({
+          block: 'start'
+        });
       });
     }
 
-    search.addEventListener('input', filter);
+    search.addEventListener('input', filterLessons);
 
     document.getElementById('clear').addEventListener('click', () => {
       search.value = '';
-      filter();
+      filterLessons();
       search.focus();
     });
 
     document.getElementById('reset').addEventListener('click', () => {
-      reset();
+      resetFilters();
       search.focus();
     });
 
@@ -1282,11 +1734,13 @@
 
     document.querySelectorAll('.quick a, .permalink').forEach(link => {
       link.addEventListener('click', () => {
-        if (link.hash === location.hash) openHash();
+        if (link.hash === location.hash) {
+          openHash();
+        }
       });
     });
 
-    filter();
+    filterLessons();
     openHash();
   </script>
 </body>
