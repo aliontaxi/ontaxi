@@ -1763,7 +1763,27 @@
       helpLink.href = '/kontakt/';
       explanation.append(helpLink);
 
-      grid.append(media, explanation);
+      grid.append(media);
+
+if (lesson.video && lesson.video.type === 'drive') {
+  const openVideo = createElement(
+    'a',
+    'open-video',
+    'Åpne video i eget vindu ↗'
+  );
+
+  openVideo.href =
+    'https://drive.google.com/file/d/' +
+    encodeURIComponent(lesson.video.id) +
+    '/view';
+
+  openVideo.target = '_blank';
+  openVideo.rel = 'noopener noreferrer';
+
+  grid.append(openVideo);
+}
+
+grid.append(explanation);
       answer.append(grid);
       detail.append(answer);
       list.append(detail);
