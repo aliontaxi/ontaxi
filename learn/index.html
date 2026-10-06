@@ -1210,95 +1210,151 @@
     */
 
     const lessons = [
-      {
-        id: 'starte-skift',
-        category: 'Kom i gang',
-        title: 'Hvordan logger jeg inn og starter skiftet?',
-        keywords: 'innlogging sjåfør sjafor start pålogging',
-        steps: [],
-        video: null
-      },
-      {
-        id: 'uber-tur',
-        category: 'Registrere turer',
-        title: 'Hvordan registrerer jeg en Uber-tur i taksameteret?',
-        keywords: 'uber app appbetaling registrering',
-        steps: [],
-        video: null
-      },
-      {
-        id: 'bolt-tur',
-        category: 'Registrere turer',
-        title: 'Hvordan registrerer jeg en Bolt-tur i taksameteret?',
-        keywords: 'bolt app appbetaling registrering',
-        steps: [],
-        video: null
-      },
-      {
-        id: 'vanlig-tur',
-        category: 'Registrere turer',
-        title: 'Hvordan starter jeg en vanlig taksametertur?',
-        keywords: 'tur gate holdeplass kjøring start',
-        steps: [],
-        video: null
-      },
-      {
-        id: 'kortbetaling',
-        category: 'Betaling og kvittering',
-        title: 'Hvordan tar jeg imot kortbetaling?',
-        keywords: 'kort terminal nets bankkort betaling',
-        steps: [],
-        video: null
-      },
-      {
-        id: 'kontantbetaling',
-        category: 'Betaling og kvittering',
-        title: 'Hvordan registrerer jeg kontantbetaling?',
-        keywords: 'kontant kontanter penger betaling',
-        steps: [],
-        video: null
-      },
-      {
-        id: 'kvittering',
-        category: 'Betaling og kvittering',
-        title: 'Hvordan skriver jeg ut en kvittering?',
-        keywords: 'kvittering kopi utskrift skriver printer',
-        steps: [],
-        video: null
-      },
-      {
-        id: 'avslutte-skift',
-        category: 'Skift og rapporter',
-        title: 'Hvordan avslutter jeg skiftet?',
-        keywords: 'avslutt utlogging logge ut skift slutt',
-        steps: [],
-        video: null
-      },
-      {
-        id: 'skiftrapport',
-        category: 'Skift og rapporter',
-        title: 'Hvor finner jeg skiftrapportene mine?',
-        keywords: 'rapport rapporter oppgjør akarnet åkarnet',
-        steps: [],
-        video: null
-      },
-      {
-        id: 'skriver-feil',
-        category: 'Feil og problemer',
-        title: 'Hva gjør jeg hvis skriveren ikke fungerer?',
-        keywords: 'feil problem papir papirrull printer utskrift',
-        steps: [],
-        video: null
-      },
-      {
-        id: 'terminal-feil',
-        category: 'Feil og problemer',
-        title: 'Hva gjør jeg hvis betalingsterminalen ikke svarer?',
-        keywords: 'feil problem nets kort terminal forbindelse',
-        steps: [],
-        video: null
-      }
-    ];
+  {
+    id: 'starte-skift',
+    category: 'Kom i gang',
+    title: 'Hvordan logger jeg inn og starter skiftet?',
+    keywords: 'innlogging sjåfør sjafor start pålogging',
+    steps: [],
+    video: null
+  },
+  {
+    id: 'feilmeldinger',
+    category: 'Feil og problemer',
+    title: 'Hvilke feilmeldinger kan dukke opp, og hva betyr de?',
+    keywords: 'feil feilmelding feilmeldinger varsel varsler taksameter',
+    steps: [],
+    video: null
+  },
+  {
+    id: 'taklampe',
+    category: 'Kom i gang',
+    title: 'Hvordan slår jeg taklampen av og på manuelt?',
+    keywords: 'taklampe taklys lampe lys slå av på manuelt',
+    steps: [],
+    video: null
+  },
+  {
+    id: 'uber-tur',
+    category: 'Registrere turer',
+    title: 'Hvordan registrerer jeg en Uber-tur i taksameteret?',
+    keywords: 'uber app appbetaling registrering',
+    steps: [],
+    video: null
+  },
+  {
+    id: 'bolt-tur',
+    category: 'Registrere turer',
+    title: 'Hvordan registrerer jeg en Bolt-tur i taksameteret?',
+    keywords: 'bolt app appbetaling registrering',
+    steps: [],
+    video: null
+  },
+  {
+    id: 'vanlig-tur',
+    category: 'Registrere turer',
+    title: 'Hvordan starter jeg en vanlig taksametertur?',
+    keywords: 'tur gate holdeplass kjøring start taksameter vanlig',
+    steps: [],
+    video: null
+  },
+  {
+    id: 'fastpris-tur',
+    category: 'Registrere turer',
+    title: 'Hvordan starter jeg en tur med fastpris?',
+    keywords: 'fastpris fast pris avtalt pris tur start',
+    steps: [],
+    video: null
+  },
+  {
+    id: 'andre-tjenester',
+    category: 'Registrere turer',
+    title: 'Hvordan legger jeg til andre tjenester på turen, som ekstra stopp eller rengjøring?',
+    keywords: 'tillegg tjenester ekstra stopp rengjøring gebyr',
+    steps: [],
+    video: null
+  },
+  {
+    id: 'betaling',
+    category: 'Betaling og kvittering',
+    title: 'Hvordan tar jeg imot betaling med kort, kontanter, Vipps eller annen kreditt?',
+    keywords: 'betaling kort bankkort kontant kontanter vipps annen kreditt terminal nets',
+    steps: [],
+    video: null
+  },
+  {
+    id: 'kvittering',
+    category: 'Betaling og kvittering',
+    title: 'Hvordan skriver jeg ut kvitteringer fra tidligere turer?',
+    keywords: 'kvittering kvitteringer kopi tidligere eldre turer historikk utskrift',
+    steps: [],
+    video: null
+  },
+  {
+    id: 'avslutte-skift',
+    category: 'Skift og rapporter',
+    title: 'Hvordan avslutter jeg skiftet?',
+    keywords: 'avslutt utlogging logge ut skift slutt',
+    steps: [],
+    video: null
+  },
+  {
+    id: 'skiftrapport',
+    category: 'Skift og rapporter',
+    title: 'Hvor finner jeg skiftrapportene mine?',
+    keywords: 'rapport rapporter skiftrapport skiftrapporter oppgjør akarnet åkarnet',
+    steps: [],
+    video: null
+  },
+  {
+    id: 'terminal-feil',
+    category: 'Feil og problemer',
+    title: 'Hva gjør jeg hvis betalingsterminalen ikke svarer?',
+    keywords: 'feil problem nets kort terminal betalingsterminal forbindelse',
+    steps: [],
+    video: null
+  },
+  {
+    id: 'skriver-feil',
+    category: 'Feil og problemer',
+    title: 'Hva gjør jeg hvis skriveren ikke fungerer?',
+    keywords: 'feil problem papir papirrull printer skriver utskrift',
+    steps: [],
+    video: null
+  },
+  {
+    id: 'splitte-betaling',
+    category: 'Betaling og kvittering',
+    title: 'Hvordan deler jeg betalingen for en tur?',
+    keywords: 'splitte dele delt betaling delbetaling flere passasjerer',
+    steps: [],
+    video: null
+  },
+  {
+    id: 'rekvisisjon',
+    category: 'Rekvisisjon og transportkort',
+    title: 'Hvordan tar jeg imot en rekvisisjon?',
+    keywords: 'rekvisisjon rekvisisjoner betaling kreditt',
+    steps: [],
+    video: null
+  },
+  {
+    id: 'tt-kort',
+    category: 'Rekvisisjon og transportkort',
+    title: 'Hvordan tar jeg imot turer med TT-kort?',
+    keywords: 'tt tt-kort tt kort transport tilrettelagt transport',
+    steps: [],
+    video: null
+  },
+  {
+    id: 'oslo-taxi-card',
+    category: 'Rekvisisjon og transportkort',
+    title: 'Hvordan tar jeg imot Oslo Taxi Card?',
+    keywords: 'oslo taxi card taxicard taxikort transportkort',
+    steps: [],
+    video: null
+  }
+];
 
     const search = document.getElementById('search');
     const list = document.getElementById('questions');
