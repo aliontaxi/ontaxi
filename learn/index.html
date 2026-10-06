@@ -1211,13 +1211,16 @@
 
     const lessons = [
   {
-    id: 'starte-skift',
-    category: 'Kom i gang',
-    title: 'Hvordan logger jeg inn og starter skiftet?',
-    keywords: 'innlogging sjåfør sjafor start pålogging',
-    steps: [],
-    video: null
-  },
+  id: 'starte-skift',
+  category: 'Kom i gang',
+  title: 'Hvordan logger jeg inn og starter skiftet?',
+  keywords: 'innlogging sjåfør sjafor start pålogging',
+  steps: [],
+  video: {
+    type: 'drive',
+    id: '1Rn1tFtA2RPfTUgmeXb87ovSRJjXNrzm5'
+  }
+},
   {
     id: 'feilmeldinger',
     category: 'Feil og problemer',
@@ -1542,7 +1545,51 @@
             showPlayButton();
           }
         };
+      /* Google Drive-video */
 
+      } else if (
+        lesson.video &&
+        lesson.video.type === 'drive'
+      ) {
+        function showDrivePlayButton() {
+          const playButton = createElement(
+            'button',
+            'video-button',
+            '▶ Spill av video'
+          );
+
+          playButton.type = 'button';
+          playButton.setAttribute(
+            'aria-label',
+            'Spill av: ' + lesson.title
+          );
+
+          playButton.addEventListener('click', () => {
+            const frame = createElement('iframe');
+
+            frame.src =
+              'https://drive.google.com/file/d/' +
+              encodeURIComponent(lesson.video.id) +
+              '/preview';
+
+            frame.title = lesson.title;
+            frame.allow = 'autoplay; fullscreen';
+            frame.allowFullscreen = true;
+
+            media.replaceChildren(frame);
+          });
+
+          media.replaceChildren(playButton);
+        }
+
+        showDrivePlayButton();
+
+        stopVideo = () => {
+          if (media.querySelector('iframe')) {
+            showDrivePlayButton();
+          }
+        };
+    
       /* MP4-video */
 
       } else if (
