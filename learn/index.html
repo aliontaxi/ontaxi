@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Opplæring i taksameter | OnTaxi</title>
+  <meta name="description" content="Opplæring for OnTaxi-sjåfører. Finn spørsmål om taksameter, Uber, Bolt, betaling, kvitteringer og skift.">
+  <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#1a3b67">
+  <link rel="canonical" href="https://ontaxi.no/learn/">
+  <link rel="icon" href="/favicon.ico">
+
+  <style>
+    :root {
+      --blue: #1a3b67;
+      --red: #b33e3e;
+      --ink: #172638;
+      --muted: #596779;
+      --line: #dce3eb;
+      --light: #f4f7fb;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--light);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--blue);
+      text-underline-offset: 4px;
+    }
+
+    button, input { font: inherit; }
+
+    button, a, input, summary {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    button { cursor: pointer; }
+
+    button:focus-visible,
+    a:focus-visible,
+    summary:focus-visible,
+    input:focus-visible {
+      outline: 3px solid #ce6b38;
+      outline-offset: 4px;
+    }
+
+    [hidden] { display: none !important; }
+
+    .wrap {
+      max-width: 1120px;
+      margin: auto;
+      padding: 0 24px;
+    }
+
+    .skip {
+      position: absolute;
+      left: 16px;
+      top: -100px;
+      background: white;
+      padding: 12px;
+      z-index: 20;
+    }
+
+    .skip:focus { top: 12px; }
+
+    /* Toppmeny */
+
+    header {
+      background: white;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .header-row {
+      min-height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 44px;
+      width: auto;
+      max-width: 160px;
+      object-fit: contain;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    nav a[aria-current] { color: var(--red); }
+
+    .contact-link {
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      padding: 9px 18px;
+    }
+
+    /* Overskrift og søk */
+
+    .hero {
+      background: var(--blue);
+      color: white;
+      padding: 48px 0 62px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 390px;
+      height: 390px;
+      border: 1px solid #ffffff12;
+      border-radius: 50%;
+      right: -120px;
+      top: -160px;
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #c8d8ed;
+      margin: 0 0 14px;
+    }
+
+    .hero h1 {
+      font-size: clamp(32px, 5vw, 50px);
+      line-height: 1.15;
+      letter-spacing: -1.6px;
+      margin: 0 0 18px;
+      max-width: 800px;
+    }
+
+    .hero p.intro {
+      font-size: 17px;
+      color: #e0e8f2;
+      max-width: 640px;
+      margin: 0 0 28px;
+    }
+
+    .search-label {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .search {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: white;
+      border-radius: 12px;
+      padding: 4px 10px 4px 18px;
+      max-width: 720px;
+      box-shadow: 0 8px 24px #071b3326;
+    }
+
+    .search svg {
+      color: var(--blue);
+      flex-shrink: 0;
+    }
+
+    .search input {
+      width: 100%;
+      min-width: 0;
+      height: 52px;
+      border: 0;
+      color: var(--ink);
+      background: transparent;
+      outline-offset: 0;
+      border-radius: 4px;
+    }
+
+    .search input::placeholder { color: #6b7788; }
+
+    .clear {
+      background: var(--light);
+      border: 0;
+      border-radius: 7px;
+      color: var(--blue);
+      padding: 8px 12px;
+      font-size: 13px;
+    }
+
+    .quick {
+      font-size: 13px;
+      margin-top: 16px;
+      color: #d4e1f0;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .quick a {
+      color: white;
+      text-decoration: none;
+      background: #ffffff12;
+      border: 1px solid #ffffff33;
+      border-radius: 20px;
+      padding: 5px 12px;
+    }
+
+    .quick a:hover { background: #ffffff26; }
+
+    /* Innhold og kategorier */
+
+    main { padding: 28px 0 64px; }
+
+    .notice {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: #fffaf0;
+      border: 1px solid #eadbbb;
+      border-radius: 12px;
+      padding: 16px 20px;
+      color: #68512b;
+      margin-bottom: 32px;
+      font-size: 14px;
+    }
+
+    .notice svg {
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .notice strong {
+      display: block;
+      color: #584322;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 225px minmax(0, 1fr);
+      gap: 38px;
+    }
+
+    .sidebar-title {
+      font-size: 11px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 1.6px;
+      margin: 4px 0 14px;
+      font-weight: 750;
+    }
+
+    .categories {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .category {
+      border: 1px solid transparent;
+      background: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 14px;
+      text-align: left;
+      border-radius: 9px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .category:hover { background: #e8eef6; }
+
+    .category[aria-pressed="true"] {
+      background: var(--blue);
+      color: white;
+    }
+
+    .category .count {
+      font-size: 12px;
+      opacity: .8;
+    }
+
+    .side-help {
+      margin-top: 28px;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .side-help strong { color: var(--ink); }
+
+    .side-help a {
+      display: inline-block;
+      margin-top: 6px;
+      font-weight: 700;
+    }
+
+    .list-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .list-head h2 {
+      margin: 0;
+      font-size: 23px;
+      letter-spacing: -.5px;
+    }
+
+    .list-head span {
+      font-size: 13px;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    /* Spørsmål og svar */
+
+    details {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: white;
+      margin-bottom: 12px;
+      scroll-margin-top: 24px;
+      overflow: hidden;
+    }
+
+    details[open] {
+      border-color: #9fb5d0;
+      box-shadow: 0 5px 20px #1a3b6708;
+    }
+
+    summary {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      cursor: pointer;
+      padding: 21px 22px;
+    }
+
+    summary::-webkit-details-marker { display: none; }
+    summary:hover { background: #fbfcfe; }
+
+    .question-number {
+      font-size: 12px;
+      font-weight: 600;
+      color: #708199;
+      border: 1px solid var(--line);
+      border-radius: 9px;
+      width: 36px;
+      height: 36px;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+    }
+
+    .question {
+      flex: 1;
+      font-weight: 650;
+      font-size: 16px;
+      line-height: 1.45;
+    }
+
+    .question small {
+      display: block;
+      font-size: 11px;
+      line-height: 1.5;
+      font-weight: 500;
+      color: var(--muted);
+      margin-top: 5px;
+    }
+
+    .chevron {
+      width: 18px;
+      flex-shrink: 0;
+      transition: transform .15s;
+      color: var(--blue);
+    }
+
+    details[open] .chevron { transform: rotate(180deg); }
+
+    .answer {
+      padding: 0 22px 24px;
+      border-top: 1px solid #edf0f5;
+    }
+
+    .answer-tools {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding: 15px 0;
+      font-size: 12px;
+    }
+
+    .status {
+      color: #7b5b28;
+      background: #fbf2e2;
+      border-radius: 20px;
+      padding: 4px 10px;
+    }
+
+    .permalink {
+      color: var(--blue);
+      font-weight: 600;
+    }
+
+    .lesson-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .video-placeholder {
+      min-height: 175px;
+      aspect-ratio: 16 / 10;
+      border: 1px dashed #b8c8dd;
+      border-radius: 10px;
+      background: var(--light);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .video-placeholder svg {
+      margin-bottom: 12px;
+      color: #7991ad;
+    }
+
+    .video-placeholder strong {
+      font-size: 14px;
+      color: var(--blue);
+      margin-bottom: 4px;
+    }
+
+    .steps h3 {
+      font-size: 16px;
+      margin: 0 0 8px;
+    }
+
+    .steps p {
+      font-size: 14px;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .steps ol {
+      margin: 0;
+      padding-left: 22px;
+      font-size: 14px;
+    }
+
+    .steps li { padding-bottom: 12px; }
+
+    .steps .help-inline {
+      display: inline-block;
+      margin-top: 18px;
+      font-size: 13px;
+    }
+
+    .video-button {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: 0;
+      border-radius: 10px;
+      background: var(--blue);
+      color: white;
+      font-weight: 700;
+    }
+
+    .video-note {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    iframe, video {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: 0;
+      border-radius: 10px;
+      background: #0d1f35;
+    }
+
+    .empty {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 40px 24px;
+      text-align: center;
+    }
+
+    .empty h3 { margin: 0 0 10px; }
+
+    .empty p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .reset {
+      border: 0;
+      background: var(--blue);
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
+    }
+
+    /* Kontakt og bunntekst */
+
+    .support {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 28px;
+      margin-top: 42px;
+      padding: 30px 34px;
+      background: #e8eef7;
+      border-radius: 16px;
+    }
+
+    .support h2 {
+      font-size: 22px;
+      margin: 0 0 5px;
+    }
+
+    .support p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .support-actions {
+      display: flex;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    .support-actions a {
+      padding: 11px 17px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 650;
+      font-size: 14px;
+      background: white;
+    }
+
+    .support-actions a:first-child {
+      background: var(--red);
+      color: white;
+    }
+
+    footer {
+      background: #152237;
+      color: #b9c6d8;
+      font-size: 13px;
+      padding: 28px 0;
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    footer strong { color: white; }
+
+    footer a {
+      color: #dce5f0;
+      text-decoration: none;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 22px;
+    }
+
+    /* Nettbrett */
+
+    @media (max-width: 850px) {
+      .layout {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .categories {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .category {
+        background: white;
+        border-color: var(--line);
+        padding: 10px 14px;
+      }
+
+      .side-help { display: none; }
+      .sidebar-title { margin-top: 0; }
+
+      .support {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      nav { gap: 18px; }
+    }
+
+    /* Mobil */
+
+    @media (max-width: 540px) {
+      .wrap { padding: 0 18px; }
+
+      .header-row {
+        min-height: 70px;
+        gap: 16px;
+      }
+
+      .logo img {
+        height: 34px;
+        max-width: 115px;
+      }
+
+      nav { gap: 14px; }
+      nav .desktop-link { display: none; }
+      .contact-link { padding: 7px 12px; }
+      nav a { font-size: 12px; }
+
+      .hero { padding: 34px 0 38px; }
+      .hero h1 { letter-spacing: -1px; }
+      .hero p.intro { font-size: 15px; }
+
+      .search input { font-size: 14px; }
+      .search { padding-left: 12px; }
+      .search svg { width: 18px; }
+
+      .notice {
+        padding: 14px;
+        font-size: 13px;
+        margin-bottom: 26px;
+      }
+
+      .category {
+        font-size: 12px;
+        padding: 9px 11px;
+        gap: 8px;
+      }
+
+      .list-head h2 { font-size: 21px; }
+      .list-head span { font-size: 12px; }
+
+      summary {
+        padding: 18px 16px;
+        gap: 12px;
+      }
+
+      .question { font-size: 15px; }
+      .question-number { display: none; }
+      .answer { padding: 0 16px 20px; }
+
+      .lesson-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .video-placeholder {
+        min-height: 150px;
+        aspect-ratio: 16 / 9;
+      }
+
+      .support { padding: 24px; }
+      .support-actions { flex-wrap: wrap; }
+      .support-actions a { font-size: 13px; }
+      .footer-row { flex-direction: column; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip" href="#guides">Hopp til veiledninger</a>
+
+  <header>
+    <div class="wrap header-row">
+      <a class="logo" href="/" aria-label="OnTaxi – hjem">
+        <img src="/OnTaxi-signatur-GIF.gif" alt="OnTaxi">
+      </a>
+
+      <nav aria-label="Hovedmeny">
+        <a class="desktop-link" href="/">Hjem</a>
+        <a class="desktop-link" href="/taksameter/">Taksameter</a>
+        <a href="/learn/" aria-current="page">Opplæring</a>
+        <a class="contact-link" href="/kontakt/">Kontakt oss</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" aria-labelledby="page-title">
+    <div class="wrap">
+      <p class="eyebrow">OnTaxi · Sjåførhjelp</p>
+
+      <h1 id="page-title">Bli trygg på taksameteret.</h1>
+
+      <p class="intro">
+        Opplæring samlet på ett sted. Finn temaet du trenger hjelp med,
+        og åpne spørsmålet for video og forklaring.
+      </p>
+
+      <label class="search-label" for="search">
+        Hva trenger du hjelp med?
+      </label>
+
+      <div class="search">
+        <svg width="22" height="22" viewBox="0 0 24 24"
+             fill="none" stroke="currentColor" stroke-width="1.8"
+             aria-hidden="true">
+          <circle cx="10.5" cy="10.5" r="6.5"/>
+          <path d="m16 16 5 5"/>
+        </svg>
+
+        <input
+          id="search"
+          type="search"
+          placeholder="Søk etter Uber, kvittering, skift …"
+          autocomplete="off"
+          aria-controls="questions"
+        >
+
+        <button class="clear" id="clear" type="button" hidden>
+          Nullstill
+        </button>
+      </div>
+
+      <div class="quick">
+        <span>Snarveier:</span>
+        <a href="#uber-tur">Uber-tur</a>
+        <a href="#kvittering">Kvittering</a>
+        <a href="#avslutte-skift">Avslutte skift</a>
+      </div>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <div class="notice">
+      <svg width="20" height="20" viewBox="0 0 24 24"
+           fill="none" stroke="currentColor" stroke-width="1.7"
+           aria-hidden="true">
+        <circle cx="12" cy="12" r="9"/>
+        <path d="M12 11v6m0-10v2"/>
+      </svg>
+
+      <div>
+        <strong>Opplæringssiden er under oppbygging</strong>
+        Videoer og steg for steg-veiledninger kommer snart.
+        Trenger du hjelp nå?
+        <a href="/kontakt/">Kontakt OnTaxi.</a>
+      </div>
+    </div>
+
+    <div class="layout">
+      <aside aria-label="Velg tema">
+        <p class="sidebar-title">Finn ditt tema</p>
+
+        <div id="categories"
+             class="categories"
+             aria-label="Filtrer etter kategori"></div>
+
+        <div class="side-help">
+          <strong>Vi hjelper deg videre.</strong><br>
+          Finner du ikke det du leter etter?<br>
+          <a href="tel:+4740024400">Ring 400 24 400 →</a>
+        </div>
+      </aside>
+
+      <section id="guides" aria-labelledby="list-title">
+        <div class="list-head">
+          <h2 id="list-title">Alle spørsmål</h2>
+          <span id="result-count" role="status" aria-live="polite"></span>
+        </div>
+
+        <div id="questions"></div>
+
+        <div id="empty" class="empty" hidden>
+          <h3>Ingen spørsmål funnet</h3>
+          <p>Prøv et annet søkeord, eller vis alle spørsmål.</p>
+          <button id="reset" class="reset" type="button">
+            Vis alle spørsmål
+          </button>
+        </div>
+
+        <noscript>
+          <p>
+            Slå på JavaScript for å søke og vise spørsmålene.
+            Du kan også <a href="/kontakt/">kontakte OnTaxi for hjelp</a>.
+          </p>
+        </noscript>
+      </section>
+    </div>
+
+    <section class="support" aria-labelledby="help-title">
+      <div>
+        <h2 id="help-title">Trenger du en hånd?</h2>
+        <p>
+          Ta kontakt med oss hvis du trenger hjelp med taksameteret.
+        </p>
+      </div>
+
+      <div class="support-actions">
+        <a href="tel:+4740024400">Ring 400 24 400</a>
+        <a href="mailto:post@ontaxi.no">Send e-post</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-row">
+      <div>
+        <strong>OnTaxi AS</strong> · En enklere hverdag bak rattet.
+      </div>
+
+      <div class="footer-links">
+        <a href="/">ontaxi.no</a>
+        <a href="/kontakt/">Kontakt oss</a>
+        <a href="https://akarnet.no"
+           target="_blank"
+           rel="noopener noreferrer">Åkarnet ↗</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    'use strict';
+
+    /*
+      REDIGER SPØRSMÅL OG INNHOLD HER
+
+      steps: []
+      Fyll senere inn forklaringer som en liste med tekst.
+
+      Eksempel på format:
+      steps: [
+        'Første trinn i den kontrollerte veiledningen.',
+        'Andre trinn i den kontrollerte veiledningen.'
+      ]
+
+      Video fra YouTube:
+      video: { type: 'youtube', id: 'VIDEO_ID' }
+
+      Video fra en MP4-fil:
+      video: { type: 'mp4', src: '/learn/video.mp4' }
+
+      Ingen video ennå:
+      video: null
+
+      YouTube lastes først når brukeren trykker på Spill av.
+    */
+
+    const lessons = [
+      {
+        id: 'starte-skift',
+        category: 'Kom i gang',
+        title: 'Hvordan logger jeg inn og starter skiftet?',
+        keywords: 'innlogging sjåfør sjafor start pålogging',
+        steps: [],
+        video: null
+      },
+      {
+        id: 'uber-tur',
+        category: 'Registrere turer',
+        title: 'Hvordan registrerer jeg en Uber-tur i taksameteret?',
+        keywords: 'uber app appbetaling registrering',
+        steps: [],
+        video: null
+      },
+      {
+        id: 'bolt-tur',
+        category: 'Registrere turer',
+        title: 'Hvordan registrerer jeg en Bolt-tur i taksameteret?',
+        keywords: 'bolt app appbetaling registrering',
+        steps: [],
+        video: null
+      },
+      {
+        id: 'vanlig-tur',
+        category: 'Registrere turer',
+        title: 'Hvordan starter jeg en vanlig taksametertur?',
+        keywords: 'tur gate holdeplass kjøring start',
+        steps: [],
+        video: null
+      },
+      {
+        id: 'kortbetaling',
+        category: 'Betaling og kvittering',
+        title: 'Hvordan tar jeg imot kortbetaling?',
+        keywords: 'kort terminal nets bankkort betaling',
+        steps: [],
+        video: null
+      },
+      {
+        id: 'kontantbetaling',
+        category: 'Betaling og kvittering',
+        title: 'Hvordan registrerer jeg kontantbetaling?',
+        keywords: 'kontant kontanter penger betaling',
+        steps: [],
+        video: null
+      },
+      {
+        id: 'kvittering',
+        category: 'Betaling og kvittering',
+        title: 'Hvordan skriver jeg ut en kvittering?',
+        keywords: 'kvittering kopi utskrift skriver printer',
+        steps: [],
+        video: null
+      },
+      {
+        id: 'avslutte-skift',
+        category: 'Skift og rapporter',
+        title: 'Hvordan avslutter jeg skiftet?',
+        keywords: 'avslutt utlogging logge ut skift slutt',
+        steps: [],
+        video: null
+      },
+      {
+        id: 'skiftrapport',
+        category: 'Skift og rapporter',
+        title: 'Hvor finner jeg skiftrapportene mine?',
+        keywords: 'rapport rapporter oppgjør akarnet åkarnet',
+        steps: [],
+        video: null
+      },
+      {
+        id: 'skriver-feil',
+        category: 'Feil og problemer',
+        title: 'Hva gjør jeg hvis skriveren ikke fungerer?',
+        keywords: 'feil problem papir papirrull printer utskrift',
+        steps: [],
+        video: null
+      },
+      {
+        id: 'terminal-feil',
+        category: 'Feil og problemer',
+        title: 'Hva gjør jeg hvis betalingsterminalen ikke svarer?',
+        keywords: 'feil problem nets kort terminal forbindelse',
+        steps: [],
+        video: null
+      }
+    ];
+
+    const search = document.getElementById('search');
+    const list = document.getElementById('questions');
+    const categories = document.getElementById('categories');
+
+    let selected = 'Alle spørsmål';
+
+    const names = [
+      'Alle spørsmål',
+      ...new Set(lessons.map(lesson => lesson.category))
+    ];
+
+    const normalize = value => value
+      .toLocaleLowerCase('nb')
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/ø/g, 'o')
+      .replace(/æ/g, 'ae');
+
+    function el(tag, className, text) {
+      const node = document.createElement(tag);
+
+      if (className) node.className = className;
+      if (text !== undefined) node.textContent = text;
+
+      return node;
+    }
+
+    const chevronIcon = `
+      <svg class="chevron" viewBox="0 0 24 24"
+           fill="none" stroke="currentColor"
+           stroke-width="1.8" aria-hidden="true">
+        <path d="m6 9 6 6 6-6"/>
+      </svg>
+    `;
+
+    /* Lag kategoriknappene */
+
+    names.forEach(name => {
+      const button = el('button', 'category');
+      button.type = 'button';
+
+      const count = name === names[0]
+        ? lessons.length
+        : lessons.filter(lesson => lesson.category === name).length;
+
+      button.append(
+        el('span', '', name),
+        el('span', 'count', String(count))
+      );
+
+      button.setAttribute('aria-pressed', String(name === selected));
+      button.dataset.category = name;
+
+      button.addEventListener('click', () => {
+        selected = name;
+        filter();
+      });
+
+      categories.append(button);
+    });
+
+    /* Lag spørsmål, videofelt og forklaring */
+
+    lessons.forEach((lesson, index) => {
+      const detail = el('details');
+      detail.id = lesson.id;
+
+      const summary = el('summary');
+
+      summary.append(
+        el('span', 'question-number', String(index + 1).padStart(2, '0'))
+      );
+
+      const question = el('span', 'question', lesson.title);
+      question.append(el('small', '', lesson.category));
+
+      summary.append(question);
+      summary.insertAdjacentHTML('beforeend', chevronIcon);
+      detail.append(summary);
+
+      const answer = el('div', 'answer');
+      const tools = el('div', 'answer-tools');
+
+      tools.append(
+        el('span', 'status', lesson.steps.length ? 'Veiledning' : 'Kommer snart')
+      );
+
+      const link = el('a', 'permalink', 'Lenke til spørsmålet');
+      link.href = '#' + lesson.id;
+
+      tools.append(link);
+      answer.append(tools);
+
+      const grid = el('div', 'lesson-grid');
+      const media = el('div');
+
+      if (
+        lesson.video &&
+        lesson.video.type === 'youtube' &&
+        /^[\w-]{11}$/.test(lesson.video.id)
+      ) {
+        const play = el('button', 'video-button', '▶ Spill av video');
+
+        play.type = 'button';
+        play.setAttribute('aria-label', 'Spill av: ' + lesson.title);
+
+        play.addEventListener('click', () => {
+          const frame = el('iframe');
+
+          frame.src =
+            'https://www.youtube-nocookie.com/embed/' +
+            lesson.video.id +
+            '?autoplay=1';
+
+          frame.title = lesson.title;
+          frame.allow =
+            'autoplay; encrypted-media; picture-in-picture; fullscreen';
+
+          frame.allowFullscreen = true;
+          media.replaceChildren(frame);
+        });
+
+        media.append(
+          play,
+          el(
+            'p',
+            'video-note',
+            'Videoen lastes fra YouTube når du trykker på Spill av.'
+          )
+        );
+      } else if (lesson.video && lesson.video.type === 'mp4') {
+        const video = el('video');
+
+        video.controls = true;
+        video.preload = 'none';
+        video.playsInline = true;
+        video.src = lesson.video.src;
+        video.setAttribute('aria-label', lesson.title);
+
+        media.append(video);
+      } else {
+        const placeholder = el('div', 'video-placeholder');
+
+        placeholder.innerHTML = `
+          <svg width="36" height="36" viewBox="0 0 24 24"
+               fill="none" stroke="currentColor"
+               stroke-width="1.4" aria-hidden="true">
+            <rect x="3" y="4" width="18" height="16" rx="3"/>
+            <path d="m10 8 6 4-6 4Z"/>
+          </svg>
+        `;
+
+        placeholder.append(
+          el('strong', '', 'Video kommer snart'),
+          el('span', '', 'Se fremgangsmåten her når videoen er klar.')
+        );
+
+        media.append(placeholder);
+      }
+
+      const text = el('div', 'steps');
+      text.append(el('h3', '', 'Steg for steg'));
+
+      if (lesson.steps.length) {
+        const orderedList = el('ol');
+
+        lesson.steps.forEach(step => {
+          orderedList.append(el('li', '', step));
+        });
+
+        text.append(orderedList);
+      } else {
+        text.append(
+          el(
+            'p',
+            '',
+            'Vi gjør klar en enkel forklaring til dette spørsmålet. ' +
+            'Ta kontakt med OnTaxi hvis du trenger hjelp i mellomtiden.'
+          )
+        );
+      }
+
+      const help = el('a', 'help-inline', 'Kontakt OnTaxi →');
+      help.href = '/kontakt/';
+      text.append(help);
+
+      grid.append(media, text);
+      answer.append(grid);
+      detail.append(answer);
+      list.append(detail);
+
+      /* Stopp videoen når spørsmålet lukkes */
+
+      detail.addEventListener('toggle', () => {
+        if (!detail.open) {
+          detail.querySelectorAll('iframe').forEach(frame => {
+            frame.src = frame.src.replace('?autoplay=1', '');
+          });
+
+          detail.querySelectorAll('video').forEach(video => {
+            video.pause();
+          });
+        }
+      });
+    });
+
+    /* Søk og kategorifilter */
+
+    function filter() {
+      const words = normalize(search.value.trim())
+        .split(/\s+/)
+        .filter(Boolean);
+
+      let count = 0;
+
+      lessons.forEach(lesson => {
+        const categoryMatches =
+          selected === names[0] || selected === lesson.category;
+
+        const searchableText = normalize([
+          lesson.title,
+          lesson.category,
+          lesson.keywords,
+          ...lesson.steps
+        ].join(' '));
+
+        const searchMatches = words.every(word => {
+          return searchableText.includes(word);
+        });
+
+        const match = categoryMatches && searchMatches;
+        const detail = document.getElementById(lesson.id);
+
+        detail.hidden = !match;
+
+        if (!match) detail.open = false;
+        if (match) count++;
+      });
+
+      categories.querySelectorAll('button').forEach(button => {
+        button.setAttribute(
+          'aria-pressed',
+          String(button.dataset.category === selected)
+        );
+      });
+
+      document.getElementById('list-title').textContent =
+        search.value.trim() ? 'Søkeresultater' : selected;
+
+      document.getElementById('result-count').textContent =
+        count + ' spørsmål';
+
+      document.getElementById('empty').hidden = count !== 0;
+      document.getElementById('clear').hidden = !search.value;
+    }
+
+    function reset() {
+      search.value = '';
+      selected = names[0];
+      filter();
+    }
+
+    /* Åpne et spørsmål direkte fra lenken */
+
+    function openHash() {
+      let id;
+
+      try {
+        id = decodeURIComponent(location.hash.slice(1));
+      } catch {
+        return;
+      }
+
+      if (!lessons.some(lesson => lesson.id === id)) return;
+
+      reset();
+
+      const detail = document.getElementById(id);
+      detail.open = true;
+
+      requestAnimationFrame(() => {
+        detail.scrollIntoView({ block: 'start' });
+      });
+    }
+
+    search.addEventListener('input', filter);
+
+    document.getElementById('clear').addEventListener('click', () => {
+      search.value = '';
+      filter();
+      search.focus();
+    });
+
+    document.getElementById('reset').addEventListener('click', () => {
+      reset();
+      search.focus();
+    });
+
+    window.addEventListener('hashchange', openHash);
+
+    document.querySelectorAll('.quick a, .permalink').forEach(link => {
+      link.addEventListener('click', () => {
+        if (link.hash === location.hash) openHash();
+      });
+    });
+
+    filter();
+    openHash();
+  </script>
+</body>
+</html>
