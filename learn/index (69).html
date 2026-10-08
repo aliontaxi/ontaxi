@@ -1,0 +1,1909 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Opplæring i taksameter | OnTaxi</title>
+
+  <meta
+    name="description"
+    content="Opplæring for OnTaxi-sjåfører. Finn spørsmål om taksameter, Uber, Bolt, betaling, kvitteringer og skift."
+  >
+  <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#1a3b67">
+
+  <link rel="canonical" href="https://ontaxi.no/learn/">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <style>
+    :root {
+      --blue: #1a3b67;
+      --red: #b33e3e;
+      --ink: #172638;
+      --muted: #596779;
+      --line: #dce3eb;
+      --light: #f4f7fb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+      color: var(--ink);
+      background: var(--light);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--blue);
+      text-underline-offset: 4px;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    button,
+    a,
+    input,
+    summary {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    button:focus-visible,
+    a:focus-visible,
+    summary:focus-visible,
+    input:focus-visible {
+      outline: 3px solid #ce6b38;
+      outline-offset: 4px;
+    }
+
+    [hidden] {
+      display: none !important;
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .skip {
+      position: absolute;
+      left: 16px;
+      top: -100px;
+      background: white;
+      padding: 12px;
+      z-index: 20;
+    }
+
+    .skip:focus {
+      top: 12px;
+    }
+
+    /* Toppmeny */
+
+    .site-header {
+      background: white;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .header-row {
+      min-height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      display: block;
+      height: 44px;
+      width: auto;
+      max-width: 160px;
+      object-fit: contain;
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .main-nav a {
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .main-nav a[aria-current="page"] {
+      color: var(--red);
+    }
+
+    .contact-link {
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      padding: 9px 18px;
+    }
+
+    /* Overskrift og søk */
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background: var(--blue);
+      color: white;
+      padding: 48px 0 62px;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 390px;
+      height: 390px;
+      border: 1px solid #ffffff12;
+      border-radius: 50%;
+      right: -120px;
+      top: -160px;
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #c8d8ed;
+      margin: 0 0 14px;
+    }
+
+    .hero h1 {
+      font-size: clamp(32px, 5vw, 50px);
+      line-height: 1.15;
+      letter-spacing: -1.6px;
+      margin: 0 0 18px;
+      max-width: 800px;
+    }
+
+    .hero .intro {
+      font-size: 17px;
+      color: #e0e8f2;
+      max-width: 640px;
+      margin: 0 0 28px;
+    }
+
+    .search-label {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .search {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: white;
+      border-radius: 12px;
+      padding: 4px 10px 4px 18px;
+      max-width: 720px;
+      box-shadow: 0 8px 24px #071b3326;
+    }
+
+    .search svg {
+      color: var(--blue);
+      flex-shrink: 0;
+    }
+
+    .search input {
+      width: 100%;
+      min-width: 0;
+      height: 52px;
+      border: 0;
+      color: var(--ink);
+      background: transparent;
+      outline-offset: 0;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    .search input::placeholder {
+      color: #6b7788;
+    }
+
+    .clear {
+      background: var(--light);
+      border: 0;
+      border-radius: 7px;
+      color: var(--blue);
+      padding: 8px 12px;
+      font-size: 13px;
+    }
+
+    .quick {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+      font-size: 13px;
+      margin-top: 16px;
+      color: #d4e1f0;
+    }
+
+    .quick a {
+      color: white;
+      text-decoration: none;
+      background: #ffffff12;
+      border: 1px solid #ffffff33;
+      border-radius: 20px;
+      padding: 5px 12px;
+    }
+
+    .quick a:hover {
+      background: #ffffff26;
+    }
+
+    /* Hovedinnhold */
+
+    .learn-main {
+      padding-top: 28px;
+      padding-bottom: 64px;
+    }
+
+    .notice {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: #fffaf0;
+      border: 1px solid #eadbbb;
+      border-radius: 12px;
+      padding: 16px 20px;
+      color: #68512b;
+      margin-bottom: 32px;
+      font-size: 14px;
+    }
+
+    .notice svg {
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .notice strong {
+      display: block;
+      color: #584322;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 225px minmax(0, 1fr);
+      gap: 38px;
+    }
+
+    .sidebar-title {
+      font-size: 11px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 1.6px;
+      margin: 4px 0 14px;
+      font-weight: 750;
+    }
+
+    .categories {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .category {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      border: 1px solid transparent;
+      background: transparent;
+      padding: 12px 14px;
+      text-align: left;
+      border-radius: 9px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .category:hover {
+      background: #e8eef6;
+    }
+
+    .category[aria-pressed="true"] {
+      background: var(--blue);
+      color: white;
+    }
+
+    .category .count {
+      font-size: 12px;
+      opacity: .8;
+    }
+
+    .side-help {
+      margin-top: 28px;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .side-help strong {
+      color: var(--ink);
+    }
+
+    .side-help a {
+      display: inline-block;
+      margin-top: 6px;
+      font-weight: 700;
+    }
+
+    .list-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .list-head h2 {
+      margin: 0;
+      font-size: 23px;
+      letter-spacing: -.5px;
+    }
+
+    .list-head span {
+      font-size: 13px;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    /* Spørsmål og svar */
+
+    .lesson {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: white;
+      margin-bottom: 12px;
+      scroll-margin-top: 24px;
+      overflow: hidden;
+    }
+
+    .lesson[open] {
+      border-color: #9fb5d0;
+      box-shadow: 0 5px 20px #1a3b6708;
+    }
+
+    .lesson summary {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      cursor: pointer;
+      padding: 21px 22px;
+    }
+
+    .lesson summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .lesson summary:hover {
+      background: #fbfcfe;
+    }
+
+    .question-number {
+      display: grid;
+      place-items: center;
+      width: 36px;
+      height: 36px;
+      flex-shrink: 0;
+      font-size: 12px;
+      font-weight: 600;
+      color: #708199;
+      border: 1px solid var(--line);
+      border-radius: 9px;
+    }
+
+    .question {
+      flex: 1;
+      min-width: 0;
+      font-weight: 650;
+      font-size: 16px;
+      line-height: 1.45;
+    }
+
+    .question small {
+      display: block;
+      font-size: 11px;
+      line-height: 1.5;
+      font-weight: 500;
+      color: var(--muted);
+      margin-top: 5px;
+    }
+
+    .chevron {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      transition: transform .15s;
+      color: var(--blue);
+    }
+
+    .lesson[open] .chevron {
+      transform: rotate(180deg);
+    }
+
+    .answer {
+      padding: 0 22px 24px;
+      border-top: 1px solid #edf0f5;
+    }
+
+    .answer-tools {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding: 15px 0;
+      font-size: 12px;
+    }
+
+    .status {
+      color: #7b5b28;
+      background: #fbf2e2;
+      border-radius: 20px;
+      padding: 4px 10px;
+    }
+
+    .permalink {
+      color: var(--blue);
+      font-weight: 600;
+    }
+
+    .lesson-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 24px;
+      align-items: start;
+    }
+
+    .video-placeholder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 175px;
+      aspect-ratio: 16 / 10;
+      border: 1px dashed #b8c8dd;
+      border-radius: 10px;
+      background: var(--light);
+      text-align: center;
+      padding: 20px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .video-placeholder svg {
+      margin-bottom: 12px;
+      color: #7991ad;
+    }
+
+    .video-placeholder strong {
+      font-size: 14px;
+      color: var(--blue);
+      margin-bottom: 4px;
+    }
+
+    .steps h3 {
+      font-size: 16px;
+      margin: 0 0 8px;
+    }
+
+    .steps p {
+      font-size: 14px;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .steps ol {
+      margin: 0;
+      padding-left: 22px;
+      font-size: 14px;
+    }
+
+    .steps li {
+      padding-bottom: 12px;
+    }
+
+    .steps .lesson-note {
+      margin-top: 14px;
+      padding: 12px 14px;
+      border-left: 3px solid var(--blue);
+      border-radius: 6px;
+      background: var(--light);
+      color: var(--ink);
+    }
+
+    .help-inline {
+      display: inline-block;
+      margin-top: 18px;
+      font-size: 13px;
+    }
+
+    /* Video direkte fra Cloudflare R2 */
+    .lesson-grid > div { min-width: 0; }
+
+    .lesson video {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;
+      object-fit: contain;
+      background: #000;
+      border: 0;
+      border-radius: 10px;
+    }
+
+    .lesson video:fullscreen {
+      width: 100%;
+      height: 100%;
+      border-radius: 0;
+      object-fit: contain;
+    }
+
+    .video-note {
+      font-size: 13px;
+      color: var(--muted);
+      margin: 12px 0 0;
+    }
+
+    .empty {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 40px 24px;
+      text-align: center;
+    }
+
+    .empty h3 {
+      margin: 0 0 10px;
+    }
+
+    .empty p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .reset {
+      border: 0;
+      background: var(--blue);
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
+    }
+
+    /* Kontaktfelt */
+
+    .support {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 28px;
+      margin-top: 42px;
+      padding: 30px 34px;
+      background: #e8eef7;
+      border-radius: 16px;
+    }
+
+    .support h2 {
+      font-size: 22px;
+      margin: 0 0 5px;
+    }
+
+    .support p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .support-actions {
+      display: flex;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    .support-actions a {
+      padding: 11px 17px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 650;
+      font-size: 14px;
+      background: white;
+    }
+
+    .support-actions a:first-child {
+      background: var(--red);
+      color: white;
+    }
+
+    /* Bunntekst – samme oppsett som taksametersiden */
+
+    .ontaxi-footer {
+      background: #111827;
+      color: #ffffff;
+      padding: 48px 0 40px;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .footer-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    .footer-columns {
+      display: grid;
+      grid-template-columns: 1fr;
+      align-items: start;
+      gap: 48px;
+      margin-bottom: 40px;
+    }
+
+    .ontaxi-footer h3 {
+      margin: 0 0 16px;
+      color: #ffffff;
+      font-size: 20px;
+      line-height: 28px;
+      font-weight: 700;
+    }
+
+    .ontaxi-footer h4 {
+      margin: 0 0 16px;
+      color: #ffffff;
+      font-size: 18px;
+      line-height: 28px;
+      font-weight: 600;
+    }
+
+    .ontaxi-footer p {
+      margin: 0;
+      color: #9ca3af;
+      line-height: 1.625;
+    }
+
+    .ontaxi-footer a {
+      color: #9ca3af;
+      text-decoration: none;
+      transition: color .15s ease;
+    }
+
+    .ontaxi-footer a:hover {
+      color: #ffffff;
+    }
+
+    .footer-shortcuts {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      column-gap: 40px;
+      row-gap: 8px;
+    }
+
+    .footer-contact {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      color: #9ca3af;
+    }
+
+    .footer-contact li {
+      display: flex;
+      align-items: center;
+    }
+
+    .footer-contact li + li {
+      margin-top: 8px;
+    }
+
+    .footer-contact svg {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      margin-right: 8px;
+    }
+
+    .footer-copyright {
+      border-top: 1px solid #1f2937;
+      padding-top: 24px;
+      text-align: center;
+      color: #9ca3af;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    /* Nettbrett og mobil */
+
+    @media (max-width: 850px) {
+      .layout {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .categories {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .category {
+        background: white;
+        border-color: var(--line);
+        padding: 10px 14px;
+      }
+
+      .side-help {
+        display: none;
+      }
+
+      .sidebar-title {
+        margin-top: 0;
+      }
+
+      .support {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .main-nav {
+        gap: 18px;
+      }
+    }
+
+    @media (max-width: 540px) {
+      .wrap {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+
+      .header-row {
+        min-height: 70px;
+        gap: 16px;
+      }
+
+      .logo img {
+        height: 34px;
+        max-width: 115px;
+      }
+
+      .main-nav {
+        gap: 14px;
+      }
+
+      .main-nav .desktop-link {
+        display: none;
+      }
+
+      .contact-link {
+        padding: 7px 12px;
+      }
+
+      .main-nav a {
+        font-size: 12px;
+      }
+
+      .hero {
+        padding: 34px 0 38px;
+      }
+
+      .hero h1 {
+        letter-spacing: -1px;
+      }
+
+      .hero .intro {
+        font-size: 15px;
+      }
+
+      .search {
+        padding-left: 12px;
+      }
+
+      .search svg {
+        width: 18px;
+      }
+
+      .notice {
+        padding: 14px;
+        font-size: 13px;
+        margin-bottom: 26px;
+      }
+
+      .category {
+        font-size: 12px;
+        padding: 9px 11px;
+        gap: 8px;
+      }
+
+      .list-head h2 {
+        font-size: 21px;
+      }
+
+      .list-head span {
+        font-size: 12px;
+      }
+
+      .lesson summary {
+        padding: 18px 16px;
+        gap: 12px;
+      }
+
+      .question {
+        font-size: 15px;
+      }
+
+      .question-number {
+        display: none;
+      }
+
+      .answer {
+        padding: 0 16px 20px;
+      }
+
+      .lesson-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .video-placeholder {
+        min-height: 150px;
+        aspect-ratio: 16 / 9;
+      }
+
+      .support {
+        padding: 24px;
+      }
+
+      .support-actions {
+        flex-wrap: wrap;
+      }
+
+      .support-actions a {
+        font-size: 13px;
+      }
+    }
+
+    @media (min-width: 640px) {
+      .footer-container {
+        padding: 0 24px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .footer-columns {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .footer-container {
+        padding: 0 32px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip" href="#guides">Hopp til veiledninger</a>
+
+  <!-- Toppmeny -->
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="logo" href="/" aria-label="OnTaxi – hjem">
+        <img src="/OnTaxi-signatur-GIF.gif" alt="OnTaxi">
+      </a>
+
+      <nav class="main-nav" aria-label="Hovedmeny">
+        <a class="desktop-link" href="/">Hjem</a>
+        <a class="desktop-link" href="/taksameter/">Taksameter</a>
+        <a href="/learn/" aria-current="page">Opplæring</a>
+        <a class="contact-link" href="/kontakt/">Kontakt oss</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Overskrift og søk -->
+  <section class="hero" aria-labelledby="page-title">
+    <div class="wrap">
+      <p class="eyebrow">OnTaxi · Sjåførhjelp</p>
+
+      <h1 id="page-title">Bli trygg på taksameteret.</h1>
+
+      <p class="intro">
+        Opplæring samlet på ett sted. Finn temaet du trenger hjelp med,
+        og åpne spørsmålet for video og forklaring.
+      </p>
+
+      <label class="search-label" for="search">
+        Hva trenger du hjelp med?
+      </label>
+
+      <div class="search">
+        <svg
+          width="22"
+          height="22"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          aria-hidden="true"
+        >
+          <circle cx="10.5" cy="10.5" r="6.5"/>
+          <path d="m16 16 5 5"/>
+        </svg>
+
+        <input
+          id="search"
+          type="search"
+          placeholder="Søk etter Uber, kvittering, skift …"
+          autocomplete="off"
+          aria-controls="questions"
+        >
+
+        <button class="clear" id="clear" type="button" hidden>
+          Nullstill
+        </button>
+      </div>
+
+      <div class="quick">
+        <span>Snarveier:</span>
+        <a href="#uber-tur">Uber-tur</a>
+        <a href="#kvittering">Kvittering</a>
+        <a href="#avslutte-skift">Avslutte skift</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Opplæring -->
+  <main class="wrap learn-main">
+    <div class="notice">
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.7"
+        aria-hidden="true"
+      >
+        <circle cx="12" cy="12" r="9"/>
+        <path d="M12 11v6m0-10v2"/>
+      </svg>
+
+      <div>
+        <strong>Opplæringssiden er under oppbygging</strong>
+        Vi legger fortløpende til videoer og steg for steg-veiledninger.
+        Trenger du hjelp nå?
+        <a href="/kontakt/">Kontakt OnTaxi.</a>
+      </div>
+    </div>
+
+    <div class="layout">
+      <aside aria-label="Velg tema">
+        <p class="sidebar-title">Finn ditt tema</p>
+
+        <div
+          id="categories"
+          class="categories"
+          role="group"
+          aria-label="Filtrer etter kategori"
+        ></div>
+
+        <div class="side-help">
+          <strong>Vi hjelper deg videre.</strong><br>
+          Finner du ikke det du leter etter?<br>
+          <a href="tel:+4740024400">Ring 400 24 400 →</a>
+        </div>
+      </aside>
+
+      <section id="guides" aria-labelledby="list-title">
+        <div class="list-head">
+          <h2 id="list-title">Alle spørsmål</h2>
+          <span
+            id="result-count"
+            role="status"
+            aria-live="polite"
+          ></span>
+        </div>
+
+        <div id="questions"></div>
+
+        <div id="empty" class="empty" hidden>
+          <h3>Ingen spørsmål funnet</h3>
+          <p>Prøv et annet søkeord, eller vis alle spørsmål.</p>
+
+          <button id="reset" class="reset" type="button">
+            Vis alle spørsmål
+          </button>
+        </div>
+
+        <noscript>
+          <p>
+            Slå på JavaScript for å søke og vise spørsmålene.
+            Du kan også
+            <a href="/kontakt/">kontakte OnTaxi for hjelp</a>.
+          </p>
+        </noscript>
+      </section>
+    </div>
+
+    <section class="support" aria-labelledby="help-title">
+      <div>
+        <h2 id="help-title">Trenger du en hånd?</h2>
+        <p>
+          Ta kontakt med oss hvis du trenger hjelp med taksameteret.
+        </p>
+      </div>
+
+      <div class="support-actions">
+        <a href="tel:+4740024400">Ring 400 24 400</a>
+        <a href="mailto:post@ontaxi.no">Send e-post</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Bunntekst -->
+  <footer class="ontaxi-footer">
+    <div class="footer-container">
+      <div class="footer-columns">
+
+        <div>
+          <h3>OnTaxi AS</h3>
+          <p>
+            Tydelige vilkår og gode løsninger som gjør hverdagen
+            enklere for løyvehavere og sjåfører.
+          </p>
+        </div>
+
+        <div>
+          <h4>Snarveier</h4>
+
+          <div class="footer-shortcuts">
+            <a href="/">Startsiden</a>
+            <a href="/bli-partner/">Bli partner</a>
+
+            <a href="/taksameter/">Taksameter</a>
+            <a href="/kontakt/">Kontakt oss</a>
+
+            <a href="/priser/">Priser</a>
+
+            <a
+              href="https://akarnet.no"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Taksameter rapporter
+            </a>
+
+            <a href="/fordeler/">Fordeler</a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Kontakt oss</h4>
+
+          <ul class="footer-contact">
+            <li>
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+
+              <a href="mailto:post@ontaxi.no">
+                post@ontaxi.no
+              </a>
+            </li>
+
+            <li>
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.35 1.9.69 2.79a2 2 0 0 1-.45 2.11L8.08 9.89a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.89.34 1.83.57 2.79.69A2 2 0 0 1 22 16.92z"/>
+              </svg>
+
+              <a href="tel:+4740024400">
+                +47 400 24 400
+              </a>
+            </li>
+
+            <li>
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+
+              <a
+                href="https://maps.app.goo.gl/64tCr7qhbAhwRLcq6"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Trondheimsveien 436B – 0962 Oslo, Norge
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-copyright">
+        © 2026 OnTaxi AS – Alle rettigheter forbeholdt.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    'use strict';
+
+    /*
+      LEGG TIL VIDEOER OG FORKLARINGER HER.
+      Last opp MP4-filene i Cloudflare R2 og bruk filnavnet i src.
+      R2 omgjør ikke videoformatet: bruk MP4 med H.264-video og AAC-lyd.
+      Behold video: null og steps: [] til innholdet er klart.
+      Bytt VIDEO_BASE til eget videodomene når det er satt opp.
+    */
+    const VIDEO_BASE = 'https://pub-5e6f528fd16246c28386246dd2390af7.r2.dev';
+
+    const lessons = [
+  {
+  id: 'starte-skift',
+  category: 'Kom i gang',
+  title: 'Hvordan logger jeg inn og starter skiftet?',
+  keywords: 'innlogging sjåfør sjafor start pålogging',
+  steps: [
+    'Kontroller at betalingsterminalen har strøm og er koblet til taksameteret.',
+    'Kontroller at skriveren har papir. Du kan ikke logge inn før både betalingsterminalen og skriveren er klare.',
+    'Trykk på det grønne flagget på taksameteret for å starte innloggingen.',
+    'Når skjermen viser «VENTER: PMT», venter taksameteret på kommunikasjon med betalingsterminalen. Vent i omtrent 5–10 sekunder.',
+    'Når innloggingsbildet vises, skriver du inn de siste fem sifrene i sjåførens fødselsnummer og trykker OK.',
+    'Taklampen slås på, og taksameteret viser at taxien er ledig. Du er nå logget inn og har startet skiftet.'
+  ],
+  video: {
+    type: 'mp4',
+    src: VIDEO_BASE + '/starte-skift.mp4'
+  }
+},
+  {
+    id: 'feilmeldinger',
+    category: 'Feil og problemer',
+    title: 'Hvilke feilmeldinger kan dukke opp, og hva betyr de?',
+    keywords: 'feil feilmelding feilmeldinger varsel varsler taksameter',
+    steps: [],
+    video: null
+  },
+  {
+    id: 'taklampe',
+    category: 'Kom i gang',
+    title: 'Hvordan slår jeg taklampen av og på manuelt?',
+    keywords: 'taklampe taklys lampe lys slå av på manuelt',
+    steps: [
+      'Finn taxi-ikonet på skjermen til taksameteret.',
+      'Når taklampen er på, trykker du på taxi-ikonet for å slå den av.',
+      'Trykk på det samme ikonet igjen for å slå taklampen på.'
+    ],
+    note: 'Manuell styring av taklampen anbefales ikke til vanlig. Taksameteret slår taklampen automatisk av og på basert på turstatus.',
+    video: {
+      type: 'mp4',
+      src: VIDEO_BASE + '/taklampe-av-og-pa.mp4'
+    }
+  },
+  {
+    id: 'pause',
+    category: "Kom i gang",
+    title: "Hvordan setter jeg taksameteret på pause?",
+    keywords: "pause pauseknapp kaffekopp privat privatkjøring utilgjengelig hjem barn",
+    steps: [
+      "Bruk pause når bilen midlertidig ikke er tilgjengelig for kunder, for eksempel når du kjører hjem eller henter dine egne barn på skolen.",
+      "Fra skjermen som viser «Ledig», trykker du på Mer-knappen med de tre prikkene.",
+      "Trykk på kaffekoppen nederst til venstre.",
+      "Kontroller at pausesymbolet vises på skjermen. Pausefunksjonen er nå aktivert.",
+      "Når du er klar til å jobbe igjen, trykker du på TAXI-knappen nederst til venstre. Taksameteret går tilbake til «Ledig»."
+    ],
+    note: "Bruk denne pausefunksjonen ved privatkjøring, slik at bilen har riktig status i taksameteret.",
+    video: {
+      type: 'mp4',
+      src: VIDEO_BASE + '/Pauseknapp.mp4'
+    }
+  },
+  {
+    id: 'uber-tur',
+    category: 'Registrere turer',
+    title: 'Hvordan registrerer jeg en Uber-tur i taksameteret?',
+    keywords: 'uber app appbetaling registrering',
+    steps: [
+      "Godta turen i Uber-appen. Registrer den deretter med en gang i taksameteret.",
+      "Trykk på mobilikonet i taksameteret og velg Uber.",
+      "Ikke skriv inn et beløp ennå. Den endelige prisen er ikke kjent. Trykk bare OK for å gå videre.",
+      "Kontroller at taksameteret viser «Opptatt», og at taklampen er slått av. Kjør til hentestedet.",
+      "Når kunden har satt seg i bilen, starter du turen i Uber-appen og kjører til bestemmelsesstedet.",
+      "Avslutt turen i Uber-appen og finn den endelige prisen. Trykk på knappen for å registrere beløpet i taksameteret, slik videoen viser. Skriv inn prisen fra Uber, for eksempel 150 kroner, og trykk OK.",
+      "Kontroller beløpet og trykk på kasseknappen. Taksameteret viser nå «Stopp».",
+      "Sjekk om kunden allerede har betalt gjennom Uber-appen. Hvis turen er betalt i appen, avslutter du med eller uten kvittering, etter kundens ønske.",
+      "Hvis kunden skal betale i bilen, trykker du på 1–2–3-ikonet. Kunden kan betale med kontanter, Vipps eller via bankterminalen.",
+      "Når betalingen er registrert og turen er avsluttet i taksameteret, er Uber-turen ferdig registrert."
+    ],
+    video: {
+      type: 'mp4',
+      src: VIDEO_BASE + '/Ubertur.mp4'
+    }
+  },
+  {
+    id: 'bolt-tur',
+    category: 'Registrere turer',
+    title: 'Hvordan registrerer jeg en Bolt-tur i taksameteret?',
+    keywords: 'bolt app appbetaling registrering',
+    steps: [
+      "Godta turen i Bolt-appen. Registrer den deretter med en gang i taksameteret.",
+      "Trykk på mobilikonet i taksameteret og velg Bolt.",
+      "Ikke skriv inn et beløp ennå. Den endelige prisen er ikke kjent. Trykk bare OK.",
+      "Kontroller at taksameteret viser «Opptatt», og at taklampen er slått av. Kjør til hentestedet.",
+      "Når kunden har satt seg i bilen, starter du turen i Bolt-appen og kjører til bestemmelsesstedet.",
+      "Avslutt turen i Bolt-appen og finn den endelige prisen.",
+      "Trykk på knappen for å registrere beløpet i taksameteret, slik videoen viser. Skriv inn prisen fra Bolt, for eksempel 150 kroner, og trykk OK.",
+      "Kontroller at riktig beløp er registrert, og trykk på kasseknappen.",
+      "Hvis kunden allerede har betalt gjennom Bolt-appen, avslutter du med kvittering hvis kunden ønsker det, eller uten kvittering.",
+      "Når betalingen er registrert og turen er avsluttet i taksameteret, er Bolt-turen ferdig registrert."
+    ],
+    video: {
+      type: 'mp4',
+      src: VIDEO_BASE + '/Bolttur.mp4'
+    }
+  },
+  {
+    id: 'vanlig-tur',
+    category: 'Registrere turer',
+    title: 'Hvordan starter jeg en vanlig taksametertur?',
+    keywords: 'tur gate holdeplass kjøring start taksameter vanlig',
+    steps: [
+      "Trykk på T1 på startskjermen.",
+      "Velg riktig alternativ for antall passasjerer: 1–4 eller 5–8. I videoen velges 1–4 passasjerer. Bekreft med OK.",
+      "Kontroller at taksameteret viser «Opptatt», og at taklampen er slått av. Startprisen vises på skjermen. I eksempelet legges det også til 75 kroner i bom- og miljøavgift.",
+      "Bruk pauseknappen på turskjermen hvis du må stoppe prisberegningen under turen, for eksempel hvis du har kjørt feil og ikke vil belaste kunden mer mens dette rettes opp.",
+      "Hvis du skal legge til andre tjenester eller tillegg under turen, trykker du på plussknappen.",
+      "Når turen er ferdig, trykker du på kasseknappen. I videoens korte demonstrasjon avsluttes turen med minsteprisen på 274 kroner.",
+      "Kunden kan betale via bankterminalen eller med kontanter. Vipps og annen kreditt finner du via 1–2–3-ikonet.",
+      "Når betalingen er mottatt, avslutter du med kvittering hvis kunden ønsker det, eller uten kvittering. Taksameteret går tilbake til «Ledig»."
+    ],
+    note: "Prisene i videoen er eksempler fra taksameteret som brukes i demonstrasjonen.",
+    video: {
+      type: 'mp4',
+      src: VIDEO_BASE + '/Taksametertur.mp4'
+    }
+  },
+  {
+    id: 'fastpris-tur',
+    category: 'Registrere turer',
+    title: 'Hvordan starter jeg en tur med fastpris?',
+    keywords: 'fastpris fast pris avtalt pris tur start',
+    steps: [
+      "Avtal totalprisen med kunden. I videoen avtales en tur til flyplassen for 1 000 kroner, inkludert alle avgifter.",
+      "Trykk på fastprisikonet på startskjermen, slik videoen viser.",
+      "Skriv inn det avtalte beløpet og trykk OK.",
+      "Kontroller at taksameteret viser «Opptatt», og at taklampen er slått av. I eksempelet legges det ikke til bom- og miljøavgift eller andre avgifter, fordi alt er inkludert i den avtalte prisen.",
+      "Når dere er fremme, trykker du på kasseknappen for å avslutte turen.",
+      "Kunden kan betale via bankterminalen eller med kontanter. Vipps og annen kreditt finnes blant de øvrige betalingsvalgene.",
+      "Når betalingen er mottatt, avslutter du med eller uten kvittering. I videoen betaler kunden kontant og får en kvittering.",
+      "Turen er ferdig, og taksameteret går tilbake til «Ledig»."
+    ],
+    video: {
+      type: 'mp4',
+      src: VIDEO_BASE + '/Fastpris.mp4'
+    }
+  },
+  {
+    id: 'andre-tjenester',
+    category: 'Registrere turer',
+    title: 'Hvordan legger jeg til andre tjenester på turen, som ekstra stopp eller rengjøring?',
+    keywords: 'tillegg tjenester ekstra stopp rengjøring gebyr',
+    steps: [
+      "Start turen som vanlig. Tillegg kan legges til både på en taksametertur og på en fastpristur.",
+      "Trykk på plussknappen for å åpne menyen for tjenester og tillegg.",
+      "Velg riktig tjeneste. I videoen vises blant annet rengjøring, taxidepot, parkeringsavgift, bom- og miljøavgift, ekstra bagasje og andre bomavgifter.",
+      "For et ekstra stopp velger du E, som står for «Andre tillegg».",
+      "Skriv inn beløpet som er avtalt med kunden. I videoen brukes 100 kroner. Trykk OK.",
+      "Bekreft at «Andre tillegg» på 100 kroner skal legges til turen.",
+      "Kontroller at tillegget vises sammen med turprisen. Når du går til kassen, summeres beløpene. I eksempelet blir 1 000 kroner pluss 100 kroner til sammen 1 100 kroner."
+    ],
+    video: {
+      type: 'mp4',
+      src: VIDEO_BASE + '/Andretjenester.mp4'
+    }
+  },
+  {
+    id: 'bomtur',
+    category: "Registrere turer",
+    title: "Hvordan registrerer jeg en bomtur?",
+    keywords: "bomtur kunde møter ikke opp avbestilling kansellering bom tur",
+    steps: [
+      "Bruk bomtur når du har kjørt for å hente en kunde, men turen ikke blir gjennomført. Kunden kan for eksempel ha uteblitt eller avbestilt etter at du kom frem.",
+      "Fra betalingsbildet trykker du på Mer-knappen med de tre prikkene til du finner bomturknappen med det røde søppelbøttesymbolet.",
+      "Trykk på bomturknappen.",
+      "Bekreft med OK, altså den grønne haken.",
+      "Taksameteret skriver ut en bomturkvittering. Bomturen er registrert og avsluttet, og taksameteret går tilbake til «Ledig»."
+    ],
+    video: {
+      type: 'mp4',
+      src: VIDEO_BASE + '/Bomtur.mp4'
+    }
+  },
+  {
+    id: 'betaling',
+    category: 'Betaling og kvittering',
+    title: 'Hvordan tar jeg imot betaling med kort, kontanter, Vipps eller annen kreditt?',
+    keywords: 'betaling kort bankkort kontant kontanter vipps annen kreditt terminal nets',
+    steps: [],
+    video: null
+  },
+  {
+    id: 'tips',
+    category: "Betaling og kvittering",
+    title: "Hvordan legger jeg til tips?",
+    keywords: "tips driks ekstra betaling totalbeløp",
+    steps: [
+      "Legg til tips før betalingen gjennomføres, dersom kunden ønsker å gi tips.",
+      "Når turen er ferdig, trykker du på kasseknappen for å gå til betaling.",
+      "Trykk på Mer-knappen med de tre prikkene og velg tipsknappen.",
+      "Skriv inn det nye totalbeløpet, inkludert tips. Hvis turen koster 1 000 kroner og kunden vil gi 100 kroner i tips, skriver du 1 100 kroner.",
+      "Bekreft med OK og kontroller at det nye totalbeløpet er riktig. Tipsbeløpet vil også stå på kvitteringen.",
+      "Ta imot betalingen som vanlig, for eksempel med kort eller kontanter. Vipps finner du via 1–2–3-knappen."
+    ],
+    note: "I feltet «Totalt beløp» skriver du turprisen pluss tips.",
+    video: {
+      type: 'mp4',
+      src: VIDEO_BASE + '/Tips.mp4'
+    }
+  },
+  {
+    id: 'rabatt',
+    category: "Betaling og kvittering",
+    title: "Hvordan registrerer jeg rabatt på en tur?",
+    keywords: "rabatt avslag prisavslag discount redusere pris totalbeløp",
+    steps: [
+      "Legg inn rabatten før kunden betaler.",
+      "Når turen er ferdig, trykker du på kasseknappen for å gå til betaling.",
+      "Trykk på Mer-knappen med de tre prikkene til du finner rabattknappen, og velg den.",
+      "Skriv inn det nye beløpet kunden skal betale etter rabatten. Eksempel: Hvis turen koster 485 kroner og du gir 85 kroner i rabatt, skriver du 400 kroner.",
+      "Trykk OK for å bekrefte.",
+      "Kontroller at rabatten og beløpet kunden skal betale, er riktig registrert før du går videre.",
+      "Ta imot betalingen som vanlig, for eksempel med kort, kontanter eller Vipps."
+    ],
+    video: {
+      type: 'mp4',
+      src: VIDEO_BASE + '/Rabatt.mp4'
+    }
+  },
+  {
+    id: 'kvittering',
+    category: 'Betaling og kvittering',
+    title: 'Hvordan skriver jeg ut kvitteringer fra tidligere turer?',
+    keywords: 'kvittering kvitteringer kopi tidligere eldre turer historikk utskrift',
+    steps: [
+      "Trykk på Mer-knappen med de tre prikkene. Du kan skrive ut en kvittering selv om turen allerede er avsluttet.",
+      "For den siste turen trykker du på den nederste av de to kvitteringsknappene til høyre. For eldre turer velger du knappen rett over.",
+      "Når du søker etter en eldre tur, skriver du inn kvitteringsnummeret hvis du har det. Hvis ikke, lar du feltet stå tomt og går videre med OK.",
+      "Skriv inn beløpet for turen, for eksempel 150 kroner, og trykk OK.",
+      "Skriv inn datoen for turen i formatet ÅÅMMDD: to sifre for år, to for måned og to for dag. Trykk OK.",
+      "Gå videre til utskrift av kvitteringen for turen du har søkt opp."
+    ],
+    video: {
+      type: 'mp4',
+      src: VIDEO_BASE + '/Skrive-ut-kvittering.mp4'
+    }
+  },
+  {
+    id: 'avslutte-skift',
+    category: 'Skift og rapporter',
+    title: 'Hvordan avslutter jeg skiftet?',
+    keywords: 'avslutt utlogging logge ut skift slutt',
+    steps: [
+      "Når du er ferdig med å kjøre for dagen, trykker du på Mer-knappen med de tre prikkene.",
+      "Finn det røde flagget til høyre i menyen.",
+      "Trykk på det røde flagget to ganger for å avslutte skiftet.",
+      "Skiftet er nå avsluttet, og du er logget ut av taksameteret."
+    ],
+    video: {
+      type: 'mp4',
+      src: VIDEO_BASE + '/Avslutte-shift.mp4'
+    }
+  },
+  {
+    id: 'skiftrapport',
+    category: 'Skift og rapporter',
+    title: 'Hvor finner jeg skiftrapportene mine?',
+    keywords: 'rapport rapporter skiftrapport skiftrapporter oppgjør akarnet åkarnet',
+    steps: [],
+    video: null
+  },
+  {
+    id: 'terminal-feil',
+    category: 'Feil og problemer',
+    title: 'Hva gjør jeg hvis betalingsterminalen ikke svarer?',
+    keywords: 'feil problem nets kort terminal betalingsterminal forbindelse',
+    steps: [],
+    video: null
+  },
+  {
+    id: 'skriver-feil',
+    category: 'Feil og problemer',
+    title: 'Hva gjør jeg hvis skriveren ikke fungerer?',
+    keywords: 'feil problem papir papirrull printer skriver utskrift',
+    steps: [],
+    video: null
+  },
+  {
+    id: 'splitte-betaling',
+    category: 'Betaling og kvittering',
+    title: 'Hvordan deler jeg betalingen for en tur?',
+    keywords: 'splitte dele delt betaling delbetaling flere passasjerer',
+    steps: [
+      "Gå til betalingsbildet for turen. I videoen er totalbeløpet 1 100 kroner. Den ene kunden skal betale 100 kroner, og den andre skal betale resten.",
+      "Trykk på kvitteringsknappen med delesymbolet.",
+      "Velg hvordan betalingen skal deles: etter beløp, antall personer eller prosent.",
+      "I eksempelet velger du penger/beløp og skriver inn 100 kroner.",
+      "Kontroller fordelingen på skjermen: 100 kroner til den første betalingen og 1 000 kroner igjen. Trykk OK for å bekrefte.",
+      "Ta imot den første betalingen på 100 kroner. Kunden kan betale med kort via terminalen eller med kontanter. Vipps og annen kreditt finnes via 1–2–3-ikonet.",
+      "I videoen betaler den første kunden kontant. Trykk på kvitteringsknappen for å fullføre denne delbetalingen og skrive ut kvitteringen.",
+      "Taksameteret viser nå restbeløpet på 1 000 kroner. Ta imot betalingen fra den andre kunden med kort, kontanter, Vipps eller annen kreditt."
+    ],
+    video: {
+      type: 'mp4',
+      src: VIDEO_BASE + '/deleregning.mp4'
+    }
+  },
+  {
+    id: 'rekvisisjon',
+    category: 'Rekvisisjon og transportkort',
+    title: 'Hvordan tar jeg imot en rekvisisjon?',
+    keywords: 'rekvisisjon rekvisisjoner betaling kreditt',
+    steps: [],
+    video: null
+  },
+  {
+    id: 'tt-kort',
+    category: 'Rekvisisjon og transportkort',
+    title: 'Hvordan tar jeg imot turer med TT-kort?',
+    keywords: 'tt tt-kort tt kort transport tilrettelagt transport',
+    steps: [],
+    video: null
+  },
+  {
+    id: 'oslo-taxi-card',
+    category: 'Rekvisisjon og transportkort',
+    title: 'Hvordan tar jeg imot Oslo Taxi Card?',
+    keywords: 'oslo taxi card taxicard taxikort transportkort',
+    steps: [],
+    video: null
+  }
+];
+
+    const search = document.getElementById('search');
+    const list = document.getElementById('questions');
+    const categories = document.getElementById('categories');
+
+    let selected = 'Alle spørsmål';
+
+    const categoryNames = [
+      'Alle spørsmål',
+      ...new Set(lessons.map(lesson => lesson.category))
+    ];
+
+    function normalize(value) {
+      return value
+        .toLocaleLowerCase('nb')
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/ø/g, 'o')
+        .replace(/æ/g, 'ae');
+    }
+
+    function createElement(tag, className, text) {
+      const node = document.createElement(tag);
+
+      if (className) {
+        node.className = className;
+      }
+
+      if (text !== undefined) {
+        node.textContent = text;
+      }
+
+      return node;
+    }
+
+    const chevronIcon = `
+      <svg
+        class="chevron"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.8"
+        aria-hidden="true"
+      >
+        <path d="m6 9 6 6 6-6"/>
+      </svg>
+    `;
+
+    /* Kategorier */
+
+    categoryNames.forEach(name => {
+      const button = createElement('button', 'category');
+      button.type = 'button';
+      button.dataset.category = name;
+
+      const count = name === categoryNames[0]
+        ? lessons.length
+        : lessons.filter(lesson => lesson.category === name).length;
+
+      button.append(
+        createElement('span', '', name),
+        createElement('span', 'count', String(count))
+      );
+
+      button.setAttribute(
+        'aria-pressed',
+        String(name === selected)
+      );
+
+      button.addEventListener('click', () => {
+        selected = name;
+        filterLessons();
+      });
+
+      categories.append(button);
+    });
+
+    /* Spørsmål */
+
+    lessons.forEach((lesson, index) => {
+      const detail = createElement('details', 'lesson');
+      detail.id = lesson.id;
+
+      const summary = createElement('summary');
+
+      summary.append(
+        createElement(
+          'span',
+          'question-number',
+          String(index + 1).padStart(2, '0')
+        )
+      );
+
+      const question = createElement(
+        'span',
+        'question',
+        lesson.title
+      );
+
+      question.append(
+        createElement('small', '', lesson.category)
+      );
+
+      summary.append(question);
+      summary.insertAdjacentHTML('beforeend', chevronIcon);
+      detail.append(summary);
+
+      const answer = createElement('div', 'answer');
+      const answerTools = createElement('div', 'answer-tools');
+
+      answerTools.append(
+        createElement(
+          'span',
+          'status',
+          lesson.video ? 'Video tilgjengelig' : (lesson.steps.length ? 'Veiledning' : 'Kommer snart')
+        )
+      );
+
+      const permalink = createElement(
+        'a',
+        'permalink',
+        'Lenke til spørsmålet'
+      );
+
+      permalink.href = '#' + lesson.id;
+
+      answerTools.append(permalink);
+      answer.append(answerTools);
+
+      const grid = createElement('div', 'lesson-grid');
+      const media = createElement('div');
+
+      let stopVideo = () => {};
+
+      /* Vanlig videospiller – ingen Google Drive-ramme */
+      if (lesson.video && lesson.video.type === 'mp4') {
+        const video = createElement('video');
+        video.controls = true;
+        video.preload = 'metadata';
+        video.playsInline = true;
+        video.setAttribute('aria-label', lesson.title);
+
+        if (lesson.video.poster) {
+          video.poster = lesson.video.poster;
+        }
+
+        const source = createElement('source');
+        source.src = lesson.video.src;
+        source.type = 'video/mp4';
+        video.append(source);
+        media.append(video);
+
+        const errorMessage = createElement(
+          'p', 'video-note',
+          'Videoen kunne ikke lastes. Last siden på nytt eller kontakt OnTaxi.'
+        );
+        errorMessage.hidden = true;
+        errorMessage.setAttribute('role', 'status');
+        media.append(errorMessage);
+
+        video.addEventListener('error', () => { errorMessage.hidden = false; });
+        source.addEventListener('error', () => { errorMessage.hidden = false; });
+        video.addEventListener('loadeddata', () => { errorMessage.hidden = true; });
+
+        stopVideo = () => { video.pause(); };
+
+      /* Video kommer snart */
+
+      } else {
+        const placeholder = createElement(
+          'div',
+          'video-placeholder'
+        );
+
+        placeholder.innerHTML = `
+          <svg
+            width="36"
+            height="36"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.4"
+            aria-hidden="true"
+          >
+            <rect x="3" y="4" width="18" height="16" rx="3"/>
+            <path d="m10 8 6 4-6 4Z"/>
+          </svg>
+        `;
+
+        placeholder.append(
+          createElement('strong', '', 'Video kommer snart'),
+          createElement(
+            'span',
+            '',
+            'Se fremgangsmåten her når videoen er klar.'
+          )
+        );
+
+        media.append(placeholder);
+      }
+
+      /* Tekstforklaring */
+
+      const explanation = createElement('div', 'steps');
+
+      explanation.append(
+        createElement('h3', '', 'Steg for steg')
+      );
+
+      if (lesson.steps.length) {
+        const orderedList = createElement('ol');
+
+        lesson.steps.forEach(step => {
+          orderedList.append(
+            createElement('li', '', step)
+          );
+        });
+
+        explanation.append(orderedList);
+      } else {
+        explanation.append(
+          createElement(
+            'p',
+            '',
+            'Vi gjør klar en enkel forklaring til dette spørsmålet. ' +
+            'Ta kontakt med OnTaxi hvis du trenger hjelp i mellomtiden.'
+          )
+        );
+      }
+
+      if (lesson.note) {
+        const note = createElement('p', 'lesson-note', lesson.note);
+        explanation.append(note);
+      }
+
+      const helpLink = createElement(
+        'a',
+        'help-inline',
+        'Kontakt OnTaxi →'
+      );
+
+      helpLink.href = '/kontakt/';
+      explanation.append(helpLink);
+
+      grid.append(media, explanation);
+      answer.append(grid);
+      detail.append(answer);
+      list.append(detail);
+
+      detail.addEventListener('toggle', () => {
+        if (!detail.open) {
+          stopVideo();
+        }
+      });
+    });
+
+    /* Søk og filtrering */
+
+    function filterLessons() {
+      const words = normalize(search.value.trim())
+        .split(/\s+/)
+        .filter(Boolean);
+
+      let count = 0;
+
+      lessons.forEach(lesson => {
+        const categoryMatches =
+          selected === categoryNames[0] ||
+          selected === lesson.category;
+
+        const searchableText = normalize([
+          lesson.title,
+          lesson.category,
+          lesson.keywords,
+          lesson.note || '',
+          ...lesson.steps
+        ].join(' '));
+
+        const searchMatches = words.every(word => {
+          return searchableText.includes(word);
+        });
+
+        const match = categoryMatches && searchMatches;
+        const detail = document.getElementById(lesson.id);
+
+        detail.hidden = !match;
+
+        if (!match) {
+          detail.open = false;
+        }
+
+        if (match) {
+          count++;
+        }
+      });
+
+      categories.querySelectorAll('button').forEach(button => {
+        button.setAttribute(
+          'aria-pressed',
+          String(button.dataset.category === selected)
+        );
+      });
+
+      document.getElementById('list-title').textContent =
+        search.value.trim() ? 'Søkeresultater' : selected;
+
+      document.getElementById('result-count').textContent =
+        count + ' spørsmål';
+
+      document.getElementById('empty').hidden = count !== 0;
+      document.getElementById('clear').hidden = !search.value;
+    }
+
+    function resetFilters() {
+      search.value = '';
+      selected = categoryNames[0];
+      filterLessons();
+    }
+
+    /* Åpne spørsmål fra direkte lenke */
+
+    function openHash() {
+      let id;
+
+      try {
+        id = decodeURIComponent(location.hash.slice(1));
+      } catch {
+        return;
+      }
+
+      if (!lessons.some(lesson => lesson.id === id)) {
+        return;
+      }
+
+      resetFilters();
+
+      const detail = document.getElementById(id);
+      detail.open = true;
+
+      requestAnimationFrame(() => {
+        detail.scrollIntoView({
+          block: 'start'
+        });
+      });
+    }
+
+    search.addEventListener('input', filterLessons);
+
+    document.getElementById('clear').addEventListener('click', () => {
+      search.value = '';
+      filterLessons();
+      search.focus();
+    });
+
+    document.getElementById('reset').addEventListener('click', () => {
+      resetFilters();
+      search.focus();
+    });
+
+    window.addEventListener('hashchange', openHash);
+
+    document.querySelectorAll('.quick a, .permalink').forEach(link => {
+      link.addEventListener('click', () => {
+        if (link.hash === location.hash) {
+          openHash();
+        }
+      });
+    });
+
+    filterLessons();
+    openHash();
+  </script>
+</body>
+</html>
