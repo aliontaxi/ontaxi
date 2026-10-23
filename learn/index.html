@@ -1227,6 +1227,95 @@
       .image-dialog { padding: 12px; }
     }
 
+    /* Eget felt for nettrapporter, under spørsmål 27. */
+    .akarnet-panel {
+      margin-top: 30px;
+      border: 1px solid #a9bdd6;
+      border-radius: 16px;
+      background: #eef3f9;
+      box-shadow: 0 8px 24px #1a3b670d;
+      scroll-margin-top: 24px;
+    }
+    .akarnet-heading {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding: 26px 24px;
+      border-radius: 15px;
+      background: linear-gradient(120deg, #1a3b67, #234d7b);
+      color: white;
+      cursor: pointer;
+      list-style: none;
+    }
+    .akarnet-heading::-webkit-details-marker,
+    .akarnet-guide > summary::-webkit-details-marker { display: none; }
+    .akarnet-panel[open] > .akarnet-heading { border-radius: 15px 15px 0 0; }
+    .akarnet-symbol {
+      display: grid;
+      place-items: center;
+      flex: 0 0 54px;
+      width: 54px;
+      height: 62px;
+      border: 1px solid #ffffff40;
+      border-radius: 13px;
+      background: #ffffff12;
+    }
+    .akarnet-symbol svg { width: 32px; height: 32px; }
+    .akarnet-heading-text { min-width: 0; flex: 1; }
+    .akarnet-eyebrow { display: block; color: #d0e2f7; font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 5px; }
+    .akarnet-title { display: block; font-size: clamp(19px, 2.5vw, 24px); font-weight: 700; line-height: 1.3; }
+    .akarnet-subtitle { display: block; font-size: 13px; line-height: 1.6; color: #dfebf8; margin-top: 7px; }
+    .akarnet-chevron, .akarnet-guide-chevron { width: 20px; height: 20px; flex: 0 0 20px; transition: transform .15s; }
+    .akarnet-panel[open] > summary .akarnet-chevron,
+    .akarnet-guide[open] > summary .akarnet-guide-chevron { transform: rotate(180deg); }
+    .akarnet-content { padding: 22px; }
+    .akarnet-intro { margin: 0 0 18px; color: var(--muted); font-size: 14px; }
+    .akarnet-guide { border: 1px solid var(--line); border-radius: 11px; background: white; margin-top: 12px; scroll-margin-top: 24px; }
+    .akarnet-guide > summary { display: flex; align-items: center; gap: 12px; min-height: 76px; padding: 18px; cursor: pointer; list-style: none; color: var(--blue); }
+    .akarnet-guide > summary:hover { background: #f8fbff; border-radius: 10px; }
+    .akarnet-number { display: grid; place-items: center; width: 30px; height: 30px; flex: 0 0 30px; border-radius: 8px; background: #eaf0f8; font-size: 13px; font-weight: 700; }
+    .akarnet-question { flex: 1; min-width: 0; font-size: 15px; line-height: 1.5; font-weight: 650; }
+    .akarnet-answer { border-top: 1px solid var(--line); padding: 18px 22px 22px; font-size: 14px; overflow-wrap: anywhere; }
+    .akarnet-answer > p:first-child { margin-top: 0; color: var(--muted); }
+    .akarnet-answer ol { margin: 18px 0; padding-left: 21px; }
+    .akarnet-answer li { padding: 0 0 14px 3px; }
+    .akarnet-answer li::marker { color: var(--blue); font-weight: 700; }
+    .akarnet-answer li:last-child { padding-bottom: 0; }
+    .akarnet-note { background: var(--light); border-left: 3px solid var(--blue); padding: 12px 14px; border-radius: 5px; }
+    .akarnet-source { font-size: 12px; color: var(--muted); margin-bottom: 0; }
+    .akarnet-figure { margin: 20px 0; }
+    .akarnet-signup-figure { max-width: 360px; margin: 18px auto 4px; }
+    .akarnet-image { overflow: hidden; border: 1px solid var(--line); border-radius: 9px; }
+    .akarnet-image img { display: block; width: 100%; height: auto; }
+    .akarnet-figure figcaption { margin-top: 10px; color: var(--muted); font-size: 12px; line-height: 1.6; }
+    .image-dialog-tools { margin-bottom: 12px; }
+    .image-dialog-tools button { min-height: 44px; padding: 8px 14px; border: 1px solid var(--line); border-radius: 8px; background: var(--light); color: var(--blue); cursor: pointer; }
+    .image-dialog-tools p { margin: 6px 0 0; font-size: 13px; color: var(--muted); }
+    .image-dialog-stage.is-zoomable { overflow: auto; max-height: 60vh; max-height: 60dvh; }
+    .image-dialog-stage.is-zoomable:not(.is-zoomed) img { width: auto; max-width: 100%; max-height: 60vh; max-height: 60dvh; margin-inline: auto; }
+    .image-dialog-stage.is-zoomed .lesson-image-wrap { width: var(--image-natural-width); max-width: none; }
+    .image-dialog-stage.is-zoomed img { max-width: none; }
+    .akarnet-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; margin-top: 20px; }
+    .akarnet-bottom p { flex: 1 1 250px; margin: 0; font-size: 13px; color: var(--muted); }
+    .akarnet-open { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 11px 17px; border-radius: 9px; color: white; background: var(--blue); text-decoration: none; font-size: 14px; font-weight: 650; }
+    .akarnet-open:hover { background: #244f80; }
+    .akarnet-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+    @media (max-width: 600px) {
+      .akarnet-heading { gap: 12px; padding: 22px 16px; }
+      .akarnet-symbol { flex-basis: 38px; width: 38px; height: 48px; border-radius: 10px; }
+      .akarnet-symbol svg { width: 25px; height: 25px; }
+      .akarnet-eyebrow { font-size: 9px; letter-spacing: 1px; }
+      .akarnet-content { padding: 16px 12px; }
+      .akarnet-guide > summary { gap: 9px; padding: 16px 12px; }
+      .akarnet-question { font-size: 14px; }
+      .akarnet-answer { padding: 16px 15px 20px; }
+      .akarnet-bottom { padding: 0 3px; }
+      .akarnet-open { width: 100%; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .akarnet-chevron, .akarnet-guide-chevron { transition: none; }
+    }
+
   </style>
 </head>
 
@@ -1343,6 +1432,83 @@
             Vis alle spørsmål
           </button>
         </div>
+
+        <!-- Åkarnet: egen seksjon under de 27 taksameterspørsmålene -->
+        <details id="akarnet" class="akarnet-panel">
+          <summary class="akarnet-heading">
+            <span class="akarnet-symbol" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="5" y="3" width="22" height="26" rx="4"/>
+                <path d="M10 10h12M10 23v-5m6 5v-9m6 9v-6" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="akarnet-heading-text">
+              <span class="akarnet-eyebrow">Rapporter og oversikt</span>
+              <span class="akarnet-title">Taksameter Rapporter (Åkarnet)</span>
+              <span class="akarnet-subtitle">Opprett konto og få oversikt over skift, tall og innkjørte beløp.</span>
+            </span>
+            <svg class="akarnet-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+
+          <div class="akarnet-content">
+            <p class="akarnet-intro">Åkarnet er nettsiden der du ser rapporter fra taksameteret. Velg spørsmålet du trenger hjelp med.</p>
+
+            <details id="akarnet-konto" class="akarnet-guide" data-keywords="åkarnet akarnet opprette konto registrering registrere bruker ny bruker innlogging epost e-post passord engangskode tofaktor MFA logge inn">
+              <summary>
+                <span class="akarnet-number" aria-hidden="true">1</span>
+                <span class="akarnet-question">Hvordan opprette konto på Åkarnet?</span>
+                <svg class="akarnet-guide-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+              </summary>
+              <div class="akarnet-answer">
+                <p>Ha e-post og mobil tilgjengelig. Språket på innloggingssiden kan variere.</p>
+                <ol>
+                  <li><strong>Åpne Åkarnet og velg opprett konto.</strong> Gå til <a href="https://akarnet.no" target="_blank" rel="noopener noreferrer">akarnet.no</a> og trykk <strong>Logg inn</strong>. Velg deretter <strong lang="sv">Anmäl dig nu</strong> nederst på innloggingssiden, slik pilen viser. Det betyr «opprett konto». På engelsk heter lenken <strong lang="en">Sign up now</strong>.
+                    <figure class="akarnet-figure akarnet-signup-figure">
+                      <button type="button" class="figure-zoom akarnet-image" aria-label="Forstørr bildet som viser hvor du oppretter konto på Åkarnet" aria-haspopup="dialog" data-caption="Den røde pilen viser lenken «Anmäl dig nu». Trykk der for å opprette konto på Åkarnet.">
+                        <img src="./Signup.png" alt="Åkarnets innloggingsside med en rød pil mot lenken Anmäl dig nu nederst på siden." width="527" height="712" loading="lazy" decoding="async">
+                      </button>
+                      <figcaption>Den røde pilen viser hvor du trykker for å opprette konto.<span class="figure-zoom-hint">Trykk på bildet for å forstørre</span></figcaption>
+                    </figure>
+                  </li>
+                  <li><strong>Bekreft e-postadressen.</strong> Bruk e-postadressen som er registrert for Åkarnet-tilgangen din. Be om en kode, hent den fra e-posten og trykk <strong>Verify Code</strong>.</li>
+                  <li><strong>Fyll ut kontoen.</strong> Lag og bekreft passordet ditt, og fyll ut navnet ditt.</li>
+                  <li><strong>Velg hvordan du vil få engangskoder.</strong> Velg e-post eller mobil blant alternativene som vises. Velger du mobil, må du velge riktig landskode, for eksempel <strong>+47</strong> for Norge.</li>
+                  <li><strong>Fullfør registreringen.</strong> Trykk <strong>Create</strong>. Følg deretter bekreftelsen på skjermen, og bruk <strong>Verify Code</strong> og <strong>Continue</strong> når du blir bedt om det.</li>
+                  <li><strong>Logg inn.</strong> Bruk e-postadressen, passordet og engangskoden du mottar med den valgte metoden.</li>
+                </ol>
+                <p class="akarnet-note"><strong>Har du allerede konto?</strong> Velg Logg inn og bruk den eksisterende kontoen. Følg oppsettet for engangskode hvis det vises.</p>
+                <p class="akarnet-source">Mer om registrering: <a href="https://www.halda.com/media/halda-ab/manualer/norge-ny-mate-a-logge-pa-akarnet.pdf" target="_blank" rel="noopener noreferrer">Haldas norske innloggingsveiledning (PDF)</a>.</p>
+              </div>
+            </details>
+
+            <details id="akarnet-rapporter" class="akarnet-guide" data-keywords="åkarnet akarnet rapport rapporter skiftrapport skiftrapporter shiftrapport shiftrapporter shift tall inntjening inntekt omsetning innkjørt beløp periode dag uke måned bil sjåfør servicenr servicenummer tidsintervall søk skiftrapport">
+              <summary>
+                <span class="akarnet-number" aria-hidden="true">2</span>
+                <span class="akarnet-question">Hva skal jeg se etter når jeg er logget inn?</span>
+                <svg class="akarnet-guide-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+              </summary>
+              <div class="akarnet-answer">
+                <p>Følg rekkefølgen 1–3 i bildet for å finne skiftrapportene dine: velg bil, velg periode og søk.</p>
+                <ol>
+                  <li><strong>Velg bil.</strong> Velg bilen du vil se rapporter for. I bildet er feltet merket <strong>Servicenr.</strong> og vist med pil 1.</li>
+                  <li><strong>Velg periode.</strong> Velg for eksempel <strong>Denne måned</strong>, <strong>Forrige måned</strong> eller <strong>Denne uke</strong>. Bruk <strong>Tidsintervall</strong> hvis du vil velge en bestemt periode. Pil 2 viser hvor du velger perioden.</li>
+                  <li><strong>Trykk på Søk skiftrapport.</strong> Kontroller at bil og periode er riktig, og trykk deretter på <strong>Søk skiftrapport</strong>, som vist med pil 3.</li>
+                </ol>
+                <figure class="akarnet-figure">
+                  <button type="button" class="figure-zoom akarnet-image" aria-label="Forstørr bildet som viser de tre stegene for å søke etter skiftrapporter" aria-haspopup="dialog" data-caption="Pil 1: Velg bil i feltet Servicenr. Pil 2: Velg periode. Pil 3: Trykk på Søk skiftrapport.">
+                    <img src="./S%C3%B8k%20shiftrapport.png" alt="Åkarnets skiftrapportering med tre røde piler: 1 viser Servicenr., 2 viser periodevalgene og 3 viser knappen Søk skiftrapport." width="1343" height="572" loading="lazy" decoding="async">
+                  </button>
+                  <figcaption>1: Velg bil. 2: Velg periode. 3: Trykk «Søk skiftrapport».<span class="figure-zoom-hint">Trykk på bildet for å forstørre</span></figcaption>
+                </figure>
+              </div>
+            </details>
+
+            <div class="akarnet-bottom">
+              <p>Mangler du tilgang til bilen eller rapportene? Kontakt OnTaxi for hjelp med tilgangen.</p>
+              <a class="akarnet-open" href="https://akarnet.no" target="_blank" rel="noopener noreferrer">Åpne Åkarnet <span aria-hidden="true">↗</span><span class="akarnet-sr-only"> (åpnes i ny fane)</span></a>
+            </div>
+          </div>
+        </details>
 
         <noscript>
           <p>
@@ -1484,6 +1650,10 @@
     <div class="image-dialog-head">
       <h2 id="image-dialog-title">Større bilde</h2>
       <button id="image-dialog-close" class="image-dialog-close" type="button" autofocus>Lukk</button>
+    </div>
+    <div id="image-dialog-tools" class="image-dialog-tools" hidden>
+      <button id="image-dialog-zoom" type="button" aria-pressed="false" aria-controls="image-dialog-stage">Forstørr mer</button>
+      <p id="image-dialog-zoom-hint" hidden>Sveip eller rull i bildet for å se alle delene.</p>
     </div>
     <div id="image-dialog-stage" class="image-dialog-stage"></div>
     <p id="image-dialog-caption" class="image-dialog-caption"></p>
@@ -3776,7 +3946,14 @@
     }
 
     // Ett søkegrunnlag for hvert spørsmål. Ingen eksterne tjenester er nødvendige.
-    const searchIndex = lessons.map((lesson, order) => {
+    const akarnetGuides = [...document.querySelectorAll('.akarnet-guide')].map(detail => ({
+      id: detail.id,
+      category: 'Taksameter Rapporter (Åkarnet)',
+      title: detail.querySelector('.akarnet-question').textContent,
+      keywords: detail.dataset.keywords,
+      steps: [detail.querySelector('.akarnet-answer').textContent]
+    }));
+    const searchIndex = [...lessons, ...akarnetGuides].map((lesson, order) => {
       const fields = [
         { weight: 8, tokens: searchTokens(lesson.title) },
         { weight: 6, tokens: searchTokens(lesson.keywords) },
@@ -3927,6 +4104,15 @@
     function showLessonImage(asset) {
       const dialog = document.getElementById('image-dialog');
       const stage = document.getElementById('image-dialog-stage');
+      stage.classList.remove('is-zoomed');
+      stage.classList.toggle('is-zoomable', Boolean(asset.allowZoom));
+      stage.style.setProperty('--image-natural-width', asset.width + 'px');
+      stage.scrollTop = 0;
+      stage.scrollLeft = 0;
+      document.getElementById('image-dialog-tools').hidden = !asset.allowZoom;
+      document.getElementById('image-dialog-zoom').setAttribute('aria-pressed', 'false');
+      document.getElementById('image-dialog-zoom').textContent = 'Forstørr mer';
+      document.getElementById('image-dialog-zoom-hint').hidden = true;
       const picture = createLessonPicture(asset);
       picture.querySelector('img').loading = 'eager';
       stage.replaceChildren(picture);
@@ -4336,6 +4522,7 @@
     /* Søk og filtrering */
 
     function filterLessons() {
+      const hasQuery = Boolean(search.value.trim());
       const results = rankLessons(search.value);
       const matches = new Map(results
         .filter(result => selected === categoryNames[0] || result.lesson.category === selected)
@@ -4351,8 +4538,18 @@
         context.textContent = result && result.videoMatch ? 'Treff i videoforklaringen' : '';
       });
 
+      const reportPanel = document.getElementById('akarnet');
+      const reportMatches = akarnetGuides.filter(guide => matches.has(guide.id));
+      reportPanel.hidden = selected !== categoryNames[0] || (hasQuery && !reportMatches.length);
+      akarnetGuides.forEach(guide => {
+        const detail = document.getElementById(guide.id);
+        detail.hidden = hasQuery && !matches.has(guide.id);
+        if (detail.hidden) detail.open = false;
+      });
+      if (hasQuery && reportMatches.length && !reportPanel.hidden) reportPanel.open = true;
+
       // Behold samme elementer og videospillere; flytt bare når rekkefølgen endres.
-      const rankedIds = results.map(result => result.lesson.id);
+      const rankedIds = results.filter(result => lessons.includes(result.lesson)).map(result => result.lesson.id);
       const rankedSet = new Set(rankedIds);
       const orderedIds = [...rankedIds, ...lessons.filter(lesson => !rankedSet.has(lesson.id)).map(lesson => lesson.id)];
       orderedIds.forEach((id, index) => {
@@ -4363,10 +4560,9 @@
       categories.querySelectorAll('button').forEach(button => {
         button.setAttribute('aria-pressed', String(button.dataset.category === selected));
       });
-      const hasQuery = Boolean(search.value.trim());
       document.getElementById('list-title').textContent = hasQuery ? 'Søkeresultater' : selected;
       document.getElementById('result-count').textContent = hasQuery
-        ? matches.size + ' treff' : matches.size + ' spørsmål';
+        ? matches.size + ' treff' : lessons.filter(lesson => matches.has(lesson.id)).length + ' spørsmål';
       document.getElementById('empty').hidden = matches.size !== 0;
       document.getElementById('clear').hidden = !search.value;
     }
@@ -4388,13 +4584,16 @@
         return;
       }
 
-      if (!lessons.some(lesson => lesson.id === id)) {
+      if (id !== 'akarnet' && ![...lessons, ...akarnetGuides].some(lesson => lesson.id === id)) {
         return;
       }
 
       resetFilters();
 
       const detail = document.getElementById(id);
+      if (id === 'akarnet' || akarnetGuides.some(guide => guide.id === id)) {
+        document.getElementById('akarnet').open = true;
+      }
       detail.open = true;
 
       requestAnimationFrame(() => {
@@ -4417,6 +4616,29 @@
     document.getElementById('reset').addEventListener('click', () => {
       resetFilters();
       search.focus();
+    });
+
+    document.querySelectorAll('.akarnet-image').forEach(button => {
+      button.addEventListener('click', () => {
+        const img = button.querySelector('img');
+        showLessonImage({
+          src: img.src,
+          alt: img.alt,
+          width: Number(img.getAttribute('width')),
+          height: Number(img.getAttribute('height')),
+          caption: button.dataset.caption,
+          allowZoom: true
+        });
+      });
+    });
+    document.getElementById('image-dialog-zoom').addEventListener('click', event => {
+      const stage = document.getElementById('image-dialog-stage');
+      const zoomed = stage.classList.toggle('is-zoomed');
+      event.currentTarget.setAttribute('aria-pressed', String(zoomed));
+      event.currentTarget.textContent = zoomed ? 'Vis hele bildet' : 'Forstørr mer';
+      document.getElementById('image-dialog-zoom-hint').hidden = !zoomed;
+      stage.scrollTop = 0;
+      stage.scrollLeft = 0;
     });
 
     const imageDialog = document.getElementById('image-dialog');
